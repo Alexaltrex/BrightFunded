@@ -1,0 +1,94 @@
+@import "../../assets/styles/app";
+
+.header {
+  @include container;
+  position: relative;
+  z-index: 100;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0));
+  }
+
+  .inner {
+    @include inner;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+
+    @include desktop {
+      height: 102px;
+    }
+
+    .logo {
+      display: block;
+
+      svg {
+        width: 145px;
+        height: 28px;
+
+        @include desktop {
+          width: 160px;
+          height: 30.89px;
+        }
+      }
+    }
+
+    .links {
+      @include absoluteCenter;
+      @include centerRow;
+      @include onlyDesktop(flex);
+
+
+      .item {
+        &:not(:first-child) {
+          margin-left: 30px;
+        }
+      }
+
+      .link {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+        white-space: nowrap;
+
+        &:not(:first-child) {
+          margin-left: 30px;
+        }
+
+        &:hover {
+          background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+
+    .tradeBtn {
+      @include onlyDesktop;
+      width: 130px;
+    }
+
+    .burgerBtn {
+      @include button;
+      @include centerRow;
+      @include onlyMobile;
+      width: 30px;
+      height: 30px;
+
+    }
+  }
+}
+

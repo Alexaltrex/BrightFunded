@@ -1,0 +1,74 @@
+@import "../../../assets/styles/app";
+
+.dropDownBurger {
+
+
+  .btn {
+    @include button;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+      transform: rotate(-90deg);
+      transition: 0.3s;
+
+      path {
+        transition: 0.3s;
+      }
+    }
+
+    &_open {
+
+      p {
+        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      svg {
+        transform: rotate(0deg);
+
+        path {
+          fill: #0781FE;
+        }
+      }
+    }
+  }
+
+  .list {
+    margin-top: 12px;
+    background: rgba(21, 24, 40, 0.8);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 12px 16px;
+
+    .item {
+      display: block;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+  }
+}

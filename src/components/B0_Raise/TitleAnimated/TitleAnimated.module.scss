@@ -1,0 +1,38 @@
+@import "../../../assets/styles/app";
+
+.titleAnimated {
+  display: inline-flex;
+  position: relative;
+  //border: 1px solid red;
+  overflow: hidden;
+  width: 200px;
+  height: 37px; //35
+  top: 8px;
+
+  @include desktop {
+    width: 385px;
+    height: 70px; //67
+    top: 15px;
+  }
+
+  p {
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    height: 37px;
+    background: linear-gradient(36.3deg, #0781FE -12.63%, #00C7B4 67.08%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include desktop {
+      font-size: 58px;
+      line-height: 67px;
+      height: 70px;
+    }
+  }
+}

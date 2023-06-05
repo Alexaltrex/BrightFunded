@@ -1,0 +1,33 @@
+@import "../../../assets/styles/app";
+
+.linkCustom {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    background: #FFF;
+    width: 100%;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+  }
+
+  svg {
+    margin-left: 8px;
+  }
+
+
+}

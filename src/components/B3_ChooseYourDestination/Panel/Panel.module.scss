@@ -1,0 +1,93 @@
+@import "../../../assets/styles/app";
+
+.panel {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+  }
+
+  .currencyWrapper {
+
+    .label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: #FFFFFF;
+    }
+
+    .buttons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+
+      @include desktop {
+        justify-content: start;
+      }
+
+      .btn {
+        @include button;
+        @include centerRow;
+        background: linear-gradient(34.49deg, rgba(7, 129, 254, 0.12) -12.58%, rgba(0, 199, 180, 0.12) 102.84%);
+        border-radius: 12px;
+        width: 85px;
+        height: 42px;
+        border: 1px solid #02AFC7;
+        box-sizing: border-box;
+
+        @include desktop {
+          width: 99px;
+        }
+
+        &_selected {
+          border: none;
+          background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        }
+
+        &:not(:first-child) {
+          margin-left: 12px;
+
+          @include desktop {
+            margin-left: 15px;
+          }
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+          letter-spacing: -0.03em;
+          color: #FFFFFF;
+        }
+
+
+      }
+    }
+  }
+
+  .balanceWrapper {
+    margin-top: 30px;
+
+    @include desktop {
+      margin-top: 0;
+      margin-left: 100px;
+      flex-grow: 1;
+    }
+
+    .label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: #FFFFFF;
+    }
+
+    .sliderWrapper {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+  }
+}

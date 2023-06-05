@@ -1,0 +1,52 @@
+@import "../../../assets/styles/app";
+
+.buttonCustom {
+  @include button;
+  @include centerRow;
+  text-decoration: none;
+  width: 100%;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(85.01deg, #0072E7 6.26%, #00AA9A 92.45%);
+
+  &:hover {
+    background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+  }
+
+  &_secondary {
+    border: 1px solid #02AFC7;
+    background: linear-gradient(85.01deg, rgba(0, 114, 231, 0.12) 6.26%, rgba(0, 170, 154, 0.12) 92.45%);
+
+    &:hover {
+      background: linear-gradient(85.01deg, rgba(0, 114, 231, 0.3) 6.26%, rgba(0, 170, 154, 0.3) 92.45%);
+    }
+  }
+
+  svg {
+    margin-left: 8px;
+  }
+
+  &:disabled {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: none;
+    cursor: auto;
+
+    p {
+      color: #8C8C8C;
+    }
+
+    svg {
+      path {
+        fill: #8C8C8C;
+      }
+    }
+  }
+}

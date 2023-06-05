@@ -1,0 +1,139 @@
+@import "../../assets/styles/app";
+
+.howToBecome {
+
+  .container {
+    @include container;
+    background: #F7F9FC;
+    border-radius: 40px 40px 0 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include desktop {
+      padding-top: 108px;
+      padding-bottom: 50px;
+    }
+
+    .inner {
+      @include inner;
+
+      .titleWrapper {
+        @include h2_block;
+        @include h2_block_black;
+      }
+
+      .cardsMobile {
+        @include onlyMobile;
+        margin-top: 30px;
+
+        .card {
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+          border-radius: 15px;
+          padding: 20px;
+
+          @include desktop {
+            padding: 35px;
+          }
+
+          &:not(:first-child) {
+            margin-top: 20px;
+
+            @include desktop {
+              margin-top: 0;
+            }
+          }
+
+          .phase {
+            align-self: flex-start;
+            padding: 8px 20px;
+            border: 2px solid #FFF;
+            box-sizing: border-box;
+            border-radius: 999px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 115%;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+
+            @include desktop {
+              padding: 9px 25px;
+            }
+          }
+
+          .planet {
+            align-self: center;
+            display: block;
+            width: 210px;
+            height: 221px;
+            margin-top: 12px;
+
+            @include desktop {
+              width: 429px;
+              height: 450px;
+            }
+          }
+
+          .title {
+            margin-top: 12px;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 130%;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: #0E0B3D;
+
+            @include desktop {
+              font-size: 32px;
+              text-align: left;
+            }
+          }
+
+          .text {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: -0.01em;
+            color: #3E3C64;
+
+            @include desktop {
+              margin-top: 15px;
+              width: 590px;
+            }
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+  .cardsDesktop {
+    @include onlyDesktop(flex);
+    flex-wrap: wrap;
+    width: 300vw;
+    height: 100vh;
+
+    .block {
+      width: 100vw;
+      height: 100vh;
+
+      &_red {
+        background: red;
+      }
+
+      &_olive {
+        background: olive;
+      }
+
+      &_purple {
+        background: purple;
+      }
+
+    }
+  }
+
+}

@@ -1,0 +1,12 @@
+@import "../../assets/styles/app";
+
+.app {
+  background: #11131F;
+  position: relative;
+  overflow: hidden;
+
+  &_burger {
+    height: 100vh;
+    box-sizing: border-box;
+  }
+}

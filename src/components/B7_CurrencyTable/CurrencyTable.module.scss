@@ -1,0 +1,232 @@
+@import "../../assets/styles/app";
+
+.currencyTable {
+  @include container;
+  padding-top: 60px;
+  padding-bottom: 80px;
+
+  @include desktop {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+
+  .inner {
+    @include inner;
+
+    @include desktop {
+      width: 1063px;
+    }
+
+    .selectWrapper {
+      @include onlyMobile();
+      width: 100%;
+    }
+
+    .tableMobile {
+      @include onlyMobile;
+      position: relative;
+      margin-top: 20px;
+      border: 1px solid #E6EAEE;
+      filter: drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.08));
+      border-radius: 15px;
+      overflow: hidden;
+
+      .row {
+        display: flex;
+        height: 50px;
+
+        &:not(:first-child) {
+          border-top: 1px solid #E6EAEE;
+        }
+
+        .currency {
+          display: flex;
+          align-items: center;
+          width: 120px;
+          padding-left: 20px;
+          box-sizing: border-box;
+          background: #FFF;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+          letter-spacing: -0.02em;
+          color: #0E0B3D;
+        }
+
+        .value {
+          @include centerRow;
+          flex-grow: 1;
+          background: #F1F5FA;
+        }
+
+        &:first-child {
+          .currency {
+            font-size: 15px;
+            line-height: 22px;
+            color: #9A99AF;
+          }
+        }
+      }
+
+      .swiperWrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(100% - 120px);
+        height: 100%;
+        //background: rgba(255,0,0,0.1);
+
+        .slide {
+
+          .cell {
+            @include centerRow;
+            height: 50px;
+
+            &:nth-child(1) {
+              font-weight: 400;
+              font-size: 15px;
+              line-height: 22px;
+              letter-spacing: -0.02em;
+              color: #9A99AF;
+            }
+
+            &:not(:first-child) {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 21px;
+              letter-spacing: -0.02em;
+              color: #0E0B3D;
+            }
+
+            p {
+              position: relative;
+
+              svg {
+                position: absolute;
+                top: 50%;
+                right: -3px;
+                transform: translate(100%, -50%);
+              }
+            }
+
+
+
+          }
+        }
+      }
+    }
+
+    .navigation {
+      @include onlyMobile(flex);
+      justify-content: center;
+      margin-top: 29px;
+
+      .item {
+        width: 40px;
+        height: 4px;
+        background: #CDD6E2;
+        border-radius: 4px;
+
+        &_selected {
+          background: linear-gradient(85.01deg, #0072E7 6.26%, #00AA9A 92.45%);
+        }
+
+        &:not(:first-child) {
+          margin-left: 12px;
+        }
+      }
+    }
+
+    .tableDesktop {
+      @include onlyDesktop;
+      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+      border-radius: 15px;
+      overflow: hidden;
+
+      .buttons {
+        height: 53px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+
+        .btn {
+          @include button;
+          @include centerRow;
+          background: rgba(2, 38, 76, 0.05);
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 22px;
+          text-align: center;
+          letter-spacing: -0.02em;
+          color: #0E0B3D;
+          transition: 0.3s;
+
+          &:hover {
+            background: rgba(2, 38, 76, 0.1);
+          }
+
+          &_selected {
+            background: #02264C;
+            color: #FFFFFF;
+
+            &:hover {
+              background: #02264C;
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+
+      .rows {
+
+        .row {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          height: 53px;
+          background: #FFF;
+
+          &:first-child {
+            .cell {
+              color: rgba(14, 11, 61, 0.4);
+            }
+          }
+
+          &:not(:first-child) {
+            border: 1px solid #F2F2F2;
+
+            .cell {
+              color: #0E0B3D;
+            }
+          }
+
+          .cell {
+            @include centerRow;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: -0.02em;
+
+            p {
+              position: relative;
+
+              svg {
+                position: absolute;
+                top: 50%;
+                right: -3px;
+                transform: translate(100%, -50%);
+              }
+            }
+          }
+
+        }
+      }
+
+
+
+    }
+
+
+
+  }
+}

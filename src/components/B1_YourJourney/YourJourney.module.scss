@@ -1,0 +1,144 @@
+@import "../../assets/styles/app";
+
+.yourJourney {
+  @include container;
+  padding-top: 80px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 180px;
+    padding-bottom: 110px;
+  }
+
+  .inner {
+    @include inner;
+
+    .titleWrapper {
+      @include h2_block;
+      @include h2_block_white;
+
+      .title {
+        @include desktop {
+          width: 453px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    .cards {
+      margin-top: 30px;
+
+      @include desktop {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+      }
+
+      .card {
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(21, 24, 40, 0.8);
+        backdrop-filter: blur(17px);
+        border-radius: 15px;
+        box-sizing: border-box;
+        padding: 20px;
+
+        @include desktop {
+          padding: 30px;
+        }
+
+        &:nth-child(1) {
+          @include desktop {
+            top: -45px;
+          }
+        }
+
+        &:nth-child(2) {
+          @include desktop {
+            transform: rotate(-0.5deg);
+          }
+        }
+
+        &:nth-child(3) {
+          @include desktop {
+            top: -45px;
+            transform: rotate(-0.5deg);
+          }
+        }
+
+        &:not(:first-child) {
+          margin-top: 20px;
+
+          @include desktop {
+            margin-top: 0;
+          }
+        }
+
+        .iconWrapper {
+          @include centerRow;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          width: 35px;
+          height: 35px;
+          background: #1C1F31;
+          border-radius: 10px;
+
+          svg {
+            width: 19px;
+            height: 19px;
+
+            @include desktop {
+              width: 29px;
+              height: 29px;
+            }
+          }
+
+          @include desktop {
+            width: 55px;
+            height: 55px;
+            top: 30px;
+            right: 30px;
+          }
+
+        }
+
+        .title {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 130%;
+          letter-spacing: -0.02em;
+          color: #FFFFFF;
+          width: 175px;
+
+          @include desktop {
+            font-size: 24px;
+            width: 260px;
+          }
+
+        }
+
+        .text {
+          margin-top: 20px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: -0.01em;
+          color: #A1A3A9;
+        }
+
+        .btn {
+          margin-top: 30px;
+          width: auto;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+      }
+
+    }
+
+  }
+}

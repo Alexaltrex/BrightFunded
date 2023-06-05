@@ -1,0 +1,117 @@
+@import "../../../assets/styles/app";
+
+.dropDownHeader {
+  position: relative;
+  z-index: 101;
+
+  .btn {
+    @include button;
+    display: flex;
+    align-items: flex-end;
+
+    p {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      white-space: nowrap;
+      transition: 0.3s;
+    }
+
+    svg {
+      margin-left: 6px;
+      margin-bottom: 5px;
+      transition: 0.3s;
+
+      path {
+        transition: 0.3s;
+      }
+    }
+
+    &_open {
+
+      p {
+        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+      }
+
+      svg {
+        transform: rotate(-180deg);
+
+        path {
+          fill: #00C7B4;
+        }
+      }
+    }
+  }
+
+  .dropDownWrapper {
+    position: absolute;
+    z-index: 200;
+    left: 0;
+    top: 20px;
+    padding-top: 10px;
+
+    .dropDown {
+      padding: 15px;
+      box-sizing: border-box;
+      width: 146px;
+      background: rgba(21, 24, 40, 0.8);
+      backdrop-filter: blur(12px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+
+      .item {
+        display: block;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+        white-space: nowrap;
+        transition: 0.3s;
+
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+
+        &:hover {
+          background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+    }
+  }
+
+
+}
+
+.popoverlistItem {
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  white-space: nowrap;
+  transition: 0.3s;
+
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  &:hover {
+    background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
