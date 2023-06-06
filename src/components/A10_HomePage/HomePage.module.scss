@@ -2,11 +2,6 @@
 
 .homePage {
   //overflow: hidden;
-  padding-top: 40px;
-
-  @include desktop {
-    padding-top: 90px;
-  }
 
   .whiteCard {
     position: relative;
