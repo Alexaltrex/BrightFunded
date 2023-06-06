@@ -8,7 +8,7 @@ import * as React from "react";
 const a_x = 100;
 const a_y = 100;
 const a_z = 200;
-const pointsCount = 666;
+const pointsCount = 600;
 const speed = 10;
 
 //========= POINTS =========//

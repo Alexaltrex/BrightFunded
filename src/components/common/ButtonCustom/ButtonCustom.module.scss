@@ -8,6 +8,7 @@
   height: 42px;
   border-radius: 12px;
   background: linear-gradient(85.01deg, #0072E7 6.26%, #00AA9A 92.45%);
+  transition: 0.3s;
 
   &:hover {
     background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
@@ -22,11 +23,11 @@
   }
 
   &_secondary {
+    background: rgba(2, 164, 199, 0.12);
     border: 1px solid #02AFC7;
-    background: linear-gradient(85.01deg, rgba(0, 114, 231, 0.12) 6.26%, rgba(0, 170, 154, 0.12) 92.45%);
 
     &:hover {
-      background: linear-gradient(85.01deg, rgba(0, 114, 231, 0.3) 6.26%, rgba(0, 170, 154, 0.3) 92.45%);
+      background: rgba(2, 164, 199, 0.24);
     }
   }
 

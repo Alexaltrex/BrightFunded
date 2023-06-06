@@ -1,7 +1,9 @@
 import * as React from "react";
 import {FC} from "react";
 import {Swiper, SwiperClass, SwiperSlide} from "swiper/react";
+import { EffectFade } from 'swiper';
 import "swiper/css";
+import 'swiper/css/effect-fade';
 import style from "./PlanetSlider.module.scss";
 import {planets} from "./planets";
 import {svgIcons} from "../../../assets/svgIcons";
@@ -19,7 +21,13 @@ export const PlanetSlider: FC<IPlanetSlider> = ({
         <Swiper className={style.planetSlider}
                 slidesPerView={1}
                 onSwiper={(swiper) => setSwiper(swiper)}
-                allowTouchMove={false}
+                //allowTouchMove={false}
+                modules={[EffectFade]}
+                effect="fade"
+                fadeEffect={{
+                    crossFade: true
+                }}
+
         >
             {
                 planets.map(({src, title, text}, key) => (
@@ -27,16 +35,19 @@ export const PlanetSlider: FC<IPlanetSlider> = ({
                                  className={style.slide}
 
                     >
-                        <img src={src} alt="" className={style.img}/>
-                        <div>
-                            <p className={style.title}>{title}</p>
-                            <p className={style.text}>{text}</p>
+                        <div className={style.slideInner}>
+                            <img src={src} alt="" className={style.img}/>
+                            <div>
+                                <p className={style.title}>{title}</p>
+                                <p className={style.text}>{text}</p>
+                            </div>
+
+                            <ButtonCustom label="Join Waitlist"
+                                          icon={svgIcons.arrow_right}
+                                          className={style.joinBtn}
+                            />
                         </div>
 
-                        <ButtonCustom label="Join Waitlist"
-                                      icon={svgIcons.arrow_right}
-                                      className={style.joinBtn}
-                        />
                     </SwiperSlide>
                 ))
             }

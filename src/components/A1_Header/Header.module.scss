@@ -62,15 +62,14 @@
         letter-spacing: -0.02em;
         color: #FFFFFF;
         white-space: nowrap;
+        transition: 0.3s;
 
         &:not(:first-child) {
           margin-left: 30px;
         }
 
         &:hover {
-          background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: #02A4C7;
         }
       }
     }

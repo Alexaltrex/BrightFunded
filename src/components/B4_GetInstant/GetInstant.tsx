@@ -13,10 +13,10 @@ export const GetInstant = () => {
 
                 <div className={style.titleWrapper}>
                     <p className={style.pretext}>
-                        EVALUATION PROCESS
+                        trade2earn
                     </p>
                     <h2 className={style.title}>
-                        How To Become A Funded Star
+                        Get Instant Rewarded
                     </h2>
                 </div>
 

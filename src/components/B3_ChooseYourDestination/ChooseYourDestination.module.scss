@@ -57,6 +57,8 @@
         }
 
         .leftBlock {
+          position: relative;
+          z-index: 10;
 
           @include desktop {
             width: 847px;
@@ -128,6 +130,8 @@
           }
 
           .sliderDesktop {
+            position: relative;
+            z-index: 5;
             @include onlyDesktop;
             width: 393px;
             margin-left: 40px;

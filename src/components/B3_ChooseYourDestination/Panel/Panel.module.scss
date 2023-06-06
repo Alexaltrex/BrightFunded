@@ -30,20 +30,28 @@
       .btn {
         @include button;
         @include centerRow;
-        background: linear-gradient(34.49deg, rgba(7, 129, 254, 0.12) -12.58%, rgba(0, 199, 180, 0.12) 102.84%);
         border-radius: 12px;
         width: 85px;
         height: 42px;
-        border: 1px solid #02AFC7;
         box-sizing: border-box;
+        background: rgba(2, 164, 199, 0.12);
+        border: 1px solid #02AFC7;
+        transition: 0.3s;
 
         @include desktop {
           width: 99px;
         }
 
-        &_selected {
+        &:hover {
+          background: rgba(2, 164, 199, 0.24);
+          border: 1px solid #02AFC7;
+        }
+
+        &_selected, &_selected:hover {
           border: none;
           background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+
+
         }
 
         &:not(:first-child) {

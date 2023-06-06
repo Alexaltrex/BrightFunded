@@ -32,17 +32,14 @@
     &_open {
 
       p {
-        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-fill-color: transparent;
+        color: #02A4C7;
       }
 
       svg {
         transform: rotate(-180deg);
 
         path {
-          fill: #00C7B4;
+          fill: #02A4C7;
         }
       }
     }
@@ -80,9 +77,7 @@
         }
 
         &:hover {
-          background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: #02A4C7;
         }
       }
 
@@ -108,10 +103,6 @@
   }
 
   &:hover {
-    background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    color: #02A4C7;
   }
 }
