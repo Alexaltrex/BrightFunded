@@ -1,4 +1,4 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .homePage {
   //overflow: hidden;
@@ -11,28 +11,51 @@
   .whiteCard {
     position: relative;
     z-index: 10;
-    background: #F7F9FC;
+    background: #f7f9fc;
     border-radius: 40px;
     overflow: hidden;
   }
 
+  .inner {
+    background: #f7f9fc;
+    border-radius: 40px 40px 0 0;
+    padding-top: 108px;
+
+    .titleWrapper {
+      @include h2_block;
+      @include h2_block_black;
+    }
+  }
+
   .cardsDesktop {
     @include onlyDesktop(flex);
-    flex-wrap: wrap;
-    width: 400vw;
-    height: 100vh;
-    background: #F7F9FC;
+    @include inner();
+    box-sizing: border-box;
+    width: auto;
+    height: 692px;
+    padding: 0 0 100px;
+    background: #f7f9fc;
+    margin: 50px 0 0;
+
+    .panel {
+      height: 100%;
+
+      &:not(:first-child) {
+        margin: 0 0 0 20px;
+      }
+    }
 
     .cardWrapper {
-      width: 100vw;
-      height: 100vh;
       @include centerRow;
 
       .card {
-        @include inner;
+        // @include inner;
         position: relative;
-        height: calc(100vh - 200px);
-        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+        width: 850px;
+        height: 592px;
+        // height: calc(100vh - 200px);
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02),
+          0px 9px 19px rgba(0, 0, 0, 0.01);
         border-radius: 15px;
         padding: 35px;
         box-sizing: border-box;
@@ -44,7 +67,7 @@
         .phase {
           align-self: flex-start;
           padding: 9px 25px;
-          border: 2px solid #FFF;
+          border: 2px solid #fff;
           box-sizing: border-box;
           border-radius: 999px;
           font-weight: 500;
@@ -67,7 +90,7 @@
           line-height: 130%;
           text-align: left;
           letter-spacing: -0.02em;
-          color: #0E0B3D;
+          color: #0e0b3d;
         }
 
         .text {
@@ -76,15 +99,10 @@
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #3E3C64;
+          color: #3e3c64;
           width: 590px;
         }
-
       }
-
     }
-
-
   }
-
 }

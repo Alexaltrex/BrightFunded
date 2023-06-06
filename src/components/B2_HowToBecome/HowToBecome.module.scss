@@ -1,10 +1,11 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .howToBecome {
+  @include onlyMobile;
 
   .container {
     @include container;
-    background: #F7F9FC;
+    background: #f7f9fc;
     border-radius: 40px 40px 0 0;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -29,7 +30,8 @@
         .card {
           display: flex;
           flex-direction: column;
-          box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+          box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02),
+            0px 9px 19px rgba(0, 0, 0, 0.01);
           border-radius: 15px;
           padding: 20px;
 
@@ -48,7 +50,7 @@
           .phase {
             align-self: flex-start;
             padding: 8px 20px;
-            border: 2px solid #FFF;
+            border: 2px solid #fff;
             box-sizing: border-box;
             border-radius: 999px;
             font-weight: 500;
@@ -82,7 +84,7 @@
             line-height: 130%;
             text-align: center;
             letter-spacing: -0.02em;
-            color: #0E0B3D;
+            color: #0e0b3d;
 
             @include desktop {
               font-size: 32px;
@@ -96,19 +98,16 @@
             font-size: 14px;
             line-height: 150%;
             letter-spacing: -0.01em;
-            color: #3E3C64;
+            color: #3e3c64;
 
             @include desktop {
               margin-top: 15px;
               width: 590px;
             }
           }
-
         }
       }
-
     }
-
   }
 
   .cardsDesktop {
@@ -132,8 +131,6 @@
       &_purple {
         background: purple;
       }
-
     }
   }
-
 }
