@@ -65,6 +65,9 @@
       }
 
       .btns {
+        position: relative;
+        z-index: 2;
+
         @include centerRow;
         margin-top: 20px;
 
@@ -93,6 +96,7 @@
       // 1920 1080 1.7777
       .videoWrapper {
         position: relative;
+        z-index: 1;
         margin-top: 22px;
         height: 268px;
         width: 100%;

@@ -7,8 +7,9 @@ export const HowToBecome = () => {
     <div className={style.howToBecome}>
       <div className={style.container}>
         <div className={style.inner}>
+
           <div className={style.titleWrapper}>
-            <p className={style.pretext}>trade2earn</p>
+            <p className={style.pretext}>EVALUATION PROCESS</p>
             <h2 className={style.title}>How To Become A Funded Star</h2>
           </div>
 

@@ -17,6 +17,7 @@
 
     .inner {
       @include inner;
+      @include onlyMobile();
 
       .titleWrapper {
         @include h2_block;
@@ -82,13 +83,12 @@
             font-weight: 600;
             font-size: 22px;
             line-height: 130%;
-            text-align: center;
+            text-align: left;
             letter-spacing: -0.02em;
             color: #0e0b3d;
 
             @include desktop {
               font-size: 32px;
-              text-align: left;
             }
           }
 
