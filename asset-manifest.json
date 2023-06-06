@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/BrightFunded/static/css/main.fb493d43.css",
-    "main.js": "/BrightFunded/static/js/main.52cfd2ed.js",
+    "main.css": "/BrightFunded/static/css/main.5d9d2e3d.css",
+    "main.js": "/BrightFunded/static/js/main.77419420.js",
     "static/js/787.451eb046.chunk.js": "/BrightFunded/static/js/787.451eb046.chunk.js",
     "static/media/coin.mp4": "/BrightFunded/static/media/coin.b803ce3687d54b0d7821.mp4",
-    "static/media/coin-back.png": "/BrightFunded/static/media/coin-back.0c2b3b99e81b9af5c1df.png",
+    "static/media/coin-back.png": "/BrightFunded/static/media/coin-back.d0764979c049612a62a0.png",
     "static/media/coin.webm": "/BrightFunded/static/media/coin.48f1d02ee0149c0bdc2d.webm",
     "static/media/planet_3.png": "/BrightFunded/static/media/planet_3.db89338192a952232d45.png",
     "static/media/neptune.png": "/BrightFunded/static/media/neptune.bbf4bd8d90c37e8947f8.png",
@@ -17,12 +17,12 @@
     "static/media/fly_coin_green.png": "/BrightFunded/static/media/fly_coin_green.f4277c2395d6a5a533aa.png",
     "static/media/fly_coin_yellow.png": "/BrightFunded/static/media/fly_coin_yellow.bde9937f5e5494007773.png",
     "index.html": "/BrightFunded/index.html",
-    "main.fb493d43.css.map": "/BrightFunded/static/css/main.fb493d43.css.map",
-    "main.52cfd2ed.js.map": "/BrightFunded/static/js/main.52cfd2ed.js.map",
+    "main.5d9d2e3d.css.map": "/BrightFunded/static/css/main.5d9d2e3d.css.map",
+    "main.77419420.js.map": "/BrightFunded/static/js/main.77419420.js.map",
     "787.451eb046.chunk.js.map": "/BrightFunded/static/js/787.451eb046.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb493d43.css",
-    "static/js/main.52cfd2ed.js"
+    "static/css/main.5d9d2e3d.css",
+    "static/js/main.77419420.js"
   ]
 }
