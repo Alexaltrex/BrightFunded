@@ -52,8 +52,8 @@
       }
 
       .linksMobile {
-        @include onlyMobile(flex);
-        justify-content: space-between;
+        @include onlyMobile(grid);
+        grid-template-columns: repeat(2, 1fr);
 
         .column {
 

@@ -7,6 +7,7 @@
 
   &::before {
     position: absolute;
+    z-index: 2;
     content: "";
     display: block;
     left: 0;
@@ -16,9 +17,26 @@
     background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0));
   }
 
+  .gradientLeft {
+    @include onlyDesktop();
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .gradientRight {
+    @include onlyDesktop();
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
+
   .inner {
     @include inner;
     position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;

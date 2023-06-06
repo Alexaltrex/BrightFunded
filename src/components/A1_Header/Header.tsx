@@ -7,6 +7,8 @@ import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
 import {headerLinks} from "../A0_App/links";
 import {DropDownHeader} from "../common/DropDownHeader/DropDownHeader";
+import gradientLeft from "../../assets/png/gradient_header_left.png";
+import gradientRight from "../../assets/png/gradient_header_right.png";
 
 export const Header = observer(() => {
     const {
@@ -22,6 +24,10 @@ export const Header = observer(() => {
     return (
         <>
             <header className={style.header}>
+
+                <img src={gradientLeft} alt="" className={style.gradientLeft}/>
+                <img src={gradientRight} alt="" className={style.gradientRight}/>
+
                 <div className={style.inner}>
 
                     <Link className={style.logo}

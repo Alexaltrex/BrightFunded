@@ -6,11 +6,14 @@ import {LinkCustom} from "../LinkCustom/LinkCustom";
 import coin_green from "../../../assets/png/fly_coin_green.png";
 import coin_yellow from "../../../assets/png/fly_coin_yellow.png";
 import coin_blue from "../../../assets/png/fly_coin_blue.png";
-
+import gradientLeft from "../../../assets/png/gradient_footer_left.png";
 
 export const YourChance = () => {
     return (
         <div className={style.yourChance}>
+
+            <img src={gradientLeft} alt="" className={style.gradientLeft}/>
+            <img src={gradientLeft} alt="" className={style.gradientRight}/>
 
             <div className={style.titleWrapper}>
                 <p className={style.pretext}>
