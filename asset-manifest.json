@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/BrightFunded/static/css/main.7f1f131e.css",
-    "main.js": "/BrightFunded/static/js/main.c090ce94.js",
+    "main.js": "/BrightFunded/static/js/main.68c50cda.js",
     "static/js/787.451eb046.chunk.js": "/BrightFunded/static/js/787.451eb046.chunk.js",
     "static/media/coin.mp4": "/BrightFunded/static/media/coin.b803ce3687d54b0d7821.mp4",
     "static/media/planet_3.png": "/BrightFunded/static/media/planet_3.2814efe4714bf85c4f8d.png",
@@ -23,11 +23,11 @@
     "static/media/fly_coin_yellow.png": "/BrightFunded/static/media/fly_coin_yellow.bde9937f5e5494007773.png",
     "index.html": "/BrightFunded/index.html",
     "main.7f1f131e.css.map": "/BrightFunded/static/css/main.7f1f131e.css.map",
-    "main.c090ce94.js.map": "/BrightFunded/static/js/main.c090ce94.js.map",
+    "main.68c50cda.js.map": "/BrightFunded/static/js/main.68c50cda.js.map",
     "787.451eb046.chunk.js.map": "/BrightFunded/static/js/787.451eb046.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7f1f131e.css",
-    "static/js/main.c090ce94.js"
+    "static/js/main.68c50cda.js"
   ]
 }
