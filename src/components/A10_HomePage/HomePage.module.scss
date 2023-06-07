@@ -1,7 +1,8 @@
 @import '../../assets/styles/app';
 
 .homePage {
-  //overflow: hidden;
+  position: relative;
+  z-index: 200;
 
   .whiteCard {
     position: relative;
@@ -18,7 +19,6 @@
     padding-top: 108px;
 
     .titleWrapper {
-
       @include h2_block;
       @include h2_block_black;
     }

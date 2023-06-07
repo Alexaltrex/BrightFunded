@@ -20,7 +20,7 @@
         height: 72px;
       }
 
-      .prop, .value {
+      .value {
         @include centerRow;
       }
 
@@ -32,6 +32,10 @@
         line-height: 20px;
         letter-spacing: -0.02em;
         color: #FFFFFF;
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+
       }
 
       .value {

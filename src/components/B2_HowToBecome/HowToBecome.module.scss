@@ -22,6 +22,9 @@
       .titleWrapper {
         @include h2_block;
         @include h2_block_black;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .cardsMobile {

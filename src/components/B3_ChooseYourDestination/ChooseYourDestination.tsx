@@ -8,8 +8,12 @@ import {SwiperClass} from "swiper/react";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {svgIcons} from "../../assets/svgIcons";
 import {planets} from "./PlanetSlider/planets";
+import {useStore} from "../../store/useStore";
+import {observer} from "mobx-react-lite";
 
-export const ChooseYourDestination = () => {
+export const ChooseYourDestination = observer(() => {
+    const { setJoinModal } = useStore();
+
     const [currency, setCurrency] = useState(0);
     const [balance, setBalance] = useState<number | string | Array<number | string>>(0);
     const [planetSwiper, setPlanetSwiper] = useState<SwiperClass | null>(null);
@@ -18,10 +22,14 @@ export const ChooseYourDestination = () => {
         if (typeof balance === "number") {
             planetSwiper?.slideTo(balance)
         }
-    }, [balance])
+    }, [balance]);
+
+    const onJoin = () => setJoinModal(true);
 
     return (
-        <div className={style.chooseYourDestination}>
+        <div className={style.chooseYourDestination}
+             id="trading-objectives"
+        >
 
             <div className={style.top}/>
 
@@ -57,11 +65,15 @@ export const ChooseYourDestination = () => {
                                 <ButtonCustom label="Join Waitlist"
                                               icon={svgIcons.arrow_right}
                                               className={style.joinBtn}
+                                              //@ts-ignore
+                                              onClick={onJoin}
                                 />
                             </div>
 
                             <div className={style.sliderDesktop}>
-                                <PlanetSlider setSwiper={(s) => setPlanetSwiper(s)}/>
+                                <PlanetSlider setSwiper={(s) => setPlanetSwiper(s)}
+                                              onJoin={onJoin}
+                                />
                             </div>
 
                         </div>
@@ -73,4 +85,4 @@ export const ChooseYourDestination = () => {
         </div>
 
     )
-}
+})

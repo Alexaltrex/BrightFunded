@@ -16,13 +16,13 @@ import videoWebm from "../../assets/webm/coin.webm";
 import videoMp4 from "../../assets/mp4/coin.mp4";
 import {TitleAnimated} from "./TitleAnimated/TitleAnimated";
 import {observer} from "mobx-react-lite";
-import { useStore } from "../../store/useStore";
+import {useStore} from "../../store/useStore";
 
 export const Raise = observer(() => {
     const [swiper, setSwiper] = useState<SwiperClass | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const { setJoinModal } = useStore();
+    const {setJoinModal} = useStore();
 
     return (
         <>
@@ -35,17 +35,22 @@ export const Raise = observer(() => {
                             Raise Your Trading Game With <TitleAnimated/>
                         </h1>
 
-                        <p className={style.description}>
-                            Trade yourself up to <span>$400k</span> in capital.
-                            Receive <span>80%</span> to <span>100%</span> of the profits. Get rewarded
-                            with <span>Trade2Earn.</span>
-                        </p>
+                        <div className={style.description}>
+                            <p>
+                                Trade yourself up to <span>$400k</span> in capital.
+                                Receive <span>80%</span> to <span>100%</span> of the profits.
+                            </p>
+                            <p>
+                                Get rewarded with <span>Trade2Earn.</span>
+                            </p>
+
+                        </div>
 
                         <div className={style.btns}>
                             <ButtonCustom label="Join Waitlist"
                                           icon={svgIcons.arrow_right}
                                           className={style.joinBtn}
-                                          // @ts-ignore
+                                // @ts-ignore
                                           onClick={() => setJoinModal(true)}
                             />
 
@@ -90,10 +95,17 @@ export const Raise = observer(() => {
                             }
                         </div>
 
-                        <p className={style.description}>
-                            Trade yourself up to <span>$400k</span> in capital.
-                            Receive <span>80%</span> to <span>100%</span> of the profits. Get rewarded
-                            with <span>Trade2Earn.</span>
+                        <div className={style.description}>
+                            <p>
+                                Trade yourself up to <span>$400k</span> in capital.
+                                Receive <span>80%</span> to <span>100%</span> of the profits.
+                            </p>
+                            <p>
+                                Get rewarded with <span>Trade2Earn.</span>
+                            </p>
+                        </div>
+                        <p>
+
                         </p>
                     </div>
 

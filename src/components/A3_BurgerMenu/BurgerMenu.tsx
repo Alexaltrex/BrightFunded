@@ -32,8 +32,8 @@ export const BurgerMenu = observer(() => {
                                     setBurgerMenu(false);
                                 }}
                                 list={[
-                                    {label: "The Challange", to: "/challange"},
-                                    {label: "Trading Objectives", to: "/trading-objectives"},
+                                    {label: "The Challange", to: "/#challenge"},
+                                    {label: "Trading Objectives", to: "/#trading-objectives"},
                                     {label: "Scaling Plan", to: "/scaling-plan"},
                                 ]}
                 />

@@ -20,6 +20,10 @@
       padding: 50px 60px 60px;
     }
 
+    &:focus-visible {
+      outline: none;
+    }
+
     .closeBtn {
       @include button;
       position: absolute;

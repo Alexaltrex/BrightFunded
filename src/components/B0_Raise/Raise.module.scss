@@ -2,6 +2,8 @@
 
 .raise {
   @include container;
+  position: relative;
+  z-index: 200;
   padding-top: 40px;
 
   @include desktop {
@@ -11,6 +13,7 @@
   .inner {
     @include inner;
     position: relative;
+    z-index: 200;
 
     @include desktop {
       display: flex;
@@ -18,6 +21,8 @@
     }
 
     .centerBlock {
+      position: relative;
+      z-index: 1;
 
       @include desktop {
         display: flex;
@@ -36,7 +41,6 @@
         text-align: center;
         letter-spacing: -0.02em;
         color: #FFFFFF;
-        text-align: center;
 
         @include desktop {
           font-size: 58px;
@@ -93,7 +97,6 @@
 
       }
 
-      // 1920 1080 1.7777
       .videoWrapper {
         position: relative;
         z-index: 1;
@@ -144,12 +147,17 @@
     .left {
       @include onlyDesktop;
       padding-top: 190px;
+      position: relative;
+      z-index: 200;
 
       .socialLinks {
+        position: relative;
+        z-index: 200;
+
         .link {
           @include centerRow;
           position: relative;
-          z-index: 1;
+          z-index: 200;
           width: 42px;
           height: 42px;
           border-radius: 50%;

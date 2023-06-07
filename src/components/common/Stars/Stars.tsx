@@ -5,11 +5,11 @@ import {Canvas, useFrame} from "@react-three/fiber";
 import {OrbitControls, PerspectiveCamera} from "@react-three/drei";
 import * as React from "react";
 
-const a_x = 100;
-const a_y = 100;
-const a_z = 200;
-const pointsCount = 600;
-const speed = 10;
+const a_x = 200;
+const a_y = 200;
+const a_z = 1000;
+const pointsCount = 200;
+const speed = 75;
 
 //========= POINTS =========//
 export const Points: FC<{isScrolling: boolean}> = ({isScrolling}) => {
@@ -67,7 +67,7 @@ export const Stars: FC<{isScrolling: boolean}> = ({ isScrolling }) => {
     return (
         <Canvas gl={{antialias: true}}>
             <Points isScrolling={isScrolling}/>
-            <PerspectiveCamera makeDefault position={[0, 0, 200]} zoom={4}/>
+            <PerspectiveCamera makeDefault position={[0, 0, 1000]} zoom={4}/>
             <OrbitControls target={[0, 0, 0]} enableRotate={false} enableZoom={false}/>
         </Canvas>
     )

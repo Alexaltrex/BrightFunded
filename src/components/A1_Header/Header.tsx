@@ -46,8 +46,8 @@ export const Header = observer(() => {
                         <DropDownHeader buttonLabel="How to Trade"
                                         className={style.item}
                                         list={[
-                                            {label: "The Challange", to: "/challange"},
-                                            {label: "Trading Objectives", to: "/trading-objectives"},
+                                            {label: "The Challenge", to: "/#challenge"},
+                                            {label: "Trading Objectives", to: "/#trading-objectives"},
                                             {label: "Scaling Plan", to: "/scaling-plan"},
                                         ]}
                         />

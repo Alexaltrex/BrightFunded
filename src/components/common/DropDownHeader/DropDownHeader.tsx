@@ -5,6 +5,7 @@ import style from "./DropDownHeader.module.scss"
 import {Popover} from "@mui/material";
 import {svgIcons} from "../../../assets/svgIcons";
 import {Link} from "react-router-dom";
+import {HashLink} from "react-router-hash-link";
 
 interface IDropDownHeader {
     className?: string
@@ -53,12 +54,13 @@ export const DropDownHeader: FC<IDropDownHeader> = ({
                         <div className={style.dropDown}>
                             {
                                 list.map(({label, to}, key) => (
-                                    <Link key={key}
-                                          to={to}
-                                          className={style.item}
+                                    <HashLink key={key}
+                                              to={to}
+                                              className={style.item}
+                                              smooth
                                     >
                                         <p>{label}</p>
-                                    </Link>
+                                    </HashLink>
                                 ))
                             }
                         </div>

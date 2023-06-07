@@ -11,10 +11,12 @@ import {ButtonCustom} from "../../common/ButtonCustom/ButtonCustom";
 
 interface IPlanetSlider {
     setSwiper: (swiper: SwiperClass) => void
+    onJoin: () => void
 }
 
 export const PlanetSlider: FC<IPlanetSlider> = ({
-                                                    setSwiper
+                                                    setSwiper,
+                                                    onJoin
 }) => {
 
     return (
@@ -27,6 +29,7 @@ export const PlanetSlider: FC<IPlanetSlider> = ({
                 fadeEffect={{
                     crossFade: true
                 }}
+                speed={500}
 
         >
             {
@@ -45,6 +48,8 @@ export const PlanetSlider: FC<IPlanetSlider> = ({
                             <ButtonCustom label="Join Waitlist"
                                           icon={svgIcons.arrow_right}
                                           className={style.joinBtn}
+                                          //@ts-ignore
+                                          onClick={onJoin}
                             />
                         </div>
 

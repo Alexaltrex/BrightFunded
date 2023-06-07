@@ -42,48 +42,59 @@ export const HomePage = () => {
     });
 
     return (
-        <div className={style.homePage} ref={componentRef}>
+        <div className={style.homePage}
+             ref={componentRef}
+        >
+
             <Raise/>
             <YourJourney/>
-            <HowToBecome/>
 
-            <div ref={pinContainer}>
-                <div className={style.inner} ref={sliderRef}>
-                    <div className={style.titleWrapper}>
-                        <p className={style.pretext}>EVALUATION PROCESS</p>
-                        <h2 className={style.title}>How To Become A Funded Star</h2>
-                    </div>
-                    <div className={style.cardsDesktop}>
-                        {phases.map(({title, text, img, background, color}, key) => (
-                            <div key={key} className={`${style.panel} panel`}>
-                                <div className={style.cardWrapper}>
-                                    <div className={style.card} style={{background}}>
-                                        <div
-                                            className={style.phase}
-                                            style={{
-                                                borderColor: color,
-                                                color,
-                                            }}
-                                        >
-                                            {`phase ${key + 1}`}
-                                        </div>
+            <div id="challenge">
+                <HowToBecome/>
+                <div ref={pinContainer}>
+                    <div className={style.inner} ref={sliderRef}>
 
-                                        <img src={img} alt='' className={style.planet}/>
+                        <div className={style.titleWrapper}>
+                            <p className={style.pretext}>EVALUATION PROCESS</p>
+                            <h2 className={style.title}>How To Become A Funded Star</h2>
+                        </div>
 
-                                        <div>
-                                            <p className={style.title}>{title}</p>
+                        <div className={style.cardsDesktop}>
+                            {phases.map(({title, text, img, background, color}, key) => (
+                                <div key={key} className={`${style.panel} panel`}>
+                                    <div className={style.cardWrapper}>
+                                        <div className={style.card} style={{background}}>
+                                            <div
+                                                className={style.phase}
+                                                style={{
+                                                    borderColor: color,
+                                                    color,
+                                                }}
+                                            >
+                                                {`phase ${key + 1}`}
+                                            </div>
 
-                                            <p className={style.text}>{text}</p>
+                                            <img src={img} alt='' className={style.planet}/>
+
+                                            <div>
+                                                <p className={style.title}>{title}</p>
+
+                                                <p className={style.text}>{text}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                            ))}
+                        </div>
 
-                <ChooseYourDestination/>
+                    </div>
+
+                    <ChooseYourDestination/>
+                </div>
             </div>
+
+
+
             <GetInstant/>
             <div className={style.whiteCard}>
                 <LaunchInto/>

@@ -5,6 +5,20 @@
   position: relative;
   overflow: hidden;
 
+  .wrapper {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .main {
+    position: relative;
+    z-index: 2;
+  }
+
   &_burger {
     height: 100vh;
     box-sizing: border-box;

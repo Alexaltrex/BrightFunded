@@ -5,8 +5,13 @@ import planet from "../../assets/png/neptune.png";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {svgIcons} from "../../assets/svgIcons";
 import {LinkCustom} from "../common/LinkCustom/LinkCustom";
+import {useStore} from "../../store/useStore";
+import { observer } from "mobx-react-lite";
 
-export const GetInstant = () => {
+export const GetInstant = observer(() => {
+    const { setJoinModal } = useStore();
+    const onJoin = () => setJoinModal(true);
+
     return (
         <div className={style.getInstant}>
             <div className={style.inner}>
@@ -46,6 +51,8 @@ export const GetInstant = () => {
                         <ButtonCustom label="Join Waitlist"
                                       icon={svgIcons.arrow_right}
                                       className={style.joinBtn}
+                                      //@ts-ignore
+                                      onClick={onJoin}
                         />
 
                         <LinkCustom label="Learn more"
@@ -60,4 +67,4 @@ export const GetInstant = () => {
             </div>
         </div>
     )
-}
+})

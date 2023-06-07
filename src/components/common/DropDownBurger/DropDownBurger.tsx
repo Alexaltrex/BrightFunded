@@ -5,6 +5,7 @@ import clsx from "clsx";
 import {svgIcons} from "../../../assets/svgIcons";
 import {Collapse} from "@mui/material";
 import {Link} from "react-router-dom";
+import {HashLink} from "react-router-hash-link";
 
 interface IDropDownBurger {
     className?: string
@@ -44,13 +45,14 @@ export const DropDownBurger: FC<IDropDownBurger> = ({
                 <div className={style.list}>
                     {
                         list.map(({label, to}, key) => (
-                            <Link key={key}
-                                  to={to}
-                                  className={style.item}
-                                  onClick={onClickLink}
+                            <HashLink key={key}
+                                      to={to}
+                                      className={style.item}
+                                      onClick={onClickLink}
+                                      smooth
                             >
                                 <p>{label}</p>
-                            </Link>
+                            </HashLink>
                         ))
                     }
                 </div>

@@ -30,5 +30,5 @@ export const burgerSocialLinks = [
     socialLinks[0],
     socialLinks[1],
     socialLinks[2],
-    socialLinks[3],
+    socialLinks[4],
 ]

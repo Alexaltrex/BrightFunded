@@ -16,6 +16,7 @@ const links = [
 
 
 export const Footer = () => {
+
     return (
         <footer className={style.footer}>
 

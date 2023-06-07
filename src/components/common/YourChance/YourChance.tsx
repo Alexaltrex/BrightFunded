@@ -7,8 +7,13 @@ import coin_green from "../../../assets/png/fly_coin_green.png";
 import coin_yellow from "../../../assets/png/fly_coin_yellow.png";
 import coin_blue from "../../../assets/png/fly_coin_blue.png";
 import gradientLeft from "../../../assets/png/gradient_footer_left.png";
+import {observer} from "mobx-react-lite";
+import {useStore} from "../../../store/useStore";
 
-export const YourChance = () => {
+export const YourChance = observer(() => {
+    const { setJoinModal } = useStore();
+    const onJoin = () => setJoinModal(true);
+
     return (
         <div className={style.yourChance}>
 
@@ -32,6 +37,8 @@ export const YourChance = () => {
                 <ButtonCustom label="Join Waitlist"
                               icon={svgIcons.arrow_right}
                               className={style.joinBtn}
+                                //@ts-ignore
+                              onClick={onJoin}
                 />
 
                 <LinkCustom label="Join Our Discord"
@@ -43,4 +50,4 @@ export const YourChance = () => {
 
         </div>
     )
-}
+})

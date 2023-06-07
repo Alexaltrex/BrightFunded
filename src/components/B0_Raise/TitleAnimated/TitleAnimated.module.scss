@@ -28,6 +28,8 @@
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    text-align: center;
 
     @include desktop {
       font-size: 58px;
