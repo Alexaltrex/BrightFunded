@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/BrightFunded/static/css/main.a60bc2d6.css",
-    "main.js": "/BrightFunded/static/js/main.0dc4f7a2.js",
+    "main.css": "/BrightFunded/static/css/main.3c4ae5dd.css",
+    "main.js": "/BrightFunded/static/js/main.ab517858.js",
     "static/js/787.451eb046.chunk.js": "/BrightFunded/static/js/787.451eb046.chunk.js",
     "static/media/coin.mp4": "/BrightFunded/static/media/coin.b803ce3687d54b0d7821.mp4",
     "static/media/coin-back.png": "/BrightFunded/static/media/coin-back.c04bedbc9928225d7a05.png",
     "static/media/coin.webm": "/BrightFunded/static/media/coin.48f1d02ee0149c0bdc2d.webm",
+    "static/media/columns_desktop.png": "/BrightFunded/static/media/columns_desktop.42b1f0a463750e8c898d.png",
     "static/media/planet_3.png": "/BrightFunded/static/media/planet_3.51442af29df948984663.png",
     "static/media/planet_4.png": "/BrightFunded/static/media/planet_4.7176efadced90efb893f.png",
     "static/media/planet_2.png": "/BrightFunded/static/media/planet_2.5ae085fd08ff28b64766.png",
@@ -14,15 +15,20 @@
     "static/media/neptune.png": "/BrightFunded/static/media/neptune.bbf4bd8d90c37e8947f8.png",
     "static/media/launch_0.png": "/BrightFunded/static/media/launch_0.3b7f95cc81c78c69612a.png",
     "static/media/launch_1.png": "/BrightFunded/static/media/launch_1.3004bef75234774f1032.png",
+    "static/media/roadmap_planet_left.png": "/BrightFunded/static/media/roadmap_planet_left.b0b9c87b7ffdebb0813f.png",
     "static/media/launch_3.png": "/BrightFunded/static/media/launch_3.8f163382f6ce47fecfeb.png",
+    "static/media/roadmap_planet_right.png": "/BrightFunded/static/media/roadmap_planet_right.28081bc18cbffe5878e4.png",
     "static/media/launch_4.png": "/BrightFunded/static/media/launch_4.b5521d68b4c465dd5934.png",
+    "static/media/rocket.png": "/BrightFunded/static/media/rocket.9b9824847e9caea14b94.png",
     "static/media/phase0.png": "/BrightFunded/static/media/phase0.600ecf3d9c5704cdf428.png",
     "static/media/launch_3_m.png": "/BrightFunded/static/media/launch_3_m.9bb9b12c10a7ca29d1ee.png",
     "static/media/launch_2.png": "/BrightFunded/static/media/launch_2.c46d685cb1dce79941db.png",
+    "static/media/columns_mobile.png": "/BrightFunded/static/media/columns_mobile.2ca6d6271023039c6264.png",
     "static/media/launch_0_m.png": "/BrightFunded/static/media/launch_0_m.71abb3350997f1829e95.png",
     "static/media/launch_1_m.png": "/BrightFunded/static/media/launch_1_m.c0702c5beda49bb1732f.png",
     "static/media/launch_4_m.png": "/BrightFunded/static/media/launch_4_m.67c19e566a20da28b232.png",
     "static/media/gradient_footer_left.png": "/BrightFunded/static/media/gradient_footer_left.3a0aa280d2ff8b78db10.png",
+    "static/media/gradient_footer_right2.png": "/BrightFunded/static/media/gradient_footer_right2.2bfc1aad18613e7b45b0.png",
     "static/media/gradient_footer_right.png": "/BrightFunded/static/media/gradient_footer_right.c77b0521999ae762ef69.png",
     "static/media/gradient_header_right.png": "/BrightFunded/static/media/gradient_header_right.2414f80227136857955e.png",
     "static/media/gradient_header_left.png": "/BrightFunded/static/media/gradient_header_left.d8744610e908cf36f0fe.png",
@@ -32,12 +38,12 @@
     "static/media/meta4.png": "/BrightFunded/static/media/meta4.0eaeb3c8a49f1a3f7bd7.png",
     "static/media/launch_2_m.png": "/BrightFunded/static/media/launch_2_m.088f9b46de1b773ace38.png",
     "index.html": "/BrightFunded/index.html",
-    "main.a60bc2d6.css.map": "/BrightFunded/static/css/main.a60bc2d6.css.map",
-    "main.0dc4f7a2.js.map": "/BrightFunded/static/js/main.0dc4f7a2.js.map",
+    "main.3c4ae5dd.css.map": "/BrightFunded/static/css/main.3c4ae5dd.css.map",
+    "main.ab517858.js.map": "/BrightFunded/static/js/main.ab517858.js.map",
     "787.451eb046.chunk.js.map": "/BrightFunded/static/js/787.451eb046.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a60bc2d6.css",
-    "static/js/main.0dc4f7a2.js"
+    "static/css/main.3c4ae5dd.css",
+    "static/js/main.ab517858.js"
   ]
 }
