@@ -29,7 +29,7 @@ export const PlanetSlider: FC<IPlanetSlider> = ({
                 fadeEffect={{
                     crossFade: true
                 }}
-                speed={500}
+                speed={750}
 
         >
             {

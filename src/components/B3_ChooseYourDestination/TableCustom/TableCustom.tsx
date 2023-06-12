@@ -5,13 +5,18 @@ import {dataMock, headers} from "../dataMock";
 import {Swiper, SwiperClass, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import clsx from "clsx";
+import { data } from "../data";
 
 
 interface ITableCustom {
     currency: number
+    balance: number
 }
 
-export const TableCustom: FC<ITableCustom> = ({currency}) => {
+export const TableCustom: FC<ITableCustom> = ({
+                                                  currency,
+                                                  balance,
+}) => {
     const [swiper, setSwiper] = useState<SwiperClass | null>(null);
     const [step, setStep] = useState(0);
 
@@ -25,7 +30,7 @@ export const TableCustom: FC<ITableCustom> = ({currency}) => {
                         <div className={style.value}/>
                     </div>
                     {
-                        Object.keys(dataMock).map((prop, key) => (
+                        Object.keys(data).map((prop, key) => (
                             <div key={key}
                                  className={style.row}
                             >
@@ -53,14 +58,16 @@ export const TableCustom: FC<ITableCustom> = ({currency}) => {
                                             <p>{headers[step]}</p>
                                         </div>
                                         {
-                                            Object.keys(dataMock)
+                                            Object.keys(data)
                                                 // @ts-ignore
-                                                .map(prop => dataMock[prop][step][currency])
+                                                .map(prop => data[prop][currency][balance][step])
                                                 .map((value, key) => (
                                                     <div key={key}
                                                          className={style.row}
                                                     >
-                                                        <p>{value}</p>
+                                                        <p>{
+                                                            value//[key]
+                                                        }</p>
                                                     </div>
                                                 ))
                                         }
@@ -104,17 +111,17 @@ export const TableCustom: FC<ITableCustom> = ({currency}) => {
                 </div>
 
                 {
-                    Object.keys(dataMock).map((prop, key) => (
+                    Object.keys(data).map((prop, key) => (
                         <div key={key}
                              className={style.row}
                         >
                             <div>{prop}</div>
                             {/*@ts-ignore*/}
-                            <div>{dataMock[prop][0][currency]}</div>
+                            <div>{data[prop][currency][balance][0]}</div>
                             {/*@ts-ignore*/}
-                            <div>{dataMock[prop][1][currency]}</div>
+                            <div>{data[prop][currency][balance][1]}</div>
                             {/*@ts-ignore*/}
-                            <div>{dataMock[prop][2][currency]}</div>
+                            <div>{data[prop][currency][balance][2]}</div>
                         </div>
                     ))
 

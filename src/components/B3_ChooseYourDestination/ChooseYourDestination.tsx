@@ -14,7 +14,9 @@ import {observer} from "mobx-react-lite";
 export const ChooseYourDestination = observer(() => {
     const { setJoinModal } = useStore();
 
+    // 0 - USD, 1 - EUR, 2 - POUND
     const [currency, setCurrency] = useState(0);
+    // 0...4 => 10, 25, 50, 100, 200
     const [balance, setBalance] = useState<number | string | Array<number | string>>(0);
     const [planetSwiper, setPlanetSwiper] = useState<SwiperClass | null>(null);
 
@@ -53,7 +55,9 @@ export const ChooseYourDestination = observer(() => {
                                    balance={balance}
                                    setBalance={(b) => setBalance(b)}
                             />
-                            <TableCustom currency={currency}/>
+                            <TableCustom currency={currency}
+                                         balance={Number(balance) || 0}
+                            />
                         </div>
 
                         <div className={style.rightBlock}>

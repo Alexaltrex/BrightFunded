@@ -1,0 +1,124 @@
+@import "../../assets/styles/app";
+
+.joinOurDiscord {
+  @include container;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 140px 20px 80px;
+  overflow: hidden;
+
+  @include desktop {
+    padding: 124px 0 100px;
+  }
+
+  .gradientLeft {
+    @include onlyDesktop;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-50%);
+  }
+
+  .gradientRight {
+    @include onlyDesktop;
+    position: absolute;
+    right: 0;
+    top: 43px;
+    height: 340px;
+  }
+
+  .titleWrapper {
+    @include h2_block;
+    @include h2_block_white;
+    position: relative;
+
+    h2 {
+      width: 240px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include desktop {
+        width: 624px;
+      }
+
+      span {
+        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .coin_green {
+      position: absolute;
+      top: -100px;
+      left: -5px;
+      width: 100px;
+      height: auto;
+
+      @include desktop {
+        top: 0;
+        left: -155px;
+        width: 130px;
+      }
+    }
+
+    .coin_yellow {
+      @include onlyDesktop();
+      position: absolute;
+      width: 140px;
+      height: auto;
+      right: -235px;
+      top: -35px;
+    }
+
+    .coin_blue {
+      position: absolute;
+      width: 50px;
+      height: auto;
+      top: 65px;
+      right: 0;
+
+      @include desktop {
+        width: 60px;
+        top: 160px;
+        right: auto;
+        left: 70px;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+    @include desktop {
+      margin-top: 40px;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .joinBtn {
+      width: 161px;
+
+      @include desktop {
+        width: 161px;
+      }
+    }
+
+    .tradeBtn {
+      margin-top: 30px;
+
+      @include desktop {
+        margin-top: 0;
+        margin-left: 35px;
+      }
+    }
+
+  }
+
+}

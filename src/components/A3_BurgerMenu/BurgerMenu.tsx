@@ -47,8 +47,8 @@ export const BurgerMenu = observer(() => {
                                     setBurgerMenu(false);
                                 }}
                                 list={[
-                                    {label: "About", to: "/about"},
-                                    {label: "Roadmap", to: "/roadmap"},
+                                    {label: "About", to: "/about#about-top"},
+                                    {label: "Roadmap", to: "/roadmap#roadmap-top"},
                                 ]}
                 />
 

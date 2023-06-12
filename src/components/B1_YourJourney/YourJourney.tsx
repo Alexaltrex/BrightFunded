@@ -2,8 +2,21 @@ import * as React from "react";
 import style from "./YourJourney.module.scss";
 import {cards} from "./cards";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
+import {observer} from "mobx-react-lite";
+import {useStore} from "../../store/useStore";
+import {HashLink} from "react-router-hash-link";
 
-export const YourJourney = () => {
+export const YourJourney = observer(() => {
+    const {setJoinModal} = useStore();
+
+    const handlers = [
+        () => setJoinModal(true),
+        () => {
+        },
+        () => {
+        },
+    ]
+
     return (
         <div className={style.yourJourney}>
             <div className={style.inner}>
@@ -27,11 +40,42 @@ export const YourJourney = () => {
 
                                 <p className={style.title}>{tittle}</p>
                                 <p className={style.text}>{text}</p>
-
-                                <ButtonCustom label={buttonLabel}
-                                              primary={false}
-                                              className={style.btn}
-                                />
+                                {
+                                    key === 0 && (
+                                        <ButtonCustom label={buttonLabel}
+                                                      primary={false}
+                                                      className={style.btn}
+                                            //@ts-ignore
+                                                      onClick={handlers[key]}
+                                        />
+                                    )
+                                }
+                                {
+                                    key === 1 && (
+                                        <HashLink to="/roadmap#roadmap-top"
+                                                  className={style.link}
+                                                  smooth
+                                        >
+                                            <ButtonCustom label={buttonLabel}
+                                                          primary={false}
+                                                          className={style.btn}
+                                            />
+                                        </HashLink>
+                                    )
+                                }
+                                {
+                                    key === 2 && (
+                                        <HashLink to="/about#about-top"
+                                                  className={style.link}
+                                                  smooth
+                                        >
+                                            <ButtonCustom label={buttonLabel}
+                                                          primary={false}
+                                                          className={style.btn}
+                                            />
+                                        </HashLink>
+                                    )
+                                }
                             </div>
                         ))
                     }
@@ -39,4 +83,4 @@ export const YourJourney = () => {
             </div>
         </div>
     )
-}
+})

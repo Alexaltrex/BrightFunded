@@ -146,7 +146,7 @@ export const JoinModal = observer(() => {
                                    helperText={formik.touched.name && formik.errors.name}
                         />
 
-                        <TextField placeholder="Surname"
+                        <TextField placeholder="Last Name"
                                    size="small"
                                    {...formik.getFieldProps("surname")}
                                    fullWidth

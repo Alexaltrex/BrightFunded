@@ -61,9 +61,9 @@
         border-radius: 20px;
         transition: 0.3s;
 
-        &:hover {
-          box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.1);
-        }
+        //&:hover {
+        //  box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.1);
+        //}
 
         @include desktop {
           width: 240px;
@@ -81,12 +81,7 @@
         img {
           display: block;
           width: 170px;
-          height: 46px;
-
-          @include desktop {
-            width: 170px;
-            height: 45.57px;
-          }
+          height: auto;
         }
       }
     }

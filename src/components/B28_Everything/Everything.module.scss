@@ -1,0 +1,111 @@
+@import '../../assets/styles/app';
+
+.everything {
+  @include container;
+  padding-top: 115px;
+  padding-bottom: 80px;
+
+  @include desktop {
+    padding-top: 184px;
+    padding-bottom: 50px;
+  }
+
+  .inner {
+    @include inner;
+
+    h2.title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 115%;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      width: 258px;
+
+      @include desktop {
+        width: auto;
+        font-size: 58px;
+        text-align: center;
+      }
+    }
+
+    .description {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: #A1A3A9;
+
+      @include desktop {
+        text-align: center;
+      }
+
+      span {
+        color: #FFF;
+      }
+    }
+
+    .search {
+      margin-top: 60px;
+      height: 42px;
+      background: rgba(21, 24, 40, 0.8);
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 0 20px;
+      box-sizing: border-box;
+
+      @include desktop {
+        width: 846px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 25px;
+      }
+
+      .input {
+        flex-grow: 1;
+        background: none;
+        border: none;
+        outline: none;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        color: #FFF;
+
+        &::placeholder {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: -0.01em;
+          color: #525664;
+        }
+      }
+
+      .submitBtn {
+        @include button;
+        margin-left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+
+
+    }
+
+    .list {
+      position: relative;
+      z-index: 2;
+      margin-top: 30px;
+
+      @include desktop {
+        width: 846px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+  }
+}

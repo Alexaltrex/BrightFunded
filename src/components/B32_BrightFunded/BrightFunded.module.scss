@@ -1,0 +1,142 @@
+@import '../../assets/styles/app';
+
+.brightFunded {
+  @include container;
+  padding-top: 80px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+
+  .inner {
+    @include inner;
+
+    .top {
+
+      @include desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: rgba(14, 11, 61, 1);
+
+        span {
+          background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        @include desktop {
+          font-size: 36px;
+        }
+      }
+
+      .text {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: #0E0B3D;
+
+        span {
+          background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        @include desktop {
+          margin-top: 0;
+          font-size: 22px;
+        }
+      }
+
+    }
+
+    .cards {
+      margin-top: 30px;
+
+      @include desktop {
+        margin-top: 60px;
+      }
+
+      .card {
+        background: #FFFFFF;
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+        border-radius: 15px;
+        padding: 20px;
+
+        @include desktop {
+          padding: 30px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-column-gap: 20px;
+        }
+
+        &:not(:nth-child(1)) {
+          margin-top: 20px;
+        }
+
+        &_title {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 130%;
+          letter-spacing: -0.02em;
+          color: #0E0B3D;
+
+          @include desktop {
+            font-size: 22px;
+          }
+        }
+
+        &_text {
+          margin-top: 20px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: -0.01em;
+          color: #3E3C64;
+
+          @include desktop {
+            margin-top: 0;
+          }
+        }
+
+      }
+    }
+
+    .bottom {
+      margin-top: 60px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #0E0B3D;
+
+      span {
+        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @include desktop {
+        font-size: 22px;
+        width: 734px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+
+  }
+
+}

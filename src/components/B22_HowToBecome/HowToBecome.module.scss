@@ -1,0 +1,111 @@
+@import "../../assets/styles/app";
+
+.howToBecome {
+  @include container;
+  padding-top: 60px;
+
+  @include desktop {
+    padding-top: 120px;
+  }
+
+  .inner {
+    @include inner;
+
+    .titleWrapper {
+      @include h2_block;
+      @include h2_block_white;
+
+      h2 {
+        width: 225px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include desktop {
+          width: auto;
+        }
+      }
+    }
+
+    .cards {
+      margin-top: 120px;
+
+      @include desktop {
+        margin-top: 148px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+      }
+
+      .card {
+        position: relative;
+        background: rgba(21, 24, 40, 0.8);
+        backdrop-filter: blur(17px);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        box-sizing: border-box;
+        padding: 68px 0px 20px;
+
+        @include desktop {
+          padding: 115px 0px 20px;
+        }
+
+        &:not(:first-child) {
+          margin-top: 109px;
+
+          @include desktop {
+            margin-top: 0;
+          }
+        }
+
+        .planet {
+          position: absolute;
+          z-index: 1;
+          left: 50%;
+          transform: translateX(-50%);
+          top: -50%;
+          width: 190px;
+          height: auto;
+
+          @include desktop {
+            width: 285px;
+          }
+        }
+
+        &_title {
+          position: relative;
+          z-index: 2;
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 130%;
+          text-align: center;
+          letter-spacing: -0.02em;
+          color: #FFFFFF;
+
+          @include desktop {
+            font-size: 24px;
+          }
+        }
+
+        &_text {
+          position: relative;
+          z-index: 2;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          text-align: center;
+          letter-spacing: -0.01em;
+          color: #A1A3A9;
+          margin-top: 10px;
+
+          @include desktop {
+            font-size: 16px;
+          }
+        }
+      }
+
+
+    }
+
+  }
+
+}

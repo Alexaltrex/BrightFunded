@@ -3,7 +3,7 @@
 .planetSlider {
   position: relative;
   background: rgba(21, 24, 40, 0.8);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(1px);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.06);
   width: 100%;
@@ -28,8 +28,6 @@
       top: 314px;
     }
   }
-
-
 
   .slide {
 
@@ -86,8 +84,8 @@
         height: 380px;
 
         @include desktop {
-          top: -65px;
-          height: 480px;
+          top: 0;
+          height: 315px;
         }
       }
     }

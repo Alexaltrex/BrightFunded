@@ -1,15 +1,13 @@
 import * as React from "react";
 import style from "./Panel.module.scss";
-import {FC, useState} from "react";
+import {FC} from "react";
 import clsx from "clsx";
 import {Slider} from "@mui/material";
 import {theme} from "../../../theme";
+import {balances} from "../data";
 
 const marks = [
-    {
-        value: -1,
-        label: '$10k',
-    },
+
     {
         value: 0,
         label: '$10k',
@@ -86,7 +84,7 @@ export const Panel: FC<IPanel> = ({
                     <Slider className={style.slider}
                             value={typeof balance === 'number' ? balance : 0}
                             onChange={onChangeHandler}
-                            marks={marks}
+                            marks={ balances[currency].map((b, i) => ({value: i, label: b})) }
                             min={0}
                             max={4}
                             valueLabelDisplay="off"

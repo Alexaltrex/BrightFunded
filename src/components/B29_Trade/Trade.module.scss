@@ -1,0 +1,90 @@
+@import '../../assets/styles/app';
+
+.trade {
+  @include container;
+  padding-top: 115px;
+
+  @include desktop {
+    padding-top: 170px;
+  }
+
+  .inner {
+    @include inner;
+
+    h2.title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 115%;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+
+      span {
+        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @include desktop {
+        font-size: 58px;
+        text-align: center;
+      }
+    }
+
+    .text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: #A1A3A9;
+
+      @include desktop {
+        width: 634px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      span {
+        color: #FFF;
+      }
+
+      &_1 {
+        margin-top: 20px;
+      }
+
+      &_2 {
+        margin-top: 21px;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+
+      @include desktop {
+        margin-top: 30px;
+      }
+
+      .joinBtn {
+        width: 125px;
+
+        @include desktop {
+          width: 137px;
+        }
+      }
+
+      .tradeBtn {
+        margin-left: 20px;
+
+        @include desktop {
+          margin-left: 35px;
+        }
+      }
+
+    }
+  }
+}

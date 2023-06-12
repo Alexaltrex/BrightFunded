@@ -2,8 +2,12 @@
 
 .header {
   @include container;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
+  transition: 0.3s;
 
   &::before {
     position: absolute;
@@ -25,7 +29,6 @@
     left: 0;
     width: 284px;
     height: auto;
-    //border: 1px solid #FFF;
   }
 
   .gradientRight {
@@ -44,6 +47,7 @@
     align-items: center;
     justify-content: space-between;
     height: 75px;
+    transition: 0.3s;
 
     @include desktop {
       height: 102px;
@@ -95,7 +99,6 @@
       }
     }
 
-
     .tradeBtn {
       @include onlyDesktop;
       width: 130px;
@@ -109,6 +112,23 @@
       height: 30px;
 
     }
+  }
+
+  &_scroll {
+    background: rgba(17, 19, 31, 0.9);
+    backdrop-filter: blur(6px);
+
+    .inner {
+      height: 75px;
+
+      @include desktop {
+        height: 82px;
+      }
+    }
+  }
+
+  &_hide {
+    transform: translateY(-101%);
   }
 }
 

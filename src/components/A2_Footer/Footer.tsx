@@ -3,19 +3,23 @@ import style from "./Footer.module.scss";
 import {svgIcons} from "../../assets/svgIcons";
 import {Link} from "react-router-dom";
 import {socialLinks} from "../A0_App/socialLinks";
+import {texts} from "./texts";
+import clsx from "clsx";
+import {useState} from "react";
+import {Collapse} from "@mui/material";
 
 const links = [
     {label: "Privacy Policy", to: "/policy"},
     {label: "Terms & Conditions", to: "/terms"},
-    {label: "Affiliate Program", to: "/program"},
+    {label: "Affiliate Program", to: "/affiliate#top"},
     {label: "FAQ", to: "/faq"},
     {label: "Contact", to: "/contact"},
     {label: "Careers", to: "/careers"},
     {label: "Blog", to: "/blog"},
 ]
 
-
 export const Footer = () => {
+    const [open, setOpen] = useState(false);
 
     return (
         <footer className={style.footer}>
@@ -97,6 +101,30 @@ export const Footer = () => {
 
                 </div>
 
+            </div>
+
+            <div className={style.rightsBlock}>
+                <div className={style.inner}>
+
+                    <div className={style.rightsBlock_top}>
+                        <p className={style.text}>{texts[0]}</p>
+                        <button className={clsx({
+                            [style.expandBtn]: true,
+                            [style.expandBtn_open]: open,
+                        })}
+                                onClick={() => setOpen(!open)}
+                        >
+                            {svgIcons.arrow_down2}
+                        </button>
+                    </div>
+
+                    <Collapse in={open}>
+                        <p className={clsx(style.text, style.text_1)}>
+                            {texts[1]}
+                        </p>
+                    </Collapse>
+
+                </div>
             </div>
 
         </footer>

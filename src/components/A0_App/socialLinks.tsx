@@ -3,27 +3,27 @@ import {svgIcons} from "../../assets/svgIcons";
 export const socialLinks = [
     {
         icon: svgIcons.discord,
-        href: "#",
+        href: "https://discord.gg/9Ypd4ETZ",
     },
     {
         icon: svgIcons.telegram,
-        href: "#",
+        href: "https://t.me/+jApFWWlL7iMzYzY0",
     },
     {
         icon: svgIcons.instagram,
-        href: "#",
+        href: "https://www.instagram.com/brightfunded",
     },
     {
         icon: svgIcons.youtube,
-        href: "#",
+        href: "https://www.youtube.com/@BrightFunded",
     },
     {
         icon: svgIcons.twitter,
-        href: "#",
+        href: "https://twitter.com/BrightFunded",
     },
     {
         icon: svgIcons.linkedIn,
-        href: "#",
+        href: "https://www.linkedin.com/company/brightfunded/",
     },
 ];
 export const burgerSocialLinks = [

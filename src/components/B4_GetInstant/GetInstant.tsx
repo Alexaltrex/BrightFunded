@@ -4,9 +4,10 @@ import {items} from "./items";
 import planet from "../../assets/png/neptune.png";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {svgIcons} from "../../assets/svgIcons";
-import {LinkCustom} from "../common/LinkCustom/LinkCustom";
 import {useStore} from "../../store/useStore";
 import { observer } from "mobx-react-lite";
+import {HashLink} from "react-router-hash-link";
+import {ButtonLink} from "../common/ButtonLink/ButtonLink";
 
 export const GetInstant = observer(() => {
     const { setJoinModal } = useStore();
@@ -55,11 +56,16 @@ export const GetInstant = observer(() => {
                                       onClick={onJoin}
                         />
 
-                        <LinkCustom label="Learn more"
-                                    href="#"
-                                    className={style.learnBtn}
-                                    icon={svgIcons.arrow_right}
-                        />
+                        <HashLink to="/trade#trade-top"
+                                  style={{textDecoration: "none"}}
+                                  smooth
+                        >
+                            <ButtonLink label="Learn more"
+                                        className={style.learnBtn}
+                                        icon={svgIcons.arrow_right}
+                            />
+                        </HashLink>
+
                     </div>
 
                 </div>

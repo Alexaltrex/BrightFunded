@@ -1,0 +1,385 @@
+@import '../../assets/styles/app';
+
+.roadmap {
+  @include container;
+  position: relative;
+  padding-top: 115px;
+
+  @include desktop {
+    padding-top: 182px;
+  }
+
+  .planet_left {
+    @include onlyDesktop;
+    position: absolute;
+    top: 820px;
+    left: 0;
+  }
+
+  .planet_right {
+    @include onlyDesktop;
+    position: absolute;
+    top: 130px;
+    right: 0;
+  }
+
+
+  .inner {
+    @include inner;
+    position: relative;
+    z-index: 2;
+
+    .title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 115%;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+
+      @include desktop {
+        font-size: 58px;
+      }
+    }
+
+    .description {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      text-align: center;
+      letter-spacing: -0.01em;
+      color: #A1A3A9;
+
+      @include desktop {
+        margin-top: 24px;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      span {
+        color: #FFF;
+      }
+
+    }
+
+    .cards {
+      margin-top: 40px;
+
+      @include desktop {
+        margin-top: 116px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .wrapper {
+        position: relative;
+        padding-left: 46px;
+
+        @include desktop {
+          padding-left: 0;
+        }
+
+        &:not(:first-child) {
+          margin-top: 20px;
+
+          @include desktop {
+            margin-top: -24px;
+          }
+        }
+
+        &:nth-child(odd) {
+          @include desktop {
+            align-self: flex-start;
+          }
+        }
+
+        &:nth-child(even) {
+          @include desktop {
+            align-self: flex-end;
+          }
+        }
+
+        &:nth-child(1) {
+          &::after {
+            @include onlyDesktop() {
+              position: absolute;
+              display: block;
+              content: "";
+              top: 143px;
+              bottom: -95px;
+              width: 3px;
+              right: -111px;
+              background: #02AFC7;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          &::after {
+            @include onlyDesktop() {
+              position: absolute;
+              display: block;
+              content: "";
+              top: 161px;
+              bottom: -65px;
+              width: 3px;
+              left: -111px;
+              background: #02AFC7;
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          &::after {
+            @include onlyDesktop() {
+              position: absolute;
+              display: block;
+              content: "";
+              top: 135px;
+              bottom: -89px;
+              width: 3px;
+              right: -111px;
+              background: #131624;
+            }
+          }
+        }
+
+        &:nth-child(4) {
+          &::after {
+            @include onlyDesktop() {
+              position: absolute;
+              display: block;
+              content: "";
+              top: 153px;
+              bottom: -97px;
+              width: 3px;
+              left: -111px;
+              background: #131624;
+            }
+          }
+        }
+
+        &:nth-child(5) {
+          &::after {
+            @include onlyDesktop() {
+              position: absolute;
+              display: block;
+              content: "";
+              top: 153px;
+              bottom: -97px;
+              width: 3px;
+              right: -111px;
+              background: #131624;
+            }
+          }
+        }
+
+        & .iconWrapper {
+          top: 18px;
+          left: 0;
+
+          @include desktop {
+            top: auto;
+            left: auto;
+          }
+        }
+
+        &:nth-child(odd) {
+          @include desktop {
+            .iconWrapper {
+              top: 50%;
+              transform: translateY(-50%);
+              right: -129px;
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          @include desktop {
+            .iconWrapper {
+              top: 50%;
+              transform: translateY(-50%);
+              left: -129px;
+            }
+          }
+        }
+
+        .iconWrapper {
+          @include centerRow;
+          position: absolute;
+          z-index: 2;
+          background: #131624;
+          border: 1px solid rgba(23, 27, 44, 1);
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          box-sizing: border-box;
+
+          @include desktop {
+            width: 40px;
+            height: 40px;
+            border-width: 2px;
+          }
+
+          &_ended {
+            background: rgba(2, 175, 199, 0.12);
+            border-color: #02AFC7;
+
+            svg {
+              width: 18px;
+              height: 18px;
+
+              @include desktop {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+
+          &_active {
+            background: rgba(2, 175, 199, 0.12);
+            border-color: #02AFC7;
+            box-shadow: 0px 0px 24px rgba(6, 147, 236, 0.4);
+
+            svg {
+              width: 15px;
+              height: 3px;
+
+              @include desktop {
+                width: 20px;
+                height: 4px;
+              }
+            }
+          }
+        }
+
+        &:not(:last-child) {
+          .card::after {
+            @include onlyMobile();
+            position: absolute;
+            display: block;
+            content: "";
+            top: 48px;
+            bottom: -38px;
+            width: 3px;
+            left: -34px;
+            background: #131624;
+          }
+
+          .card_ended::after {
+            @include onlyMobile();
+            position: absolute;
+            z-index: 1;
+            display: block;
+            content: "";
+            top: 48px;
+            bottom: -38px;
+            width: 3px;
+            left: -34px;
+            background: #02AFC7;
+          }
+        }
+
+
+        .card {
+          position: relative;
+          background: rgba(21, 24, 40, 0.5);
+          backdrop-filter: blur(37px);
+          border-radius: 15px;
+          padding: 20px;
+          box-sizing: border-box;
+          border: 1px solid rgba(255, 255, 255, 0.06);
+
+          @include desktop {
+            padding: 25px;
+            width: 531px;
+          }
+
+          .phase {
+            @include centerRow;
+            width: 75px;
+            height: 26px;
+            box-sizing: border-box;
+            border: 1px solid #707179;
+            border-radius: 999px;
+
+            @include desktop {
+              width: 85px;
+              height: 30px;
+            }
+
+            p {
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 115%;
+              letter-spacing: -0.02em;
+              text-transform: uppercase;
+              color: #707179;
+
+              @include desktop {
+                font-size: 14px;
+              }
+            }
+          }
+
+          &_title {
+            margin-top: 16px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
+
+            @include desktop {
+              margin-top: 30px;
+              font-size: 20px;
+              line-height: 30px;
+            }
+          }
+
+          &_text {
+            margin-top: 12px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: -0.01em;
+            color: rgba(255, 255, 255, 0.6);
+
+            @include desktop {
+              margin-top: 16px;
+            }
+          }
+
+          &_ended {
+            .phase {
+              border-color: #02AFC7;
+              background: rgba(2, 164, 199, 0.12);
+
+              p {
+                color: #02AFC7;
+              }
+            }
+          }
+
+          &_active {
+            .phase {
+              border: none;
+              background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+
+              p {
+                color: #FFF;
+              }
+            }
+
+          }
+
+
+        }
+      }
+
+
+    }
+
+  }
+}

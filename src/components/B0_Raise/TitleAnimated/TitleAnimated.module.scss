@@ -1,5 +1,37 @@
 @import "../../../assets/styles/app";
 
+.wrapperDesktop {
+  @include onlyDesktop(inline-flex);
+}
+
+.wrapperMobile {
+  @include onlyMobile(inline-flex);
+}
+
+.tooltipContent {
+  background: rgba(29, 32, 44, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #9D9EA2;
+
+    @include desktop {
+      font-size: 11px;
+      line-height: 16px;
+    }
+  }
+}
+
+
 .titleAnimated {
   display: inline-flex;
   position: relative;
@@ -15,7 +47,17 @@
     top: 15px;
   }
 
+  //&_tooltip {
+    p:nth-child(1) {
+      span {
+        display: inline-block;
+        border-bottom: 2px dashed #00C7B4;
+      }
+    }
+  //}
+
   p {
+    user-select: none;
     white-space: nowrap;
     font-weight: 600;
     font-size: 30px;
@@ -35,6 +77,10 @@
       font-size: 58px;
       line-height: 67px;
       height: 70px;
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+      transform: translateY(100%);
     }
   }
 }

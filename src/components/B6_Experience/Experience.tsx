@@ -28,21 +28,21 @@ export const Experience = () => {
                         [
                             {
                                 src: meta4,
-                                href: "https://www.metatrader4.com/ru",
+                                href: "", //"https://www.metatrader4.com/ru",
                             },
                             {
                                 src: meta5,
-                                href: "https://www.metatrader5.com/ru",
+                                href: "", //"https://www.metatrader5.com/ru",
                             }
                         ].map(({src, href}, key) => (
-                            <a key={key}
+                            <div key={key}
                                className={style.item}
-                               href={href}
-                               target="_blank"
-                               rel="nofollow noopener noreferrer"
+                               // href={href}
+                               // target="_blank"
+                               // rel="nofollow noopener noreferrer"
                             >
                                 <img src={src} alt=""/>
-                            </a>
+                            </div>
                         ))
                     }
                 </div>

@@ -1,6 +1,13 @@
 @import "../../assets/styles/app";
 
 .footer {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 20px;
+
+  @include desktop {
+    padding-bottom: 30px;
+  }
 
   .top {
     @include container;
@@ -105,11 +112,10 @@
     @include container;
     position: relative;
     padding-top: 20px;
-    padding-bottom: 20px;
 
     @include desktop {
       padding-top: 25px;
-      padding-bottom: 25px;
+
     }
 
     &::before {
@@ -178,5 +184,64 @@
     }
 
 
+  }
+
+  .rightsBlock {
+    @include container;
+    margin-top: 30px;
+
+    .inner {
+      @include inner;
+
+      .rightsBlock_top {
+        display: flex;
+
+        .expandBtn {
+          @include button;
+          @include centerRow;
+          position: relative;
+          top: -5px;
+          width: 24px;
+          height: 24px;
+          //margin-left: 12px;
+
+          svg {
+            transform: rotate(0deg);
+            transition: 0.3s;
+          }
+
+          &_open {
+
+            svg {
+              transform: rotate(-180deg);
+            }
+          }
+        }
+      }
+
+      .text {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+        color: #9D9EA2;
+
+        @include desktop {
+          ont-size: 12px;
+          line-height: 18px;
+        }
+
+        &_1 {
+          color: #707179;
+          margin-top: 20px;
+
+          @include desktop {
+            margin-top: 24px;
+          }
+        }
+      }
+
+
+    }
   }
 }

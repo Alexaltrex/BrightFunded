@@ -1,0 +1,73 @@
+@import "../../assets/styles/app";
+
+.affiliate {
+  @include container;
+  padding-top: 115px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 184px;
+    padding-bottom: 80px;
+  }
+
+  .inner {
+    @include inner;
+
+    h2.title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 115%;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      width: 280px;
+
+      @include desktop {
+        width: auto;
+        font-size: 58px;
+        text-align: center;
+      }
+
+      span {
+        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+    }
+
+    .text {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: #A1A3A9;
+
+      @include desktop {
+        margin-top: 24px;
+        width: 713px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      span {
+        color: #FFF;
+      }
+    }
+
+    .signBtn {
+      margin-top: 20px;
+      width: 151px;
+
+      @include desktop {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+
+  }
+
+}

@@ -9,6 +9,7 @@ import {Swiper, SwiperClass, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import {useState} from "react";
 import clsx from "clsx";
+import { useNavigate } from "react-router-dom";
 import coinBack from "../../assets/png/coin-back.png";
 // @ts-ignore
 import videoWebm from "../../assets/webm/coin.webm";
@@ -17,12 +18,16 @@ import videoMp4 from "../../assets/mp4/coin.mp4";
 import {TitleAnimated} from "./TitleAnimated/TitleAnimated";
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
+import {ButtonLink} from "../common/ButtonLink/ButtonLink";
+import {HashLink} from "react-router-hash-link";
 
 export const Raise = observer(() => {
     const [swiper, setSwiper] = useState<SwiperClass | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const {setJoinModal} = useStore();
+    const navigate = useNavigate();
+    const onTrade = () => navigate("/trade#trade-top")
 
     return (
         <>
@@ -38,6 +43,8 @@ export const Raise = observer(() => {
                         <div className={style.description}>
                             <p>
                                 Trade yourself up to <span>$400k</span> in capital.
+                            </p>
+                            <p>
                                 Receive <span>80%</span> to <span>100%</span> of the profits.
                             </p>
                             <p>
@@ -50,15 +57,21 @@ export const Raise = observer(() => {
                             <ButtonCustom label="Join Waitlist"
                                           icon={svgIcons.arrow_right}
                                           className={style.joinBtn}
-                                // @ts-ignore
+                                            // @ts-ignore
                                           onClick={() => setJoinModal(true)}
                             />
 
-                            <LinkCustom label="Trade2Earn"
-                                        href="#"
-                                        className={style.tradeBtn}
-                                        icon={svgIcons.arrow_right}
-                            />
+                            <HashLink to="/trade#trade-top"
+                                      className={style.link}
+                                      smooth
+                            >
+                                <ButtonLink label="Trade2Earn"
+                                            className={style.tradeBtn}
+                                            icon={svgIcons.arrow_right}
+                                            onClick={onTrade}
+                                />
+                            </HashLink>
+
                         </div>
 
                         <div className={style.videoWrapper}>
@@ -98,6 +111,8 @@ export const Raise = observer(() => {
                         <div className={style.description}>
                             <p>
                                 Trade yourself up to <span>$400k</span> in capital.
+                            </p>
+                            <p>
                                 Receive <span>80%</span> to <span>100%</span> of the profits.
                             </p>
                             <p>

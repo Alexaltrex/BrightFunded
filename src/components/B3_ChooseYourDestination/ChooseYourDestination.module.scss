@@ -15,7 +15,7 @@
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: -3px;
       border-radius: 40px 40px 0 0;
       overflow: hidden;
       background: #11131F;;
@@ -80,7 +80,7 @@
           .cardMobile {
             @include onlyMobile(flex);
             background: rgba(21, 24, 40, 0.8);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(1px);
             border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.06);
 
@@ -128,11 +128,11 @@
             .img {
               display: block;
               position: absolute;
-              top: -62px;
+              top: 0;
               left: 50%;
               transform: translateX(-50%);
               width: auto;
-              height: 380px;
+              height: 220px;
             }
           }
 

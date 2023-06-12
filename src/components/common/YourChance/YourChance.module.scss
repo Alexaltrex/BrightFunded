@@ -8,7 +8,7 @@
   align-items: center;
   box-sizing: border-box;
   padding: 60px 20px 80px;
-  overflow: hidden;
+  //overflow-x: hidden;
 
   @include desktop {
     padding: 100px 0;
@@ -26,8 +26,8 @@
     @include onlyDesktop;
     position: absolute;
     right: 0;
-    top: 65px;
-    transform: rotate(180deg);
+    top: 43px;
+    height: 340px;
   }
 
   .titleWrapper {
@@ -46,13 +46,12 @@
         background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
       }
     }
 
     .coin_green {
       position: absolute;
+      z-index: 1;
       top: -100px;
       left: -5px;
       width: 100px;

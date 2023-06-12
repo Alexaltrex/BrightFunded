@@ -40,7 +40,7 @@
 
       .value {
         flex-grow: 1;
-        background: #161929;
+        background: rgba(22, 25, 41, 0.8);
       }
 
     }
@@ -114,11 +114,11 @@
 
 .tableCustomDesktop {
   @include onlyDesktop();
-  margin-top: 50px;
+  margin-top: 48px;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.06);
   background: rgba(21, 24, 40, 0.8);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(1px);
 
   .header {
     height: 75px;

@@ -11,17 +11,17 @@ export const links = [
     },
     {
         label: "Trade2Earn",
-        path: "/trade2Earn",
+        path: "/trade#trade-top",
         //components:
     },
     {
         label: "FAQ",
-        path: "/faq",
+        path: "/faq#faq-top",
         //components:
     },
     {
         label: "Affiliate Program",
-        path: "/affiliate-program",
+        path: "/affiliate#top",
         //components:
     },
 ]

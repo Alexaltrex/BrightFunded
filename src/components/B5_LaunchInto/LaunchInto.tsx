@@ -8,8 +8,6 @@ export const LaunchInto = () => {
 
         <div className={style.launchInto}>
 
-
-
                 <div className={style.inner}>
 
                     <div className={style.titleWrapper}>
