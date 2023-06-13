@@ -16,7 +16,6 @@ export const HomePage = () => {
         <div className={style.homePage}
              id="home-top"
         >
-
             <Raise/>
             <YourJourney/>
             <HowToBecome/>

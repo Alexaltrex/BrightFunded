@@ -163,6 +163,11 @@
               width: auto;
             }
 
+            span {
+              background: yellow;
+              color: #000;
+            }
+
           }
 
           .answer {
@@ -175,6 +180,11 @@
 
             @include desktop {
               //width: 555px;
+            }
+
+            span {
+              background: yellow;
+              color: #000;
             }
           }
         }

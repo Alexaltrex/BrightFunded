@@ -11,6 +11,7 @@ import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
 import clsx from "clsx";
 import {useState} from "react";
+import {getSelectedString} from "../../helpers/getSelectedString";
 
 interface IValues {
     question: string
@@ -62,7 +63,6 @@ export const Everything = observer(() => {
                 const matchAllArrQuestion = Array.from(matchAllQuestion); // теперь массив
                 const matchAllAnswer = answer.matchAll(regexp);
                 const matchAllArrAnswer = Array.from(matchAllAnswer); // теперь массив
-                console.log(matchAllArrQuestion)
 
                 if (matchAllArrQuestion.length > 0 || matchAllArrAnswer.length > 0) {
                     list.push(item);
@@ -77,7 +77,7 @@ export const Everything = observer(() => {
         setSearchList(null);
     }
 
-    const text = <>test <span>test</span> test</>
+
 
     return (
         <div className={style.everything}>
@@ -87,8 +87,6 @@ export const Everything = observer(() => {
                 <p className={style.description}>
                     Can’t find what you are looking for? <span>Get in touch with us!</span>
                 </p>
-
-                <p>{text}</p>
 
                 <form className={style.search}
                       onSubmit={formik.handleSubmit}
@@ -142,8 +140,12 @@ export const Everything = observer(() => {
                                                 <div key={key}
                                                      className={style.resultCard}
                                                 >
-                                                    <p className={style.question}>{question}</p>
-                                                    <p className={style.answer}>{answer}</p>
+                                                    <p className={style.question}>
+                                                        {getSelectedString(question, formik.values.question)}
+                                                    </p>
+                                                    <p className={style.answer}>
+                                                        {getSelectedString(answer, formik.values.question)}
+                                                    </p>
                                                 </div>
                                             ))
                                         }

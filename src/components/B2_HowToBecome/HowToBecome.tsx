@@ -16,25 +16,42 @@ export const HowToBecome = () => {
                 </div>
 
                 <div className={style.cards}>
-                    {phases.map(({title, text, img, background, color}, key) => (
-                        <div key={key} className={style.card} style={{background}}>
-                            <div
-                                className={style.phase}
-                                style={{
-                                    borderColor: color,
-                                    color,
-                                }}
+                    {
+                        phases.map(({title, text, src, background, color, img}, key) => (
+                            <div key={key}
+                                 className={style.card}
+                                 style={{background}}
                             >
-                                {`phase ${key + 1}`}
+                                <div className={style.phase}
+                                     style={{
+                                         borderColor: color,
+                                         color,
+                                     }}
+                                >
+                                    {`phase ${key + 1}`}
+                                </div>
+
+                                <img src={img} alt='' className={style.img}/>
+
+                                {/*<div className={style.videoWrapper}>*/}
+                                {/*    <video autoPlay={true}*/}
+                                {/*           muted={true}*/}
+                                {/*           playsInline={true}*/}
+                                {/*           loop={true}*/}
+                                {/*    >*/}
+                                {/*        <source src={videoMp4}*/}
+                                {/*            type='video/mp4; codecs="hvc1"'*/}
+                                {/*        />*/}
+                                {/*        /!*<source src={videoWebm} type='video/webm'/>*!/*/}
+                                {/*    </video>*/}
+                                {/*</div>*/}
+
+                                <p className={style.title}>{title}</p>
+
+                                <p className={style.text}>{text}</p>
                             </div>
-
-                            <img src={img} alt='' className={style.img}/>
-
-                            <p className={style.title}>{title}</p>
-
-                            <p className={style.text}>{text}</p>
-                        </div>
-                    ))}
+                        ))
+                    }
                 </div>
             </div>
 

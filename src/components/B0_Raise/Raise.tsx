@@ -2,7 +2,6 @@ import * as React from "react";
 import style from "./Raise.module.scss";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {svgIcons} from "../../assets/svgIcons";
-import {LinkCustom} from "../common/LinkCustom/LinkCustom";
 import {burgerSocialLinks} from "../A0_App/socialLinks";
 import {items} from "./items";
 import {Swiper, SwiperClass, SwiperSlide} from "swiper/react";
@@ -10,16 +9,18 @@ import "swiper/css";
 import {useState} from "react";
 import clsx from "clsx";
 import { useNavigate } from "react-router-dom";
-import coinBack from "../../assets/png/coin-back.png";
-// @ts-ignore
-import videoWebm from "../../assets/webm/coin.webm";
-// @ts-ignore
-import videoMp4 from "../../assets/mp4/coin.mp4";
 import {TitleAnimated} from "./TitleAnimated/TitleAnimated";
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
 import {ButtonLink} from "../common/ButtonLink/ButtonLink";
 import {HashLink} from "react-router-hash-link";
+import coinBack from "../../assets/png/coin-back.png";
+
+// @ts-ignore
+import videoWebm from "../../assets/webm/coin.webm";
+// @ts-ignore
+import videoMp4 from "../../assets/mp4/coin.mp4";
+
 
 export const Raise = observer(() => {
     const [swiper, setSwiper] = useState<SwiperClass | null>(null);
