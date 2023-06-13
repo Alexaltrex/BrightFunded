@@ -45,12 +45,18 @@ export const App = observer(() => {
             <JoinModal/>
             <main className={style.main}>
                 <Routes>
-                    <Route path='/' element={<HomePage/>}/>
-                    <Route path='/roadmap' element={<RoadmapPage/>}/>
-                    <Route path='/affiliate' element={<AffiliatePage/>}/>
-                    <Route path='/scaling-plan' element={<ScalingPlanPage/>}/>
-                    <Route path='/faq' element={<FaqPage/>}/>
-                    <Route path='/trade' element={<Trade2EarnPage/>}/>
+                    {
+                        [
+                            { path: "/", element: <HomePage/>},
+                            { path: "/roadmap", element: <RoadmapPage/>},
+                            { path: "/affiliate", element: <AffiliatePage/>},
+                            { path: "/scaling-plan", element: <ScalingPlanPage/>},
+                            { path: "/faq", element: <FaqPage/>},
+                            { path: "/trade", element: <Trade2EarnPage/>},
+                        ].map(({path, element}, key) => (
+                            <Route key={key} path={path} element={element}/>
+                        ))
+                    }
                 </Routes>
             </main>
             <Footer/>

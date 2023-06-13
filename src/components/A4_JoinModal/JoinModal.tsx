@@ -68,7 +68,7 @@ export const JoinModal = observer(() => {
             errors.name = "Name is required";
         }
         if (!surname) {
-            errors.surname = "Surname is required";
+            errors.surname = "Last Name is required";
         }
         if (!email) {
             errors.email = "Email is required";

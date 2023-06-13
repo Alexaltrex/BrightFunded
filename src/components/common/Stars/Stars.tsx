@@ -8,7 +8,7 @@ import * as React from "react";
 const a_x = 200;
 const a_y = 200;
 const a_z = 1000;
-const pointsCount = 200;
+const pointsCount = 250;
 const speed = 50;
 const mult = 5;
 

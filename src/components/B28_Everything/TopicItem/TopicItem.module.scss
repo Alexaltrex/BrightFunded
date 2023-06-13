@@ -1,0 +1,64 @@
+@import '../../../assets/styles/app';
+
+.topicItem {
+
+  &:not(:first-child) {
+    margin-top: 22px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #1D1F2A;
+  }
+
+  .topic_header {
+    cursor: pointer;
+    padding-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+
+    .label {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 130%;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      transition: 0.3s;
+
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      transition: 0.3s;
+
+      path {
+        transition: 0.3s;
+        fill: #FFF;
+      }
+    }
+  }
+
+  .list {
+
+  }
+
+  &_open {
+    .topic_header {
+      border-color: transparent;
+
+      .label {
+        color: #4F5056;
+      }
+
+      svg {
+        transform: rotate(-180deg);
+
+        path {
+          fill: #4F5056;
+        }
+      }
+    }
+  }
+}

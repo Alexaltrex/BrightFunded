@@ -12,5 +12,171 @@
 
   .inner {
     @include inner;
+
+    .tableMobile {
+      @include onlyMobile;
+
+      .tableWrapper {
+        position: relative;
+        background: #FFFFFF;
+        border: 1px solid #E6EAEE;
+        filter: drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.08));
+        border-radius: 15px;
+        overflow: hidden;
+
+        .header {
+          height: 53px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+
+          .propCell {
+            @include centerRow;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 22px;
+            letter-spacing: -0.02em;
+            color: #9A99AF;
+          }
+
+          .valueCell {
+            background: #F1F5FA;
+          }
+        }
+
+        .row {
+          height: 53px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          border-top: 1px solid #E6EAEE;
+
+          .propCell {
+            @include centerRow;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: -0.02em;
+            color: #0E0B3D;
+          }
+
+          .valueCell {
+            background: #F1F5FA;
+          }
+        }
+
+        .swiperWrapper {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: 50%;
+
+          .slide {
+            .cell {
+              @include centerRow;
+              height: 53px;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 21px;
+              text-align: center;
+              letter-spacing: -0.02em;
+              color: #0E0B3D;
+
+              &:first-child {
+                color: #9A99AF;
+              }
+            }
+          }
+        }
+      }
+
+      .navigation {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        .item {
+          width: 40px;
+          height: 4px;
+          background: #CDD6E2;
+          border-radius: 4px;
+
+          &_selected {
+            background: linear-gradient(85.01deg, #0072E7 6.26%, #00AA9A 92.45%);
+          }
+
+          &:not(:first-child) {
+            margin-left: 12px;
+          }
+        }
+      }
+    }
+
+    .tableDesktop {
+      @include onlyDesktop;
+      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+      border-radius: 15px;
+      overflow: hidden;
+
+      .header {
+        background: #02264C;
+        height: 54px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        .headerCell {
+          @include centerRow;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 22px;
+          text-align: center;
+          letter-spacing: -0.02em;
+          color: #FFFFFF;
+        }
+      }
+
+      .body {
+        background: #FFF;
+
+        .row {
+          height: 54px;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+
+          &:not(:first-child) {
+            border-top: 1px solid #F2F2F2;
+          }
+
+          .cell {
+            @include centerRow;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: #0E0B3D;
+          }
+        }
+      }
+
+    }
+
+    .table_text {
+      margin-top: 30px;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #6C6B7D;
+
+      @include desktop {
+        margin-top: 20px;
+        font-size: 13px;
+        text-align: left;
+      }
+    }
+
+
   }
 }
