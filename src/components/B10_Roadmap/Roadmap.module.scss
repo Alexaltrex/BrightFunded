@@ -23,7 +23,6 @@
     right: 0;
   }
 
-
   .inner {
     @include inner;
     position: relative;
@@ -35,7 +34,7 @@
       line-height: 115%;
       text-align: center;
       letter-spacing: -0.02em;
-      color: #FFFFFF;
+      color: #ffffff;
 
       @include desktop {
         font-size: 58px;
@@ -49,7 +48,7 @@
       line-height: 150%;
       text-align: center;
       letter-spacing: -0.01em;
-      color: #A1A3A9;
+      color: #a1a3a9;
 
       @include desktop {
         margin-top: 24px;
@@ -59,12 +58,12 @@
       }
 
       span {
-        color: #FFF;
+        color: #fff;
       }
-
     }
 
     .cards {
+      position: relative;
       margin-top: 40px;
 
       @include desktop {
@@ -73,9 +72,41 @@
         flex-direction: column;
       }
 
+      &Line {
+        position: absolute;
+        z-index: -1;
+        width: 3px;
+        top: 40px;
+        bottom: 135px;
+        left: 14px;
+        background-color: #131624;
+
+        @media (min-width: 1440px) {
+          width: 5px;
+          top: 96px;
+          bottom: 120px;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+
+        &__progress {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          max-height: 0;
+          background-color: #02afc7;
+        }
+      }
+
       .wrapper {
         position: relative;
+        z-index: 1;
         padding-left: 46px;
+
+        &::after {
+          display: none !important;
+        }
 
         @include desktop {
           padding-left: 0;
@@ -106,12 +137,12 @@
             @include onlyDesktop() {
               position: absolute;
               display: block;
-              content: "";
+              content: '';
               top: 143px;
               bottom: -95px;
               width: 3px;
               right: -111px;
-              background: #02AFC7;
+              background: #02afc7;
             }
           }
         }
@@ -121,12 +152,12 @@
             @include onlyDesktop() {
               position: absolute;
               display: block;
-              content: "";
+              content: '';
               top: 161px;
               bottom: -65px;
               width: 3px;
               left: -111px;
-              background: #02AFC7;
+              background: #02afc7;
             }
           }
         }
@@ -136,7 +167,7 @@
             @include onlyDesktop() {
               position: absolute;
               display: block;
-              content: "";
+              content: '';
               top: 135px;
               bottom: -89px;
               width: 3px;
@@ -151,7 +182,7 @@
             @include onlyDesktop() {
               position: absolute;
               display: block;
-              content: "";
+              content: '';
               top: 153px;
               bottom: -97px;
               width: 3px;
@@ -166,7 +197,7 @@
             @include onlyDesktop() {
               position: absolute;
               display: block;
-              content: "";
+              content: '';
               top: 153px;
               bottom: -97px;
               width: 3px;
@@ -216,6 +247,12 @@
           height: 30px;
           border-radius: 50%;
           box-sizing: border-box;
+          transition: all 0.4s ease;
+
+          svg {
+            transform: scale(0);
+            transition: transform 0.4s ease;
+          }
 
           @include desktop {
             width: 40px;
@@ -223,65 +260,77 @@
             border-width: 2px;
           }
 
-          &_ended {
-            background: rgba(2, 175, 199, 0.12);
-            border-color: #02AFC7;
+          // &_ended {
+          //   background: #0f2534;
+          //   border-color: #02afc7;
+
+          //   svg {
+          //     width: 18px;
+          //     height: 18px;
+
+          //     @include desktop {
+          //       width: 24px;
+          //       height: 24px;
+          //     }
+          //   }
+          // }
+
+          // &_active {
+          //   background: #0f2534;
+          //   border-color: #02afc7;
+          //   box-shadow: 0px 0px 24px rgba(6, 147, 236, 0.4);
+
+          //   svg {
+          //     width: 15px;
+          //     height: 3px;
+
+          //     @include desktop {
+          //       width: 20px;
+          //       height: 4px;
+          //     }
+          //   }
+          // }
+
+          &_inprogress {
+            background: #0f2534;
+            border-color: #02afc7;
 
             svg {
-              width: 18px;
-              height: 18px;
-
-              @include desktop {
-                width: 24px;
-                height: 24px;
-              }
+              transform: scale(1);
             }
-          }
 
-          &_active {
-            background: rgba(2, 175, 199, 0.12);
-            border-color: #02AFC7;
-            box-shadow: 0px 0px 24px rgba(6, 147, 236, 0.4);
-
-            svg {
-              width: 15px;
-              height: 3px;
-
-              @include desktop {
-                width: 20px;
-                height: 4px;
-              }
+            &.iconWrapper_active {
+              box-shadow: 0px 0px 24px rgba(6, 147, 236, 0.4);
             }
           }
         }
 
-        &:not(:last-child) {
-          .card::after {
-            @include onlyMobile();
-            position: absolute;
-            display: block;
-            content: "";
-            top: 48px;
-            bottom: -38px;
-            width: 3px;
-            left: -34px;
-            background: #131624;
-          }
+        // &:not(:last-child) {
+        //   .card::after {
+        //     @include onlyMobile();
+        //     position: absolute;
+        //     display: block;
+        //     content: '';
+        //     top: 48px;
+        //     bottom: -38px;
+        //     width: 3px;
+        //     left: -34px;
+        //     background: #131624;
+        //   }
 
-          .card_ended::after {
-            @include onlyMobile();
-            position: absolute;
-            z-index: 1;
-            display: block;
-            content: "";
-            top: 48px;
-            bottom: -38px;
-            width: 3px;
-            left: -34px;
-            background: #02AFC7;
-          }
-        }
-
+        //   .card_ended::after {
+        //     @include onlyMobile();
+        //     position: absolute;
+        //     z-index: 1;
+        //     display: block;
+        //     content: '';
+        //     top: 48px;
+        //     bottom: -38px;
+        //     width: 3px;
+        //     left: -34px;
+        //     background: #02afc7;
+        //   }
+        // }
 
         .card {
           position: relative;
@@ -329,7 +378,7 @@
             font-weight: 600;
             font-size: 16px;
             line-height: 24px;
-            color: #FFFFFF;
+            color: #ffffff;
 
             @include desktop {
               margin-top: 30px;
@@ -353,11 +402,11 @@
 
           &_ended {
             .phase {
-              border-color: #02AFC7;
+              border-color: #02afc7;
               background: rgba(2, 164, 199, 0.12);
 
               p {
-                color: #02AFC7;
+                color: #02afc7;
               }
             }
           }
@@ -365,21 +414,19 @@
           &_active {
             .phase {
               border: none;
-              background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+              background: linear-gradient(
+                34.49deg,
+                #0781fe -12.58%,
+                #00c7b4 102.84%
+              );
 
               p {
-                color: #FFF;
+                color: #fff;
               }
             }
-
           }
-
-
         }
       }
-
-
     }
-
   }
 }
