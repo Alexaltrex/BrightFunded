@@ -13,171 +13,181 @@
 
   .inner {
     @include inner;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 
     .titleWrapper {
       @include h2_block;
       @include h2_block_white;
     }
 
-    .rest {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
+    .videoWrapper {
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      //border: 1px solid #FFF;
+      width: 467px;
+      height: 387px;
 
       @include desktop {
-        margin-top: 20px;
-        flex-direction: column-reverse;
+        width: 887px;
+        height: 737px;
+        top: 26px;
+        left: calc(50% - 3px);
+
       }
 
-      .items {
+      video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .items {
+      position: relative;
+      z-index: 2;
+      margin-top: 323px;
+
+      @include desktop {
+        margin-top: 85px;
+        display: flex;
+        flex-direction: column;
+        order: 2;
+      }
+
+      .item {
         position: relative;
+        box-sizing: border-box;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(21, 24, 40, 0.8);
+        backdrop-filter: blur(1px);
+        border-radius: 15px;
+        padding: 30px 20px 20px;
 
-        .planet {
-          position: relative;
-          z-index: 2;
-          display: block;
-          width: 280px;
-          height: auto;
-          margin-left: auto;
-          margin-right: auto;
-
-          @include desktop {
-            width: 523px;
-          }
+        @include desktop {
+          padding: 25px 25px 25px 95px;
+          width: 413px;
         }
 
-        .item {
-          position: relative;
-          box-sizing: border-box;
-          border: 1px solid rgba(255, 255, 255, 0.06);
-          background: rgba(21, 24, 40, 0.8);
-          backdrop-filter: blur(1px);
-          border-radius: 15px;
-          padding: 30px 20px 20px;
+        &:nth-child(2) {
           margin-top: 20px;
 
           @include desktop {
-            padding: 25px 25px 25px 95px;
-            width: 413px;
-            margin-top: 0;
-            position: absolute;
+            margin-top: -73px;
+            align-self: flex-end;
           }
+        }
 
-          &:nth-child(2) {
-            @include desktop {
-              top: 83px;
-              left: 45px;
-              z-index: 1;
-            }
+        &:nth-child(3) {
+          margin-top: 20px;
 
+          @include desktop {
+            margin-top: 40px;
           }
+        }
 
-          &:nth-child(3) {
-            @include desktop {
-              top: 190px;
-              right: 0;
-              z-index: 2;
-            }
+        &:nth-child(4) {
+          @include desktop {
+            bottom: 0px;
+            left: 220px;
+            z-index: 3;
           }
+        }
 
-          &:nth-child(4) {
-            @include desktop {
-              bottom: 0px;
-              left: 220px;
-              z-index: 3;
-            }
-          }
+        .title {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 130%;
+          letter-spacing: -0.02em;
+          color: #FFFFFF;
+          margin-left: 55px;
 
-
-          .title {
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 130%;
-            letter-spacing: -0.02em;
-            color: #FFFFFF;
-            margin-left: 55px;
-
-            @include desktop {
-              font-size: 24px;
-              margin-left: 0;
-            }
-
-          }
-
-          .text {
-            margin-top: 15px;
-            font-weight: 400;
-            font-size: 13px;
-            line-height: 150%;
-            letter-spacing: -0.01em;
-            color: #FFFFFF;
-            opacity: 0.6;
-
-            @include desktop {
-              font-size: 14px;
-              color: #A1A3A9;
-              opacity: 1;
-            }
-          }
-
-          .iconWrapper {
-            @include centerRow;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 40px;
-            height: 40px;
-            background: #1C1F31;
-            border-radius: 10px;
-
-            @include desktop {
-              width: 50px;
-              height: 50px;
-              top: 25px;
-              left: 25px;
-            }
-
-            svg {
-              width: 20px;
-              height: 20px;
-
-              @include desktop {
-                width: 26px;
-                height: 26px;
-              }
-            }
+          @include desktop {
+            font-size: 24px;
+            margin-left: 0;
           }
 
         }
 
+        .text {
+          margin-top: 15px;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 150%;
+          letter-spacing: -0.01em;
+          color: #FFFFFF;
+          opacity: 0.6;
+
+          @include desktop {
+            font-size: 14px;
+            color: #A1A3A9;
+            opacity: 1;
+          }
+        }
+
+        .iconWrapper {
+          @include centerRow;
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          width: 40px;
+          height: 40px;
+          background: #1C1F31;
+          border-radius: 10px;
+
+          @include desktop {
+            width: 50px;
+            height: 50px;
+            top: 25px;
+            left: 25px;
+          }
+
+          svg {
+            width: 20px;
+            height: 20px;
+
+            @include desktop {
+              width: 26px;
+              height: 26px;
+            }
+          }
+        }
+
+      }
+    }
+
+    .buttons {
+      position: relative;
+      z-index: 2;
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include desktop {
+        margin-top: 20px;
       }
 
-      .buttons {
-        margin-top: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      .joinBtn {
+        width: 130px;
 
         @include desktop {
-          margin-top: 0;
-        }
-
-        .joinBtn {
-          width: 130px;
-
-          @include desktop {
-            width: 137px;
-          }
-        }
-
-        .learnBtn {
-          margin-left: 20px;
-
-          @include desktop {
-            margin-left: 35px;
-          }
+          width: 137px;
         }
       }
+
+      .learnBtn {
+        margin-left: 20px;
+
+        @include desktop {
+          margin-left: 35px;
+        }
+      }
+
     }
   }
 }

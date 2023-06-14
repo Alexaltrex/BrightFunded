@@ -7,6 +7,9 @@ export class Store {
     burgerOpen1: boolean = false
     burgerOpen2: boolean = false
     joinModal: boolean = false
+    welcomeModal: boolean = false
+    affiliateModal: boolean = false
+    signUpSuccessModal: boolean = false
 
     constructor() {
         makeObservable(this, {
@@ -16,6 +19,9 @@ export class Store {
             burgerOpen1: observable,
             burgerOpen2: observable,
             joinModal: observable,
+            welcomeModal: observable,
+            affiliateModal: observable,
+            signUpSuccessModal: observable,
 
             setBurgerMenu: action.bound,
             setScrollDown: action.bound,
@@ -23,6 +29,9 @@ export class Store {
             setBurgerOpen1: action.bound,
             setBurgerOpen2: action.bound,
             setJoinModal: action.bound,
+            setWelcomeModal: action.bound,
+            setAffiliateModal: action.bound,
+            setSignUpSuccessModal: action.bound,
         })
     }
 
@@ -49,5 +58,19 @@ export class Store {
     setJoinModal(joinModal: boolean) {
         this.joinModal = joinModal;
     }
+
+
+    setWelcomeModal(welcomeModal: boolean) {
+        this.welcomeModal = welcomeModal;
+    }
+
+    setAffiliateModal(affiliateModal: boolean) {
+        this.affiliateModal = affiliateModal;
+    }
+
+    setSignUpSuccessModal(signUpSuccessModal: boolean) {
+        this.signUpSuccessModal = signUpSuccessModal;
+    }
+
 }
 export const store = new Store()

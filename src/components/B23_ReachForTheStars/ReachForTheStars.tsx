@@ -7,8 +7,12 @@ import gradientRight from "../../assets/png/gradient_footer_right2.png";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {svgIcons} from "../../assets/svgIcons";
 import {LinkCustom} from "../common/LinkCustom/LinkCustom";
+import {observer} from "mobx-react-lite";
+import {useStore} from "../../store/useStore";
 
-export const ReachForTheStars = () => {
+export const ReachForTheStars = observer(() => {
+    const {setAffiliateModal} = useStore();
+    const onClickHandler = () => setAffiliateModal(true);
 
     return (
         <div className={style.reachForTheStars}>
@@ -33,8 +37,8 @@ export const ReachForTheStars = () => {
                 <ButtonCustom label="Sign Up"
                               icon={svgIcons.arrow_right}
                               className={style.btn}
-                    // @ts-ignore
-                    //onClick={onJoin}
+                                // @ts-ignore
+                              onClick={onClickHandler}
                 />
 
                 <LinkCustom label="Join Our Discord"
@@ -46,4 +50,4 @@ export const ReachForTheStars = () => {
 
         </div>
     )
-}
+})

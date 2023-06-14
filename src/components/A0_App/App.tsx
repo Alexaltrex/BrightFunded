@@ -15,6 +15,9 @@ import {AffiliatePage} from "../A12_AffiliatePage/AffiliatePage";
 import {ScalingPlanPage} from "../A13_ScalingPlanPage/ScalingPlanPage";
 import {FaqPage} from "../A14_FaqPage/FaqPage";
 import {Trade2EarnPage} from "../A15_Trade2EarnPage/Trade2EarnPage";
+import {WelcomeModal} from "../A5_WelcomeModal/WelcomeModal";
+import {AffiliateModal} from "../A6_AffiliateModal/AffiliateModal";
+import {SignUpSuccessModal} from "../A7_SignUpSuccessModal/SignUpSuccessModal";
 
 export const App = observer(() => {
     const {burgerMenu, setScrollDown, pageYOffset, setPageYOffset} = useStore();
@@ -37,22 +40,39 @@ export const App = observer(() => {
             [style.app_burger]: burgerMenu,
         })}
         >
+
+            {/*<div className='tradingview-widget-container'>*/}
+            {/*    <div className='tradingview-widget-container__widget'/>*/}
+            {/*    <div className='tradingview-widget-copyright'>*/}
+            {/*        <a href='https://www.tradingview.com/' rel='noopener nofollow' target='_blank'>*/}
+            {/*        <span className='blue-text'>*/}
+            {/*            Track all markets on TradingView*/}
+            {/*        </span>*/}
+            {/*        </a>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+
             <div className={style.wrapper}>
                 <StarsScroll/>
             </div>
             <Header/>
             <BurgerMenu/>
+
             <JoinModal/>
+            <WelcomeModal/>
+            <AffiliateModal/>
+            <SignUpSuccessModal/>
+
             <main className={style.main}>
                 <Routes>
                     {
                         [
-                            { path: "/", element: <HomePage/>},
-                            { path: "/roadmap", element: <RoadmapPage/>},
-                            { path: "/affiliate", element: <AffiliatePage/>},
-                            { path: "/scaling-plan", element: <ScalingPlanPage/>},
-                            { path: "/faq", element: <FaqPage/>},
-                            { path: "/trade", element: <Trade2EarnPage/>},
+                            {path: "/", element: <HomePage/>},
+                            {path: "/roadmap", element: <RoadmapPage/>},
+                            {path: "/affiliate", element: <AffiliatePage/>},
+                            {path: "/scaling-plan", element: <ScalingPlanPage/>},
+                            {path: "/faq", element: <FaqPage/>},
+                            {path: "/trade", element: <Trade2EarnPage/>},
                         ].map(({path, element}, key) => (
                             <Route key={key} path={path} element={element}/>
                         ))

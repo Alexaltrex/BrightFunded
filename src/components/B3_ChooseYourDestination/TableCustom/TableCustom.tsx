@@ -6,8 +6,24 @@ import {Swiper, SwiperClass, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import clsx from "clsx";
 import { data } from "../data";
+import {svgIcons} from "../../../assets/svgIcons";
+import {styled} from "@mui/material/styles";
+import Tooltip, {tooltipClasses, TooltipProps} from "@mui/material/Tooltip";
+import {tooltips} from "./tooltips";
+import Fade from "@mui/material/Fade";
+import {TooltipModal} from "./TooltipModal/TooltipModal";
+
+//========= TOOLTIP CUSTOM =========//
+const TooltipCustom = styled(({className, ...props}: TooltipProps) => (
+    <Tooltip {...props}
+             classes={{popper: className}}
+    />
+))(({theme}) => ({
+    [`& .${tooltipClasses.tooltip}`]: {},
+}));
 
 
+//========= TABLE CUSTOM =========//
 interface ITableCustom {
     currency: number
     balance: number
@@ -20,8 +36,21 @@ export const TableCustom: FC<ITableCustom> = ({
     const [swiper, setSwiper] = useState<SwiperClass | null>(null);
     const [step, setStep] = useState(0);
 
+    const [showTooltipModal, setShowTooltipModal] = useState(false);
+    const [tooltipIndex, setTooltipIndex] = useState(0);
+    const onTooltipClick = (index: number) => {
+        setShowTooltipModal(true);
+        setTooltipIndex(index)
+    };
+
+
     return (
         <>
+            <TooltipModal open={showTooltipModal}
+                          onClose={() => setShowTooltipModal(false)}
+                          tooltipIndex={tooltipIndex}
+            />
+
             <div className={style.tableCustomMobile}>
 
                 <div className={style.table}>
@@ -34,8 +63,15 @@ export const TableCustom: FC<ITableCustom> = ({
                             <div key={key}
                                  className={style.row}
                             >
-                                <div className={style.prop}>
-                                    {prop}
+                                <div className={style.propCell}>
+                                    <p className={style.prop}>
+                                        {prop}
+                                    </p>
+                                    <button className={style.popupBtn}
+                                            onClick={() => onTooltipClick(key)}
+                                    >
+                                        {svgIcons.info}
+                                    </button>
                                 </div>
                                 <div className={style.value}/>
                             </div>
@@ -65,9 +101,16 @@ export const TableCustom: FC<ITableCustom> = ({
                                                     <div key={key}
                                                          className={style.row}
                                                     >
-                                                        <p>{
-                                                            value//[key]
-                                                        }</p>
+                                                        <p>{value}</p>
+                                                        {
+                                                            step === 0 && key === 0 && (
+                                                                <p className={style.tooltipText}
+                                                                   onClick={() => onTooltipClick(7)}
+                                                                >
+                                                                    +14 Days
+                                                                </p>
+                                                            )
+                                                        }
                                                     </div>
                                                 ))
                                         }
@@ -115,9 +158,53 @@ export const TableCustom: FC<ITableCustom> = ({
                         <div key={key}
                              className={style.row}
                         >
-                            <div>{prop}</div>
+                            <div>
+                                {prop}
+                                <TooltipCustom title={
+                                    <div className={style.tooltipContent}>
+                                        {tooltips[key]}
+                                    </div>
+                                }
+                                               arrow
+                                               sx={{
+                                                   "& .MuiTooltip-tooltip": {
+                                                       backgroundColor: "transparent",
+                                                       padding: 0,
+                                                   }
+                                               }}
+                                               placement="top"
+                                               TransitionComponent={Fade}
+                                >
+                                    {svgIcons.info}
+                                </TooltipCustom>
+                            </div>
+
                             {/*@ts-ignore*/}
-                            <div>{data[prop][currency][balance][0]}</div>
+                            <div className={clsx(key === 0 && step === 0  && style.withTooltip)}>
+                                {/*@ts-ignore*/}
+                                <p>{data[prop][currency][balance][0]}</p>
+                                {
+                                    key === 0 && step === 0  && (
+                                        <TooltipCustom title={
+                                            <div className={style.tooltipContent}>
+                                                {tooltips[7]}
+                                            </div>
+                                        }
+                                                       arrow
+                                                       sx={{
+                                                           "& .MuiTooltip-tooltip": {
+                                                               backgroundColor: "transparent",
+                                                               padding: 0,
+                                                           }
+                                                       }}
+                                                       placement="top"
+                                                       TransitionComponent={Fade}
+                                        >
+                                            <p className={style.tooltipText}>+14 Days</p>
+                                        </TooltipCustom>
+                                    )
+                                }
+                            </div>
                             {/*@ts-ignore*/}
                             <div>{data[prop][currency][balance][1]}</div>
                             {/*@ts-ignore*/}

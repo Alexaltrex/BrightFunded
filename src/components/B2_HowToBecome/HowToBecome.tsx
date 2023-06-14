@@ -17,7 +17,7 @@ export const HowToBecome = () => {
 
                 <div className={style.cards}>
                     {
-                        phases.map(({title, text, src, background, color, img}, key) => (
+                        phases.map(({title, text, src_mp4, src_webm,background, color}, key) => (
                             <div key={key}
                                  className={style.card}
                                  style={{background}}
@@ -31,20 +31,16 @@ export const HowToBecome = () => {
                                     {`phase ${key + 1}`}
                                 </div>
 
-                                <img src={img} alt='' className={style.img}/>
-
-                                {/*<div className={style.videoWrapper}>*/}
-                                {/*    <video autoPlay={true}*/}
-                                {/*           muted={true}*/}
-                                {/*           playsInline={true}*/}
-                                {/*           loop={true}*/}
-                                {/*    >*/}
-                                {/*        <source src={videoMp4}*/}
-                                {/*            type='video/mp4; codecs="hvc1"'*/}
-                                {/*        />*/}
-                                {/*        /!*<source src={videoWebm} type='video/webm'/>*!/*/}
-                                {/*    </video>*/}
-                                {/*</div>*/}
+                                <div className={style.videoWrapper}>
+                                    <video autoPlay={true}
+                                           muted={true}
+                                           playsInline={true}
+                                           loop={true}
+                                    >
+                                        <source src={src_mp4} type='video/mp4; codecs="hvc1"' />
+                                        <source src={src_webm} type='video/webm' />
+                                    </video>
+                                </div>
 
                                 <p className={style.title}>{title}</p>
 

@@ -68,7 +68,7 @@
         }
 
         &:nth-child(1) {
-          .img {
+          .videoWrapper {
             width: 250px;
             height: 250px;
             top: 36px;
@@ -86,7 +86,7 @@
         }
 
         &:nth-child(2) {
-          .img {
+          .videoWrapper {
             width: 250px;
             height: 250px;
             top: 36px;
@@ -104,7 +104,7 @@
         }
 
         &:nth-child(3) {
-          .img {
+          .videoWrapper {
             width: 280px;
             height: 280px;
             top: 5px;
@@ -145,11 +145,11 @@
         }
 
         .videoWrapper {
-          position: relative;
+          position: absolute;
           z-index: 2;
-          width: 250px;
-          height: 250px;
-          border: 1px solid red;
+          //width: 250px;
+          //height: 250px;
+          //border: 1px solid red;
 
           video {
             object-fit: fill;

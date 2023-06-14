@@ -8,64 +8,25 @@ import {FormikErrors, FormikHelpers, useFormik} from "formik";
 import TextField from "@mui/material/TextField";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 
-const sxField = {
-    background: "rgba(2, 38, 76, 0.05)",
-    "& .MuiOutlinedInput-notchedOutline": {
-        borderColor: "#E5EAEF",
-    },
-    "& .MuiInputBase-root": {
-        fontFamily: 'Poppins',
-        fontStyle: "normal",
-        fontWeight: "400",
-        fontSize: "14px",
-        lineHeight: "150%",
-        letterSpacing: "-0.01em",
-        color: "#1C1F31",
-        "&:hover": {
-            "& .MuiOutlinedInput-notchedOutline": {
-                borderColor: "#D3D2DE",
-            }
-        }
-    },
-    "& .MuiFormHelperText-root": {
-        fontFamily: 'Poppins',
-        fontStyle: "normal",
-        fontWeight: "400",
-        fontSize: "12px",
-        lineHeight: "150%",
-        letterSpacing: "-0.01em",
-        //color: "#1C1F31",
-        position: "absolute",
-        left: 0,
-        bottom: "-18px",
-    },
-    "& .MuiInputBase-root.Mui-focused": {
-        "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "#D3D2DE",
-        }
-    }
-}
-
-
 interface IValues {
     name: string
     surname: string
     email: string
 }
 
-export const JoinModal = observer(() => {
-    const {joinModal, setJoinModal} = useStore();
+const initialValues: IValues = {
+    name: "",
+    surname: "",
+    email: "",
+}
 
-    const initialValues: IValues = {
-        name: "",
-        surname: "",
-        email: "",
-    }
+export const JoinModal = observer(() => {
+    const { joinModal, setJoinModal, setWelcomeModal } = useStore();
 
     const validate = ({name, surname, email}: IValues): FormikErrors<IValues> => {
         const errors = {} as FormikErrors<IValues>;
         if (!name) {
-            errors.name = "Name is required";
+            errors.name = "First Name is required";
         }
         if (!surname) {
             errors.surname = "Last Name is required";
@@ -85,6 +46,8 @@ export const JoinModal = observer(() => {
     ) => {
         try {
             console.log(values);
+            setJoinModal(false);
+            setWelcomeModal(true);
         } catch (e: any) {
             console.log(e.message);
         } finally {
@@ -136,7 +99,7 @@ export const JoinModal = observer(() => {
                 >
                     <div className={style.top}>
 
-                        <TextField placeholder="Name"
+                        <TextField placeholder="First Name"
                                    size="small"
                                    {...formik.getFieldProps("name")}
                                    fullWidth
@@ -176,7 +139,50 @@ export const JoinModal = observer(() => {
                     />
                 </form>
 
+                <p className={style.text}>Don’t worry, we hate spam just as much as you do.</p>
+
             </div>
         </Modal>
     )
 })
+
+const sxField = {
+    background: "rgba(2, 38, 76, 0.05)",
+    borderRadius: "10px",
+    "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "#E5EAEF",
+        borderRadius: "10px",
+    },
+    "& .MuiInputBase-root": {
+        borderRadius: "10px",
+        fontFamily: 'Poppins',
+        fontStyle: "normal",
+        fontWeight: "400",
+        fontSize: "14px",
+        lineHeight: "150%",
+        letterSpacing: "-0.01em",
+        color: "#1C1F31",
+        "&:hover": {
+            "& .MuiOutlinedInput-notchedOutline": {
+                borderColor: "#D3D2DE",
+            }
+        }
+    },
+    "& .MuiFormHelperText-root": {
+        fontFamily: 'Poppins',
+        fontStyle: "normal",
+        fontWeight: "400",
+        fontSize: "12px",
+        lineHeight: "150%",
+        letterSpacing: "-0.01em",
+        //color: "#1C1F31",
+        position: "absolute",
+        left: 0,
+        bottom: "-18px",
+    },
+    "& .MuiInputBase-root.Mui-focused": {
+        "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#D3D2DE",
+        }
+    }
+}
