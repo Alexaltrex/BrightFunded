@@ -91,7 +91,7 @@ export const JoinModal = observer(() => {
 
                 <p className={style.description}>
                     Get a head start on your journey. Fill in the details below, secure your <span>early access</span>,
-                    and have a chance to win rare trading perks. Join us on Discord for more information.
+                    and have a chance to <span>win rare trading perks</span>. Join us on Discord for more information.
                 </p>
 
                 <form onSubmit={formik.handleSubmit}

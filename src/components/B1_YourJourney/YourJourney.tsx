@@ -45,7 +45,7 @@ export const YourJourney = observer(() => {
                                         <ButtonCustom label={buttonLabel}
                                                       primary={false}
                                                       className={style.btn}
-                                            //@ts-ignore
+                                                    //@ts-ignore
                                                       onClick={handlers[key]}
                                         />
                                     )

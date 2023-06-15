@@ -12,14 +12,18 @@
   .planet_left {
     @include onlyDesktop;
     position: absolute;
-    top: 820px;
+    height: 456px;
+    width: auto;
+    top: 720px;
     left: 0;
   }
 
   .planet_right {
     @include onlyDesktop;
     position: absolute;
-    top: 130px;
+    height: 600px;
+    width: auto;
+    top: 80px;
     right: 0;
   }
 

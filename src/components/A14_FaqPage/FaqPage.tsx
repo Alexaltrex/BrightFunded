@@ -13,3 +13,4 @@ export const FaqPage = () => {
         </div>
     )
 }
+export default FaqPage

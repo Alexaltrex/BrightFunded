@@ -10,8 +10,7 @@ import {Experience} from '../B6_Experience/Experience';
 import {CurrencyTable} from '../B7_CurrencyTable/CurrencyTable';
 import {YourChance} from '../common/YourChance/YourChance';
 
-export const HomePage = () => {
-
+const HomePage = () => {
     return (
         <div className={style.homePage}
              id="home-top"
@@ -30,3 +29,4 @@ export const HomePage = () => {
         </div>
     );
 };
+export default HomePage;

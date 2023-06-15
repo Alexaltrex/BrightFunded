@@ -1,0 +1,88 @@
+@import '../../assets/styles/app';
+
+.technology {
+  @include container;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .inner {
+    @include inner;
+
+    .block {
+
+      &:not(:first-child) {
+        margin-top: 60px;
+
+        @include desktop {
+          margin-top: 100px;
+        }
+      }
+
+      @include desktop {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      h3.title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: #0E0B3D;
+
+        @include desktop {
+          font-size: 36px;
+        }
+
+        span {
+          @include gradient-text;
+        }
+      }
+
+      .textsWrapper {
+        margin-top: 20px;
+
+        @include desktop {
+          margin-top: 0;
+          width: 630px;
+        }
+
+        .description {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 130%;
+          letter-spacing: -0.02em;
+          color: #0E0B3D;
+
+          @include desktop {
+            font-size: 22px;
+            width: 572px;
+          }
+
+          span {
+            @include gradient-text;
+          }
+        }
+
+        .text {
+          margin-top: 20px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: -0.01em;
+          color: #3E3C64;
+
+          @include desktop {
+            margin-top: 30px;
+          }
+        }
+
+      }
+    }
+  }
+}

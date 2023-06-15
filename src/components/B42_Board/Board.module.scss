@@ -1,0 +1,217 @@
+@import '../../assets/styles/app';
+
+.board {
+  @include container;
+  margin-top: 60px;
+
+  @include desktop {
+    margin-top: 100px;
+  }
+
+  .inner {
+    @include inner;
+
+    h3.title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 130%;
+      letter-spacing: -0.02em;
+      color: #0E0B3D;
+
+      @include desktop {
+        font-size: 36px;
+      }
+    }
+
+    .cards {
+      margin-top: 20px;
+
+      @include desktop {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+      }
+
+      .card {
+        background: #FFFFFF;
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+        border-radius: 15px;
+        box-sizing: border-box;
+        padding: 20px;
+
+        @include desktop {
+          height: 316px;
+          padding: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        &:not(:first-child) {
+          margin-top: 20px;
+
+          @include desktop {
+            margin-top: 0;
+          }
+        }
+
+        .top {
+
+          .wrapper {
+            display: flex;
+
+            .img {
+              width: 75px;
+              height: 75px;
+
+              @include desktop {
+                width: 100px;
+                height: 100px;
+              }
+            }
+
+            .right {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              margin-left: 13px;
+
+              @include desktop {
+                margin-left: 20px;
+              }
+
+              .name {
+                font-weight: 600;
+                font-size: 17px;
+                line-height: 130%;
+                letter-spacing: -0.02em;
+                color: #0E0B3D;
+
+                @include desktop {
+                  font-size: 22px;
+                }
+              }
+
+              .member {
+                margin-top: 5px;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 150%;
+                letter-spacing: -0.01em;
+                color: #0E0B3D;
+
+                @include desktop {
+                  margin-top: 7px;
+                  font-size: 14px;
+                }
+              }
+
+              .socials {
+                display: flex;
+                margin-top: 10px;
+
+                @include desktop {
+                  margin-top: 14px;
+                }
+
+                .link {
+                  @include centerRow;
+                  text-decoration: none;
+                  width: 20px;
+                  height: 20px;
+                  background: linear-gradient(34.49deg, rgba(7, 129, 254, 0.12) -12.58%, rgba(0, 199, 180, 0.12) 102.84%);
+                  border-radius: 6px;
+
+                  @include desktop {
+                    width: 26px;
+                    height: 26px;
+                  }
+
+                  &:not(:first-child) {
+                    margin-left: 6px;
+                  }
+
+                  svg {
+                    width: 11px;
+                    height: 11px;
+
+                    @include desktop {
+                      width: 14px;
+                      height: 14px;
+                    }
+                  }
+
+                }
+              }
+
+            }
+
+          }
+
+          .text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: -0.01em;
+            color: #3E3C64;
+            margin-top: 15px;
+
+            @include desktop {
+              margin-top: 20px;
+            }
+          }
+
+        }
+
+        .btn {
+          width: 143px;
+          margin-top: 20px;
+
+          @include desktop {
+            margin-top: 0;
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: -0.03em;
+            color: #04A9D4;
+          }
+        }
+
+        &:nth-child(3) {
+          .top {
+            .wrapper {
+              .right {
+                .socials {
+                  .link {
+                    background: #F7F9FC;
+
+                    svg {
+                      path {
+                        fill: #DFE4EC;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .btn {
+            p {
+              color: #8C8C8C;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+}

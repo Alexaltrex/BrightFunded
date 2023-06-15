@@ -6,7 +6,7 @@ import {TheSky} from "../B26_TheSky/TheSky";
 import { Table } from "../B27_Table/Table";
 import {YourChance} from "../common/YourChance/YourChance";
 
-export const ScalingPlanPage = () => {
+const ScalingPlanPage = () => {
     return (
         <div className={style.scalingPlanPage}
              id="top-scaling-plan"
@@ -21,3 +21,4 @@ export const ScalingPlanPage = () => {
         </div>
     )
 }
+export default ScalingPlanPage

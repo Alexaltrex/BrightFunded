@@ -1,0 +1,58 @@
+@import '../../assets/styles/app';
+
+.about {
+  @include container;
+  padding-top: 115px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 182px;
+    padding-bottom: 100px;
+  }
+
+  .inner {
+    @include inner;
+
+    .title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 115%;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+
+      @include desktop {
+        font-size: 52px;
+      }
+
+      span {
+        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .description {
+      margin-top: 24px;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+
+      @include desktop {
+        margin-top: 30px;
+        width: 490px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 26px;
+      }
+    }
+
+  }
+
+}

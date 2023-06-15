@@ -23,3 +23,4 @@ export const Trade2EarnPage = () => {
         </div>
     )
 }
+export default Trade2EarnPage

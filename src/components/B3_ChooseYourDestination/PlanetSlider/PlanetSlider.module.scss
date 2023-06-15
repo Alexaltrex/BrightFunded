@@ -34,6 +34,7 @@
     .slideInner {
       box-sizing: border-box;
       padding: 240px 20px 25px;
+      height: 448px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -77,22 +78,16 @@
       .img {
         display: block;
         position: absolute;
-        top: -65px;
+        top: 0px;
         left: 50%;
         transform: translateX(-50%);
         width: auto;
-        height: 380px;
+        height: 219px;
 
         @include desktop {
-          top: 0;
           height: 315px;
         }
       }
     }
-
-
-
   }
-
-
 }

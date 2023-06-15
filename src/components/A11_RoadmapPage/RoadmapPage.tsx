@@ -3,7 +3,7 @@ import style from "./RoadmapPage.module.scss";
 import {Roadmap} from "../B10_Roadmap/Roadmap";
 import {JoinOurDiscord} from "../B11_JoinOurDiscord/JoinOurDiscord";
 
-export const RoadmapPage = () => {
+const RoadmapPage = () => {
 
     return (
         <div className={style.roadmapPage}
@@ -14,3 +14,4 @@ export const RoadmapPage = () => {
         </div>
     )
 }
+export default RoadmapPage

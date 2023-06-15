@@ -8,7 +8,6 @@ export const ScalingPlan = () => {
 
             <img src={rocket} alt="" className={style.rocket}/>
 
-
             <div className={style.inner}>
 
                 <div className={style.top}>

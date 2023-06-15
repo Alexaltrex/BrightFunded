@@ -22,6 +22,7 @@ export const PlanetSlider: FC<IPlanetSlider> = ({
     return (
         <Swiper className={style.planetSlider}
                 slidesPerView={1}
+                allowTouchMove={false}
                 onSwiper={(swiper) => setSwiper(swiper)}
                 //allowTouchMove={false}
                 modules={[EffectFade]}

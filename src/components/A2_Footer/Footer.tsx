@@ -7,12 +7,13 @@ import {texts} from "./texts";
 import clsx from "clsx";
 import {useState} from "react";
 import {Collapse} from "@mui/material";
+import {HashLink} from "react-router-hash-link";
 
 const links = [
     {label: "Privacy Policy", to: "/policy"},
     {label: "Terms & Conditions", to: "/terms"},
     {label: "Affiliate Program", to: "/affiliate#top"},
-    {label: "FAQ", to: "/faq"},
+    {label: "FAQ", to: "/faq#faq-top"},
     {label: "Contact", to: "/contact"},
     {label: "Careers", to: "/careers"},
     {label: "Blog", to: "/blog"},
@@ -64,13 +65,26 @@ export const Footer = () => {
                     <nav className={style.linksDesktop}>
                         {
                             links.map(({label, to}, key) => (
-                                <Link key={key}
-                                      to={to}
-                                      className={style.link}
-                                >
-                                    {label}
-                                </Link>
-                            ))
+
+                                    (key === 2 || key === 3)
+                                        ? (
+                                            <HashLink key={key}
+                                                      to={to}
+                                                      className={style.link}
+                                                      smooth
+                                            >
+                                                {label}
+                                            </HashLink>
+                                        ) : (
+                                            <Link key={key}
+                                                  to={to}
+                                                  className={style.link}
+                                            >
+                                                {label}
+                                            </Link>
+                                        )
+                                )
+                            )
                         }
                     </nav>
 

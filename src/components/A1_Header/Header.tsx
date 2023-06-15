@@ -28,13 +28,19 @@ export const Header = observer(() => {
         <>
             <header className={clsx({
                 [style.header]: true,
-                [style.header_scroll]: pageYOffset > 100,
+                [style.header_scroll]: pageYOffset > 0,
                 [style.header_hide]: false, //pageYOffset > 110 && scrollDown && !burgerMenu,
             })}
             >
+                {
+                    pageYOffset === 0 && (
+                        <>
+                            <img src={gradientLeft} alt="" className={style.gradientLeft}/>
+                            <img src={gradientRight} alt="" className={style.gradientRight}/>
+                        </>
+                    )
 
-                <img src={gradientLeft} alt="" className={style.gradientLeft}/>
-                <img src={gradientRight} alt="" className={style.gradientRight}/>
+                }
 
                 <div className={style.inner}>
 
@@ -64,7 +70,7 @@ export const Header = observer(() => {
                         <DropDownHeader buttonLabel="Our Identity"
                                         className={style.item}
                                         list={[
-                                            {label: "About", to: "/about"},
+                                            {label: "About", to: "/about#about-top"},
                                             {label: "Roadmap", to: "/roadmap#roadmap-top"},
                                         ]}
                         />
@@ -86,7 +92,7 @@ export const Header = observer(() => {
                     <ButtonCustom label="Trading Space"
                                   primary={false}
                                   className={style.tradeBtn}
-                                  // @ts-ignore
+                        // @ts-ignore
                                   onClick={onTrading}
                     />
 

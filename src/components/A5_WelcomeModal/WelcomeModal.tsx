@@ -50,9 +50,14 @@ export const WelcomeModal = observer(() => {
                 <ButtonCustom label="Join Our Discord"
                               icon={svgIcons.discord}
                               className={style.btn}
+                              href="https://discord.gg/9Ypd4ETZ"
                 />
 
-                <p className={style.ok}>ok</p>
+                <button className={style.okBtn}
+                        onClick={onClose}
+                >
+                    ok
+                </button>
             </div>
         </Modal>
     )

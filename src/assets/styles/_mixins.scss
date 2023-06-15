@@ -120,3 +120,9 @@
     color: #0E0B3D;
   }
 }
+
+@mixin gradient-text {
+  background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

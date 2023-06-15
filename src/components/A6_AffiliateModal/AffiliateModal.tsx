@@ -10,6 +10,7 @@ import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
+import {countries} from "./countries";
 
 interface IValues {
     firstName: string
@@ -30,7 +31,7 @@ const initialValues: IValues = {
     address: "",
     city: "",
     code: "",
-    country: "Country 1"
+    country: "United States of America (the)",
 }
 
 export const AffiliateModal = observer(() => {
@@ -217,7 +218,7 @@ export const AffiliateModal = observer(() => {
                         MenuProps={{sx: sxMenu}}
                     >
                         {
-                            ["Country 1", "Country 2", "Country 3"].map((country, key) => (
+                            countries.map((country, key) => (
                                 <MenuItem key={key} value={country}>
                                     {country}
                                 </MenuItem>

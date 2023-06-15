@@ -1,0 +1,160 @@
+@import '../../../assets/styles/app';
+
+.boardModal {
+  .card {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    width: calc(100vw - 40px);
+    background: #FFFFFF;
+    backdrop-filter: blur(17px);
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 20px;
+
+    @include desktop {
+      left: 50%;
+      width: 514px;
+      transform: translate(-50%, -50%);
+      padding: 30px;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    .closeBtn {
+      @include button;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 14px;
+      height: 14px;
+
+      @include desktop {
+        width: 16px;
+        height: 16px;
+        top: 20px;
+        right: 20px;
+      }
+
+      svg {
+        width: 14px;
+        height: 14px;
+
+        @include desktop {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    .top {
+
+      @include desktop {
+        display: flex;
+        align-items: center;
+      }
+
+      .avatar {
+        display: block;
+        width: 75px;
+        height: 75px;
+
+        @include desktop {
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12px;
+
+        @include desktop {
+          flex-direction: column;
+          justify-content: flex-start;
+          margin-top: 0;
+          margin-left: 20px;
+        }
+
+        .textWrapper {
+          .name {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 130%;
+            letter-spacing: -0.02em;
+            color: #0E0B3D;
+
+            @include desktop {
+              font-size: 26px;
+            }
+          }
+
+          .member {
+            margin-top: 4px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            letter-spacing: -0.01em;
+            color: #0E0B3D;
+
+            @include desktop {
+              margin-top: 5px;
+              font-size: 14px;
+            }
+          }
+        }
+
+        .socials {
+          display: flex;
+
+          @include desktop {
+            margin-top: 14px;
+          }
+
+          .link {
+            @include centerRow;
+            text-decoration: none;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(34.49deg, rgba(7, 129, 254, 0.12) -12.58%, rgba(0, 199, 180, 0.12) 102.84%);
+            border-radius: 6px;
+
+            @include desktop {
+              width: 26px;
+              height: 26px;
+            }
+
+            &:not(:first-child) {
+              margin-left: 6px;
+            }
+
+            svg {
+              width: 11px;
+              height: 11px;
+
+              @include desktop {
+                width: 14px;
+                height: 14px;
+              }
+            }
+
+          }
+        }
+      }
+
+    }
+
+    .fullText {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: #3E3C64;
+    }
+  }
+}

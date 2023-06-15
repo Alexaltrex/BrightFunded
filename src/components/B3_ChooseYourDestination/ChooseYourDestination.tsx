@@ -61,25 +61,11 @@ export const ChooseYourDestination = observer(() => {
                         </div>
 
                         <div className={style.rightBlock}>
-
-                            <div className={style.cardMobile}>
-                                <img src={planets[Number(balance)].src} alt="" className={style.img}/>
-                                <p className={style.title}>{planets[Number(balance)].title}</p>
-                                <p className={style.text}>{planets[Number(balance)].text}</p>
-                                <ButtonCustom label="Join Waitlist"
-                                              icon={svgIcons.arrow_right}
-                                              className={style.joinBtn}
-                                              //@ts-ignore
-                                              onClick={onJoin}
-                                />
-                            </div>
-
-                            <div className={style.sliderDesktop}>
+                            <div className={style.slider}>
                                 <PlanetSlider setSwiper={(s) => setPlanetSwiper(s)}
                                               onJoin={onJoin}
                                 />
                             </div>
-
                         </div>
 
                     </div>

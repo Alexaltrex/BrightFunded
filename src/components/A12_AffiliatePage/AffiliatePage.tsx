@@ -5,7 +5,7 @@ import {WhatSets} from "../B21_WhatSets/WhatSets";
 import {HowToBecome} from "../B22_HowToBecome/HowToBecome";
 import {ReachForTheStars} from "../B23_ReachForTheStars/ReachForTheStars";
 
-export const AffiliatePage = () => {
+const AffiliatePage = () => {
     return (
         <div className={style.affiliatePage} id="top">
             <Affiliate/>
@@ -15,3 +15,4 @@ export const AffiliatePage = () => {
         </div>
     )
 }
+export default AffiliatePage
