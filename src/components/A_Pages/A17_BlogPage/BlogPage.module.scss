@@ -1,0 +1,10 @@
+@import "../../../assets/styles/app";
+
+.blogPage {
+  .card {
+    position: relative;
+    z-index: 2;
+    background: #F7F9FC;
+    border-radius: 40px;
+  }
+}

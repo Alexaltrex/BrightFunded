@@ -8,18 +8,21 @@ import {useStore} from "../../store/useStore";
 import clsx from "clsx";
 import {StarsScroll} from '../common/Stars/StarsScroll';
 import {Footer} from "../A2_Footer/Footer";
-import {JoinModal} from "../A4_JoinModal/JoinModal";
-import {WelcomeModal} from "../A5_WelcomeModal/WelcomeModal";
-import {AffiliateModal} from "../A6_AffiliateModal/AffiliateModal";
-import {SignUpSuccessModal} from "../A7_SignUpSuccessModal/SignUpSuccessModal";
+import {JoinModal} from "../A_Modals/A4_JoinModal/JoinModal";
+import {WelcomeModal} from "../A_Modals/A5_WelcomeModal/WelcomeModal";
+import {AffiliateModal} from "../A_Modals/A6_AffiliateModal/AffiliateModal";
+import {SignUpSuccessModal} from "../A_Modals/A7_SignUpSuccessModal/SignUpSuccessModal";
+import {TestPage} from "../A_Pages/A100_TestPage/TestPage";
+import {ArticlePage} from "../A_Pages/A18_ArticlePage/ArticlePage";
 
-const HomePage = lazy(() => import('../A10_HomePage/HomePage'));
-const RoadmapPage = lazy(() => import('../A11_RoadmapPage/RoadmapPage'));
-const AffiliatePage = lazy(() => import('../A12_AffiliatePage/AffiliatePage'));
-const ScalingPlanPage = lazy(() => import('../A13_ScalingPlanPage/ScalingPlanPage'));
-const FaqPage = lazy(() => import('../A14_FaqPage/FaqPage'));
-const Trade2EarnPage = lazy(() => import('../A15_Trade2EarnPage/Trade2EarnPage'));
-const AboutPage = lazy(() => import('../A16_AboutPage/AboutPage'));
+const HomePage = lazy(() => import('../A_Pages/A10_HomePage/HomePage'));
+const RoadmapPage = lazy(() => import('../A_Pages/A11_RoadmapPage/RoadmapPage'));
+const AffiliatePage = lazy(() => import('../A_Pages/A12_AffiliatePage/AffiliatePage'));
+const ScalingPlanPage = lazy(() => import('../A_Pages/A13_ScalingPlanPage/ScalingPlanPage'));
+const FaqPage = lazy(() => import('../A_Pages/A14_FaqPage/FaqPage'));
+const Trade2EarnPage = lazy(() => import('../A_Pages/A15_Trade2EarnPage/Trade2EarnPage'));
+const AboutPage = lazy(() => import('../A_Pages/A16_AboutPage/AboutPage'));
+const BlogPage = lazy(() => import('../A_Pages/A17_BlogPage/BlogPage'));
 
 export const App = observer(() => {
     const {burgerMenu, setScrollDown, pageYOffset, setPageYOffset} = useStore();
@@ -65,6 +68,8 @@ export const App = observer(() => {
                                 {path: "/faq", element: <FaqPage/>},
                                 {path: "/trade", element: <Trade2EarnPage/>},
                                 {path: "/about", element: <AboutPage/>},
+                                {path: "/blog", element: <BlogPage/>},
+                                {path: "/blog/:blogId", element: <ArticlePage/>},
                             ].map(({path, element}, key) => (
                                 <Route key={key} path={path} element={element}/>
                             ))

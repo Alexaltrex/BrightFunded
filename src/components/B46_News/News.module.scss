@@ -1,0 +1,108 @@
+@import "../../assets/styles/app";
+
+.news {
+  @include container;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .inner {
+    @include inner;
+
+    .tabsMobile {
+      @include onlyMobile;
+
+      .label {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        color: #9A99AF;
+      }
+
+      .select {
+        margin-top: 10px;
+      }
+    }
+
+    .tabsDesktop {
+      @include onlyDesktop(flex);
+
+      .tab {
+        @include button;
+        @include centerRow;
+        padding: 9px 25px;
+        background: #E4E9EF;
+        border-radius: 999px;
+        transition: 0.3s;
+
+        &:not(:first-child) {
+          margin-left: 10px;
+        }
+
+        &:hover {
+          background: #cdd0d7;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 115%;
+          letter-spacing: -0.02em;
+          color: #0E0B3D;
+          transition: 0.3s;
+        }
+
+        &_selected, &_selected:hover {
+          background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+
+          p {
+            color: #FFF;
+          }
+        }
+
+
+      }
+    }
+
+    .cards {
+      margin-top: 40px;
+
+      @include desktop {
+        margin-top: 60px;
+      }
+
+      .inner {
+
+        @include desktop {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -10px;
+          margin-right: -10px;
+
+
+        }
+
+      }
+
+
+    }
+
+    .btn {
+      margin-top: 40px;
+
+      @include desktop {
+        margin-top: 0;
+      }
+
+      p {
+        color: #04A9D4;
+      }
+    }
+
+  }
+}

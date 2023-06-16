@@ -16,7 +16,7 @@ const links = [
     {label: "FAQ", to: "/faq#faq-top"},
     {label: "Contact", to: "/contact"},
     {label: "Careers", to: "/careers"},
-    {label: "Blog", to: "/blog"},
+    {label: "Blog", to: "/blog#blog-top"},
 ]
 
 export const Footer = () => {

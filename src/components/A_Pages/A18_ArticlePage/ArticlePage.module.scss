@@ -1,0 +1,174 @@
+@import "../../../assets/styles/app";
+
+.articlePage {
+  padding-top: 75px;
+
+  @include desktop {
+    padding-top: 102px;
+  }
+
+  .card {
+    position: relative;
+    z-index: 2;
+    background: #F7F9FC;
+    border-radius: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include desktop {
+      padding-bottom: 80px;
+    }
+
+    .header {
+      @include container;
+
+      .inner {
+        @include inner;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include desktop {
+          width: 846px;
+        }
+
+        .ticket {
+          border-radius: 999px;
+          padding: 7px 15px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 115%;
+          letter-spacing: -0.02em;
+
+          @include desktop {
+            padding: 9px 25px;
+            font-size: 16px;
+          }
+        }
+
+        .title {
+          margin-top: 20px;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 130%;
+          letter-spacing: -0.02em;
+          color: #0E0B3D;
+
+          @include desktop {
+            margin-top: 15px;
+            font-size: 36px;
+            width: 630px;
+          }
+        }
+
+        .date {
+          margin-top: 20px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          letter-spacing: -0.01em;
+          color: #9A99AF;
+
+          @include desktop {
+            margin-top: 15px;
+          }
+        }
+
+      }
+    }
+
+    .imgWrapper {
+      @include container;
+      margin-top: 30px;
+
+      @include desktop {
+        margin-top: 40px;
+      }
+
+      .inner {
+        @include inner;
+
+        img {
+          width: 280px;
+          height: 186px;
+          object-fit: cover;
+          border-radius: 20px;
+          margin-right: auto;
+
+          @include desktop {
+            width: 1280px;
+            height: 600px;
+            margin-right: 0;
+          }
+        }
+      }
+
+    }
+
+    .body {
+      @include container;
+      margin-top: 30px;
+
+      @include desktop {
+        margin-top: 60px;
+      }
+
+      .inner {
+        @include inner;
+
+        @include desktop {
+          width: 846px;
+        }
+
+        .block {
+          &:not(:first-child) {
+            margin-top: 30px;
+
+            @include desktop {
+              margin-top: 60px;
+            }
+          }
+
+          .title {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 130%;
+            letter-spacing: -0.02em;
+            color: #0F0D31;
+
+            @include desktop {
+              font-size: 32px;
+            }
+          }
+
+          .text {
+            margin-top: 15px;
+
+            @include desktop {
+              margin-top: 20px;
+            }
+
+            p {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 150%;
+              letter-spacing: -0.01em;
+              color: #313235;
+
+              @include desktop {
+                font-size: 18px;
+              }
+            }
+          }
+
+
+        }
+
+
+
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,106 @@
+@import '../../../assets/styles/app';
+
+.homePage {
+  position: relative;
+  z-index: 200;
+
+  .whiteCard {
+    position: relative;
+    z-index: 10;
+    background: #f7f9fc;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+
+  .inner {
+    @include onlyDesktop();
+    background: #f7f9fc;
+    border-radius: 40px 40px 0 0;
+    padding-top: 108px;
+
+    .titleWrapper {
+      @include h2_block;
+      @include h2_block_black;
+    }
+  }
+
+  .cardsDesktop {
+    @include onlyDesktop(flex);
+    @include inner();
+    box-sizing: border-box;
+    width: auto;
+    height: 692px;
+    padding: 0 0 100px;
+    background: #f7f9fc;
+    margin: 50px 0 0;
+
+    .panel {
+      height: 100%;
+
+      &:not(:first-child) {
+        margin: 0 0 0 20px;
+      }
+    }
+
+    .cardWrapper {
+      @include centerRow;
+
+      .card {
+        // @include inner;
+        position: relative;
+        width: 850px;
+        height: 592px;
+        // height: calc(100vh - 200px);
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02),
+          0px 9px 19px rgba(0, 0, 0, 0.01);
+        border-radius: 15px;
+        padding: 35px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+
+        .phase {
+          align-self: flex-start;
+          padding: 9px 25px;
+          border: 2px solid #fff;
+          box-sizing: border-box;
+          border-radius: 999px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 115%;
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+        }
+
+        .planet {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 429px;
+          height: auto;
+        }
+
+        .title {
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 130%;
+          text-align: left;
+          letter-spacing: -0.02em;
+          color: #0e0b3d;
+        }
+
+        .text {
+          margin-top: 15px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: -0.01em;
+          color: #3e3c64;
+          width: 590px;
+        }
+      }
+    }
+  }
+}

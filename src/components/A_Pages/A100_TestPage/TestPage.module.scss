@@ -1,0 +1,46 @@
+@import "../../../assets/styles/app";
+
+.testPage {
+  @include container;
+  background: grey;
+  padding-top: 300px;
+
+  .inner {
+    @include inner;
+    //display: flex;
+    overflow: auto;
+
+    .left {
+      width: 200px;
+      box-sizing: border-box;
+      height: 200vh;
+      border: 2px solid #FFF;
+      position: relative;
+
+      .sticky {
+        width: 100px;
+        height: 100px;
+        background: green;
+        position: sticky;
+        top: 0;
+        //top: 0;
+        //left: 0;
+      }
+
+      .second {
+        width: 100px;
+        height: 100px;
+        background: red;
+      }
+    }
+
+    .right {
+      flex-grow: 1;
+      height: 200vh;
+      margin-left: 20px;
+      border: 2px solid #FFF;
+    }
+  }
+
+
+}
