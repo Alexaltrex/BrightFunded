@@ -164,8 +164,122 @@
 
         }
 
+        .listWrapper {
+          margin-top: 30px;
+
+          @include desktop {
+            margin-top: 20px;
+          }
+
+          .label {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: -0.01em;
+            color: #313235;
+
+            @include desktop {
+              font-size: 18px;
+            }
+          }
+
+          .list {
+            margin-top: 10px;
+
+            .item {
+              position: relative;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 150%;
+              letter-spacing: -0.01em;
+              color: #231F1F;
+              margin-left: 17px;
+
+              @include desktop {
+                font-size: 18px;
+                margin-left: 20px;
+              }
+
+              &:not(:first-child) {
+                margin-top: 9px;
+
+                @include desktop {
+                  margin-top: 10px;
+                }
+              }
+
+              &::before {
+                position: absolute;
+                content: "";
+                display: block;
+                top: 50%;
+                left: -17px;
+                width: 7px;
+                height: 7px;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+
+                @include desktop {
+                  left: -20px;
+                  width: 10px;
+                  height: 10px;
+                }
+              }
+            }
+          }
 
 
+        }
+
+      }
+    }
+
+    .similar {
+      @include container;
+      padding-top: 60px;
+
+      @include desktop {
+        padding-top: 80px;
+      }
+
+      .inner {
+        @include inner;
+        border-top: 1px solid #D0D6DF;
+        padding-top: 60px;
+
+        @include desktop {
+          padding-top: 80px;
+        }
+
+        .label {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 130%;
+          letter-spacing: -0.02em;
+          color: #0E0B3D;
+
+          @include desktop {
+            font-size: 36px;
+          }
+        }
+
+        .cards {
+          margin-top: 40px;
+
+          @include desktop {
+            margin-top: 60px;
+          }
+
+          .cardsInner {
+            @include desktop {
+              display: flex;
+              flex-wrap: wrap;
+              margin-left: -10px;
+              margin-right: -10px;
+            }
+          }
+        }
       }
     }
 

@@ -9,6 +9,7 @@ export interface ICard {
     date: string
     img: string
     fullImg: string
+    similar: number[]
 }
 
 export const news: ICard[] = [
@@ -20,6 +21,7 @@ export const news: ICard[] = [
         date: "11 Mar, 2023",
         img,
         fullImg,
+        similar: [7, 8, 9],
     },
     {
         id: 2,
@@ -29,6 +31,7 @@ export const news: ICard[] = [
         date: "12 Mar, 2023",
         img,
         fullImg,
+        similar: [7, 8, 9],
     },
     {
         id: 3,
@@ -38,6 +41,7 @@ export const news: ICard[] = [
         date: "13 Mar, 2023",
         img,
         fullImg,
+        similar: [7, 8, 9],
     },
     {
         id: 4,
@@ -47,6 +51,7 @@ export const news: ICard[] = [
         date: "14 Mar, 2023",
         img,
         fullImg,
+        similar: [7, 8, 9],
     },
     {
         id: 5,
@@ -56,6 +61,7 @@ export const news: ICard[] = [
         date: "15 Mar, 2023",
         img,
         fullImg,
+        similar: [7, 8, 9],
     },
     {
         id: 6,
@@ -65,6 +71,7 @@ export const news: ICard[] = [
         date: "16 Mar, 2023",
         img,
         fullImg,
+        similar: [7, 8, 9],
     },
     {
         id: 7,
@@ -74,6 +81,7 @@ export const news: ICard[] = [
         date: "17 Mar, 2023",
         img,
         fullImg,
+        similar: [1, 2, 3],
     },
     {
         id: 8,
@@ -83,6 +91,7 @@ export const news: ICard[] = [
         date: "18 Mar, 2023",
         img,
         fullImg,
+        similar: [1, 2, 3],
     },
     {
         id: 9,
@@ -92,6 +101,7 @@ export const news: ICard[] = [
         date: "19 Mar, 2023",
         img,
         fullImg,
+        similar: [1, 2, 3],
     },
 ]
 

@@ -14,8 +14,8 @@ const links = [
     {label: "Terms & Conditions", to: "/terms"},
     {label: "Affiliate Program", to: "/affiliate#top"},
     {label: "FAQ", to: "/faq#faq-top"},
-    {label: "Contact", to: "/contact"},
-    {label: "Careers", to: "/careers"},
+    {label: "Contact", to: "/contact#contact-top"},
+    {label: "Careers", to: "/career"},
     {label: "Blog", to: "/blog#blog-top"},
 ]
 

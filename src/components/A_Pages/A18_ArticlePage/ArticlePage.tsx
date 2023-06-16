@@ -2,12 +2,16 @@ import * as React from "react";
 import {useParams} from "react-router-dom";
 import style from "./ArticlePage.module.scss";
 import {ICard, news, tabs} from "../../B46_News/const";
+import {Card} from "../../B46_News/Card/Card";
+import {YourChance} from "../../common/YourChance/YourChance";
 
 export const ArticlePage = () => {
     const {blogId} = useParams<{ blogId: string }>();
-    console.log(blogId);
+
     const card = (news.find(el => el.id === Number(blogId as string))) as ICard;
-    const {id, tab, title, date, fullImg} = card;
+    const {id, tab, title, date, fullImg, similar} = card;
+
+    const similarCards = similar.map(id => (news.find(el => el.id === id) as ICard));
 
     return (
         <div className={style.articlePage}>
@@ -109,15 +113,46 @@ export const ArticlePage = () => {
                             </div>
                         </div>
 
+                        <div className={style.listWrapper}>
+                            <p className={style.label}>Here users can:</p>
+                            <div className={style.list}>
 
+                                {
+                                    [
+                                        "Invest",
+                                        "Earn",
+                                        "Govern",
+                                        "Own the Metaverse",
+                                    ].map((el, key) => (
+                                        <p className={style.item} key={key}>{el}</p>
+                                    ))
+                                }
+                            </div>
+                        </div>
 
 
                     </div>
                 </div>
 
+                <div className={style.similar}>
+                    <div className={style.inner}>
+                        <p className={style.label}>Similar to what you read</p>
+
+                        <div className={style.cards}>
+                            <div className={style.cardsInner}>
+                                {
+                                    similarCards.map((item, key) => <Card key={key} {...item}/>)
+                                }
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
 
             </div>
 
+            <YourChance/>
 
         </div>
     )

@@ -23,6 +23,8 @@ const FaqPage = lazy(() => import('../A_Pages/A14_FaqPage/FaqPage'));
 const Trade2EarnPage = lazy(() => import('../A_Pages/A15_Trade2EarnPage/Trade2EarnPage'));
 const AboutPage = lazy(() => import('../A_Pages/A16_AboutPage/AboutPage'));
 const BlogPage = lazy(() => import('../A_Pages/A17_BlogPage/BlogPage'));
+const ContactPage = lazy(() => import('../A_Pages/A19_ContactPage/ContactPage'));
+const CareerPage = lazy(() => import('../A_Pages/A20_CareerPage/CareerPage'));
 
 export const App = observer(() => {
     const {burgerMenu, setScrollDown, pageYOffset, setPageYOffset} = useStore();
@@ -70,6 +72,9 @@ export const App = observer(() => {
                                 {path: "/about", element: <AboutPage/>},
                                 {path: "/blog", element: <BlogPage/>},
                                 {path: "/blog/:blogId", element: <ArticlePage/>},
+                                {path: "/contact", element: <ContactPage/>},
+                                {path: "/career", element: <CareerPage/>},
+
                             ].map(({path, element}, key) => (
                                 <Route key={key} path={path} element={element}/>
                             ))

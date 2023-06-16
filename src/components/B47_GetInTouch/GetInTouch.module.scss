@@ -1,0 +1,303 @@
+@import "../../assets/styles/app";
+
+.getInTouch {
+  @include container;
+  padding-top: 132px;
+
+  @include desktop {
+    padding-top: 212px;
+  }
+
+  .inner {
+    @include inner;
+
+    @include desktop {
+      width: 1064px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: column;
+
+      .titleWrapper {
+        @include h2_block;
+        @include h2_block_white;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop {
+          align-items: flex-start;
+        }
+
+        h2 span {
+          @include gradient-text;
+        }
+      }
+
+      .text {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: #FFF;
+
+        @include desktop {
+          font-size: 20px;
+          width: 362px;
+          text-align: left;
+
+        }
+
+      }
+
+      .socialLinks {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+
+        @include desktop {
+          order: 4;
+          margin-top: 50px;
+          justify-content: flex-start;
+        }
+
+        .link {
+          @include centerRow;
+          position: relative;
+          z-index: 200;
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          background: rgba(2, 164, 199, 0);
+          border: 1px solid #282A35;
+          transition: 0.3s;
+
+          &:hover {
+            background: rgba(2, 164, 199, 0.24);
+            border: 1px solid #02AFC7;
+          }
+
+          &:not(:first-child) {
+            margin-left: 10px;
+          }
+
+          svg {
+            position: relative;
+            z-index: 3;
+
+            path {
+              fill: #FFF;
+            }
+          }
+
+
+        }
+      }
+
+      .items {
+        margin-top: 40px;
+
+        @include desktop {
+          margin-top: 60px;
+        }
+
+        .item {
+          display: flex;
+
+          &:not(:first-child) {
+            margin-top: 25px;
+
+            @include desktop {
+              margin-top: 30px;
+            }
+          }
+
+          .iconWrapper {
+            flex-shrink: 0;
+            @include centerRow;
+            width: 45px;
+            height: 45px;
+            background: #1C1F31;
+            border-radius: 8.18182px;
+
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+
+            @include desktop {
+              width: 45px;
+              height: 45px;
+
+              svg {
+                width: 29px;
+                height: 29px;
+              }
+            }
+          }
+
+          .right {
+            margin-left: 15px;
+
+            .label {
+              margin-top: -2px;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 150%;
+              letter-spacing: -0.01em;
+              color: #FFFFFF;
+
+              @include desktop {
+                margin-top: 0;
+                font-size: 18px;
+              }
+            }
+
+            .text {
+              text-align: left;
+              margin-top: 5px;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 150%;
+              letter-spacing: -0.01em;
+              color: #A1A3A9;
+
+              @include desktop {
+                margin-top: 7px;
+
+              }
+            }
+
+            .link {
+              @include gradient-text;
+              display: block;
+              position: relative;
+              margin-top: 5px;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 150%;
+              letter-spacing: -0.01em;
+              text-decoration: underline;
+
+              @include desktop {
+                margin-top: 7px;
+              }
+
+              &:after {
+                position: absolute;
+                content: "";
+                display: block;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+              }
+            }
+          }
+        }
+
+
+      }
+    }
+
+    .card {
+      margin-top: 60px;
+      background: rgba(21, 24, 40, 0.8);
+      border-radius: 12px;
+      box-sizing: border-box;
+      padding: 30px 20px;
+
+      @include desktop {
+        margin-top: 0;
+        width: 490px;
+        padding: 50px 40px;
+      }
+
+      .formTitle {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+
+        @include desktop {
+          font-size: 32px;
+        }
+      }
+
+      .top {
+        margin-top: 20px;
+
+        @include desktop {
+          margin-top: 24px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-column-gap: 10px;
+        }
+
+        .field {
+          margin-top: 15px;
+
+          @include desktop {
+            margin-top: 0;
+          }
+        }
+      }
+
+      .field {
+        margin-top: 15px;
+        position: relative;
+
+        .optional {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: -0.01em;
+          color: #00C7B4;
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          transform: translateY(-50%);
+        }
+      }
+
+      .textarea {
+        margin-top: 15px;
+
+        //& > div {
+        //  height: 130px;
+        //
+        //  @include desktop {
+        //    height: 94px;
+        //  }
+        //
+        //  & textarea {
+        //    height: 40px!important;
+        //  }
+        //}
+      }
+
+      .btn {
+        margin-top: 20px;
+        color: #ff7676;
+
+        @include desktop {
+          margin-top: 24px;
+        }
+      }
+
+
+    }
+
+
+  }
+}
