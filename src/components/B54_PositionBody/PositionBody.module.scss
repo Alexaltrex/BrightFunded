@@ -1,0 +1,131 @@
+@import "../../assets/styles/app";
+
+.positionBody {
+  @include container;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .inner {
+    @include inner;
+
+    .block {
+      &:not(:first-child) {
+        margin-top: 40px;
+
+        @include desktop {
+          margin-top: 60px;
+        }
+      }
+
+      &_title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: #0F0D31;
+
+        @include desktop {
+          font-size: 32px;
+        }
+      }
+
+      &_text {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        color: #313235;
+
+        @include desktop {
+          margin-top: 9px;
+          font-size: 18px;
+        }
+      }
+
+      &_list {
+        margin-top: 20px;
+
+        .list_item {
+          position: relative;
+          padding-left: 17px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: -0.01em;
+          color: #231F1F;
+
+          @include desktop {
+            padding-left: 20px;
+            font-size: 18px;
+          }
+
+          &:not(:first-child) {
+            margin-top: 15px;
+          }
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+
+            @include desktop {
+              width: 10px;
+              height: 10px;
+              top: 9px;
+            }
+          }
+
+        }
+      }
+
+      &_textLast {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        color: #313235;
+
+        @include desktop {
+          font-size: 18px;
+        }
+
+        a {
+          @include gradient-text;
+          text-decoration: underline!important;
+          position: relative;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+          }
+
+        }
+      }
+
+    }
+
+    .btn {
+      margin-top: 34px;
+      width: 157px;
+    }
+
+  }
+}

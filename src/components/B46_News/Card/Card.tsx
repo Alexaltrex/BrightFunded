@@ -14,7 +14,7 @@ export const Card: FC<ICard> = ({
                                 }) => {
     return (
         <div className={style.card}>
-            <Link className={style.link}
+            <Link className={style.lincardk}
                   to={`/blog/${id}`}
             >
                 <img src={img} alt="" className={style.img}/>

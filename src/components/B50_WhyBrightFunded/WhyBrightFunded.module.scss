@@ -1,0 +1,155 @@
+@import "../../assets/styles/app";
+
+.whyBrightFunded {
+  @include container;
+  padding-top: 60px;
+
+  @include desktop {
+    padding-top: 100px;
+  }
+
+  .inner {
+    @include inner;
+
+    .top {
+
+      @include desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: #0E0B3D;
+
+        @include desktop {
+          font-size: 36px;
+        }
+
+        span {
+          @include gradient-text;
+        }
+      }
+
+      .right {
+        margin-top: 20px;
+
+        @include desktop {
+          margin-top: 0;
+        }
+
+        .text {
+          margin-top: 20px;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 130%;
+          letter-spacing: -0.02em;
+          color: #0E0B3D;
+
+          @include desktop {
+            margin-top: 0;
+            font-size: 22px;
+            width: 518px;
+          }
+        }
+
+        .description {
+          margin-top: 20px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: -0.01em;
+          color: #3E3C64;
+          width: 578px;
+        }
+      }
+
+    }
+
+    .cards {
+      margin-top: 30px;
+
+      @include desktop {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 20px;
+      }
+
+      .card {
+        background: #FFFFFF;
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+        border-radius: 15px;
+        padding: 20px;
+
+        &:not(:first-child) {
+          margin-top: 20px;
+
+          @include desktop {
+            margin-top: 0;
+          }
+        }
+
+        .icon {
+          @include centerRow;
+          width: 45px;
+          height: 45px;
+          background: linear-gradient(34.49deg, rgba(7, 129, 254, 0.1) -12.58%, rgba(0, 199, 180, 0.1) 102.84%);
+          border-radius: 10px;
+
+          @include desktop {
+            width: 55px;
+            height: 55px;
+            border-radius: 15px;
+          }
+
+          svg {
+            width: 23px;
+            height: 23px;
+
+            @include desktop {
+              width: 29px;
+              height: 29px;
+            }
+          }
+        }
+
+        &_title {
+          margin-top: 15px;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 130%;
+          letter-spacing: -0.02em;
+          color: #0E0B3D;
+
+          @include desktop {
+            margin-top: 20px;
+            font-size: 22px;
+          }
+        }
+
+        &_text {
+          margin-top: 20px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: -0.01em;
+          color: #3E3C64;
+
+          @include desktop {
+            margin-top: 30px;
+          }
+        }
+
+
+
+      }
+
+
+    }
+  }
+}

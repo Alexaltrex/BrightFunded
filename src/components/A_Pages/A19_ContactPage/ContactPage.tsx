@@ -4,7 +4,7 @@ import {OurTeam} from "../../B48_OurTeam/OurTeam";
 
 const ContactPage = () => {
     return (
-        <div id="contact#contact-top">
+        <div id="contact-top">
             <GetInTouch/>
             <OurTeam/>
         </div>

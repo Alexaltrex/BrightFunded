@@ -28,7 +28,6 @@ export const HowToScaleUp = () => {
                     }
                 </div>
 
-
             </div>
         </div>
     )

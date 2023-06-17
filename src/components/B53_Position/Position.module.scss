@@ -1,0 +1,97 @@
+@import "../../assets/styles/app";
+
+.position {
+  @include container;
+  padding-top: 115px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 162px;
+  }
+
+  .inner {
+    @include inner;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include desktop {
+      width: 846px;
+    }
+
+    .ticket {
+      padding: 7px 15px;
+      border-radius: 999px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 115%;
+      letter-spacing: -0.02em;
+    }
+
+    .title {
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 115%;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+
+      @include desktop {
+        margin-top: 16px;
+        font-size: 36px;
+      }
+    }
+
+    .items {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+
+      @include desktop {
+        margin-top: 16px;
+        flex-direction: row;
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+          margin-top: 15px;
+
+          @include desktop {
+            margin-top: 0;
+            margin-left: 32px;
+          }
+        }
+
+        svg {
+          flex-shrink: 0;
+          width: 21px;
+          height: 21px;
+        }
+
+        &_text {
+          margin-left: 8px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: -0.01em;
+          color: #FFF;
+        }
+      }
+
+    }
+
+    .btn {
+      margin-top: 30px;
+      width: 128px;
+
+      @include desktop {
+        margin-top: 36px;
+      }
+    }
+
+
+  }
+}

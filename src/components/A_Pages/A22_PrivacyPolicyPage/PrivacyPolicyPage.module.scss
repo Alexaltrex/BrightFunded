@@ -1,0 +1,218 @@
+@import "../../../assets/styles/app";
+
+.privacyPolicyPage {
+  padding-top: 115px;
+
+  @include desktop {
+    padding-top: 182px;
+    margin-bottom: 30px;
+  }
+
+  h2.title {
+    @include container;
+
+    .inner {
+      @include inner;
+
+      @include desktop {
+        width: 846px;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 115%;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+
+        @include desktop {
+          font-size: 52px;
+        }
+      }
+
+    }
+  }
+
+  .card {
+    @include container;
+    background: #F7F9FC;
+    border-radius: 40px;
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 38px;
+
+    @include desktop {
+      padding-left: 0;
+      margin-top: 60px;
+      padding-bottom: 80px;
+    }
+
+    .inner {
+      @include inner;
+
+      @include desktop {
+        width: 846px;
+      }
+
+      .block {
+
+        &:not(:first-child) {
+          margin-top: 40px;
+
+          @include desktop {
+            margin-top: 60px;
+          }
+        }
+
+        &_title {
+          position: relative;
+
+          p {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 130%;
+            letter-spacing: -0.02em;
+            color: #0F0D31;
+
+            @include desktop {
+              font-size: 24px;
+            }
+
+            &:first-child {
+              position: absolute;
+              top: 0;
+              left: -24px;
+
+              @include desktop {
+                left: -30px;
+              }
+            }
+          }
+
+        }
+
+        &_text {
+          margin-top: 16px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: -0.01em;
+          color: #313235;
+
+          @include desktop {
+            margin-top: 20px;
+            font-size: 18px;
+          }
+
+          a {
+            @include gradient-text;
+            text-decoration: underline!important;
+            position: relative;
+
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              height: 1px;
+              background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+            }
+          }
+
+        }
+
+        &_list {
+          margin-top: 16px;
+
+          @include desktop {
+            margin-top: 24px;
+          }
+
+          .list_item {
+            position: relative;
+
+            &::before {
+              position: absolute;
+              display: block;
+              content: "";
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              left: -20px;
+              top: 6px;
+              background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+
+              @include desktop {
+                top: 9px;
+              }
+            }
+
+            .item_label {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 150%;
+              letter-spacing: -0.01em;
+              color: #231F1F;
+              margin-bottom: 10px;
+
+              @include desktop {
+                font-size: 18px;
+                margin-bottom: 15px;
+              }
+            }
+
+            .item_text {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 150%;
+              letter-spacing: -0.01em;
+              color: #313235;
+
+              @include desktop {
+                font-size: 18px;
+              }
+
+              span {
+                text-decoration: underline;
+              }
+            }
+
+            &:not(:first-child) {
+              margin-top: 24px;
+
+              @include desktop {
+                margin-top: 30px;
+              }
+            }
+          }
+
+          &_without_label {
+            @include desktop {
+              margin-top: 20px;
+            }
+
+            .list_item {
+              &:not(:first-child) {
+                margin-top: 16px;
+
+                @include desktop {
+                  margin-top: 20px;
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+
+
+}
+

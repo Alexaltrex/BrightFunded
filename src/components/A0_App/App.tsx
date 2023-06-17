@@ -25,6 +25,8 @@ const AboutPage = lazy(() => import('../A_Pages/A16_AboutPage/AboutPage'));
 const BlogPage = lazy(() => import('../A_Pages/A17_BlogPage/BlogPage'));
 const ContactPage = lazy(() => import('../A_Pages/A19_ContactPage/ContactPage'));
 const CareerPage = lazy(() => import('../A_Pages/A20_CareerPage/CareerPage'));
+const PositionPage = lazy(() => import('../A_Pages/A21_PositionPage/PositionPage'));
+const PrivacyPolicyPage = lazy(() => import('../A_Pages/A22_PrivacyPolicyPage/PrivacyPolicyPage'));
 
 export const App = observer(() => {
     const {burgerMenu, setScrollDown, pageYOffset, setPageYOffset} = useStore();
@@ -74,7 +76,8 @@ export const App = observer(() => {
                                 {path: "/blog/:blogId", element: <ArticlePage/>},
                                 {path: "/contact", element: <ContactPage/>},
                                 {path: "/career", element: <CareerPage/>},
-
+                                {path: "/position/:positionId", element: <PositionPage/>},
+                                {path: "/policy", element: <PrivacyPolicyPage/>},
                             ].map(({path, element}, key) => (
                                 <Route key={key} path={path} element={element}/>
                             ))

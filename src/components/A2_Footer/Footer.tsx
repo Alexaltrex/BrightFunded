@@ -10,12 +10,12 @@ import {Collapse} from "@mui/material";
 import {HashLink} from "react-router-hash-link";
 
 const links = [
-    {label: "Privacy Policy", to: "/policy"},
+    {label: "Privacy Policy", to: "/policy#policy-top"},
     {label: "Terms & Conditions", to: "/terms"},
     {label: "Affiliate Program", to: "/affiliate#top"},
     {label: "FAQ", to: "/faq#faq-top"},
     {label: "Contact", to: "/contact#contact-top"},
-    {label: "Careers", to: "/career"},
+    {label: "Careers", to: "/career#career-top"},
     {label: "Blog", to: "/blog#blog-top"},
 ]
 
@@ -39,24 +39,26 @@ export const Footer = () => {
                         <div className={style.column}>
                             {
                                 [links[0], links[1], links[2], links[3]].map(({label, to}, key) => (
-                                    <Link key={key}
-                                          to={to}
-                                          className={style.link}
+                                    <HashLink key={key}
+                                              to={to}
+                                              className={style.link}
+                                              smooth
                                     >
                                         {label}
-                                    </Link>
+                                    </HashLink>
                                 ))
                             }
                         </div>
                         <div className={style.column}>
                             {
                                 [links[4], links[5], links[6]].map(({label, to}, key) => (
-                                    <Link key={key}
-                                          to={to}
-                                          className={style.link}
+                                    <HashLink key={key}
+                                              to={to}
+                                              className={style.link}
+                                              smooth
                                     >
                                         {label}
-                                    </Link>
+                                    </HashLink>
                                 ))
                             }
                         </div>
@@ -65,24 +67,13 @@ export const Footer = () => {
                     <nav className={style.linksDesktop}>
                         {
                             links.map(({label, to}, key) => (
-
-                                    (key === 2 || key === 3)
-                                        ? (
-                                            <HashLink key={key}
-                                                      to={to}
-                                                      className={style.link}
-                                                      smooth
-                                            >
-                                                {label}
-                                            </HashLink>
-                                        ) : (
-                                            <Link key={key}
-                                                  to={to}
-                                                  className={style.link}
-                                            >
-                                                {label}
-                                            </Link>
-                                        )
+                                <HashLink key={key}
+                                          to={to}
+                                          className={style.link}
+                                          smooth
+                                >
+                                    {label}
+                                </HashLink>
                                 )
                             )
                         }
