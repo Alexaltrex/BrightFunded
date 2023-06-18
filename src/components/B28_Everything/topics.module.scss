@@ -1,0 +1,39 @@
+.list {
+  margin-top: 24px;
+
+  .list_item {
+    &:not(:first-child) {
+      margin-top: 6px;
+    }
+
+    span {
+      font-weight: 600;
+      color: #CCC;
+    }
+  }
+}
+
+.text {
+
+  span {
+    font-weight: 600;
+    color: #CCC;
+  }
+
+  &:not(:first-child) {
+    margin-top: 24px;
+  }
+
+  .text_title {
+    color: #FFF;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .text_subtitle {
+    color: #FFF;
+    margin-bottom: 12px;
+  }
+
+
+}

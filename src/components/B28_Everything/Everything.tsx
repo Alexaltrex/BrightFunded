@@ -28,7 +28,6 @@ export const Everything = () => {
         if (!question) {
             errors.question = 'Question is required';
         }
-
         return errors;
     };
 
@@ -76,7 +75,7 @@ export const Everything = () => {
                 }
             });
         });
-        console.log(list);
+        //console.log(list);
         setSearchList(list);
     };
     const onCloseHandler = () => {
@@ -89,20 +88,22 @@ export const Everything = () => {
     const topicsRef = React.useRef<HTMLDivElement>(null!);
 
     // React.useLayoutEffect(() => {
-    //     const topicsHeight = topicsRef.current.offsetHeight;
+    //     if (triggerRef) {
+    //         const topicsHeight = topicsRef.current.offsetHeight;
     //
-    //     let ctx = gsap.context(() => {
-    //         gsap.to(topicsRef.current, {
-    //             ease: 'none',
-    //             scrollTrigger: {
-    //                 trigger: triggerRef.current,
-    //                 pin: topicsRef.current,
-    //                 start: () => '-=' + 50,
-    //                 end: `bottom +=${topicsHeight + 50}`,
-    //             },
-    //         });
-    //     }, componentRef);
-    //     return () => ctx.revert();
+    //         let ctx = gsap.context(() => {
+    //             gsap.to(topicsRef.current, {
+    //                 ease: 'none',
+    //                 scrollTrigger: {
+    //                     trigger: triggerRef.current,
+    //                     pin: topicsRef.current,
+    //                     start: () => '-=' + 50,
+    //                     end: `bottom +=${topicsHeight + 50}`,
+    //                 },
+    //             });
+    //         }, componentRef);
+    //         return () => ctx.revert();
+    //     }
     // });
 
     return (
