@@ -1,10 +1,10 @@
 import {FC, useState} from "react";
 import * as React from "react";
-import {IListItem} from "../list";
 import style from "./Item.module.scss";
 import Collapse from "@mui/material/Collapse";
 import plus from "../../../assets/png/btn_plus.png";
 import minus from "../../../assets/png/btn_minus.png";
+import {IListItem} from "../topics";
 
 interface IItem extends IListItem {
 
@@ -27,7 +27,7 @@ export const Item: FC<IItem> = ({
             <p className={style.question}>{question}</p>
 
             <Collapse in={show}>
-                <p className={style.answer}>{answer}</p>
+                <div className={style.answer}>{answer}</div>
             </Collapse>
 
         </div>

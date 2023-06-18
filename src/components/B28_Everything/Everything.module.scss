@@ -2,6 +2,8 @@
 
 .everything {
   @include container;
+  position: relative;
+  z-index: 2;
   padding-top: 115px;
   padding-bottom: 80px;
 

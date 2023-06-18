@@ -17,13 +17,16 @@
   .gradientLeft {
     @include onlyDesktop;
     position: absolute;
+    z-index: 1;
     left: 0;
     top: 0;
     transform: translateY(-50%);
+
   }
 
   .gradientRight {
     @include onlyDesktop;
+    z-index: 1;
     position: absolute;
     right: 0;
     top: 43px;
