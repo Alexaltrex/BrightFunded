@@ -5,7 +5,7 @@ import {ICard, news, tabs} from "../../B46_News/const";
 import {Card} from "../../B46_News/Card/Card";
 import {YourChance} from "../../common/YourChance/YourChance";
 
-export const ArticlePage = () => {
+const ArticlePage = () => {
     const {blogId} = useParams<{ blogId: string }>();
 
     const card = (news.find(el => el.id === Number(blogId as string))) as ICard;
@@ -157,3 +157,4 @@ export const ArticlePage = () => {
         </div>
     )
 }
+export default ArticlePage

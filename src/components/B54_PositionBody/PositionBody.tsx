@@ -37,7 +37,7 @@ export const PositionBody = () => {
                     <p className={style.block_title}>
                         About BrightFunded
                     </p>
-                    <div className={style.text}>
+                    <div className={style.block_text}>
                         <p>
                             Are you passionate about delivering excellent customer service and looking to join an
                             innovative, fast-paced FinTech startup? Look no further! We're searching for a dynamic

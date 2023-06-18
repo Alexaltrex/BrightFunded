@@ -12,8 +12,6 @@ import {JoinModal} from "../A_Modals/A4_JoinModal/JoinModal";
 import {WelcomeModal} from "../A_Modals/A5_WelcomeModal/WelcomeModal";
 import {AffiliateModal} from "../A_Modals/A6_AffiliateModal/AffiliateModal";
 import {SignUpSuccessModal} from "../A_Modals/A7_SignUpSuccessModal/SignUpSuccessModal";
-import {TestPage} from "../A_Pages/A100_TestPage/TestPage";
-import {ArticlePage} from "../A_Pages/A18_ArticlePage/ArticlePage";
 
 const HomePage = lazy(() => import('../A_Pages/A10_HomePage/HomePage'));
 const RoadmapPage = lazy(() => import('../A_Pages/A11_RoadmapPage/RoadmapPage'));
@@ -23,6 +21,7 @@ const FaqPage = lazy(() => import('../A_Pages/A14_FaqPage/FaqPage'));
 const Trade2EarnPage = lazy(() => import('../A_Pages/A15_Trade2EarnPage/Trade2EarnPage'));
 const AboutPage = lazy(() => import('../A_Pages/A16_AboutPage/AboutPage'));
 const BlogPage = lazy(() => import('../A_Pages/A17_BlogPage/BlogPage'));
+const ArticlePage = lazy(() => import('../A_Pages/A18_ArticlePage/ArticlePage'));
 const ContactPage = lazy(() => import('../A_Pages/A19_ContactPage/ContactPage'));
 const CareerPage = lazy(() => import('../A_Pages/A20_CareerPage/CareerPage'));
 const PositionPage = lazy(() => import('../A_Pages/A21_PositionPage/PositionPage'));
@@ -60,8 +59,8 @@ export const App = observer(() => {
             <AffiliateModal/>
             <SignUpSuccessModal/>
 
-            <Suspense fallback={<p>loading</p>}>
-                <main className={style.main}>
+            <main className={style.main}>
+                <Suspense fallback={<p>loading</p>}>
                     <Routes>
                         {
                             [
@@ -83,8 +82,9 @@ export const App = observer(() => {
                             ))
                         }
                     </Routes>
-                </main>
-            </Suspense>
+                </Suspense>
+            </main>
+
 
             <Footer/>
 

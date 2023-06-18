@@ -13,6 +13,10 @@
   .inner {
     @include inner;
 
+    @include desktop {
+      width: 846px;
+    }
+
     .block {
       &:not(:first-child) {
         margin-top: 40px;
