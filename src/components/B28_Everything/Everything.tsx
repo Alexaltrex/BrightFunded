@@ -88,7 +88,7 @@ export const Everything = () => {
     const topicsRef = React.useRef<HTMLDivElement>(null!);
 
     // React.useLayoutEffect(() => {
-    //     if (triggerRef) {
+    //     if (triggerRef && triggerRef.current) {
     //         const topicsHeight = topicsRef.current.offsetHeight;
     //
     //         let ctx = gsap.context(() => {
