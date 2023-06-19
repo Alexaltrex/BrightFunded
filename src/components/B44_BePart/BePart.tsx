@@ -22,15 +22,14 @@ export const BePart = () => {
                 </h2>
             </div>
 
-            <HashLink to="/careers#careers-top"
-                      smooth={true}
-                      className={style.link}
-            >
+            <HashLink to="/career#career-top" smooth={true} className={style.link}>
                 <ButtonCustom label="BrightFunded Careers"
                               icon={svgIcons.arrow_right}
                               className={style.btn}
+
                 />
             </HashLink>
+
 
         </div>
     )

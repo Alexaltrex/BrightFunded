@@ -2,6 +2,8 @@ import * as React from "react";
 import style from "./WhyBrightFunded.module.scss";
 import {cards} from "../B25_HowToScaleUp/cards";
 
+const desc = "We have a straightforward belief: Gather a passionate, diverse team and create an environment that allows you to unleash your full potential."
+
 export const WhyBrightFunded = () => {
     return (
         <div className={style.whyBrightFunded}>
@@ -12,11 +14,11 @@ export const WhyBrightFunded = () => {
                         Why <span>BrightFunded</span>?
                     </p>
                     <div className={style.right}>
-                        <p className={style.text}>
+                        <p className={style.text}>d
                             We're more interested in building a community of friends than a mere workforce.
                         </p>
-                        <p className={style.description}>
-                            We have a straightforward belief: Gather a passionate, diverse team and create an environment that allows you to unleash your full potential.
+                        <p className={style.desc}>
+                            {desc}
                         </p>
                     </div>
 

@@ -57,14 +57,18 @@
           }
         }
 
-        .description {
+        .desc {
           margin-top: 20px;
           font-weight: 400;
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
           color: #3E3C64;
-          width: 578px;
+
+          @include desktop {
+            width: 578px;
+          }
+
         }
       }
 

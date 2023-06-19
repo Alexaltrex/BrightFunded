@@ -12,6 +12,7 @@ import {JoinModal} from "../A_Modals/A4_JoinModal/JoinModal";
 import {WelcomeModal} from "../A_Modals/A5_WelcomeModal/WelcomeModal";
 import {AffiliateModal} from "../A_Modals/A6_AffiliateModal/AffiliateModal";
 import {SignUpSuccessModal} from "../A_Modals/A7_SignUpSuccessModal/SignUpSuccessModal";
+import {ContactModal} from "../A_Modals/A8_ContactModal/ContactModal";
 
 const HomePage = lazy(() => import('../A_Pages/A10_HomePage/HomePage'));
 const RoadmapPage = lazy(() => import('../A_Pages/A11_RoadmapPage/RoadmapPage'));
@@ -26,6 +27,7 @@ const ContactPage = lazy(() => import('../A_Pages/A19_ContactPage/ContactPage'))
 const CareerPage = lazy(() => import('../A_Pages/A20_CareerPage/CareerPage'));
 const PositionPage = lazy(() => import('../A_Pages/A21_PositionPage/PositionPage'));
 const PrivacyPolicyPage = lazy(() => import('../A_Pages/A22_PrivacyPolicyPage/PrivacyPolicyPage'));
+const TermsPage = lazy(() => import('../A_Pages/A23_TermsPage/TermsPage'));
 
 export const App = observer(() => {
     const {burgerMenu, setScrollDown, pageYOffset, setPageYOffset} = useStore();
@@ -58,6 +60,7 @@ export const App = observer(() => {
             <WelcomeModal/>
             <AffiliateModal/>
             <SignUpSuccessModal/>
+            <ContactModal/>
 
             <main className={style.main}>
                 <Suspense fallback={<p>loading</p>}>
@@ -77,6 +80,8 @@ export const App = observer(() => {
                                 {path: "/career", element: <CareerPage/>},
                                 {path: "/position/:positionId", element: <PositionPage/>},
                                 {path: "/policy", element: <PrivacyPolicyPage/>},
+                                {path: "/terms", element: <TermsPage/>},
+
                             ].map(({path, element}, key) => (
                                 <Route key={key} path={path} element={element}/>
                             ))

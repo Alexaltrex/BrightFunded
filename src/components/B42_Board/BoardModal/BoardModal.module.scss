@@ -12,12 +12,15 @@
     border-radius: 15px;
     box-sizing: border-box;
     padding: 20px;
+    max-height: calc(100vh - 40px);
+    overflow: scroll;
 
     @include desktop {
       left: 50%;
       width: 514px;
       transform: translate(-50%, -50%);
       padding: 30px;
+      overflow: auto;
     }
 
     &:focus-visible {

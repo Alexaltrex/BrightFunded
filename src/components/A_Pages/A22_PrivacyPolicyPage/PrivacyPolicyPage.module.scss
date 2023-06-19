@@ -102,11 +102,6 @@
           letter-spacing: -0.01em;
           color: #313235;
 
-          @include desktop {
-            margin-top: 20px;
-            font-size: 18px;
-          }
-
           a {
             @include gradient-text;
             text-decoration: underline!important;

@@ -10,6 +10,7 @@ export class Store {
     welcomeModal: boolean = false
     affiliateModal: boolean = false
     signUpSuccessModal: boolean = false
+    contactModal: boolean = false
 
     constructor() {
         makeObservable(this, {
@@ -22,6 +23,7 @@ export class Store {
             welcomeModal: observable,
             affiliateModal: observable,
             signUpSuccessModal: observable,
+            contactModal: observable,
 
             setBurgerMenu: action.bound,
             setScrollDown: action.bound,
@@ -32,6 +34,7 @@ export class Store {
             setWelcomeModal: action.bound,
             setAffiliateModal: action.bound,
             setSignUpSuccessModal: action.bound,
+            setContactModal: action.bound,
         })
     }
 
@@ -70,6 +73,10 @@ export class Store {
 
     setSignUpSuccessModal(signUpSuccessModal: boolean) {
         this.signUpSuccessModal = signUpSuccessModal;
+    }
+
+    setContactModal(contactModal: boolean) {
+        this.contactModal = contactModal;
     }
 
 }

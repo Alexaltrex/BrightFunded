@@ -70,7 +70,11 @@
           line-height: 150%;
           letter-spacing: -0.01em;
           color: #3E3C64;
-          width: 578px;
+
+          @include desktop {
+            width: 578px;
+          }
+
         }
       }
 
@@ -155,8 +159,7 @@
         @include desktop {
           display: flex;
           flex-wrap: wrap;
-          margin-left: -10px;
-          margin-right: -10px;
+          justify-content: space-between;
         }
       }
     }

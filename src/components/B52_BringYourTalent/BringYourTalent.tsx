@@ -8,9 +8,7 @@ import {svgIcons} from "../../assets/svgIcons";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 
 
-export const BringYourTalent = observer(() => {
-    const { setJoinModal } = useStore();
-    const onJoin = () => setJoinModal(true);
+export const BringYourTalent = () => {
 
     return (
         <div className={style.bringYourTalent}>
@@ -31,11 +29,9 @@ export const BringYourTalent = observer(() => {
             <ButtonCustom label="Join The Team"
                           icon={svgIcons.arrow_right}
                           className={style.btn}
-                //@ts-ignore
-                          //onClick={onJoin}
+                          href="mailto:careers@brightfunded.com"
             />
-
 
         </div>
     )
-})
+}

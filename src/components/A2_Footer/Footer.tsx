@@ -11,7 +11,7 @@ import {HashLink} from "react-router-hash-link";
 
 const links = [
     {label: "Privacy Policy", to: "/policy#policy-top"},
-    {label: "Terms & Conditions", to: "/terms"},
+    {label: "Terms & Conditions", to: "/terms#terms-top"},
     {label: "Affiliate Program", to: "/affiliate#top"},
     {label: "FAQ", to: "/faq#faq-top"},
     {label: "Contact", to: "/contact#contact-top"},

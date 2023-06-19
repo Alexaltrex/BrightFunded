@@ -42,6 +42,7 @@ export const Position: FC<IPosition> = ({
                 <ButtonCustom label="Apply now"
                               icon={svgIcons.arrow_right}
                               className={style.btn}
+                              href="mailto:careers@brightfunded.com"
                 />
             </div>
         </div>

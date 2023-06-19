@@ -162,11 +162,23 @@ export const data = {
     ]
 }
 
+
+
 export const balances = [
     ["$10k", "$25k", "$50k", "$100k", "$200k"], // USD
     ["€10k", "€20k", "€40k", "€80k", "€160k"], // EUR
     ["£10k", "£20k", "£35k", "£70k", "£140k"], // POUND
+]
+export const balancesFull = [
+    ["$10,000", "$25,000", "$50,000", "$100,000", "$200,000"], // USD
+    ["€10.000", "€20.000", "€40.000", "€80.000", "€160.000"], // EUR
+    ["£10,000", "£20,000", "£35,000", "£70,000", "£140,000"], // POUND
+]
 
+export const headers = [
+    "The Challenge",
+    "The Verification",
+    "The Funded Star"
 ]
 
 // ["", "", ""], // step1, step2, step3

@@ -38,11 +38,11 @@ export const cards = [
         socials: [
             {
                 icon: svgIcons.instagram_blue,
-                href: "#"
+                href: "https://www.linkedin.com/in/lex-hoogduin-95a2502b/"
             },
             {
                 icon: svgIcons.twitter_blue,
-                href: "#"
+                href: "https://twitter.com/lexhoogduin"
             },
         ]
     },
@@ -81,7 +81,7 @@ export const cards = [
         socials: [
             {
                 icon: svgIcons.instagram_blue,
-                href: "#"
+                href: "https://www.linkedin.com/in/willemsprenkeler/"
             },
         ]
     },

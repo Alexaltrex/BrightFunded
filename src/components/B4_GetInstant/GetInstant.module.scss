@@ -86,16 +86,9 @@
           margin-top: 20px;
 
           @include desktop {
-            margin-top: 40px;
+            width: 423px;
+            margin-top: 70px;
             margin-left: 217px;
-          }
-        }
-
-        &:nth-child(4) {
-          @include desktop {
-            bottom: 0px;
-            left: 220px;
-            z-index: 3;
           }
         }
 

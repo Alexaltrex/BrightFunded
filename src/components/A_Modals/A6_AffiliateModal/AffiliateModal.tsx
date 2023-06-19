@@ -31,11 +31,11 @@ const initialValues: IValues = {
     address: "",
     city: "",
     code: "",
-    country: "United States of America (the)",
+    country: "",
 }
 
 export const AffiliateModal = observer(() => {
-    const {affiliateModal, setAffiliateModal, setSignUpSuccessModal } = useStore();
+    const {affiliateModal, setAffiliateModal, setSignUpSuccessModal} = useStore();
 
     const validate = ({
                           firstName,
@@ -67,7 +67,7 @@ export const AffiliateModal = observer(() => {
             errors.code = "Postal code is required";
         }
         if (!country) {
-            errors.country = "country code is required";
+            errors.country = "Country is required";
         }
 
         if (!email) {
@@ -214,9 +214,18 @@ export const AffiliateModal = observer(() => {
                         {...formik.getFieldProps("country")}
                         IconComponent={KeyboardArrowDownIcon}
                         fullWidth
-                        sx={sxSelect}
+                        sx={sxSelect(formik.values.country)}
+                        displayEmpty
                         MenuProps={{sx: sxMenu}}
+                        error={formik.touched.country && Boolean(formik.errors.country)}
+                        //helperText={formik.touched.country && formik.errors.country}
                     >
+                        <MenuItem disabled
+                                  value=""
+
+                        >
+                            Country
+                        </MenuItem>
                         {
                             countries.map((country, key) => (
                                 <MenuItem key={key} value={country}>
@@ -281,7 +290,7 @@ const sxField = {
     }
 }
 
-const sxSelect = {
+const sxSelect = (value: string) => ({
     //width: "calc(100vw - 40px)",
     background: "rgba(2, 38, 76, 0.05)",
     borderRadius: "10px",
@@ -292,7 +301,7 @@ const sxSelect = {
     fontSize: "14px",
     lineHeight: "150%",
     letterSpacing: "-0.01em",
-    color: "#0E0B3D",
+    color: value === "" ? "#9A99AF" : "#0E0B3D",
     transition: "0.3s",
     "&:hover": {
         border: "1px solid #D3D2DE",
@@ -306,8 +315,7 @@ const sxSelect = {
     "& .MuiOutlinedInput-notchedOutline": {
         border: "none",
     },
-
-}
+})
 
 const sxMenu = {
     "& .MuiPaper-root": {
@@ -325,7 +333,7 @@ const sxMenu = {
         fontSize: "15px",
         lineHeight: "22px",
         letterSpacing: "-0.02em",
-        color: " #0E0B3D",
+        color: "#0E0B3D",
         padding: "10px 15px",
     },
     "& .MuiMenuItem-root.Mui-selected": {

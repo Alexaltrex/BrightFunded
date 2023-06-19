@@ -2,33 +2,25 @@ import * as React from "react";
 import style from "./PositionBody.module.scss";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {svgIcons} from "../../assets/svgIcons";
+import {FC} from "react";
 
-const lists = [
-    [
-        "Respond promptly and professionally to customer inquiries via email, chat, and social media.",
-        "Resolve customer issues and communicate complex concepts in a clear, understandable way.",
-        "Collaborate with other teams to resolve complex issues and provide user feedback to enhance our services.",
-        "Monitor and report on customer feedback and insights to improve our platform and services.",
-        "Stay updated about our platform, services, and the financial trading landscape.",
-    ],
-    [
-        "Respond promptly and professionally to customer inquiries via email, chat, and social media.",
-        "Resolve customer issues and communicate complex concepts in a clear, understandable way.",
-        "Collaborate with other teams to resolve complex issues and provide user feedback to enhance our services.",
-        "Monitor and report on customer feedback and insights to improve our platform and services.",
-        "Stay updated about our platform, services, and the financial trading landscape.",
-    ],
-    [
+const list = [
         "Be a part of a dedicated, diverse team with direct influence over the company's direction.",
         "Help shape the future of a global FinTech startup with massive growth potential.",
         "Connect with intelligent and passionate individuals from around the world.",
         "Enjoy the freedom to work remotely or from our office in Amsterdam.",
         "Join a culture that values friendship over formality.",
-    ],
-]
+    ];
 
+interface IPositionBody {
+    responsibilities: string[]
+    talents: string[]
+}
 
-export const PositionBody = () => {
+export const PositionBody: FC<IPositionBody> = ({
+                                                                   responsibilities,
+                                                                   talents,
+}) => {
     return (
         <div className={style.positionBody}>
             <div className={style.inner}>
@@ -67,7 +59,7 @@ export const PositionBody = () => {
                     </p>
                     <div className={style.block_list}>
                         {
-                            lists[0].map((item, key) => (
+                            responsibilities.map((item, key) => (
                                 <p key={key} className={style.list_item}>{item}</p>
                             ))
                         }
@@ -81,7 +73,7 @@ export const PositionBody = () => {
                     </p>
                     <div className={style.block_list}>
                         {
-                            lists[1].map((item, key) => (
+                            talents.map((item, key) => (
                                 <p key={key} className={style.list_item}>{item}</p>
                             ))
                         }
@@ -94,7 +86,7 @@ export const PositionBody = () => {
                     </p>
                     <div className={style.block_list}>
                         {
-                            lists[2].map((item, key) => (
+                            list.map((item, key) => (
                                 <p key={key} className={style.list_item}>{item}</p>
                             ))
                         }
@@ -114,6 +106,7 @@ export const PositionBody = () => {
                 <ButtonCustom label="Apply now"
                               icon={svgIcons.arrow_right}
                               className={style.btn}
+                              href="mailto:careers@brightfunded.com"
                 />
 
 

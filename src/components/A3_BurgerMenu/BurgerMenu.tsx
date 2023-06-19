@@ -4,7 +4,7 @@ import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
 import clsx from "clsx";
 import {DropDownBurger} from "../common/DropDownBurger/DropDownBurger";
-import {headerLinks} from "../A0_App/links";
+import {headerLinks} from "../A1_Header/links";
 import {Link} from "react-router-dom";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {burgerSocialLinks} from "../A0_App/socialLinks";
@@ -53,10 +53,10 @@ export const BurgerMenu = observer(() => {
                 />
 
                 {
-                    headerLinks.map(({label, path}, key) => (
+                    headerLinks.map(({label, to}, key) => (
                         <div className={style.item}>
                             <Link key={key}
-                                  to={path}
+                                  to={to}
                                   className={style.link}
                                   onClick={() => {
                                       setBurgerOpen1(false);

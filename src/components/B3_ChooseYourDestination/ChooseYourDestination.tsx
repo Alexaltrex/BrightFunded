@@ -5,9 +5,6 @@ import {Panel} from "./Panel/Panel";
 import {TableCustom} from "./TableCustom/TableCustom";
 import {PlanetSlider} from "./PlanetSlider/PlanetSlider";
 import {SwiperClass} from "swiper/react";
-import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
-import {svgIcons} from "../../assets/svgIcons";
-import {planets} from "./PlanetSlider/planets";
 import {useStore} from "../../store/useStore";
 import {observer} from "mobx-react-lite";
 
@@ -64,6 +61,7 @@ export const ChooseYourDestination = observer(() => {
                             <div className={style.slider}>
                                 <PlanetSlider setSwiper={(s) => setPlanetSwiper(s)}
                                               onJoin={onJoin}
+                                              currency={currency}
                                 />
                             </div>
                         </div>

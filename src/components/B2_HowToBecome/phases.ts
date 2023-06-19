@@ -1,7 +1,7 @@
-// @ts-ignore
-import src1 from "../../assets/mp4/phase_1.mp4";
-// @ts-ignore
-import src2 from "../../assets/mp4/phase_2.mp4";
+import phase_0 from "../../assets/png/phase_0_mobile.png";
+import phase_1 from "../../assets/png/phase_1_mobile.png";
+import phase_2 from "../../assets/png/phase_2_mobile.png";
+
 // @ts-ignore
 import src_mp4_1 from "../../assets/mp4/step_1.mp4";
 // @ts-ignore
@@ -28,7 +28,7 @@ export const phases = [
         src_webm: src_webm_1,
         background: "#E3EDFF",
         color: "#045AB1",
-
+        img_m: phase_0,
     },
     {
         title: "The Verification",
@@ -37,7 +37,7 @@ export const phases = [
         src_webm: src_webm_2,
         background: "#F2E7E4",
         color: "#C6430A",
-
+        img_m: phase_1,
     },
     {
         title: "The Funded Star",
@@ -46,6 +46,6 @@ export const phases = [
         src_webm: src_webm_3,
         background: "#D9EAE8",
         color: "#008B7D",
-
+        img_m: phase_2,
     },
 ]

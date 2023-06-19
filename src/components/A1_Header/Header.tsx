@@ -4,7 +4,7 @@ import {svgIcons} from "../../assets/svgIcons";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
-import {headerLinks} from "../A0_App/links";
+import {headerLinks} from "./links";
 import {DropDownHeader} from "../common/DropDownHeader/DropDownHeader";
 import gradientLeft from "../../assets/png/gradient_header_left.png";
 import gradientRight from "../../assets/png/gradient_header_right.png";
@@ -76,9 +76,9 @@ export const Header = observer(() => {
                         />
 
                         {
-                            headerLinks.map(({label, path}, key) => (
+                            headerLinks.map(({label, to}, key) => (
                                 <HashLink key={key}
-                                          to={path}
+                                          to={to}
                                           className={style.link}
                                           smooth
                                 >

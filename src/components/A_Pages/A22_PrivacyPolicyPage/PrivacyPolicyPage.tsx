@@ -3,18 +3,6 @@ import style from "./PrivacyPolicyPage.module.scss";
 import {content} from "./content";
 import clsx from "clsx";
 
-const titles = [
-    "WHO MANAGES YOUR PERSONAL INFORMATION AND WHO SHOULD YOU CONTACT?",
-    "WHAT PERSONAL DATA DO WE GATHER ABOUT YOU AND HOW DO WE OBTAIN IT?",
-    "HOW DO WE USE YOUR PERSONAL DATA?",
-    "HOW DO WE SAFEGUARD AND STORE YOUR PERSONAL DATA?",
-    "WHAT IS THE DURATION OF YOUR DATA PROCESSING?",
-    "HARING AND TRANSFERRING DATA TO THIRD PARTIES",
-    "YOUR RIGHTS",
-    "CHANGES TO THIS PRIVACY POLICY",
-]
-
-
 const PrivacyPolicyPage = () => {
     return (
         <div className={style.privacyPolicyPage}

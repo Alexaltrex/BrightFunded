@@ -14,7 +14,9 @@ const PositionPage = () => {
         <div className={style.positionPage}>
             <Position {...position}/>
             <div className={style.card}>
-                <PositionBody/>
+                <PositionBody responsibilities={position.responsibilities}
+                              talents={position.talents}
+                />
             </div>
             <BringYourTalent/>
         </div>

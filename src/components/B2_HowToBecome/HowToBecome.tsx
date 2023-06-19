@@ -17,7 +17,7 @@ export const HowToBecome = () => {
 
                 <div className={style.cards}>
                     {
-                        phases.map(({title, text, src_mp4, src_webm,background, color}, key) => (
+                        phases.map(({title, text, src_mp4, src_webm,background, color, img_m}, key) => (
                             <div key={key}
                                  className={style.card}
                                  style={{background}}
@@ -30,6 +30,8 @@ export const HowToBecome = () => {
                                 >
                                     {`phase ${key + 1}`}
                                 </div>
+
+                                <img src={img_m} alt="" className={style.imgMobile}/>
 
                                 <div className={style.videoWrapper}>
                                     <video autoPlay={true}

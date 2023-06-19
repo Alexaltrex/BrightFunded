@@ -31,6 +31,7 @@
 
     .tabsDesktop {
       @include onlyDesktop(flex);
+      justify-content: center;
 
       .tab {
         @include button;

@@ -1,8 +1,6 @@
 @import '../../assets/styles/app';
 
 .howToBecome {
-
-
   @include container;
   background: #f7f9fc;
   border-radius: 40px 40px 0 0;
@@ -20,7 +18,6 @@
     .titleWrapper {
       @include h2_block;
       @include h2_block_black;
-
 
       h2 {
         width: 280px;
@@ -83,6 +80,12 @@
               transform: none;
             }
           }
+
+          .imgMobile {
+            width: 255px;
+            height: 255px;
+            top: 41px;
+          }
         }
 
         &:nth-child(2) {
@@ -101,6 +104,12 @@
               transform: none;
             }
           }
+
+          .imgMobile {
+            width: 250px;
+            height: 250px;
+            top: 52px;
+          }
         }
 
         &:nth-child(3) {
@@ -118,6 +127,12 @@
               left: 10px;
               transform: none;
             }
+          }
+
+          .imgMobile {
+            width: 260px;
+            height: 250px;
+            top: 33px;
           }
         }
 
@@ -145,11 +160,9 @@
         }
 
         .videoWrapper {
+          @include onlyDesktop;
           position: absolute;
           z-index: 2;
-          //width: 250px;
-          //height: 250px;
-          //border: 1px solid red;
 
           video {
             object-fit: fill;
@@ -158,10 +171,11 @@
           }
         }
 
-        .img {
-          display: block;
+        .imgMobile {
+          @include onlyMobile;
           position: absolute;
-          z-index: 1;
+          left: 50%;
+          transform: translateX(-50%);
         }
 
         .title {

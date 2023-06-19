@@ -87,29 +87,29 @@ export const Everything = () => {
     const triggerRef = React.useRef<HTMLDivElement>(null!);
     const topicsRef = React.useRef<HTMLDivElement>(null!);
 
-    // React.useLayoutEffect(() => {
-    //     if (triggerRef && triggerRef.current) {
-    //         const topicsHeight = topicsRef.current.offsetHeight;
-    //
-    //         let ctx = gsap.context(() => {
-    //             gsap.to(topicsRef.current, {
-    //                 ease: 'none',
-    //                 scrollTrigger: {
-    //                     trigger: triggerRef.current,
-    //                     pin: topicsRef.current,
-    //                     start: () => '-=' + 50,
-    //                     end: `bottom +=${topicsHeight + 50}`,
-    //                 },
-    //             });
-    //         }, componentRef);
-    //         return () => ctx.revert();
-    //     }
-    // });
+    React.useLayoutEffect(() => {
+        // if (triggerRef && triggerRef.current) {
+            const topicsHeight = topicsRef.current.offsetHeight;
+
+            let ctx = gsap.context(() => {
+                gsap.to(topicsRef.current, {
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: triggerRef.current,
+                        pin: topicsRef.current,
+                        start: () => '-=' + 50,
+                        end: `bottom +=${topicsHeight + 50}`,
+                    },
+                });
+            }, componentRef);
+            return () => ctx.revert();
+        // }
+    });
 
     return (
         <div ref={componentRef} className={style.everything}>
             <div className={style.inner}>
-                <h2 className={style.title}>Everything you need to know</h2>
+                <h2 className={style.title}>Everything You Need To Know</h2>
                 <p className={style.description}>
                     Can’t find what you are looking for?{' '}
                     <span>Get in touch with us!</span>
@@ -138,81 +138,84 @@ export const Everything = () => {
                     </button>
                 </form>
 
-                {
-                    formik.values.question ? (
-                        <div className={style.searchResult}>
-                            <p className={style.count}>
-                                {`${searchList?.length || 0} matches/`}
-                            </p>
-                            {
-                                searchList && (
-                                    <div className={style.resultList}>
-                                        {
-                                            searchList.map(({question, answer}, key) => (
-                                                <div key={key} className={style.resultCard}>
-                                                    <p className={style.question}>
-                                                        {getSelectedString(question, formik.values.question)}
-                                                    </p>
-                                                    <div className={style.answer}>
-                                                        {answer}
-                                                        {/*{getSelectedString(answer, formik.values.question)}*/}
+                {/*<div>*/}
+                    {
+                        formik.values.question ? (
+                            <div className={style.searchResult}>
+                                <p className={style.count}>
+                                    {`${searchList?.length || 0} matches/`}
+                                </p>
+                                {
+                                    searchList && (
+                                        <div className={style.resultList}>
+                                            {
+                                                searchList.map(({question, answer}, key) => (
+                                                    <div key={key} className={style.resultCard}>
+                                                        <p className={style.question}>
+                                                            {getSelectedString(question, formik.values.question)}
+                                                        </p>
+                                                        <div className={style.answer}>
+                                                            {answer}
+                                                            {/*{getSelectedString(answer, formik.values.question)}*/}
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            ))
-                                        }
-                                    </div>
-                                )}
-                        </div>
-                    ) : (
-                        <div ref={triggerRef} className={style.list}>
-                            <div className={style.listMobile}>
-                                {topics.map((item, key) => (
-                                    <TopicItem key={key} {...item} />
-                                ))}
+                                                ))
+                                            }
+                                        </div>
+                                    )}
                             </div>
-
-                            <div className={style.listDesktop}>
-                                <div ref={topicsRef} className={style.topicsWrapper}>
-                                    <div
-                                        className={clsx({
-                                            [style.topics]: true,
-                                            // [style.topics_fixed]: pageYOffset > 340,
-                                        })}
-                                    >
-                                        <p className={style.topics_label}>Topics</p>
-                                        <div className={style.topics_list}>
-                                            {topics
-                                                .map(({topic}) => topic)
-                                                .map((topic, key) => (
-                                                    <HashLink
-                                                        to={`/faq#${topic}`}
-                                                        smooth={true}
-                                                        className={style.link}
-                                                    >
-                                                        {topic}
-                                                    </HashLink>
-                                                ))}
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className={style.faqBlocks}>
-                                    {topics.map(({topic, list}, key) => (
-                                        <div key={key} className={style.block}>
-                                            <div className={style.anchor} id={topic}/>
-                                            <p className={style.block_label}>{topic}</p>
-                                            <div className={style.block_items}>
-                                                {list.map((item, key) => (
-                                                    <Item key={key} {...item} />
-                                                ))}
-                                            </div>
-                                        </div>
+                        ) : (
+                            <div ref={triggerRef} className={style.list}>
+                                <div className={style.listMobile}>
+                                    {topics.map((item, key) => (
+                                        <TopicItem key={key} {...item} />
                                     ))}
                                 </div>
+
+                                <div className={style.listDesktop}>
+                                    <div ref={topicsRef} className={style.topicsWrapper}>
+                                        <div
+                                            className={clsx({
+                                                [style.topics]: true,
+                                                // [style.topics_fixed]: pageYOffset > 340,
+                                            })}
+                                        >
+                                            <p className={style.topics_label}>Topics</p>
+                                            <div className={style.topics_list}>
+                                                {topics
+                                                    .map(({topic}) => topic)
+                                                    .map((topic, key) => (
+                                                        <HashLink
+                                                            to={`/faq#${topic}`}
+                                                            smooth={true}
+                                                            className={style.link}
+                                                        >
+                                                            {topic}
+                                                        </HashLink>
+                                                    ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className={style.faqBlocks}>
+                                        {topics.map(({topic, list}, key) => (
+                                            <div key={key} className={style.block}>
+                                                <div className={style.anchor} id={topic}/>
+                                                <p className={style.block_label}>{topic}</p>
+                                                <div className={style.block_items}>
+                                                    {list.map((item, key) => (
+                                                        <Item key={key} {...item} />
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    )
-                }
+                        )
+                    }
+                {/*</div>*/}
+
             </div>
         </div>
     );

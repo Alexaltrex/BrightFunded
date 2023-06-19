@@ -1,7 +1,7 @@
 import * as React from "react";
 import style from "./TableCustom.module.scss"
 import {FC, useState} from "react";
-import {dataMock, headers} from "../dataMock";
+import {headers} from "../data";
 import {Swiper, SwiperClass, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import clsx from "clsx";

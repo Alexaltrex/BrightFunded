@@ -5,6 +5,7 @@ import {observer} from "mobx-react-lite";
 import {useStore} from "../../../store/useStore";
 import style from "./WelcomeModal.module.scss";
 import {ButtonCustom} from "../../common/ButtonCustom/ButtonCustom";
+import {socialLinks} from "../../A0_App/socialLinks";
 
 export const WelcomeModal = observer(() => {
     const {welcomeModal, setWelcomeModal} = useStore();
@@ -50,7 +51,7 @@ export const WelcomeModal = observer(() => {
                 <ButtonCustom label="Join Our Discord"
                               icon={svgIcons.discord}
                               className={style.btn}
-                              href="https://discord.gg/9Ypd4ETZ"
+                              href={socialLinks[0].href}
                 />
 
                 <button className={style.okBtn}

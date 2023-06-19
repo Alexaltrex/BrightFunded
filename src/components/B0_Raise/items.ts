@@ -1,7 +1,7 @@
 export const items = [
     {
-        value: "5.000+",
-        text: "Traders joined the waiting list",
+        value: "5,000+",
+        text: "Exclusive waitlist spots available",
     },
     {
         value: "100+",

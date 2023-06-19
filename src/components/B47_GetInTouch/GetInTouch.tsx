@@ -5,6 +5,8 @@ import {svgIcons} from "../../assets/svgIcons";
 import {FormikErrors, FormikHelpers, useFormik} from "formik";
 import TextField from "@mui/material/TextField";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
+import {observer} from "mobx-react-lite";
+import {useStore} from "../../store/useStore";
 
 interface IValues {
     firstName: string
@@ -14,14 +16,16 @@ interface IValues {
     message: string
 }
 
-export const GetInTouch = () => {
-    const initialValues: IValues = {
-        firstName: "",
-        lastName: "",
-        email: "",
-        accountNumber: "",
-        message: "",
-    }
+const initialValues: IValues = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    accountNumber: "",
+    message: "",
+}
+
+export const GetInTouch = observer(() => {
+    const { setContactModal } = useStore();
 
     const validate = ({firstName, lastName, email, message}: IValues): FormikErrors<IValues> => {
         const errors = {} as FormikErrors<IValues>;
@@ -49,6 +53,7 @@ export const GetInTouch = () => {
     ) => {
         try {
             console.log(values);
+            setContactModal(true);
         } catch (e: any) {
             console.log(e.message);
         } finally {
@@ -201,7 +206,7 @@ export const GetInTouch = () => {
             </div>
         </div>
     )
-}
+})
 
 const sxField = {
     background: "rgba(15, 17, 28, 0.9)",
@@ -223,6 +228,11 @@ const sxField = {
             "& .MuiOutlinedInput-notchedOutline": {
                 borderColor: "#161A2B",
             }
+        },
+    },
+    "& .MuiInputBase-input": {
+        "&:-internal-autofill-selected": {
+            backgroundColor: "rgba(15, 17, 28, 0.9)!important"
         },
     },
     "& .MuiFormHelperText-root": {
