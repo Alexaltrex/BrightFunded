@@ -136,7 +136,7 @@ export const CurrencyTable = () => {
                                             // @ts-ignore
                                             Object.keys(dataMock).map(currency => dataMock[currency][params[key]][platform])
                                                 .map((el, index) => (
-                                                    <div key={key}
+                                                    <div key={index}
                                                          className={style.cell}
                                                     >
                                                         <p>

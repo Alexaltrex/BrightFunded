@@ -92,7 +92,6 @@ export const Header = observer(() => {
                     <ButtonCustom label="Trading Space"
                                   primary={false}
                                   className={style.tradeBtn}
-                        // @ts-ignore
                                   onClick={onTrading}
                     />
 

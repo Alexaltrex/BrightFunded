@@ -3,7 +3,8 @@ import style from "./OurTeam.module.scss";
 import gradientLeft from "../../assets/png/gradient_footer_left.png";
 import gradientRight from "../../assets/png/gradient_footer_right.png";
 import {svgIcons} from "../../assets/svgIcons";
-import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
+import {socialLinks} from "../A0_App/socialLinks";
+import {AnchorCustom} from "../common/AnchorCustom/AnchorCustom";
 
 export const OurTeam = () => {
     return (
@@ -22,8 +23,8 @@ export const OurTeam = () => {
                 </h2>
             </div>
 
-            <ButtonCustom label="Join Our Discord"
-                          href="https://discord.gg/9Ypd4ETZ"
+            <AnchorCustom label="Join Our Discord"
+                          href={socialLinks[0].href}
                           className={style.btn}
                           icon={svgIcons.discord}
             />

@@ -2,10 +2,9 @@ import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {svgIcons} from "../../assets/svgIcons";
 import * as React from "react";
 import style from "./JoinOurDiscord.module.scss"
-// import coin_green from "../../assets/png/fly_coin_green.png";
-// import coin_yellow from "../../assets/png/fly_coin_yellow.png";
-// import coin_blue from "../../assets/png/fly_coin_blue.png";
 import gradientRight from "../../assets/png/gradient_footer_right.png";
+import {AnchorCustom} from "../common/AnchorCustom/AnchorCustom";
+import {socialLinks} from "../A0_App/socialLinks";
 
 export const JoinOurDiscord = () => {
 
@@ -22,24 +21,14 @@ export const JoinOurDiscord = () => {
                     <p>Join Our Discord</p>
                     <p>And <span>Influence</span> The Roadmap</p>
                 </h2>
-
-                {/*<img src={coin_green} alt="" className={style.coin_green}/>*/}
-                {/*<img src={coin_yellow} alt="" className={style.coin_yellow}/>*/}
-                {/*<img src={coin_blue} alt="" className={style.coin_blue}/>*/}
             </div>
 
             <div className={style.buttons}>
-                <ButtonCustom label="Join Our Discord"
+                <AnchorCustom label="Join Our Discord"
                               icon={svgIcons.discord}
                               className={style.joinBtn}
-                              href="https://discord.gg/9Ypd4ETZ"
+                              href={socialLinks[0].href}
                 />
-
-                {/*<LinkCustom label="Join Our Discord"*/}
-                {/*            href="#"*/}
-                {/*            className={style.tradeBtn}*/}
-                {/*            icon={svgIcons.discord}*/}
-                {/*/>*/}
             </div>
 
         </div>

@@ -1,8 +1,8 @@
 import * as React from "react";
 import style from "./PositionBody.module.scss";
-import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {svgIcons} from "../../assets/svgIcons";
 import {FC} from "react";
+import {AnchorCustom} from "../common/AnchorCustom/AnchorCustom";
 
 const list = [
         "Be a part of a dedicated, diverse team with direct influence over the company's direction.",
@@ -103,7 +103,7 @@ export const PositionBody: FC<IPositionBody> = ({
                     </p>
                 </div>
 
-                <ButtonCustom label="Apply now"
+                <AnchorCustom label="Apply now"
                               icon={svgIcons.arrow_right}
                               className={style.btn}
                               href="mailto:careers@brightfunded.com"

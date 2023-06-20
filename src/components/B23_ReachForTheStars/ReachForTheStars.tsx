@@ -1,14 +1,12 @@
 import * as React from "react";
 import style from "./ReachForTheStars.module.scss";
-// import coin_green from "../../assets/png/fly_coin_green.png";
-// import coin_yellow from "../../assets/png/fly_coin_yellow.png";
-// import coin_blue from "../../assets/png/fly_coin_blue.png";
 import gradientRight from "../../assets/png/gradient_footer_right2.png";
-import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
-import {svgIcons} from "../../assets/svgIcons";
-import {LinkCustom} from "../common/LinkCustom/LinkCustom";
+import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";import {svgIcons} from "../../assets/svgIcons";
+
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
+import {AnchorUnderline} from "../common/AnchorUnderline/AnchorUnderline";
+import {socialLinks} from "../A0_App/socialLinks";
 
 export const ReachForTheStars = observer(() => {
     const {setAffiliateModal} = useStore();
@@ -27,10 +25,6 @@ export const ReachForTheStars = observer(() => {
 
                     Reach For <span>The Stars</span> As A BrightFunded Partner
                 </h2>
-
-                {/*<img src={coin_green} alt="" className={style.coin_green}/>*/}
-                {/*<img src={coin_yellow} alt="" className={style.coin_yellow}/>*/}
-                {/*<img src={coin_blue} alt="" className={style.coin_blue}/>*/}
             </div>
 
             <div className={style.buttons}>
@@ -41,10 +35,10 @@ export const ReachForTheStars = observer(() => {
                               onClick={onClickHandler}
                 />
 
-                <LinkCustom label="Join Our Discord"
-                            href="https://discord.gg/9Ypd4ETZ"
-                            className={style.tradeBtn}
-                            icon={svgIcons.discord}
+                <AnchorUnderline label="Join Our Discord"
+                                 href={socialLinks[0].href}
+                                 className={style.tradeBtn}
+                                 icon={svgIcons.discord}
                 />
             </div>
 

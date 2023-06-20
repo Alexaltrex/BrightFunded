@@ -6,7 +6,7 @@ import {svgIcons} from "../../assets/svgIcons";
 import {useStore} from "../../store/useStore";
 import {observer} from "mobx-react-lite";
 import {HashLink} from "react-router-hash-link";
-import {ButtonLink} from "../common/ButtonLink/ButtonLink";
+import {HashLinkUnderline} from "../common/HashLinkUnderline/HashLinkUnderline";
 
 // @ts-ignore
 import videoWebm from "../../assets/webm/graph.webm";
@@ -63,15 +63,12 @@ export const GetInstant = observer(() => {
                                   onClick={onJoin}
                     />
 
-                    <HashLink to="/trade#trade-top"
-                              style={{textDecoration: "none"}}
-                              smooth
-                    >
-                        <ButtonLink label="Learn more"
-                                    className={style.learnBtn}
-                                    icon={svgIcons.arrow_right}
-                        />
-                    </HashLink>
+                    <HashLinkUnderline label="Learn more"
+                                       to="/trade#trade-top"
+                                       className={style.learnBtn}
+                                       icon={svgIcons.arrow_right}
+                    />
+
 
                 </div>
 

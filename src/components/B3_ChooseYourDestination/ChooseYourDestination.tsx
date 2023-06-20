@@ -15,11 +15,13 @@ export const ChooseYourDestination = observer(() => {
     const [currency, setCurrency] = useState(0);
     // 0...4 => 10, 25, 50, 100, 200
     const [balance, setBalance] = useState<number | string | Array<number | string>>(0);
+    const [cardSwiper, setCardSwiper] = useState<SwiperClass | null>(null);
     const [planetSwiper, setPlanetSwiper] = useState<SwiperClass | null>(null);
 
     useEffect(() => {
         if (typeof balance === "number") {
-            planetSwiper?.slideTo(balance)
+            cardSwiper?.slideTo(balance);
+            planetSwiper?.slideTo(balance);
         }
     }, [balance]);
 
@@ -59,7 +61,8 @@ export const ChooseYourDestination = observer(() => {
 
                         <div className={style.rightBlock}>
                             <div className={style.slider}>
-                                <PlanetSlider setSwiper={(s) => setPlanetSwiper(s)}
+                                <PlanetSlider setCardSwiper={s => setCardSwiper(s)}
+                                              setPlanetSwiper={s => setPlanetSwiper(s)}
                                               onJoin={onJoin}
                                               currency={currency}
                                 />

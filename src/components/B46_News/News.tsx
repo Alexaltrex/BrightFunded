@@ -2,13 +2,13 @@ import * as React from "react";
 import style from "./News.module.scss";
 import {useState} from "react";
 import clsx from "clsx";
-import {news, tabs} from "./const";
 import { Card } from "./Card/Card";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {svgIcons} from "../../assets/svgIcons";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import MenuItem from "@mui/material/MenuItem";
 import Select, {SelectChangeEvent} from "@mui/material/Select";
+import {news, tabs} from "./newsContent";
 
 export const News = () => {
     const [tab, setTab] = useState(0);

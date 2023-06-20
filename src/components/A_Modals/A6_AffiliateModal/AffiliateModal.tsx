@@ -238,11 +238,9 @@ export const AffiliateModal = observer(() => {
                     <ButtonCustom label="Sign Up"
                                   icon={svgIcons.arrow_right}
                                   className={style.joinBtn}
-                        // @ts-ignore
                                   type="submit"
                     />
                 </form>
-
 
             </div>
         </Modal>

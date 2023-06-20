@@ -51,7 +51,6 @@ export const SignUpSuccessModal = observer(() => {
 
                 <ButtonCustom label="OK"
                               className={style.btn}
-                              // @ts-ignore
                               onClick={onClose}
                 />
 

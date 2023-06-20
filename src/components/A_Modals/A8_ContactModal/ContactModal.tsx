@@ -6,6 +6,7 @@ import style from "./ContactModal.module.scss"
 import {useStore} from "../../../store/useStore";
 import {observer} from "mobx-react-lite";
 import check from "../../../assets/png/check.png";
+import {AnchorCustom} from "../../common/AnchorCustom/AnchorCustom";
 
 export const ContactModal = observer(() => {
     const {contactModal, setContactModal} = useStore();
@@ -43,7 +44,7 @@ export const ContactModal = observer(() => {
                     us there if you haven't already!
                 </p>
 
-                <ButtonCustom label="Join Our Discord"
+                <AnchorCustom label="Join Our Discord"
                               icon={svgIcons.discord}
                               className={style.btn}
                               href="https://discord.gg/9Ypd4ETZ"

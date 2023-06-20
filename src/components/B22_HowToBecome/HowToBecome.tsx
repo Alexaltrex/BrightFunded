@@ -23,7 +23,8 @@ export const HowToBecome = () => {
                             <div key={key}
                                  className={style.card}
                             >
-                                <img src={src} alt="" className={style.planet}/>
+                                <p className={style.card_number}>{`0${key + 1}`}</p>
+                                <img src={src} alt="" className={style.img}/>
                                 <p className={style.card_title}>{title}</p>
                                 <p className={style.card_text}>{text}</p>
                             </div>

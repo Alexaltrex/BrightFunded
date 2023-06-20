@@ -3,7 +3,7 @@ import {FC} from "react";
 import {categories, IPosition} from "../B51_OpenPositions/positions";
 import style from "./Position.module.scss";
 import {svgIcons} from "../../assets/svgIcons";
-import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
+import {AnchorCustom} from "../common/AnchorCustom/AnchorCustom";
 
 export const Position: FC<IPosition> = ({
                                             id,
@@ -39,7 +39,7 @@ export const Position: FC<IPosition> = ({
                     </div>
                 </div>
 
-                <ButtonCustom label="Apply now"
+                <AnchorCustom label="Apply now"
                               icon={svgIcons.arrow_right}
                               className={style.btn}
                               href="mailto:careers@brightfunded.com"

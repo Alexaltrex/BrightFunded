@@ -1,8 +1,9 @@
 import {FC} from "react";
-import {ICard, tabs} from "../const";
+
 import * as React from "react";
 import style from "./Card.module.scss";
 import {Link} from "react-router-dom";
+import {ICard, tabs} from "../newsContent";
 
 export const Card: FC<ICard> = ({
                                     id,

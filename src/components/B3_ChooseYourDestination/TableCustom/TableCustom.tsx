@@ -145,7 +145,7 @@ export const TableCustom: FC<ITableCustom> = ({
                     <div/>
                     {
                         headers.map((header, key) => (
-                            <div>
+                            <div key={key}>
                                 <p>{`Step ${key + 1}`}</p>
                                 <p>{header}</p>
                             </div>

@@ -3,10 +3,10 @@ import style from "./Trade.module.scss";
 import clsx from "clsx";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {svgIcons} from "../../assets/svgIcons";
-import {LinkCustom} from "../common/LinkCustom/LinkCustom";
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
-
+import {AnchorUnderline} from "../common/AnchorUnderline/AnchorUnderline";
+import {socialLinks} from "../A0_App/socialLinks";
 
 export const Trade = observer(() => {
     const { setJoinModal } = useStore();
@@ -36,10 +36,10 @@ export const Trade = observer(() => {
                                   onClick={onJoin}
                     />
 
-                    <LinkCustom label="Join Our Discord"
-                                href="#"
-                                className={style.tradeBtn}
-                                icon={svgIcons.discord}
+                    <AnchorUnderline label="Join Our Discord"
+                                     href={socialLinks[0].href}
+                                     className={style.tradeBtn}
+                                     icon={svgIcons.discord}
                     />
                 </div>
 

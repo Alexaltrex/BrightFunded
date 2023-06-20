@@ -134,7 +134,6 @@ export const JoinModal = observer(() => {
                     <ButtonCustom label="Join Waitlist"
                                   icon={svgIcons.arrow_right}
                                   className={style.joinBtn}
-                        // @ts-ignore
                                   type="submit"
                     />
                 </form>

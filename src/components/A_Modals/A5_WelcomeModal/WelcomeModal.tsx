@@ -6,6 +6,7 @@ import {useStore} from "../../../store/useStore";
 import style from "./WelcomeModal.module.scss";
 import {ButtonCustom} from "../../common/ButtonCustom/ButtonCustom";
 import {socialLinks} from "../../A0_App/socialLinks";
+import {AnchorCustom} from "../../common/AnchorCustom/AnchorCustom";
 
 export const WelcomeModal = observer(() => {
     const {welcomeModal, setWelcomeModal} = useStore();
@@ -48,7 +49,7 @@ export const WelcomeModal = observer(() => {
                     </p>
                 </p>
 
-                <ButtonCustom label="Join Our Discord"
+                <AnchorCustom label="Join Our Discord"
                               icon={svgIcons.discord}
                               className={style.btn}
                               href={socialLinks[0].href}

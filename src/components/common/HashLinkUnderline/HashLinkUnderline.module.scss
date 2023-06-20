@@ -1,9 +1,8 @@
 @import "../../../assets/styles/app";
 
-.buttonLink {
-  @include button;
-  position: relative;
+.hashLinkUnderline {
   text-decoration: none;
+  position: relative;
   display: flex;
   align-items: center;
 

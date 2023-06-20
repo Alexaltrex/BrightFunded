@@ -1,8 +1,9 @@
 import * as React from "react";
 import style from "./BlogPage.module.scss";
 import {Blog} from "../../B45_Blog/Blog";
-import {News} from "../../B46_News/News";
+
 import {YourChance} from "../../common/YourChance/YourChance";
+import {News} from "../../B46_News/News";
 
 const BlogPage = () => {
     return (

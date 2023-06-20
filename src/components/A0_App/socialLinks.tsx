@@ -3,7 +3,7 @@ import {svgIcons} from "../../assets/svgIcons";
 export const socialLinks = [
     {
         icon: svgIcons.discord,
-        href: "https://discord.gg/9Ypd4ETZ",
+        href: "https://discord.com/invite/2jeVHncdH3",
     },
     {
         icon: svgIcons.telegram,

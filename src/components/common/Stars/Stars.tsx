@@ -1,27 +1,42 @@
 import {pointShaderMaterial} from "./pointShaderMaterial";
 import {FC, useRef} from "react";
 import {BufferAttribute} from "three";
-import {Canvas, useFrame} from "@react-three/fiber";
+import {Canvas, useFrame, useThree} from "@react-three/fiber";
 import {OrbitControls, PerspectiveCamera} from "@react-three/drei";
 import * as React from "react";
 
+const randomInterval = (min: number, max: number) => {
+    return min + Math.random() * (max - min);
+}
+
 const a_x = 200;
 const a_y = 200;
-const a_z = 1000;
-const pointsCount = 250;
-const speed = 50;
-const mult = 5;
+const a_z = 10000;
+const pointsCount = 150;
+const speed = 400;//50;
+const mult = 3;
+const k = 0.001;
+const cameraShift = 10;
 
 //========= POINTS =========//
 export const Points: FC<{isScrolling: boolean}> = ({isScrolling}) => {
+    const {viewport, camera} = useThree();
+    const {width, height} = viewport.getCurrentViewport(camera, [0, 0, -1]);
+    //console.log(width, height)
 
     const positions = [] as number[];
     const scales = [] as number[];
     const colors = [] as number[]
 
     for (let i = 0; i < pointsCount; i++) {
-        const x = (Math.random() - 0.5) * a_x  ;
-        const y = (Math.random() - 0.5) * a_y ;
+        // const x = (Math.random() - 0.5) * a_x  ;
+        // const y = (Math.random() - 0.5) * a_y ;
+        const x = (Math.random() - 0.5) * width;
+        const y = (Math.random() - 0.5) * height;
+        // const sign1 = (Math.random() - 0.5) >=0 ? 1 : -1;
+        // const sign2 = (Math.random() - 0.5) >=0 ? 1 : -1;
+        // const x = sign1 * randomInterval(k, 1.5) * width;
+        // const y = sign2 * randomInterval(k, 1.5) * height;
         const z = Math.random() * a_z ;
         positions.push(...[x, y, z])
         scales.push(2);
@@ -71,7 +86,7 @@ export const Stars: FC<{isScrolling: boolean}> = ({ isScrolling  }) => {
     return (
         <Canvas gl={{antialias: true}}>
             <Points isScrolling={isScrolling}/>
-            <PerspectiveCamera makeDefault position={[0, 0, 400]} zoom={4}/>
+            <PerspectiveCamera makeDefault position={[0, 0, a_z - cameraShift]} zoom={1} far={a_z}/>
             <OrbitControls target={[0, 0, 0]} enableRotate={false} enableZoom={false}/>
         </Canvas>
     )

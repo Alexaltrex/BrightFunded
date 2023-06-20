@@ -213,16 +213,15 @@
 
       .listDesktop {
         @include onlyDesktop(flex);
+        align-items: stretch;
         position: relative;
 
         .topicsWrapper {
+          position: relative;
           width: 216px;
-          height: 100%;
+          //height: 100%;
 
           .topics {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
             padding-top: 50px;
             width: 216px;
 
@@ -254,9 +253,9 @@
 
                 &:hover {
                   background: linear-gradient(
-                    34.49deg,
-                    #0781fe -12.58%,
-                    #00c7b4 102.84%
+                                  34.49deg,
+                                  #0781fe -12.58%,
+                                  #00c7b4 102.84%
                   );
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
@@ -269,7 +268,16 @@
               top: 50px;
               left: calc(50vw - 435px);
             }
+
+            &_end {
+              //background: green;
+              position: absolute;
+              top: auto;
+              left: -3px;
+              bottom: 5px;
+            }
           }
+
         }
 
         .faqBlocks {

@@ -81,7 +81,6 @@ export const App = observer(() => {
                                 {path: "/position/:positionId", element: <PositionPage/>},
                                 {path: "/policy", element: <PrivacyPolicyPage/>},
                                 {path: "/terms", element: <TermsPage/>},
-
                             ].map(({path, element}, key) => (
                                 <Route key={key} path={path} element={element}/>
                             ))

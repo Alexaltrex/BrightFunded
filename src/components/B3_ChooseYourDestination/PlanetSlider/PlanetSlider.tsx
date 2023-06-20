@@ -11,59 +11,89 @@ import {ButtonCustom} from "../../common/ButtonCustom/ButtonCustom";
 import {balancesFull} from "../data";
 
 interface IPlanetSlider {
-    setSwiper: (swiper: SwiperClass) => void
+    setCardSwiper: (swiper: SwiperClass) => void
+    setPlanetSwiper: (swiper: SwiperClass) => void
     onJoin: () => void
     currency: number
 }
 
 export const PlanetSlider: FC<IPlanetSlider> = ({
-                                                    setSwiper,
+                                                    setCardSwiper,
+                                                    setPlanetSwiper,
                                                     onJoin,
                                                     currency,
                                                 }) => {
 
     return (
-        <Swiper className={style.planetSlider}
-                slidesPerView={1}
-                allowTouchMove={false}
-                onSwiper={(swiper) => setSwiper(swiper)}
-            //allowTouchMove={false}
-                modules={[EffectFade]}
-                effect="fade"
-                fadeEffect={{
-                    crossFade: true
-                }}
-                speed={750}
+        <div className={style.wrapper}>
 
-        >
-            {
-                planets.map(({src, title, text, value}, key) => (
-                    <SwiperSlide key={key}
-                                 className={style.slide}
+            <Swiper className={style.planetSlider}
+                    slidesPerView={1}
+                    allowTouchMove={false}
+                    onSwiper={(swiper) => setPlanetSwiper(swiper)}
+                    modules={[EffectFade]}
+                    effect="fade"
+                    fadeEffect={{
+                        crossFade: true
+                    }}
+                    speed={750}
 
-                    >
-                        <div className={style.slideInner}>
+            >
+                {
+                    planets.map(({src, title, text, value}, key) => (
+                        <SwiperSlide key={key}
+                                     className={style.slide}
+
+                        >
                             <img src={src} alt="" className={style.img}/>
-                            <div>
-                                <div className={style.titleWrapper}>
-                                    <p className={style.title}>{title}</p>
-                                    <p className={style.value}>{balancesFull[currency][key]}</p>
+
+                        </SwiperSlide>
+                    ))
+                }
+            </Swiper>
+
+
+            <Swiper className={style.cardSlider}
+                    slidesPerView={1}
+                    allowTouchMove={false}
+                    onSwiper={(swiper) => setCardSwiper(swiper)}
+                    modules={[EffectFade]}
+                    effect="fade"
+                    fadeEffect={{
+                        crossFade: true
+                    }}
+                    speed={750}
+
+            >
+                {
+                    planets.map(({src, title, text, value}, key) => (
+                        <SwiperSlide key={key}
+                                     className={style.slide}
+
+                        >
+                            <div className={style.slideInner}>
+                                {/*<img src={src} alt="" className={style.img}/>*/}
+                                <div>
+                                    <div className={style.titleWrapper}>
+                                        <p className={style.title}>{title}</p>
+                                        <p className={style.value}>{balancesFull[currency][key]}</p>
+                                    </div>
+
+                                    <p className={style.text}>{text}</p>
                                 </div>
 
-                                <p className={style.text}>{text}</p>
+                                <ButtonCustom label="Join Waitlist"
+                                              icon={svgIcons.arrow_right}
+                                              className={style.joinBtn}
+                                              onClick={onJoin}
+                                />
                             </div>
 
-                            <ButtonCustom label="Join Waitlist"
-                                          icon={svgIcons.arrow_right}
-                                          className={style.joinBtn}
-                                //@ts-ignore
-                                          onClick={onJoin}
-                            />
-                        </div>
+                        </SwiperSlide>
+                    ))
+                }
+            </Swiper>
+        </div>
 
-                    </SwiperSlide>
-                ))
-            }
-        </Swiper>
     )
 }

@@ -44,6 +44,9 @@
         border-radius: 15px;
         box-sizing: border-box;
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
         @include desktop {
           padding: 30px;
@@ -130,7 +133,10 @@
         }
 
         .link {
-          text-decoration: none;
+          margin-top: 30px;
+          width: auto;
+          padding-left: 20px;
+          padding-right: 20px;
         }
 
         .btn {

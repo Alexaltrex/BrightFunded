@@ -1,0 +1,55 @@
+@import "../../assets/styles/app";
+
+.block {
+  margin-top: 30px;
+
+  @include desktop {
+    margin-top: 60px;
+  }
+
+  .img {
+    display: block;
+    width: 280px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+
+    @include desktop {
+      width: 846px;
+      height: auto;
+    }
+  }
+
+  &_title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #0F0D31;
+
+    @include desktop {
+      font-size: 24px;
+    }
+  }
+
+  &_text {
+    margin-top: 15px;
+
+    @include desktop {
+      margin-top: 16px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: #313235;
+
+      &:not(:first-child) {
+        margin-top: 21px;
+      }
+    }
+  }
+}

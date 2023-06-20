@@ -1,6 +1,6 @@
 import {FC, useEffect, useState} from "react";
 import * as React from "react";
-import style from "./LinkCustom.module.scss";
+import style from "./AnchorUnderline.module.scss";
 import "./style.scss"
 import clsx from "clsx";
 
@@ -11,7 +11,7 @@ interface ILinkCustom extends React.DetailedHTMLProps<React.AnchorHTMLAttributes
     href: string
 }
 
-export const LinkCustom: FC<ILinkCustom> = ({
+export const AnchorUnderline: FC<ILinkCustom> = ({
                                                     label,
                                                     className,
                                                     icon,
@@ -38,7 +38,7 @@ export const LinkCustom: FC<ILinkCustom> = ({
            target="_blank"
            rel="noopener noreferrer nofollow"
            className={clsx(
-               style.linkCustom,
+               style.anchorUnderline,
                Boolean(className) && className,
                enter && mouseEvent && "mouseEnter",
                leave && mouseEvent && "mouseLeave"

@@ -1,16 +1,16 @@
 import {FC} from "react";
 import * as React from "react";
-import style from "./ButtonCustom.module.scss";
+import style from "./AnchorCustom.module.scss";
 import clsx from "clsx";
 
-interface IButtonCustom extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+interface IAnchorCustom extends React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> {
     label: string
     primary?: boolean
     className?: string
     icon?: JSX.Element
 }
 
-export const ButtonCustom: FC<IButtonCustom> = ({
+export const AnchorCustom: FC<IAnchorCustom> = ({
                                                     label,
                                                     primary = true,
                                                     className,
@@ -18,12 +18,14 @@ export const ButtonCustom: FC<IButtonCustom> = ({
                                                     ...props
                                                 }) => {
     return (
-        <button className={clsx(
-            style.buttonCustom,
-            !primary && style.buttonCustom_secondary,
-            Boolean(className) && className
-        )}
-                {...props}
+        <a target="_blank"
+           rel="noopener noreferrer nofollow"
+           className={clsx(
+               style.anchorCustom,
+               !primary && style.anchorCustom_secondary,
+               Boolean(className) && className
+           )}
+           {...props}
         >
             <p>{label}</p>
             {
@@ -31,6 +33,6 @@ export const ButtonCustom: FC<IButtonCustom> = ({
                     <>{icon}</>
                 )
             }
-        </button>
+        </a>
     )
 }

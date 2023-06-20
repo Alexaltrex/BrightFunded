@@ -8,12 +8,10 @@ import {Swiper, SwiperClass, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import {useState} from "react";
 import clsx from "clsx";
-import { useNavigate } from "react-router-dom";
 import {TitleAnimated} from "./TitleAnimated/TitleAnimated";
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
-import {ButtonLink} from "../common/ButtonLink/ButtonLink";
-import {HashLink} from "react-router-hash-link";
+import {HashLinkUnderline} from "../common/HashLinkUnderline/HashLinkUnderline";
 import coinBack from "../../assets/png/coin-back.png";
 
 // @ts-ignore
@@ -27,8 +25,6 @@ export const Raise = observer(() => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const {setJoinModal} = useStore();
-    const navigate = useNavigate();
-    const onTrade = () => navigate("/trade#trade-top")
 
     return (
         <>
@@ -58,20 +54,15 @@ export const Raise = observer(() => {
                             <ButtonCustom label="Join Waitlist"
                                           icon={svgIcons.arrow_right}
                                           className={style.joinBtn}
-                                            // @ts-ignore
+                                // @ts-ignore
                                           onClick={() => setJoinModal(true)}
                             />
 
-                            <HashLink to="/trade#trade-top"
-                                      className={style.link}
-                                      smooth
-                            >
-                                <ButtonLink label="Trade2Earn"
-                                            className={style.tradeBtn}
-                                            icon={svgIcons.arrow_right}
-                                            onClick={onTrade}
-                                />
-                            </HashLink>
+                            <HashLinkUnderline label="Trade2Earn"
+                                               className={style.tradeBtn}
+                                               icon={svgIcons.arrow_right}
+                                               to="/trade#trade-top"
+                            />
 
                         </div>
 

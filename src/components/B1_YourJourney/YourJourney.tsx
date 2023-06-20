@@ -4,18 +4,10 @@ import {cards} from "./cards";
 import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
-import {HashLink} from "react-router-hash-link";
+import {HashLinkCustom} from "../common/HashLinkCustom/HashLinkCustom";
 
 export const YourJourney = observer(() => {
     const {setJoinModal} = useStore();
-
-    const handlers = [
-        () => setJoinModal(true),
-        () => {
-        },
-        () => {
-        },
-    ]
 
     return (
         <div className={style.yourJourney}>
@@ -45,35 +37,26 @@ export const YourJourney = observer(() => {
                                         <ButtonCustom label={buttonLabel}
                                                       primary={false}
                                                       className={style.btn}
-                                                    //@ts-ignore
-                                                      onClick={handlers[key]}
+                                                      onClick={() => setJoinModal(true)}
                                         />
                                     )
                                 }
                                 {
                                     key === 1 && (
-                                        <HashLink to="/roadmap#roadmap-top"
-                                                  className={style.link}
-                                                  smooth
-                                        >
-                                            <ButtonCustom label={buttonLabel}
-                                                          primary={false}
-                                                          className={style.btn}
-                                            />
-                                        </HashLink>
+                                        <HashLinkCustom to="/roadmap#roadmap-top"
+                                                        className={style.link}
+                                                        label={buttonLabel}
+                                                        primary={false}
+                                        />
                                     )
                                 }
                                 {
                                     key === 2 && (
-                                        <HashLink to="/about#about-top"
-                                                  className={style.link}
-                                                  smooth
-                                        >
-                                            <ButtonCustom label={buttonLabel}
-                                                          primary={false}
-                                                          className={style.btn}
-                                            />
-                                        </HashLink>
+                                        <HashLinkCustom to="/about#about-top"
+                                                        className={style.link}
+                                                        label={buttonLabel}
+                                                        primary={false}
+                                        />
                                     )
                                 }
                             </div>

@@ -1,6 +1,6 @@
-import src0 from "../../assets/png/planet_2.png";
-import src1 from "../../assets/png/planet_1.png";
-import src2 from "../../assets/png/planet_4.png";
+import src0 from "../../assets/png/howToBecome_0.png";
+import src1 from "../../assets/png/howToBecome_1.png";
+import src2 from "../../assets/png/howToBecome_2.png";
 
 export const cards = [
     {

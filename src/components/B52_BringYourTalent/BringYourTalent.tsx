@@ -2,10 +2,8 @@ import * as React from "react";
 import style from "./BringYourTalent.module.scss";
 import gradientLeft from "../../assets/png/gradient_footer_left.png";
 import gradientRight from "../../assets/png/gradient_footer_right.png";
-import {observer} from "mobx-react-lite";
-import {useStore} from "../../store/useStore";
 import {svgIcons} from "../../assets/svgIcons";
-import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
+import {AnchorCustom} from "../common/AnchorCustom/AnchorCustom";
 
 
 export const BringYourTalent = () => {
@@ -26,7 +24,7 @@ export const BringYourTalent = () => {
 
             </div>
 
-            <ButtonCustom label="Join The Team"
+            <AnchorCustom label="Join The Team"
                           icon={svgIcons.arrow_right}
                           className={style.btn}
                           href="mailto:careers@brightfunded.com"
