@@ -1,9 +1,8 @@
 import {FC} from "react";
-
 import * as React from "react";
 import style from "./Card.module.scss";
-import {Link} from "react-router-dom";
 import {ICard, tabs} from "../newsContent";
+import {HashLink} from "react-router-hash-link";
 
 export const Card: FC<ICard> = ({
                                     id,
@@ -15,12 +14,11 @@ export const Card: FC<ICard> = ({
                                 }) => {
     return (
         <div className={style.card}>
-            <Link className={style.link}
-                  to={`/blog/${id}`}
+            <HashLink className={style.link}
+                  to={`/blog/${id}#article-top`}
             >
                 <img src={img} alt="" className={style.img}/>
-            </Link>
-
+            </HashLink>
 
             <p className={style.ticket}
                style={{

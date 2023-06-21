@@ -14,7 +14,9 @@ const ArticlePage = () => {
     const similarCards = similar.map(id => (news.find(el => el.id === id) as ICard));
 
     return (
-        <div className={style.articlePage}>
+        <div className={style.articlePage}
+             id="article-top"
+        >
 
             <div className={style.card}>
 

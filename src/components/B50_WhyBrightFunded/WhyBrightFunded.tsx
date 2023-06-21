@@ -14,7 +14,7 @@ export const WhyBrightFunded = () => {
                         Why <span>BrightFunded</span>?
                     </p>
                     <div className={style.right}>
-                        <p className={style.text}>d
+                        <p className={style.text}>
                             We're more interested in building a community of friends than a mere workforce.
                         </p>
                         <p className={style.desc}>

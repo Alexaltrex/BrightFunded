@@ -1,6 +1,6 @@
 import {pointShaderMaterial} from "./pointShaderMaterial";
 import {FC, useRef} from "react";
-import {BufferAttribute} from "three";
+import {BufferAttribute, Fog} from "three";
 import {Canvas, useFrame, useThree} from "@react-three/fiber";
 import {OrbitControls, PerspectiveCamera} from "@react-three/drei";
 import * as React from "react";

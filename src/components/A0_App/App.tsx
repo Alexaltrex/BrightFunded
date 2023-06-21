@@ -29,6 +29,8 @@ const PositionPage = lazy(() => import('../A_Pages/A21_PositionPage/PositionPage
 const PrivacyPolicyPage = lazy(() => import('../A_Pages/A22_PrivacyPolicyPage/PrivacyPolicyPage'));
 const TermsPage = lazy(() => import('../A_Pages/A23_TermsPage/TermsPage'));
 
+// "homepage": "http://alexaltrex.github.io/BrightFunded",
+
 export const App = observer(() => {
     const {burgerMenu, setScrollDown, pageYOffset, setPageYOffset} = useStore();
 
@@ -50,7 +52,7 @@ export const App = observer(() => {
             [style.app_burger]: burgerMenu,
         })}
         >
-            <div className={style.wrapper}>
+            <div className={style.starWrapper}>
                 <StarsScroll/>
             </div>
             <Header/>

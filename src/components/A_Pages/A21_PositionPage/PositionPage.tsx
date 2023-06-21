@@ -11,7 +11,9 @@ const PositionPage = () => {
     const position = positions.find(position => position.id === (positionId as string)) as IPosition;
 
     return (
-        <div className={style.positionPage}>
+        <div className={style.positionPage}
+             id="position-top"
+        >
             <Position {...position}/>
             <div className={style.card}>
                 <PositionBody responsibilities={position.responsibilities}

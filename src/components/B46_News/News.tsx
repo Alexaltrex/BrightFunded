@@ -66,11 +66,11 @@ export const News = () => {
                     </div>
                 </div>
 
-                <ButtonCustom label="Load more"
-                              primary={false}
-                              icon={svgIcons.arrow_down_blue}
-                              className={style.btn}
-                />
+                {/*<ButtonCustom label="Load more"*/}
+                {/*              primary={false}*/}
+                {/*              icon={svgIcons.arrow_down_blue}*/}
+                {/*              className={style.btn}*/}
+                {/*/>*/}
 
 
             </div>

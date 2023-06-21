@@ -4,6 +4,7 @@ import {FC} from "react";
 import style from "./Card.module.scss";
 import * as React from "react";
 import {svgIcons} from "../../../assets/svgIcons";
+import {HashLink} from "react-router-hash-link";
 
 export const Card: FC<IPosition> = ({
                                         id,
@@ -14,8 +15,8 @@ export const Card: FC<IPosition> = ({
                                         time,
                                     }) => {
     return (
-        <Link className={style.card}
-              to={`/position/${id}`}
+        <HashLink className={style.card}
+              to={`/position/${id}#position-top`}
         >
             <div className={style.top}>
 
@@ -44,6 +45,6 @@ export const Card: FC<IPosition> = ({
                     </div>
                 </div>
             </div>
-        </Link>
+        </HashLink>
     )
 }
