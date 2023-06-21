@@ -5,16 +5,20 @@ import Collapse from "@mui/material/Collapse";
 import plus from "../../../assets/png/btn_plus.png";
 import minus from "../../../assets/png/btn_minus.png";
 import {IListItem} from "../topics";
+import {getSelectedString} from "../../../helpers/getSelectedString";
 
 interface IItem extends IListItem {
-
+    open?: boolean
+    selectedString?: string
 }
 
 export const Item: FC<IItem> = ({
                                     question,
-                                    answer
+                                    answer,
+                                    open = false,
+                                    selectedString
                                 }) => {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(open);
 
     return (
         <div className={style.faqItem}
@@ -24,7 +28,11 @@ export const Item: FC<IItem> = ({
                 <img src={show ? minus : plus} alt=""/>
             </div>
 
-            <p className={style.question}>{question}</p>
+            <p className={style.question}>
+                {
+                    selectedString ? getSelectedString(question, selectedString) : question
+                }
+            </p>
 
             <Collapse in={show}>
                 <div className={style.answer}>{answer}</div>

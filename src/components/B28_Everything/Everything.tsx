@@ -3,7 +3,7 @@ import style from './Everything.module.scss';
 import {FormikErrors, FormikHelpers, useFormik} from 'formik';
 import {svgIcons} from '../../assets/svgIcons';
 import {Item} from './Item/Item';
-import {IListItem, topics} from './topics';
+import {IListItem, ITopic, topics} from './topics';
 import {TopicItem} from './TopicItem/TopicItem';
 import {HashLink} from 'react-router-hash-link';
 import clsx from 'clsx';
@@ -55,11 +55,16 @@ export const Everything = observer(() => {
     });
 
     const [searchList, setSearchList] = useState<null | IListItem[]>(null);
+    const [searchListWithCategory, setSearchListWithCategory] = useState<null | ITopic[]>(null);
+
     const onSearch = (value: string) => {
         setSearchList(null);
         const list = [] as IListItem[];
+        const listWithCategory = [] as ITopic[];
 
         topics.forEach((el) => {
+            const l = [] as IListItem[];
+
             el.list.forEach((item) => {
                 const {
                     question,
@@ -76,11 +81,20 @@ export const Everything = observer(() => {
                     //|| matchAllArrAnswer.length > 0
                 ) {
                     list.push(item);
+                    l.push(item)
                 }
             });
+            if (l.length > 0) {
+                listWithCategory.push({
+                    topic: el.topic,
+                    list: l,
+                })
+            }
+
         });
         //console.log(list);
         setSearchList(list);
+        setSearchListWithCategory(listWithCategory);
     };
     const onCloseHandler = () => {
         formik.resetForm();
@@ -112,7 +126,7 @@ export const Everything = observer(() => {
 
     const ref = useRef<HTMLDivElement>(null!);
     const rect = ref.current?.getBoundingClientRect();
-    //console.log(rect?.bottom)
+    console.log(searchListWithCategory)
 
     return (
         <div ref={componentRef} className={style.everything}>
@@ -152,24 +166,42 @@ export const Everything = observer(() => {
                             <p className={style.count}>
                                 {`${searchList?.length || 0} matches/`}
                             </p>
-                            {
-                                searchList && (
-                                    <div className={style.resultList}>
-                                        {
-                                            searchList.map(({question, answer}, key) => (
-                                                <div key={key} className={style.resultCard}>
-                                                    <p className={style.question}>
-                                                        {getSelectedString(question, formik.values.question)}
-                                                    </p>
-                                                    <div className={style.answer}>
-                                                        {answer}
-                                                        {/*{getSelectedString(answer, formik.values.question)}*/}
+                            <div>
+                                {
+                                    searchListWithCategory &&  (
+                                        <div className={style.faqBlocks}>
+                                            {
+                                                searchListWithCategory.map(({topic, list}, key) => (
+                                                    <div key={key} className={style.block}>
+                                                        <div className={style.anchor} id={topic}/>
+                                                        <p className={style.block_label}>{topic}</p>
+                                                        <div className={style.block_items}>
+                                                            {list.map((item, key) => (
+                                                                <Item key={key} {...item} open={true} selectedString={formik.values.question} />
+                                                            ))}
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            ))
-                                        }
-                                    </div>
-                                )}
+                                                ))
+                                            }
+                                        </div>
+                                        // <div className={style.resultList}>
+                                        //     {
+                                        //         searchList.map(({question, answer}, key) => (
+                                        //             <div key={key} className={style.resultCard}>
+                                        //                 <p className={style.question}>
+                                        //                     {getSelectedString(question, formik.values.question)}
+                                        //                 </p>
+                                        //                 <div className={style.answer}>
+                                        //                     {answer}
+                                        //                     {/*{getSelectedString(answer, formik.values.question)}*/}
+                                        //                 </div>
+                                        //             </div>
+                                        //         ))
+                                        //     }
+                                        // </div>
+                                    )}
+                            </div>
+
                         </div>
                     ) : (
                         <div ref={triggerRef} className={style.list}>
@@ -206,17 +238,19 @@ export const Everything = observer(() => {
                                 </div>
 
                                 <div className={style.faqBlocks} ref={ref}>
-                                    {topics.map(({topic, list}, key) => (
-                                        <div key={key} className={style.block}>
-                                            <div className={style.anchor} id={topic}/>
-                                            <p className={style.block_label}>{topic}</p>
-                                            <div className={style.block_items}>
-                                                {list.map((item, key) => (
-                                                    <Item key={key} {...item} />
-                                                ))}
+                                    {
+                                        topics.map(({topic, list}, key) => (
+                                            <div key={key} className={style.block}>
+                                                <div className={style.anchor} id={topic}/>
+                                                <p className={style.block_label}>{topic}</p>
+                                                <div className={style.block_items}>
+                                                    {list.map((item, key) => (
+                                                        <Item key={key} {...item} />
+                                                    ))}
+                                                </div>
                                             </div>
-                                        </div>
-                                    ))}
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>

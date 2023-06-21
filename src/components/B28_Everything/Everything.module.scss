@@ -128,71 +128,107 @@
         }
       }
 
-      .resultList {
-        margin-top: 24px;
+      .faqBlocks {
+        width: 630px;
 
-        @include desktop {
-          margin-top: 0;
-          flex-grow: 1;
-        }
+        .block {
+          position: relative;
 
-        .resultCard {
-          background: rgba(21, 24, 40, 0.8);
-          border-radius: 15px;
-          border: 1px solid rgba(255, 255, 255, 0.06);
-          padding: 20px 20px 24px;
+          .anchor {
+            position: absolute;
+            left: 0;
+            top: -50px;
+            height: 0;
+            width: 0;
+          }
 
           &:not(:first-child) {
-            margin-top: 16px;
-
-            @include desktop {
-              margin-top: 20px;
-            }
+            padding-top: 60px;
           }
 
-          .question {
+          &:first-child {
+            //padding-top: 50px;
+          }
+
+          &_label {
             font-weight: 600;
-            font-size: 16px;
+            font-size: 24px;
             line-height: 130%;
             letter-spacing: -0.02em;
-            color: #ffffff;
-            //width: 188px;
-
-            @include desktop {
-              font-size: 18px;
-              width: auto;
-            }
-
-            span {
-              background: yellow;
-              color: #000;
-            }
+            color: #4f5056;
           }
 
-          .answer {
+          &_items {
             margin-top: 20px;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 150%;
-            letter-spacing: -0.01em;
-            color: #a1a3a9;
-
-            @include desktop {
-              //width: 555px;
-            }
-
-            span {
-              background: yellow;
-              color: #000;
-            }
-
-            a {
-              text-decoration: none;
-              color: #02A4C7;
-            }
           }
         }
       }
+
+      //.resultList {
+      //  margin-top: 24px;
+      //
+      //  @include desktop {
+      //    margin-top: 0;
+      //    flex-grow: 1;
+      //  }
+      //
+      //  .resultCard {
+      //    background: rgba(21, 24, 40, 0.8);
+      //    border-radius: 15px;
+      //    border: 1px solid rgba(255, 255, 255, 0.06);
+      //    padding: 20px 20px 24px;
+      //
+      //    &:not(:first-child) {
+      //      margin-top: 16px;
+      //
+      //      @include desktop {
+      //        margin-top: 20px;
+      //      }
+      //    }
+      //
+      //    .question {
+      //      font-weight: 600;
+      //      font-size: 16px;
+      //      line-height: 130%;
+      //      letter-spacing: -0.02em;
+      //      color: #ffffff;
+      //      //width: 188px;
+      //
+      //      @include desktop {
+      //        font-size: 18px;
+      //        width: auto;
+      //      }
+      //
+      //      span {
+      //        background: yellow;
+      //        color: #000;
+      //      }
+      //    }
+      //
+      //    .answer {
+      //      margin-top: 20px;
+      //      font-weight: 400;
+      //      font-size: 14px;
+      //      line-height: 150%;
+      //      letter-spacing: -0.01em;
+      //      color: #a1a3a9;
+      //
+      //      @include desktop {
+      //        //width: 555px;
+      //      }
+      //
+      //      span {
+      //        background: yellow;
+      //        color: #000;
+      //      }
+      //
+      //      a {
+      //        text-decoration: none;
+      //        color: #02A4C7;
+      //      }
+      //    }
+      //  }
+      //}
     }
 
     .list {
