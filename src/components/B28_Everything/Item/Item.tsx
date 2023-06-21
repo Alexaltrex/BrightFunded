@@ -6,6 +6,7 @@ import plus from "../../../assets/png/btn_plus.png";
 import minus from "../../../assets/png/btn_minus.png";
 import {IListItem} from "../topics";
 import {getSelectedString} from "../../../helpers/getSelectedString";
+import clsx from "clsx";
 
 interface IItem extends IListItem {
     open?: boolean
@@ -24,7 +25,10 @@ export const Item: FC<IItem> = ({
         <div className={style.faqItem}
              onClick={() => setShow(!show)}
         >
-            <div className={style.faqItem_btn}>
+            <div className={clsx({
+                [style.faqItem_btn]: true,
+                [style.faqItem_btn_open]: show,
+            })}>
                 <img src={show ? minus : plus} alt=""/>
             </div>
 

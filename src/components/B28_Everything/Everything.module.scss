@@ -129,7 +129,10 @@
       }
 
       .faqBlocks {
-        width: 630px;
+
+        @include desktop {
+          width: 630px;
+        }
 
         .block {
           position: relative;
@@ -147,7 +150,11 @@
           }
 
           &:first-child {
-            //padding-top: 50px;
+            padding-top: 30px;
+
+            @include desktop {
+              padding-top: 0;
+            }
           }
 
           &_label {

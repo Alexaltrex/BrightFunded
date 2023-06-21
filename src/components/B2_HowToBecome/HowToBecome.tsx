@@ -1,8 +1,12 @@
 import * as React from 'react';
 import style from './HowToBecome.module.scss';
 import {phases} from './phases';
+import {VideoWrapper} from "./VideoWrapper";
+import {useMediaQuery} from "@mui/material";
 
 export const HowToBecome = () => {
+    const matches = useMediaQuery('(min-width:1440px)');
+
     return (
         <div className={style.howToBecome}
              id="challenge"
@@ -17,7 +21,7 @@ export const HowToBecome = () => {
 
                 <div className={style.cards}>
                     {
-                        phases.map(({title, text, src_mp4, src_webm,background, color, img_m}, key) => (
+                        phases.map(({title, text, background, color, img_m}, key) => (
                             <div key={key}
                                  className={style.card}
                                  style={{background}}
@@ -33,16 +37,9 @@ export const HowToBecome = () => {
 
                                 <img src={img_m} alt="" className={style.imgMobile}/>
 
-                                <div className={style.videoWrapper}>
-                                    <video autoPlay={true}
-                                           muted={true}
-                                           playsInline={true}
-                                           loop={true}
-                                    >
-                                        <source src={src_mp4} type='video/mp4; codecs="hvc1"' />
-                                        <source src={src_webm} type='video/webm' />
-                                    </video>
-                                </div>
+                                {
+                                    matches && <VideoWrapper index={key}/>
+                                }
 
                                 <p className={style.title}>{title}</p>
 

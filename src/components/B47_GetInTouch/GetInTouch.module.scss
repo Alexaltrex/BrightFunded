@@ -170,11 +170,11 @@
               line-height: 150%;
               letter-spacing: -0.01em;
               color: #A1A3A9;
-              white-space: nowrap;
+
 
               @include desktop {
                 margin-top: 7px;
-
+                white-space: nowrap;
               }
             }
 

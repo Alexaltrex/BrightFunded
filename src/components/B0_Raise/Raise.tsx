@@ -55,7 +55,6 @@ export const Raise = observer(() => {
                             <ButtonCustom label="Join Waitlist"
                                           icon={svgIcons.arrow_right}
                                           className={style.joinBtn}
-                                // @ts-ignore
                                           onClick={() => setJoinModal(true)}
                             />
 
@@ -81,7 +80,6 @@ export const Raise = observer(() => {
                                     <source src={videoWebm} type='video/webm'/>
                                 </video>
                             </div>
-
                         </div>
 
                     </div>
