@@ -5,8 +5,8 @@ import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
 import {svgIcons} from "../../assets/svgIcons";
 import {useStore} from "../../store/useStore";
 import {observer} from "mobx-react-lite";
-import {HashLink} from "react-router-hash-link";
 import {HashLinkUnderline} from "../common/HashLinkUnderline/HashLinkUnderline";
+import rocket from "../../assets/png/rocket2.png";
 
 // @ts-ignore
 import videoWebm from "../../assets/webm/graph.webm";
@@ -29,6 +29,8 @@ export const GetInstant = observer(() => {
                         Get Instant Rewarded
                     </h2>
                 </div>
+
+                <img src={rocket} alt="" className={style.rocket}/>
 
                 <div className={style.videoWrapper}>
                     <video autoPlay={true}

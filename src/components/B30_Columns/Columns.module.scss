@@ -3,7 +3,7 @@
 .columns {
   @include container;
   position: relative;
-  padding-top: 366px;//100px;
+  padding-top: 366px; //100px;
   padding-bottom: 60px;
 
   @include desktop {
@@ -33,7 +33,19 @@
       height: auto;
     }
 
+    .rocket {
+      @include onlyMobile;
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      height: 425px;
+      top: -60px;
+    }
+
     .videoWrapper {
+      @include onlyDesktop();
       position: absolute;
       z-index: 1;
       top: -42px;

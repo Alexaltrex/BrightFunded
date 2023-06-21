@@ -22,7 +22,19 @@
       @include h2_block_white;
     }
 
+    .rocket {
+      @include onlyMobile;
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      height: 387px;
+      top: 0;
+    }
+
     .videoWrapper {
+      @include onlyDesktop;
       position: absolute;
       z-index: 1;
       left: 50%;

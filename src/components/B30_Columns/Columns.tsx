@@ -1,6 +1,7 @@
 import * as React from "react";
 import style from "./Columns.module.scss";
 import {cards} from "./cards";
+import rocket from "../../assets/png/rocket2.png";
 
 // @ts-ignore
 import videoWebm from "../../assets/webm/graph.webm";
@@ -11,6 +12,8 @@ export const Columns = () => {
     return (
         <div className={style.columns}>
             <div className={style.inner}>
+
+                <img src={rocket} alt="" className={style.rocket}/>
 
                 <div className={style.videoWrapper}>
                     <video autoPlay={true}

@@ -13,6 +13,7 @@ import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
 import {HashLinkUnderline} from "../common/HashLinkUnderline/HashLinkUnderline";
 import coinBack from "../../assets/png/coin-back.png";
+import coin from "../../assets/png/coin.png";
 
 // @ts-ignore
 import videoWebm from "../../assets/webm/coin.webm";
@@ -68,6 +69,7 @@ export const Raise = observer(() => {
 
                         <div className={style.videoWrapper}>
                             <img src={coinBack} alt="" className={style.coinBack}/>
+                            <img src={coin} alt="" className={style.coin}/>
                             <div className={style.inner}>
 
                                 <video autoPlay={true}
