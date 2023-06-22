@@ -149,8 +149,6 @@ export const Stars = (props) => {
     return (<Canvas draw={ onUpdate } style={ { width: '100%', height: '100%' } } />);
 
 }
-<<<<<<< HEAD
+
 export default Stars;
-=======
-export default Stars;
->>>>>>> e01bcab (stars)
+
