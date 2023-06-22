@@ -37,8 +37,7 @@ export const Canvas = (props) => {
     }, []);
 
     useEffect(() => {
-        let frameCount = 0;
-        let animationFrameId, fpsInterval, now, then, elapsed;
+        let animationFrameId;
 
         if (context) {
             const render = () => {
@@ -113,7 +112,7 @@ export const Stars = (props) => {
         if (stars.length === 0) return;
         context.clearRect(0, 0, s.width, s.height);
         const scrollTop = window.scrollY;
-        var delta = .5 + Math.abs(lastScroll - scrollTop) / 2;
+        var delta = .5 + Math.abs(lastScroll - scrollTop) / 5;
         var speed = delta;
         for (var t = 0; t < stars.length; t++) {
             stars[t].z -= speed;
@@ -149,6 +148,4 @@ export const Stars = (props) => {
     return (<Canvas draw={ onUpdate } style={ { width: '100%', height: '100%' } } />);
 
 }
-
 export default Stars;
-
