@@ -22,6 +22,7 @@
   }
 
   .top {
+    flex-shrink: 0;
     .item {
       &:not(:first-child) {
         margin-top: 24px;
