@@ -1,6 +1,6 @@
 export const items = [
     {
-        value: "5,000",
+        value: "5.000",
         text: "Exclusive waitlist spots available",
     },
     {

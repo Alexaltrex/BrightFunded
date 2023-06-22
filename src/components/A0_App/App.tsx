@@ -64,8 +64,9 @@ export const App = observer(() => {
             <SignUpSuccessModal/>
             <ContactModal/>
 
+            <Suspense fallback={<p>loading</p>}>
             <main className={style.main}>
-                <Suspense fallback={<p>loading</p>}>
+
                     <Routes>
                         {
                             [
@@ -88,11 +89,12 @@ export const App = observer(() => {
                             ))
                         }
                     </Routes>
-                </Suspense>
+
             </main>
-
-
             <Footer/>
+            </Suspense>
+
+
 
             {/*<div className='tradingview-widget-container'>*/}
             {/*    <div className='tradingview-widget-container__widget'/>*/}

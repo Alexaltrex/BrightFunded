@@ -5,7 +5,6 @@ import gradientRight from "../../assets/png/gradient_footer_right.png";
 import {svgIcons} from "../../assets/svgIcons";
 import {AnchorCustom} from "../common/AnchorCustom/AnchorCustom";
 
-
 export const BringYourTalent = () => {
 
     return (

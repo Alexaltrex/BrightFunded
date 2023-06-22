@@ -1,7 +1,7 @@
 import * as React from "react";
 import style from "./TitleAnimated.module.scss";
 import "./anim.scss";
-import {FC, useRef, useState} from "react";
+import {useRef, useState} from "react";
 import clsx from "clsx";
 import Fade from "@mui/material/Fade";
 import Tooltip, {TooltipProps, tooltipClasses} from '@mui/material/Tooltip';

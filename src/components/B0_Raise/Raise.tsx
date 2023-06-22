@@ -48,7 +48,6 @@ export const Raise = observer(() => {
                             <p>
                                 Get rewarded with <span>Trade2Earn.</span>
                             </p>
-
                         </div>
 
                         <div className={style.btns}>

@@ -1,12 +1,12 @@
 export const data = {
     "Elapsed Time": [
-        "0 month",
-        "4 month",
-        "8 month",
-        "12 month",
-        "16 month",
-        "20 month",
-        "24 month",
+        "0 months",
+        "4 months",
+        "8 months",
+        "12 months",
+        "16 months",
+        "20 months",
+        "24 months",
     ],
     "Initial Balance": [
         "$400,000",

@@ -7,6 +7,7 @@ import {useStore} from "../../../store/useStore";
 import {observer} from "mobx-react-lite";
 import check from "../../../assets/png/check.png";
 import {AnchorCustom} from "../../common/AnchorCustom/AnchorCustom";
+import {socialLinks} from "../../A0_App/socialLinks";
 
 export const ContactModal = observer(() => {
     const {contactModal, setContactModal} = useStore();
@@ -47,7 +48,7 @@ export const ContactModal = observer(() => {
                 <AnchorCustom label="Join Our Discord"
                               icon={svgIcons.discord}
                               className={style.btn}
-                              href="https://discord.gg/9Ypd4ETZ"
+                              href={socialLinks[0].href}
                 />
 
                 <button className={style.okBtn}

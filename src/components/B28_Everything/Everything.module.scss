@@ -88,6 +88,7 @@
       }
 
       .closeBtn {
+        flex-shrink: 0;
         @include button;
         margin-left: 20px;
         width: 20px;
@@ -95,6 +96,7 @@
       }
 
       .submitBtn {
+        flex-shrink: 0;
         @include button;
         margin-left: 10px;
         width: 20px;

@@ -14,7 +14,10 @@ export const BurgerMenu = observer(() => {
         burgerMenu, setBurgerMenu,
         burgerOpen1, burgerOpen2,
         setBurgerOpen1, setBurgerOpen2,
+        setJoinModal,
     } = useStore();
+
+    const onTradingHandler = () => setJoinModal(true);
 
     return (
         <div className={clsx({
@@ -76,6 +79,7 @@ export const BurgerMenu = observer(() => {
 
                 <ButtonCustom label="Trading Space"
                               primary={false}
+                              onClick={onTradingHandler}
                 />
 
                 <div className={style.socialLinks}>
