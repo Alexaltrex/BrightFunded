@@ -73,7 +73,7 @@ export const Stars = (props) => {
         if (Object.keys(s).length > 0) {
             var stars = [];
 
-            for (var t = 0; t < 70; t++)
+            for (var t = 0; t < 150; t++)
                 stars.push({
                     x: Math.random() * s.width - s.width / 2,
                     y: Math.random() * s.height - s.height / 2,
