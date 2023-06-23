@@ -30,9 +30,13 @@ export const BurgerMenu = observer(() => {
                                 className={style.item}
                                 open={burgerOpen1}
                                 onClickDropDown={() => setBurgerOpen1(!burgerOpen1)}
-                                onClickLink={() => {
+                                onClickLink={(to) => {
                                     setBurgerOpen1(false);
                                     setBurgerMenu(false);
+                                    if(!to.includes('#')){
+                                        window.scrollTo(0,0);
+                                    }
+                                   
                                 }}
                                 list={[
                                     {label: "The Challange", to: "/#challenge"},
@@ -45,9 +49,12 @@ export const BurgerMenu = observer(() => {
                                 className={style.item}
                                 open={burgerOpen2}
                                 onClickDropDown={() => setBurgerOpen2(!burgerOpen2)}
-                                onClickLink={() => {
+                                onClickLink={(to) => {
                                     setBurgerOpen2(false);
                                     setBurgerMenu(false);
+                                    if(!to.includes('#')){
+                                        window.scrollTo(0,0);
+                                    }
                                 }}
                                 list={[
                                     {label: "About", to: "/about#about-top"},

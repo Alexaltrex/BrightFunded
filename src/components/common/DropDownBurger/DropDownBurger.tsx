@@ -16,7 +16,7 @@ interface IDropDownBurger {
     }[]
     open: boolean
     onClickDropDown: () => void
-    onClickLink: () => void
+    onClickLink: (e:any) => void
 }
 
 export const DropDownBurger: FC<IDropDownBurger> = ({
@@ -48,7 +48,7 @@ export const DropDownBurger: FC<IDropDownBurger> = ({
                             <HashLink key={key}
                                       to={to}
                                       className={style.item}
-                                      onClick={onClickLink}
+                                      onClick={()=>{onClickLink(to)}}
                                       smooth
                             >
                                 <p>{label}</p>
