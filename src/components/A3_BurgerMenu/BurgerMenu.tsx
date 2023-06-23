@@ -65,6 +65,7 @@ export const BurgerMenu = observer(() => {
                                       setBurgerOpen1(false);
                                       setBurgerOpen2(false);
                                       setBurgerMenu(false);
+                                      window.scrollTo(0,0);
                                   }}
                             >
                                 {label}
