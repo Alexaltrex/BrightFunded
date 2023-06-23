@@ -6,7 +6,7 @@
 
 .wrapperMobile {
   @include onlyMobile(inline-flex);
-  margin-right: 3px;
+//   margin-right: 3px;
 }
 
 .tooltipContent {
@@ -62,11 +62,12 @@
           bottom: 0;
           right: 15px;
           height: 0;
-          border-top: 2px dashed #00C7B4;
+          border-top: 1px dashed #00C7B4;
 
           @include desktop {
             left: 145px;
             right: 30px;
+            border-top: 2px dashed #00C7B4;
           }
         }
       }
