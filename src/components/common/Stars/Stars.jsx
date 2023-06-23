@@ -112,7 +112,7 @@ export const Stars = (props) => {
         if (stars.length === 0) return;
         context.clearRect(0, 0, s.width, s.height);
         const scrollTop = window.scrollY;
-        var delta = .5 + Math.abs(lastScroll - scrollTop) / 5;
+        var delta = .5 + Math.abs(lastScroll - scrollTop) / 15;
         var speed = delta;
         for (var t = 0; t < stars.length; t++) {
             stars[t].z -= speed;
