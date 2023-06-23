@@ -6,6 +6,7 @@
 
 .wrapperMobile {
   @include onlyMobile(inline-flex);
+  margin-right: 3px;
 }
 
 .tooltipContent {

@@ -22,10 +22,14 @@
   }
 
   .top {
-    flex-shrink: 0;
+    position: absolute;
+    left: 20px;
+    top: 90px;
+    right: 20px;
+
     .item {
       &:not(:first-child) {
-        margin-top: 24px;
+        margin-top: 16px;//24px;
       }
     }
 
@@ -40,7 +44,11 @@
   }
 
   .bottom {
-    margin-bottom: 40px;
+    position: absolute;
+    left: 20px;
+    bottom: 70px;
+    right: 20px;
+    //margin-bottom: 40px;
 
     .socialLinks {
       margin-top: 24px;
