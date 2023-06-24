@@ -1,12 +1,17 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .footer {
   position: relative;
   z-index: 2;
   padding-bottom: 20px;
 
-  @include desktop {
+  @media (min-width: 1000px) {
     padding-bottom: 30px;
+  }
+
+  .inner {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .top {
@@ -17,28 +22,31 @@
 
     &::before {
       display: block;
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0));
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.09),
+        rgba(255, 255, 255, 0)
+      );
 
-      @include desktop {
+      @media (min-width: 1000px) {
         display: none;
       }
     }
 
-    @include desktop {
+    @media (min-width: 1000px) {
       padding-top: 0;
       padding-bottom: 25px;
     }
 
     .inner {
-      @include inner;
-
-      @include desktop {
+      @media (min-width: 1000px) {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -47,23 +55,25 @@
       .logo {
         display: none;
 
-        @include desktop {
+        @media (min-width: 1000px) {
           display: block;
 
           svg {
             width: 160px;
             height: 31px;
           }
-
         }
       }
 
       .linksMobile {
-        @include onlyMobile(grid);
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
 
-        .column {
+        @media (min-width: 1000px) {
+          display: none;
+        }
 
+        .column {
           .link {
             display: block;
             text-decoration: none;
@@ -71,18 +81,21 @@
             font-size: 13px;
             line-height: 20px;
             letter-spacing: -0.02em;
-            color: #FAFAFA;
+            color: #fafafa;
 
             &:not(:first-child) {
               margin-top: 20px;
             }
-
           }
         }
       }
 
       .linksDesktop {
-        @include onlyDesktop(flex);
+        display: none;
+
+        @media (min-width: 1000px) {
+          display: flex;
+        }
 
         .link {
           text-decoration: none;
@@ -90,7 +103,7 @@
           font-size: 13px;
           line-height: 20px;
           letter-spacing: -0.02em;
-          color: #FAFAFA;
+          color: #fafafa;
           transition: 0.3s;
 
           &:not(:first-child) {
@@ -98,14 +111,11 @@
           }
 
           &:hover {
-            color: #02A4C7;
+            color: #02a4c7;
           }
         }
       }
-
     }
-
-
   }
 
   .bottom {
@@ -113,27 +123,30 @@
     position: relative;
     padding-top: 20px;
 
-    @include desktop {
+    @media (min-width: 1000px) {
       padding-top: 25px;
-
     }
 
     &::before {
       display: block;
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0));
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.09),
+        rgba(255, 255, 255, 0)
+      );
     }
 
     .inner {
-      @include inner;
+      // @include inner;
 
-
-      @include desktop {
+      @media (min-width: 1000px) {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -172,18 +185,15 @@
         font-size: 14px;
         line-height: 21px;
         letter-spacing: -0.02em;
-        color: #FAFAFA;
+        color: #fafafa;
         opacity: 0.6;
         margin-top: 20px;
 
-        @include desktop {
+        @media (min-width: 1000px) {
           margin-top: 0;
         }
       }
-
     }
-
-
   }
 
   .rightsBlock {
@@ -191,7 +201,7 @@
     margin-top: 30px;
 
     .inner {
-      @include inner;
+      // @include inner;
 
       .rightsBlock_top {
         display: flex;
@@ -211,7 +221,6 @@
           }
 
           &_open {
-
             svg {
               transform: rotate(-180deg);
             }
@@ -224,10 +233,11 @@
         font-size: 11px;
         line-height: 16px;
         letter-spacing: -0.02em;
-        color: #9D9EA2;
+        color: #9d9ea2;
+        margin: 0 10px 0 0;
 
-        @include desktop {
-          ont-size: 12px;
+        @media (min-width: 1000px) {
+          font-size: 12px;
           line-height: 18px;
         }
 
@@ -235,13 +245,11 @@
           color: #707179;
           margin-top: 20px;
 
-          @include desktop {
+          @media (min-width: 1000px) {
             margin-top: 24px;
           }
         }
       }
-
-
     }
   }
 }

@@ -1,14 +1,12 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .getInstant {
-  @include container;
   padding-top: 80px;
   padding-bottom: 62px;
 
-  @include desktop {
+  @media (min-width: 920px) {
     padding-top: 168px;
     padding-bottom: 100px;
-
   }
 
   .inner {
@@ -23,7 +21,7 @@
     }
 
     .rocket {
-      @include onlyMobile;
+      display: block;
       position: absolute;
       z-index: 1;
       left: 50%;
@@ -31,25 +29,28 @@
       width: auto;
       height: 387px;
       top: 0;
+
+      @media (min-width: 920px) {
+        display: none;
+      }
     }
 
     .videoWrapper {
-      @include onlyDesktop;
+      display: none;
       position: absolute;
       z-index: 1;
       left: 50%;
       transform: translateX(-50%);
       top: 0;
-      //border: 1px solid #FFF;
       width: 467px;
       height: 387px;
 
-      @include desktop {
+      @media (min-width: 920px) {
+        display: block;
         width: 887px;
         height: 737px;
         top: 26px;
         left: calc(50% - 3px);
-
       }
 
       video {
@@ -64,7 +65,7 @@
       z-index: 2;
       margin-top: 323px;
 
-      @include desktop {
+      @media (min-width: 920px) {
         margin-top: 85px;
         display: flex;
         flex-direction: column;
@@ -80,7 +81,7 @@
         border-radius: 15px;
         padding: 30px 20px 20px;
 
-        @include desktop {
+        @media (min-width: 920px) {
           padding: 25px 25px 25px 95px;
           width: 413px;
         }
@@ -88,7 +89,7 @@
         &:nth-child(2) {
           margin-top: 20px;
 
-          @include desktop {
+          @media (min-width: 920px) {
             margin-top: -73px;
             align-self: flex-end;
           }
@@ -97,7 +98,7 @@
         &:nth-child(3) {
           margin-top: 20px;
 
-          @include desktop {
+          @media (min-width: 920px) {
             width: 423px;
             margin-top: 70px;
             margin-left: 217px;
@@ -109,14 +110,13 @@
           font-size: 18px;
           line-height: 130%;
           letter-spacing: -0.02em;
-          color: #FFFFFF;
+          color: #ffffff;
           margin-left: 55px;
 
-          @include desktop {
+          @media (min-width: 920px) {
             font-size: 24px;
             margin-left: 0;
           }
-
         }
 
         .text {
@@ -125,12 +125,12 @@
           font-size: 13px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #FFFFFF;
+          color: #ffffff;
           opacity: 0.6;
 
-          @include desktop {
+          @media (min-width: 920px) {
             font-size: 14px;
-            color: #A1A3A9;
+            color: #a1a3a9;
             opacity: 1;
           }
         }
@@ -142,10 +142,10 @@
           left: 20px;
           width: 40px;
           height: 40px;
-          background: #1C1F31;
+          background: #1c1f31;
           border-radius: 10px;
 
-          @include desktop {
+          @media (min-width: 920px) {
             width: 50px;
             height: 50px;
             top: 25px;
@@ -156,13 +156,12 @@
             width: 20px;
             height: 20px;
 
-            @include desktop {
+            @media (min-width: 920px) {
               width: 26px;
               height: 26px;
             }
           }
         }
-
       }
     }
 
@@ -174,14 +173,14 @@
       align-items: center;
       justify-content: center;
 
-      @include desktop {
+      @media (min-width: 920px) {
         margin-top: 20px;
       }
 
       .joinBtn {
         width: 130px;
 
-        @include desktop {
+        @media (min-width: 920px) {
           width: 137px;
         }
       }
@@ -189,11 +188,10 @@
       .learnBtn {
         margin-left: 20px;
 
-        @include desktop {
+        @media (min-width: 920px) {
           margin-left: 35px;
         }
       }
-
     }
   }
 }

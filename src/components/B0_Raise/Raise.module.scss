@@ -1,56 +1,75 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .raise {
-  @include container;
+  // @include container;
   position: relative;
   z-index: 200;
-  padding-top: 115px;
+  padding-top: 0;
 
-  @include desktop {
-    padding-top: 0;
+  @media (max-width: 800px) {
+    padding-top: 115px;
   }
 
   .inner {
-    @include inner;
     position: relative;
     z-index: 200;
+    display: flex;
+    justify-content: space-between;
 
-    @include desktop {
-      display: flex;
-      justify-content: space-between;
-    }
+    // @include inner;
+    // @include desktop {
+    //   display: flex;
+    //   justify-content: space-between;
+    // }
 
     .centerBlock {
-      position: relative;
-      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 192px;
+      left: 50%;
+      transform: translateX(-50%);
 
-      @include desktop {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 192px;
-        left: 50%;
-        transform: translateX(-50%);
+      @media (max-width: 800px) {
+        top: 0;
+        position: relative;
+        z-index: 1;
       }
+
+      // @include desktop {
+      //   display: flex;
+      //   flex-direction: column;
+      //   align-items: center;
+      //   position: absolute;
+      //   top: 192px;
+      //   left: 50%;
+      //   transform: translateX(-50%);
+      // }
 
       .title {
         position: relative;
         z-index: 2;
         font-weight: 600;
-        font-size: 30px;
         line-height: 115%;
         text-align: center;
         letter-spacing: -0.02em;
-        color: #FFFFFF;
-        width: 280px;
+        color: #ffffff;
         margin-left: auto;
         margin-right: auto;
 
-        @include desktop {
-          font-size: 58px;
-          width: 846px;
+        font-size: 58px;
+        width: 846px;
+
+        @media (max-width: 800px) {
+          font-size: 30px;
+          width: 280px;
         }
+
+        // @include desktop {
+        //   font-size: 58px;
+        //   width: 846px;
+        // }
 
         span {
           color: rgba(7, 129, 254, 1);
@@ -59,29 +78,34 @@
       }
 
       .description {
-        @include onlyMobile;
+        // @include onlyMobile;
+        display: none;
         margin-top: 20px;
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;
         text-align: center;
         letter-spacing: -0.01em;
-        color: #A1A3A9;
+        color: #a1a3a9;
+
+        @media (max-width: 800px) {
+          display: block;
+        }
 
         span {
-          color: #FFF;
+          color: #fff;
         }
       }
 
       .btns {
         position: relative;
         z-index: 2;
+        margin-top: 30px;
 
         @include centerRow;
-        margin-top: 20px;
 
-        @include desktop {
-          margin-top: 30px;
+        @media (max-width: 800px) {
+          margin-top: 20px;
         }
 
         .link {
@@ -89,69 +113,85 @@
         }
 
         .joinBtn {
-          width: 153px;
+          width: 163px;
 
-          @include desktop {
-            width: 163px;
+          @media (max-width: 800px) {
+            width: 153px;
           }
         }
 
         .tradeBtn {
-          margin-left: 20px;
+          margin-left: 35px;
 
-          @include desktop {
-            margin-left: 35px;
+          @media (max-width: 800px) {
+            margin-left: 20px;
           }
         }
-
       }
 
       .videoWrapper {
         position: relative;
         z-index: 1;
-        margin-top: 22px;
-        height: 268px;
         width: 100%;
 
-        @include desktop {
-          margin-top: 52px;
-          height: 444px;
+        margin-top: 52px;
+        height: 444px;
+
+        @media (max-width: 800px) {
+          margin-top: 22px;
+          height: 268px;
         }
+
+        // @include desktop {
+        //   margin-top: 52px;
+        //   height: 444px;
+        // }
 
         .coinBack {
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
-          top: -114px;
-          height: 678px;
+          top: -150px;
+          height: 1010px;
 
-          @include desktop {
-            top: -150px;
-            height: 1010px;
+          // @include desktop {
+          //   top: -150px;
+          //   height: 1010px;
+          // }
+
+          @media (max-width: 800px) {
+            top: -114px;
+            height: 678px;
           }
         }
 
         .coin {
-          @include onlyMobile;
+          // @include onlyMobile;
+          display: none;
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
           top: 0px;
-          width: auto;//201px;
+          width: auto; //201px;
           height: 268px;
+
+          @media (max-width: 800px) {
+            display: block;
+          }
         }
 
         .inner {
-          @include onlyDesktop;
+          // @include onlyDesktop;
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
           top: 0;
           height: 100%;
-          width: 476px;
+          width: 490px;
 
-          @include desktop {
-            width: 490px;
+          @media (max-width: 800px) {
+            width: 476px;
+            display: none;
           }
         }
 
@@ -161,18 +201,25 @@
           height: 100%;
         }
       }
-
     }
 
     .left {
-      @include onlyDesktop;
+      // @include onlyDesktop;
       padding-top: 290px;
       position: relative;
       z-index: 200;
 
+      @media (max-width: 800px) {
+        padding: 0;
+      }
+
       .socialLinks {
         position: relative;
         z-index: 200;
+
+        @media (max-width: 800px) {
+          display: none;
+        }
 
         .link {
           @include centerRow;
@@ -182,12 +229,12 @@
           height: 42px;
           border-radius: 50%;
           background: rgba(2, 164, 199, 0);
-          border: 1px solid #282A35;
+          border: 1px solid #282a35;
           transition: 0.3s;
 
           &:hover {
             background: rgba(2, 164, 199, 0.24);
-            border: 1px solid #02AFC7;
+            border: 1px solid #02afc7;
           }
 
           &:not(:first-child) {
@@ -199,47 +246,49 @@
             z-index: 3;
 
             path {
-              fill: #FFF;
+              fill: #fff;
             }
           }
-
-
         }
       }
 
       .description {
-        @include onlyDesktop;
-
         margin-top: 190px;
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;
         letter-spacing: -0.01em;
-        color: #A1A3A9;
+        color: #a1a3a9;
         width: 295px;
 
+        @media (max-width: 800px) {
+          display: none;
+        }
+
         span {
-          color: #FFF;
+          color: #fff;
         }
       }
-
     }
 
     .right {
-      @include onlyDesktop();
       padding-top: 394px;
+
+      @media (max-width: 800px) {
+        padding: 0;
+        display: none;
+      }
 
       .item {
         &:not(:first-child) {
           margin-top: 40px;
         }
 
-
         .value {
           font-weight: 500;
           font-size: 28px;
           line-height: 131.5%;
-          color: #FFFFFF;
+          color: #ffffff;
           text-align: right;
         }
 
@@ -253,19 +302,21 @@
           color: rgba(255, 255, 255, 0.6);
           width: 130px;
         }
-
       }
-
     }
-
-    }
+  }
 }
 
 .slider {
-  @include onlyMobile;
+  // @include onlyMobile;
+  display: none;
   margin-top: 4px;
   position: relative;
   z-index: 200;
+
+  @media (max-width: 800px) {
+    display: block;
+  }
 
   .swiper {
     position: relative;
@@ -289,7 +340,7 @@
           font-size: 32px;
           line-height: 131.5%;
           text-align: center;
-          color: #FFFFFF;
+          color: #ffffff;
         }
 
         .text {
@@ -299,12 +350,10 @@
           line-height: 150%;
           text-align: center;
           letter-spacing: -0.01em;
-          color: #A1A3A9;
+          color: #a1a3a9;
         }
       }
-
     }
-
   }
 
   .dots {
@@ -320,16 +369,15 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #2D3048;
+      background: #2d3048;
 
       &:not(:first-child) {
         margin-left: 6px;
       }
 
       &_selected {
-        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        background: linear-gradient(34.49deg, #0781fe -12.58%, #00c7b4 102.84%);
       }
     }
   }
-
 }

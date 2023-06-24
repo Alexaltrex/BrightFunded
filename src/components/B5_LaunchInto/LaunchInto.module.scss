@@ -1,26 +1,54 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .launchInto {
-  @include container;
+  // @include container;
   padding-top: 60px;
 
-  @include desktop {
+  @media (min-width: 920px) {
     padding-top: 100px;
   }
 
   .inner {
-    @include inner;
+    // @include inner;
 
     .titleWrapper {
-      @include h2_block;
-      @include h2_block_black;
+      .pretext {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 115%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: rgba(14, 11, 61, 0.4);
 
-      h2.title {
+        @media (max-width: 1000px) {
+          font-size: 12px;
+        }
+      }
+
+      .title {
+        margin-top: 15px;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #0e0b3d;
+
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
         width: 280px;
         margin-left: auto;
         margin-right: auto;
 
-        @include desktop {
+        @media (max-width: 1000px) {
+          width: 280px;
+          margin-top: 10px;
+          font-size: 24px;
+        }
+        @media (min-width: 920px) {
           width: 417px;
         }
       }
@@ -29,16 +57,24 @@
     .cards {
       margin-top: 30px;
 
-      @include desktop {
+      @media (min-width: 920px) {
         margin-top: 50px;
       }
 
       .cardsMobile {
-        @include onlyMobile;
+        display: block;
+
+        @media (min-width: 920px) {
+          display: none;
+        }
       }
 
       .cardsDesktop {
-        @include onlyDesktop;
+        display: none;
+
+        @media (min-width: 920px) {
+          display: block;
+        }
 
         .top {
           display: grid;
@@ -52,9 +88,7 @@
           grid-template-columns: repeat(3, 1fr);
           grid-column-gap: 20px;
         }
-
       }
-
     }
   }
 }

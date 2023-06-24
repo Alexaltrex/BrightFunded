@@ -1,39 +1,64 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .yourJourney {
-  @include container;
-  padding-top: 80px;
-  padding-bottom: 60px;
+  // @include container;
 
-  @include desktop {
-    padding-top: 180px;
-    padding-bottom: 110px;
+  padding-top: 180px;
+  padding-bottom: 110px;
+
+  @media (max-width: 800px) {
+    padding-top: 80px;
+    padding-bottom: 60px;
   }
 
   .inner {
-    @include inner;
+    // @include inner;
 
     .titleWrapper {
-      @include h2_block;
-      @include h2_block_white;
+      .pretext {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 115%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+
+        @media (max-width: 800px) {
+          font-size: 12px;
+        }
+      }
 
       .title {
-        @include desktop {
-          width: 453px;
-          margin-left: auto;
-          margin-right: auto;
+        margin-top: 15px;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+
+        width: 453px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-width: 800px) {
+          width: 100%;
+          margin-top: 10px;
+          font-size: 24px;
         }
       }
     }
 
     .cards {
-      margin-top: 30px;
+      margin-top: 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 20px;
 
-      @include desktop {
-        margin-top: 100px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 20px;
+      @media (max-width: 800px) {
+        display: block;
+        margin-top: 30px;
       }
 
       .card {
@@ -43,84 +68,83 @@
         backdrop-filter: blur(17px);
         border-radius: 15px;
         box-sizing: border-box;
-        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding: 30px;
 
-        @include desktop {
-          padding: 30px;
+        @media (max-width: 1000px) {
+          padding: 20px;
+          top: unset !important;
         }
 
         &:nth-child(1) {
-          @include desktop {
-            top: -45px;
-          }
+          top: -45px;
         }
 
         &:nth-child(2) {
-          @include desktop {
-            transform: rotate(-0.5deg);
-          }
+          transform: rotate(-0.5deg);
         }
 
         &:nth-child(3) {
-          @include desktop {
-            top: -45px;
-            transform: rotate(-0.5deg);
-          }
+          top: -45px;
+          transform: rotate(-0.5deg);
         }
 
         &:not(:first-child) {
-          margin-top: 20px;
+          margin-top: 0;
 
-          @include desktop {
-            margin-top: 0;
+          @media (max-width: 800px) {
+            margin-top: 20px;
           }
         }
 
         .iconWrapper {
           @include centerRow;
           position: absolute;
-          top: 20px;
-          right: 20px;
-          width: 35px;
-          height: 35px;
-          background: #1C1F31;
+          background: #1c1f31;
           border-radius: 10px;
 
-          svg {
-            width: 19px;
-            height: 19px;
+          width: 55px;
+          height: 55px;
+          top: 30px;
+          right: 30px;
 
-            @include desktop {
-              width: 29px;
-              height: 29px;
+          @media (max-width: 1000px) {
+            top: 20px;
+            right: 20px;
+            width: 35px;
+            height: 35px;
+          }
+
+          svg {
+            width: 29px;
+            height: 29px;
+
+            @media (max-width: 1000px) {
+              width: 19px;
+              height: 19px;
             }
           }
-
-          @include desktop {
-            width: 55px;
-            height: 55px;
-            top: 30px;
-            right: 30px;
-          }
-
         }
 
         .title {
           font-weight: 600;
-          font-size: 20px;
+          font-size: 24px;
+          max-width: 260px;
           line-height: 130%;
           letter-spacing: -0.02em;
-          color: #FFFFFF;
-          width: 175px;
+          color: #ffffff;
+          padding: 0 60px 0 0;
 
-          @include desktop {
-            font-size: 24px;
-            width: 260px;
+          @media (max-width: 1000px) {
+            max-width: 100%;
+            padding: 0 45px 0 0;
+            font-size: 20px;
           }
-
+          @media (max-width: 500px) {
+            max-width: 175px;
+          }
         }
 
         .text {
@@ -129,7 +153,7 @@
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #A1A3A9;
+          color: #a1a3a9;
         }
 
         .link {
@@ -145,10 +169,7 @@
           padding-left: 20px;
           padding-right: 20px;
         }
-
       }
-
     }
-
   }
 }

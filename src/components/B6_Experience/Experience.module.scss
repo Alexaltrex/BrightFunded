@@ -1,28 +1,54 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .experience {
-  @include container;
   padding-top: 80px;
 
-  @include desktop {
+  @media (min-width: 920px) {
     padding-top: 134px;
   }
 
   .inner {
-    @include inner;
+    // @include inner;
 
     .titleWrapper {
-      @include h2_block;
-      @include h2_block_black;
+      .pretext {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 115%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: rgba(14, 11, 61, 0.4);
 
-      h2 {
-        @include desktop {
+        @media (max-width: 1000px) {
+          font-size: 12px;
+        }
+      }
+
+      .title {
+        margin-top: 15px;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #0e0b3d;
+
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-width: 1000px) {
+          width: 280px;
+          margin-top: 10px;
+          font-size: 24px;
+        }
+        @media (min-width: 920px) {
           width: 521px;
           margin-left: auto;
           margin-right: auto;
         }
       }
-
     }
 
     .description {
@@ -34,7 +60,7 @@
       letter-spacing: -0.01em;
       color: rgba(14, 11, 61, 0.8);
 
-      @include desktop {
+      @media (min-width: 920px) {
         margin-top: 20px;
         width: 712px;
         margin-left: auto;
@@ -47,7 +73,7 @@
       display: flex;
       flex-direction: column;
 
-      @include desktop {
+      @media (min-width: 920px) {
         flex-direction: row;
         justify-content: center;
       }
@@ -56,8 +82,9 @@
         @include centerRow;
         text-decoration: none;
         height: 80px;
-        background: #FFFFFF;
-        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.03), 0px 9px 19px rgba(0, 0, 0, 0.02);
+        background: #ffffff;
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.03),
+          0px 9px 19px rgba(0, 0, 0, 0.02);
         border-radius: 20px;
         transition: 0.3s;
 
@@ -65,14 +92,14 @@
         //  box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.1);
         //}
 
-        @include desktop {
+        @media (min-width: 920px) {
           width: 240px;
         }
 
         &:nth-child(2) {
           margin-top: 20px;
 
-          @include desktop {
+          @media (min-width: 920px) {
             margin-top: 0;
             margin-left: 20px;
           }
