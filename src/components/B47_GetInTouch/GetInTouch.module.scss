@@ -1,20 +1,18 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .getInTouch {
   position: relative;
   z-index: 2;
-  @include container;
   padding-top: 132px;
 
-  @include desktop {
+  @media (min-width: 991px) {
     padding-top: 212px;
   }
 
   .inner {
-    @include inner;
+    max-width: 1104px;
 
-    @include desktop {
-      width: 1064px;
+    @media (min-width: 991px) {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -25,14 +23,40 @@
       flex-direction: column;
 
       .titleWrapper {
-        @include h2_block;
         @include h2_block_white;
 
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        @include desktop {
+        .pretext {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 115%;
+          text-align: center;
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+
+          @media (min-width: 991px) {
+            font-size: 14px;
+          }
+        }
+
+        h2.title {
+          margin-top: 10px;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 130%;
+          text-align: center;
+          letter-spacing: -0.02em;
+
+          @media (min-width: 991px) {
+            margin-top: 15px;
+            font-size: 36px;
+          }
+        }
+
+        @media (min-width: 991px) {
           align-items: flex-start;
         }
 
@@ -48,15 +72,13 @@
         line-height: 130%;
         text-align: center;
         letter-spacing: -0.01em;
-        color: #FFF;
+        color: #fff;
 
-        @include desktop {
+        @media (min-width: 991px) {
           font-size: 20px;
           width: 362px;
           text-align: left;
-
         }
-
       }
 
       .socialLinks {
@@ -64,7 +86,7 @@
         display: flex;
         justify-content: center;
 
-        @include desktop {
+        @media (min-width: 991px) {
           order: 4;
           margin-top: 50px;
           justify-content: flex-start;
@@ -78,12 +100,12 @@
           height: 42px;
           border-radius: 50%;
           background: rgba(2, 164, 199, 0);
-          border: 1px solid #282A35;
+          border: 1px solid #282a35;
           transition: 0.3s;
 
           &:hover {
             background: rgba(2, 164, 199, 0.24);
-            border: 1px solid #02AFC7;
+            border: 1px solid #02afc7;
           }
 
           &:not(:first-child) {
@@ -95,18 +117,16 @@
             z-index: 3;
 
             path {
-              fill: #FFF;
+              fill: #fff;
             }
           }
-
-
         }
       }
 
       .items {
         margin-top: 40px;
 
-        @include desktop {
+        @media (min-width: 991px) {
           margin-top: 60px;
         }
 
@@ -116,7 +136,7 @@
           &:not(:first-child) {
             margin-top: 25px;
 
-            @include desktop {
+            @media (min-width: 991px) {
               margin-top: 30px;
             }
           }
@@ -126,7 +146,7 @@
             @include centerRow;
             width: 45px;
             height: 45px;
-            background: #1C1F31;
+            background: #1c1f31;
             border-radius: 8.18182px;
 
             svg {
@@ -134,7 +154,7 @@
               height: 24px;
             }
 
-            @include desktop {
+            @media (min-width: 991px) {
               width: 55px;
               height: 55px;
 
@@ -154,9 +174,9 @@
               font-size: 16px;
               line-height: 150%;
               letter-spacing: -0.01em;
-              color: #FFFFFF;
+              color: #ffffff;
 
-              @include desktop {
+              @media (min-width: 991px) {
                 margin-top: 0;
                 font-size: 18px;
               }
@@ -169,13 +189,16 @@
               font-size: 14px;
               line-height: 150%;
               letter-spacing: -0.01em;
-              color: #A1A3A9;
+              color: #a1a3a9;
 
-
-              @include desktop {
+              @media (min-width: 991px) {
                 margin-top: 7px;
                 white-space: nowrap;
               }
+              // @media (min-width: 768px) and (max-width: 991px) {
+              //   margin-top: 7px;
+              //   white-space: unset;
+              // }
             }
 
             .link {
@@ -189,25 +212,27 @@
               letter-spacing: -0.01em;
               text-decoration: underline;
 
-              @include desktop {
+              @media (min-width: 991px) {
                 margin-top: 7px;
               }
 
               &:after {
                 position: absolute;
-                content: "";
+                content: '';
                 display: block;
                 bottom: 0;
                 left: 0;
                 right: 0;
                 height: 1px;
-                background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+                background: linear-gradient(
+                  34.49deg,
+                  #0781fe -12.58%,
+                  #00c7b4 102.84%
+                );
               }
             }
           }
         }
-
-
       }
     }
 
@@ -218,7 +243,7 @@
       box-sizing: border-box;
       padding: 30px 20px;
 
-      @include desktop {
+      @media (min-width: 991px) {
         margin-top: 0;
         width: 490px;
         padding: 50px 40px;
@@ -230,9 +255,9 @@
         line-height: 130%;
         text-align: center;
         letter-spacing: -0.02em;
-        color: #FFFFFF;
+        color: #ffffff;
 
-        @include desktop {
+        @media (min-width: 991px) {
           font-size: 32px;
         }
       }
@@ -240,7 +265,7 @@
       .top {
         margin-top: 20px;
 
-        @include desktop {
+        @media (min-width: 991px) {
           margin-top: 24px;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -250,7 +275,7 @@
         .field {
           margin-top: 15px;
 
-          @include desktop {
+          @media (min-width: 991px) {
             margin-top: 0;
           }
         }
@@ -265,7 +290,7 @@
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #00C7B4;
+          color: #00c7b4;
           position: absolute;
           top: 50%;
           right: 15px;
@@ -279,7 +304,7 @@
         //& > div {
         //  height: 130px;
         //
-        //  @include desktop {
+        //  @media (min-width: 991px) {
         //    height: 94px;
         //  }
         //
@@ -293,14 +318,10 @@
         margin-top: 20px;
         color: #ff7676;
 
-        @include desktop {
+        @media (min-width: 991px) {
           margin-top: 24px;
         }
       }
-
-
     }
-
-
   }
 }

@@ -12,7 +12,7 @@ import { useMediaQuery } from '@mui/material';
 gsap.registerPlugin(ScrollTrigger);
 
 export const Roadmap = () => {
-  const isMobile = !useMediaQuery('(min-width:1440px)');
+  const isMobile = !useMediaQuery('(min-width:991px)');
   const isMobile480 = useMediaQuery('(max-width:480px)');
   const activePhase = 1;
   const [inProgress, setInProgress]: any = React.useState(-1);
@@ -72,7 +72,7 @@ export const Roadmap = () => {
       <img src={planet_left} alt='' className={style.planet_left} />
       <img src={planet_right} alt='' className={style.planet_right} />
 
-      <div className={style.inner}>
+      <div className={`container ${style.inner}`}>
         <h2 className={style.title}>Roadmap</h2>
 
         <p className={style.description}>

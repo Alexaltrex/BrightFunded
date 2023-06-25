@@ -1,7 +1,6 @@
-@import "../../../assets/styles/app";
+@import '../../../assets/styles/app';
 
 .yourChance {
-  @include container;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -10,43 +9,76 @@
   padding: 60px 20px 80px;
   //overflow-x: hidden;
 
-  @include desktop {
+  @media (min-width: 700px) {
     padding: 100px 0;
   }
 
   .gradientLeft {
-    @include onlyDesktop;
+    display: none;
     position: absolute;
     z-index: 1;
     left: 0;
     top: 0;
     transform: translateY(-50%);
 
+    @media (min-width: 700px) {
+      display: block;
+    }
   }
 
   .gradientRight {
-    @include onlyDesktop;
+    display: none;
     z-index: 1;
     position: absolute;
     right: 0;
     top: 43px;
     height: 340px;
+
+    @media (min-width: 700px) {
+      display: block;
+    }
   }
 
   .titleWrapper {
-    @include h2_block;
-    @include h2_block_white;
     position: relative;
 
-    h2 {
-      @include desktop {
-        width: 624px;
+    .pretext {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 115%;
+      text-align: center;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+
+      @media (min-width: 700px) {
+        font-size: 14px;
+      }
+    }
+
+    .title {
+      margin-top: 10px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #fff;
+
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media (min-width: 700px) {
         margin-left: auto;
         margin-right: auto;
+        margin-top: 15px;
+        font-size: 36px;
+        width: 624px;
       }
 
       span {
-        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        background: linear-gradient(34.49deg, #0781fe -12.58%, #00c7b4 102.84%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -60,7 +92,7 @@
       width: 100px;
       height: auto;
 
-      @include desktop {
+      @media (min-width: 700px) {
         top: -150px;
         left: -155px;
         width: 130px;
@@ -68,12 +100,16 @@
     }
 
     .coin_yellow {
-      @include onlyDesktop();
+      display: none;
       position: absolute;
       width: 140px;
       height: auto;
       right: -235px;
       top: -35px;
+
+      @media (min-width: 700px) {
+        display: block;
+      }
     }
 
     .coin_blue {
@@ -83,7 +119,7 @@
       top: 65px;
       right: 0;
 
-      @include desktop {
+      @media (min-width: 700px) {
         width: 60px;
         top: 160px;
         right: auto;
@@ -98,7 +134,7 @@
     align-items: center;
     margin-top: 20px;
 
-    @include desktop {
+    @media (min-width: 700px) {
       margin-top: 40px;
       flex-direction: row;
       justify-content: center;
@@ -107,7 +143,7 @@
     .joinBtn {
       width: 125px;
 
-      @include desktop {
+      @media (min-width: 700px) {
         width: 137px;
       }
     }
@@ -115,12 +151,10 @@
     .tradeBtn {
       margin-top: 30px;
 
-      @include desktop {
+      @media (min-width: 700px) {
         margin-top: 0;
         margin-left: 35px;
       }
     }
-
   }
-
 }

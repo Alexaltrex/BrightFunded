@@ -1,19 +1,15 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .howToScaleUp {
-  @include container;
   padding-top: 60px;
 
-  @include desktop {
+  @media (min-width: 768px) {
     padding-top: 80px;
   }
 
   .inner {
-    @include inner;
-
     .topBlock {
-
-      @include desktop {
+      @media (min-width: 768px) {
         display: flex;
       }
 
@@ -22,9 +18,9 @@
         font-size: 24px;
         line-height: 130%;
         letter-spacing: -0.02em;
-        color: #0E0B3D;
+        color: #0e0b3d;
 
-        @include desktop {
+        @media (min-width: 768px) {
           font-size: 36px;
           width: 478px;
         }
@@ -36,12 +32,18 @@
         font-size: 14px;
         line-height: 150%;
         letter-spacing: -0.01em;
-        color: #3E3C64;
+        color: #3e3c64;
+        margin-left: auto;
 
-        @include desktop {
+        @media (min-width: 768px) {
           margin-top: 0;
-          margin-left: 280px;
+          margin-right: 107px;
+          margin-left: auto;
           width: 414px;
+        }
+
+        @media (max-width: 1200px) {
+          margin-right: 0;
         }
 
         span {
@@ -53,35 +55,51 @@
     .cards {
       margin-top: 40px;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 60px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 20px;
+        display: flex;
+        gap: 20px;
+      }
+
+      @media (max-width: 1200px) {
+        flex-wrap: wrap;
       }
 
       .card {
-        background: #FFFFFF;
-        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+        background: #ffffff;
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02),
+          0px 9px 19px rgba(0, 0, 0, 0.01);
         border-radius: 15px;
         padding: 20px;
+
+        @media (min-width: 768px) {
+          box-sizing: border-box;
+          flex: 0 0 calc(25% - 15px);
+        }
+        @media (max-width: 1200px) {
+          flex: 0 0 calc(50% - 10px);
+        }
 
         &:not(:first-child) {
           margin-top: 20px;
 
-          @include desktop {
+          @media (min-width: 768px) {
             margin-top: 0;
           }
         }
 
         .iconWrapper {
           @include centerRow;
-          background: linear-gradient(34.49deg, rgba(7, 129, 254, 0.1), rgba(0, 199, 180, 0.1) 102.84%);
+          background: linear-gradient(
+            34.49deg,
+            rgba(7, 129, 254, 0.1),
+            rgba(0, 199, 180, 0.1) 102.84%
+          );
           border-radius: 10px;
           width: 45px;
           height: 45px;
 
-          @include desktop {
+          @media (min-width: 768px) {
             width: 55px;
             height: 55px;
           }
@@ -90,7 +108,7 @@
             width: 23px;
             height: 23px;
 
-            @include desktop {
+            @media (min-width: 768px) {
               width: 29px;
               height: 29px;
             }
@@ -102,10 +120,10 @@
           font-size: 20px;
           line-height: 130%;
           letter-spacing: -0.02em;
-          color: #0E0B3D;
+          color: #0e0b3d;
           margin-top: 15px;
 
-          @include desktop {
+          @media (min-width: 768px) {
             font-size: 22px;
             margin-top: 20px;
           }
@@ -117,18 +135,13 @@
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #3E3C64;
+          color: #3e3c64;
 
-          @include desktop {
+          @media (min-width: 768px) {
             margin-top: 30px;
           }
         }
-
       }
-
-
     }
-
-
   }
 }

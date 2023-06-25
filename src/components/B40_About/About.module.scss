@@ -1,32 +1,29 @@
 @import '../../assets/styles/app';
 
 .about {
-  @include container;
   padding-top: 115px;
   padding-bottom: 60px;
 
-  @include desktop {
+  @media (min-width: 768px) {
     padding-top: 182px;
     padding-bottom: 100px;
   }
 
   .inner {
-    @include inner;
-
     .title {
       font-weight: 600;
       font-size: 30px;
       line-height: 115%;
       text-align: center;
       letter-spacing: -0.02em;
-      color: #FFFFFF;
+      color: #ffffff;
 
-      @include desktop {
+      @media (min-width: 768px) {
         font-size: 52px;
       }
 
       span {
-        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        background: linear-gradient(34.49deg, #0781fe -12.58%, #00c7b4 102.84%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -42,9 +39,11 @@
       align-items: center;
       text-align: center;
       letter-spacing: -0.02em;
-      color: #FFFFFF;
+      color: #ffffff;
+      margin: 24px auto 0;
+      justify-content: center;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 30px;
         width: 490px;
         margin-left: auto;
@@ -52,7 +51,5 @@
         font-size: 26px;
       }
     }
-
   }
-
 }

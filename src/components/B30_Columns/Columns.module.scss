@@ -1,29 +1,30 @@
 @import '../../assets/styles/app';
 
 .columns {
-  @include container;
   position: relative;
   padding-top: 366px; //100px;
   padding-bottom: 60px;
 
-  @include desktop {
+  @media (min-width: 991px) {
     padding-top: 135px;
     padding-bottom: 100px;
   }
 
   .inner {
-    @include inner;
-
     .columns_mobile {
-      @include onlyMobile;
+      display: block;
       width: 225.33px;
       height: auto;
       margin-left: auto;
       margin-right: auto;
+
+      @media (min-width: 991px) {
+        display: none;
+      }
     }
 
     .columns_desktop {
-      @include onlyDesktop;
+      display: none;
       position: absolute;
       z-index: 1;
       top: 55px;
@@ -31,10 +32,14 @@
       transform: translateX(-50%);
       width: 765px;
       height: auto;
+
+      @media (min-width: 991px) {
+        display: block;
+      }
     }
 
     .rocket {
-      @include onlyMobile;
+      display: block;
       position: absolute;
       z-index: 1;
       left: 50%;
@@ -42,10 +47,14 @@
       width: auto;
       height: 425px;
       top: -60px;
+
+      @media (min-width: 991px) {
+        display: none;
+      }
     }
 
     .videoWrapper {
-      @include onlyDesktop();
+      display: none;
       position: absolute;
       z-index: 1;
       top: -42px;
@@ -55,8 +64,8 @@
       width: 491px;
       height: 409px;
 
-
-      @include desktop {
+      @media (min-width: 991px) {
+        display: block;
         width: 887px;
         height: 737px;
         top: -103px;
@@ -70,12 +79,11 @@
       }
     }
 
-
     .cards {
       position: relative;
       z-index: 2;
 
-      @include desktop {
+      @media (min-width: 991px) {
         margin-top: 0;
         display: flex;
         flex-direction: column;
@@ -90,7 +98,7 @@
         padding: 29px 20px 20px;
         box-sizing: border-box;
 
-        @include desktop {
+        @media (min-width: 991px) {
           padding: 25px 25px 25px 95px;
           width: 413px;
         }
@@ -100,14 +108,14 @@
         }
 
         &:nth-child(2) {
-          @include desktop {
+          @media (min-width: 991px) {
             align-self: flex-end;
             margin-top: -114px;
           }
         }
 
         &:nth-child(3) {
-          @include desktop {
+          @media (min-width: 991px) {
             margin-top: 0;
             margin-left: 216px;
           }
@@ -120,10 +128,10 @@
           left: 20px;
           width: 40px;
           height: 40px;
-          background: #1C1F31;
+          background: #1c1f31;
           border-radius: 10px;
 
-          @include desktop {
+          @media (min-width: 991px) {
             top: 25px;
             left: 25px;
             width: 50px;
@@ -134,12 +142,11 @@
             width: 20px;
             height: 20px;
 
-            @include desktop {
+            @media (min-width: 991px) {
               width: 26px;
               height: 26px;
             }
           }
-
         }
 
         .title {
@@ -148,9 +155,9 @@
           font-size: 18px;
           line-height: 130%;
           letter-spacing: -0.02em;
-          color: #FFFFFF;
+          color: #ffffff;
 
-          @include desktop {
+          @media (min-width: 991px) {
             margin-left: 0;
             font-size: 24px;
           }
@@ -164,7 +171,7 @@
           color: rgba(255, 255, 255, 0.6);
           margin-top: 23px;
 
-          @include desktop {
+          @media (min-width: 991px) {
             margin-top: 15px;
           }
         }

@@ -1,27 +1,45 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .howToBecome {
-  @include container;
   padding-top: 60px;
 
-  @include desktop {
+  @media (min-width: 991px) {
     padding-top: 120px;
   }
 
   .inner {
-    @include inner;
-
     .titleWrapper {
-      @include h2_block;
-      @include h2_block_white;
+      .pretext {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 115%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
 
-      h2 {
+        @media (min-width: 991px) {
+          font-size: 14px;
+        }
+      }
+
+      h2.title {
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #fff;
+
         width: 225px;
         margin-left: auto;
         margin-right: auto;
 
-        @include desktop {
+        @media (min-width: 991px) {
           width: auto;
+          margin-top: 15px;
+          font-size: 36px;
         }
       }
     }
@@ -29,7 +47,7 @@
     .cards {
       margin-top: 120px;
 
-      @include desktop {
+      @media (min-width: 991px) {
         margin-top: 148px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -45,14 +63,14 @@
         box-sizing: border-box;
         padding: 68px 0px 20px;
 
-        @include desktop {
+        @media (min-width: 991px) {
           padding: 115px 0px 20px;
         }
 
         &:not(:first-child) {
           margin-top: 109px;
 
-          @include desktop {
+          @media (min-width: 991px) {
             margin-top: 0;
           }
         }
@@ -66,7 +84,7 @@
           width: 184px;
           height: 160px;
 
-          @include desktop {
+          @media (min-width: 991px) {
             top: -110px;
             width: 242px;
             height: 210px;
@@ -81,9 +99,9 @@
           font-size: 22px;
           line-height: 130%;
           letter-spacing: -0.02em;
-          color: #64666C;
+          color: #64666c;
 
-          @include desktop {
+          @media (min-width: 991px) {
             left: 15px;
             top: 15px;
             font-size: 24px;
@@ -98,9 +116,9 @@
           line-height: 130%;
           text-align: center;
           letter-spacing: -0.02em;
-          color: #FFFFFF;
+          color: #ffffff;
 
-          @include desktop {
+          @media (min-width: 991px) {
             font-size: 24px;
           }
         }
@@ -113,18 +131,14 @@
           line-height: 150%;
           text-align: center;
           letter-spacing: -0.01em;
-          color: #A1A3A9;
+          color: #a1a3a9;
           margin-top: 10px;
 
-          @include desktop {
+          @media (min-width: 991px) {
             font-size: 16px;
           }
         }
       }
-
-
     }
-
   }
-
 }

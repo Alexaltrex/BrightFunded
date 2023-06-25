@@ -1,31 +1,28 @@
 @import '../../assets/styles/app';
 
 .trade {
-  @include container;
   padding-top: 115px;
 
-  @include desktop {
+  @media (min-width: 768px) {
     padding-top: 170px;
   }
 
   .inner {
-    @include inner;
-
     h2.title {
       font-style: normal;
       font-weight: 600;
       font-size: 30px;
       line-height: 115%;
       letter-spacing: -0.02em;
-      color: #FFFFFF;
+      color: #ffffff;
 
       span {
-        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        background: linear-gradient(34.49deg, #0781fe -12.58%, #00c7b4 102.84%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
-      @include desktop {
+      @media (min-width: 768px) {
         font-size: 58px;
         text-align: center;
       }
@@ -36,9 +33,9 @@
       font-size: 14px;
       line-height: 150%;
       letter-spacing: -0.01em;
-      color: #A1A3A9;
+      color: #a1a3a9;
 
-      @include desktop {
+      @media (min-width: 768px) {
         width: 634px;
         margin-left: auto;
         margin-right: auto;
@@ -46,7 +43,7 @@
       }
 
       span {
-        color: #FFF;
+        color: #fff;
       }
 
       &_1 {
@@ -66,7 +63,7 @@
       align-items: center;
       margin-top: 20px;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 30px;
         justify-content: center;
       }
@@ -74,7 +71,7 @@
       .joinBtn {
         width: 125px;
 
-        @include desktop {
+        @media (min-width: 768px) {
           width: 137px;
         }
       }
@@ -82,11 +79,10 @@
       .tradeBtn {
         margin-left: 20px;
 
-        @include desktop {
+        @media (min-width: 768px) {
           margin-left: 35px;
         }
       }
-
     }
   }
 }

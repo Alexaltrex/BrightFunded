@@ -1,25 +1,28 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .table {
-  @include container;
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @include desktop {
+  @media (min-width: 991px) {
     padding-top: 140px;
     padding-bottom: 80px;
   }
 
   .inner {
-    @include inner;
+    // @include inner;
 
     .tableMobile {
-      @include onlyMobile;
+      display: block;
+
+      @media (min-width: 991px) {
+        display: none;
+      }
 
       .tableWrapper {
         position: relative;
-        background: #FFFFFF;
-        border: 1px solid #E6EAEE;
+        background: #ffffff;
+        border: 1px solid #e6eaee;
         filter: drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.08));
         border-radius: 15px;
         overflow: hidden;
@@ -35,11 +38,11 @@
             font-size: 15px;
             line-height: 22px;
             letter-spacing: -0.02em;
-            color: #9A99AF;
+            color: #9a99af;
           }
 
           .valueCell {
-            background: #F1F5FA;
+            background: #f1f5fa;
           }
         }
 
@@ -47,7 +50,7 @@
           height: 53px;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          border-top: 1px solid #E6EAEE;
+          border-top: 1px solid #e6eaee;
 
           .propCell {
             @include centerRow;
@@ -55,11 +58,11 @@
             font-size: 14px;
             line-height: 21px;
             letter-spacing: -0.02em;
-            color: #0E0B3D;
+            color: #0e0b3d;
           }
 
           .valueCell {
-            background: #F1F5FA;
+            background: #f1f5fa;
           }
         }
 
@@ -79,10 +82,10 @@
               line-height: 21px;
               text-align: center;
               letter-spacing: -0.02em;
-              color: #0E0B3D;
+              color: #0e0b3d;
 
               &:first-child {
-                color: #9A99AF;
+                color: #9a99af;
               }
             }
           }
@@ -97,11 +100,15 @@
         .item {
           width: 40px;
           height: 4px;
-          background: #CDD6E2;
+          background: #cdd6e2;
           border-radius: 4px;
 
           &_selected {
-            background: linear-gradient(85.01deg, #0072E7 6.26%, #00AA9A 92.45%);
+            background: linear-gradient(
+              85.01deg,
+              #0072e7 6.26%,
+              #00aa9a 92.45%
+            );
           }
 
           &:not(:first-child) {
@@ -112,13 +119,18 @@
     }
 
     .tableDesktop {
-      @include onlyDesktop;
-      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+      display: none;
+      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02),
+        0px 9px 19px rgba(0, 0, 0, 0.01);
       border-radius: 15px;
       overflow: hidden;
 
+      @media (min-width: 991px) {
+        display: block;
+      }
+
       .header {
-        background: #02264C;
+        background: #02264c;
         height: 54px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -130,12 +142,12 @@
           line-height: 22px;
           text-align: center;
           letter-spacing: -0.02em;
-          color: #FFFFFF;
+          color: #ffffff;
         }
       }
 
       .body {
-        background: #FFF;
+        background: #fff;
 
         .row {
           height: 54px;
@@ -143,7 +155,7 @@
           grid-template-columns: repeat(4, 1fr);
 
           &:not(:first-child) {
-            border-top: 1px solid #F2F2F2;
+            border-top: 1px solid #f2f2f2;
           }
 
           .cell {
@@ -153,11 +165,10 @@
             line-height: 22px;
             text-align: center;
             letter-spacing: -0.02em;
-            color: #0E0B3D;
+            color: #0e0b3d;
           }
         }
       }
-
     }
 
     .table_text {
@@ -168,7 +179,7 @@
       line-height: 16px;
       text-align: center;
       letter-spacing: -0.02em;
-      color: #6C6B7D;
+      color: #6c6b7d;
 
       @include desktop {
         margin-top: 20px;
@@ -176,7 +187,5 @@
         text-align: left;
       }
     }
-
-
   }
 }

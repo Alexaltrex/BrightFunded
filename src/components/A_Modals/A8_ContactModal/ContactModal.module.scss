@@ -1,4 +1,4 @@
-@import "../../../assets/styles/app";
+@import '../../../assets/styles/app';
 
 .contactModal {
   .card {
@@ -7,13 +7,13 @@
     transform: translateY(-50%);
     left: 20px;
     width: calc(100vw - 40px);
-    background: #FFFFFF;
+    background: #ffffff;
     backdrop-filter: blur(17px);
     border-radius: 15px;
     box-sizing: border-box;
     padding: 24px 20px 14px;
 
-    @include desktop {
+    @media (min-width: 768px) {
       left: 50%;
       width: 514px;
       transform: translate(-50%, -50%);
@@ -32,7 +32,7 @@
       width: 14px;
       height: 14px;
 
-      @include desktop {
+      @media (min-width: 768px) {
         width: 16px;
         height: 16px;
         top: 20px;
@@ -43,7 +43,7 @@
         width: 14px;
         height: 14px;
 
-        @include desktop {
+        @media (min-width: 768px) {
           width: 16px;
           height: 16px;
         }
@@ -57,7 +57,7 @@
       margin-left: auto;
       margin-right: auto;
 
-      @include desktop {
+      @media (min-width: 768px) {
         width: 120px;
         height: 120px;
       }
@@ -69,10 +69,10 @@
       line-height: 130%;
       text-align: center;
       letter-spacing: -0.02em;
-      color: #0E0B3D;
+      color: #0e0b3d;
       margin-top: 20px;
 
-      @include desktop {
+      @media (min-width: 768px) {
         font-size: 32px;
       }
     }
@@ -84,9 +84,9 @@
       line-height: 150%;
       text-align: center;
       letter-spacing: -0.01em;
-      color: #3E3C64;
+      color: #3e3c64;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 15px;
       }
     }
@@ -97,7 +97,7 @@
       margin-left: auto;
       margin-right: auto;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 30px;
         width: 100%;
       }
@@ -113,11 +113,11 @@
       font-size: 14px;
       line-height: 21px;
       letter-spacing: -0.03em;
-      color: #0E0B3D;
+      color: #0e0b3d;
       text-align: center;
       text-transform: uppercase;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 6px;
       }
     }

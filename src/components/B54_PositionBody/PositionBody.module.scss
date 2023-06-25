@@ -1,19 +1,16 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .positionBody {
-  @include container;
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @include desktop {
+  @media (min-width: 991px) {
     padding-top: 80px;
     padding-bottom: 80px;
   }
 
   .inner {
-    @include inner;
-
-    @include desktop {
+    @media (min-width: 991px) {
       width: 846px;
     }
 
@@ -21,7 +18,7 @@
       &:not(:first-child) {
         margin-top: 40px;
 
-        @include desktop {
+        @media (min-width: 991px) {
           margin-top: 60px;
         }
       }
@@ -31,9 +28,9 @@
         font-size: 22px;
         line-height: 130%;
         letter-spacing: -0.02em;
-        color: #0F0D31;
+        color: #0f0d31;
 
-        @include desktop {
+        @media (min-width: 991px) {
           font-size: 24px;
         }
       }
@@ -46,7 +43,7 @@
         letter-spacing: -0.01em;
         color: #313235;
 
-        @include desktop {
+        @media (min-width: 991px) {
           margin-top: 16px;
         }
       }
@@ -54,7 +51,7 @@
       &_list {
         margin-top: 20px;
 
-        @include desktop {
+        @media (min-width: 991px) {
           margin-top: 16px;
         }
 
@@ -65,22 +62,22 @@
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #231F1F;
+          color: #231f1f;
 
-          @include desktop {
+          @media (min-width: 991px) {
             padding-left: 16px;
           }
 
           &:not(:first-child) {
             margin-top: 15px;
 
-            @include desktop {
+            @media (min-width: 991px) {
               margin-top: 12px;
             }
           }
 
           &::before {
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             left: 0;
@@ -88,14 +85,17 @@
             width: 7px;
             height: 7px;
             border-radius: 50%;
-            background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+            background: linear-gradient(
+              34.49deg,
+              #0781fe -12.58%,
+              #00c7b4 102.84%
+            );
 
-            @include desktop {
+            @media (min-width: 991px) {
               width: 8px;
               height: 8px;
             }
           }
-
         }
       }
 
@@ -108,18 +108,22 @@
 
         a {
           @include gradient-text;
-          text-decoration: underline!important;
+          text-decoration: underline !important;
           position: relative;
 
           &::after {
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             left: 0;
             bottom: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+            background: linear-gradient(
+              34.49deg,
+              #0781fe -12.58%,
+              #00c7b4 102.84%
+            );
           }
         }
       }
@@ -129,6 +133,5 @@
       margin-top: 34px;
       width: 157px;
     }
-
   }
 }

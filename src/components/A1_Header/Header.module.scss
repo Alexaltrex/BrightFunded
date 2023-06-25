@@ -1,7 +1,7 @@
 @import '../../assets/styles/app';
 
 .header {
-  @include container;
+  // @include container;
   position: fixed;
   top: 0;
   left: 0;
@@ -137,7 +137,7 @@
 
     .inner {
       height: 75px;
-      display: none;
+      // display: none;
 
       @media (min-width: 992px) {
         display: flex;

@@ -33,8 +33,8 @@
       // @include inner;
 
       .titleWrapper {
-        @include h2_block;
-        @include h2_block_white;
+        // @include h2_block;
+        // @include h2_block_white;
         width: 290px;
         margin-left: auto;
         margin-right: auto;
@@ -58,13 +58,13 @@
         }
 
         .title {
-          margin-top: 15px;
-          font-size: 36px;
+          margin-top: 10px;
+          font-size: 24px;
           font-weight: 600;
           line-height: 130%;
           text-align: center;
           letter-spacing: -0.02em;
-          color: #0e0b3d;
+          color: #fff;
 
           width: 100%;
           margin-left: auto;
@@ -74,8 +74,8 @@
             width: 500px;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 10px;
-            font-size: 24px;
+            margin-top: 15px;
+            font-size: 36px;
           }
         }
       }
@@ -85,7 +85,7 @@
         flex-direction: column;
         margin-top: 30px;
 
-        @media (min-width: 800px) {
+        @media (min-width: 1023px) {
           margin-top: 50px;
           flex-direction: row;
         }
@@ -95,16 +95,24 @@
           z-index: 10;
 
           @media (min-width: 800px) {
+            width: 100%;
+          }
+          @media (min-width: 1023px) {
             width: 847px;
           }
         }
 
         .rightBlock {
+          @media (max-width: 1101px) {
+            display: flex;
+            align-items: flex-end;
+          }
+
           .slider {
-            display: none;
+            min-width: 0;
             margin-top: 60px;
 
-            @media (min-width: 800px) {
+            @media (min-width: 1023px) {
               display: block;
               margin-top: 0;
               position: relative;
@@ -113,7 +121,7 @@
               margin-left: 40px;
             }
             @media (max-width: 999px) {
-              width: 340px;
+              // width: 340px;
             }
           }
         }

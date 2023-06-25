@@ -1,13 +1,12 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .whatSets {
-  @include container;
-  background: #F7F9FC;
+  background: #f7f9fc;
   border-radius: 40px;
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @include desktop {
+  @media (min-width: 768px) {
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -16,15 +15,33 @@
     @include inner;
 
     .titleWrapper {
-      @include h2_block;
-      @include h2_block_black;
+      .pretext {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 115%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #9a99af;
 
-      h2 {
-        //width: 280px;
+        @media (min-width: 768px) {
+          font-size: 14px;
+        }
+      }
+
+      h2.title {
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.02em;
         margin-left: auto;
         margin-right: auto;
 
-        @include desktop {
+        @media (min-width: 768px) {
+          margin-top: 15px;
+          font-size: 36px;
           width: 630px;
         }
       }
@@ -33,11 +50,14 @@
     .cards {
       margin-top: 30px;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 40px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 20px;
+        display: flex;
+        gap: 20px;
+      }
+
+      @media (max-width: 1120px) {
+        flex-wrap: wrap;
       }
 
       .card {
@@ -45,20 +65,26 @@
         flex-direction: column;
         align-items: flex-start;
         box-sizing: border-box;
-        background: #FFF;
-        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+        background: #fff;
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02),
+          0px 9px 19px rgba(0, 0, 0, 0.01);
         border-radius: 15px;
         padding: 20px;
 
-        @include desktop {
-          padding: 20px 36px 0 20px;
-          height: 371px;
+        @media (min-width: 768px) {
+          box-sizing: border-box;
+          flex: 0 0 calc(25% - 15px);
+          padding: 20px 36px 20px 20px;
+        }
+
+        @media (max-width: 1120px) {
+          flex: 0 0 calc(50% - 10px);
         }
 
         &:not(:first-child) {
           margin-top: 20px;
 
-          @include desktop {
+          @media (min-width: 768px) {
             margin-top: 0;
           }
         }
@@ -67,10 +93,14 @@
           @include centerRow;
           width: 45px;
           height: 45px;
-          background: linear-gradient(34.49deg, rgba(7, 129, 254, 0.1) -12.58%, rgba(0, 199, 180, 0.1) 102.84%);
+          background: linear-gradient(
+            34.49deg,
+            rgba(7, 129, 254, 0.1) -12.58%,
+            rgba(0, 199, 180, 0.1) 102.84%
+          );
           border-radius: 10px;
 
-          @include desktop {
+          @media (min-width: 768px) {
             width: 55px;
             height: 55px;
           }
@@ -79,7 +109,7 @@
             width: 23px;
             height: 23px;
 
-            @include desktop {
+            @media (min-width: 768px) {
               width: 29px;
               height: 29px;
             }
@@ -92,13 +122,13 @@
           font-size: 20px;
           line-height: 130%;
           letter-spacing: -0.02em;
-          color: #0E0B3D;
+          color: #0e0b3d;
           //width: 240px;
 
-          @include desktop {
+          @media (min-width: 768px) {
+            height: 58px;
             margin-top: 20px;
             font-size: 22px;
-            width: 265px;
           }
         }
 
@@ -108,7 +138,7 @@
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #3E3C64;
+          color: #3e3c64;
 
           span {
             font-weight: 600;
@@ -117,41 +147,36 @@
 
         &:nth-child(1) {
           .card_text {
-            @include desktop {
-              margin-top: 59px;
-            }
+            // @media (min-width: 768px) {
+            //   margin-top: 59px;
+            // }
           }
         }
 
         &:nth-child(2) {
           .card_text {
-            @include desktop {
-              margin-top: 59px;
-            }
+            // @media (min-width: 768px) {
+            //   margin-top: 59px;
+            // }
           }
         }
 
         &:nth-child(3) {
           .card_text {
-            @include desktop {
-              margin-top: 30px;
-            }
+            // @media (min-width: 768px) {
+            //   margin-top: 30px;
+            // }
           }
         }
 
         &:nth-child(4) {
           .card_text {
-            @include desktop {
-              margin-top: 30px;
-            }
+            // @media (min-width: 768px) {
+            //   margin-top: 30px;
+            // }
           }
         }
-
-
       }
     }
-
   }
-
-
 }

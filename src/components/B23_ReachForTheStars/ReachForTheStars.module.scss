@@ -1,7 +1,6 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .reachForTheStars {
-  @include container;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -10,39 +9,64 @@
   padding: 140px 20px 80px;
   overflow: hidden;
 
-  @include desktop {
+  @media (min-width: 767px) {
     padding: 150px 0 100px;
   }
 
   .gradientRight {
-    @include onlyDesktop;
+    display: none;
     position: absolute;
     right: 0;
     top: 43px;
     height: 340px;
+
+    @media (min-width: 767px) {
+      display: block;
+    }
   }
 
   .titleWrapper {
-    @include h2_block;
-    @include h2_block_white;
     position: relative;
 
-    h2 {
+    .pretext {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 115%;
+      text-align: center;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+
+      @media (min-width: 767px) {
+        font-size: 14px;
+      }
+    }
+
+    h2.title {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: -0.02em;
+
       width: 240px;
       margin-left: auto;
       margin-right: auto;
 
-      @include desktop {
+      color: #fff;
+
+      @media (min-width: 767px) {
         width: 624px;
+        margin-top: 15px;
+        font-size: 36px;
       }
 
       span {
-        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        background: linear-gradient(34.49deg, #0781fe -12.58%, #00c7b4 102.84%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
     }
-
     .coin_green {
       position: absolute;
       top: -100px;
@@ -50,7 +74,7 @@
       width: 100px;
       height: auto;
 
-      @include desktop {
+      @media (min-width: 767px) {
         top: -150px;
         left: -155px;
         width: 130px;
@@ -58,12 +82,16 @@
     }
 
     .coin_yellow {
-      @include onlyDesktop();
+      display: none;
       position: absolute;
       width: 140px;
       height: auto;
       right: -235px;
       top: -35px;
+
+      @media (min-width: 767px) {
+        display: block;
+      }
     }
 
     .coin_blue {
@@ -73,7 +101,7 @@
       top: 65px;
       right: 0;
 
-      @include desktop {
+      @media (min-width: 767px) {
         width: 60px;
         top: 160px;
         right: auto;
@@ -88,7 +116,7 @@
     align-items: center;
     margin-top: 20px;
 
-    @include desktop {
+    @media (min-width: 767px) {
       margin-top: 40px;
       flex-direction: row;
       justify-content: center;
@@ -97,7 +125,7 @@
     .btn {
       width: 130px;
 
-      @include desktop {
+      @media (min-width: 767px) {
         width: 151px;
       }
     }
@@ -105,11 +133,10 @@
     .tradeBtn {
       margin-top: 30px;
 
-      @include desktop {
+      @media (min-width: 767px) {
         margin-top: 0;
         margin-left: 35px;
       }
     }
-
   }
 }

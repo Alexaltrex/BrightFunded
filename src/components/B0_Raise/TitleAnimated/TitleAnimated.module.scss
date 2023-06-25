@@ -1,12 +1,19 @@
 @import '../../../assets/styles/app';
 
 .wrapperDesktop {
-  @include onlyDesktop(inline-flex);
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline-flex;
+  }
 }
 
 .wrapperMobile {
-  @include onlyMobile(inline-flex);
-  //   margin-right: 3px;
+  display: inline-flex;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .tooltipContent {
@@ -17,6 +24,8 @@
   border-radius: 10px;
 
   p {
+    display: flex;
+    justify-content: center;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;

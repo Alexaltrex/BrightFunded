@@ -1,21 +1,19 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .position {
-  @include container;
   padding-top: 115px;
   padding-bottom: 60px;
 
-  @include desktop {
+  @media (min-width: 991px) {
     padding-top: 162px;
   }
 
   .inner {
-    @include inner;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    @include desktop {
+    @media (min-width: 991px) {
       width: 846px;
     }
 
@@ -34,9 +32,9 @@
       font-size: 30px;
       line-height: 115%;
       letter-spacing: -0.02em;
-      color: #FFFFFF;
+      color: #ffffff;
 
-      @include desktop {
+      @media (min-width: 991px) {
         margin-top: 16px;
         font-size: 36px;
       }
@@ -47,7 +45,7 @@
       display: flex;
       flex-direction: column;
 
-      @include desktop {
+      @media (min-width: 991px) {
         margin-top: 16px;
         flex-direction: row;
       }
@@ -59,7 +57,7 @@
         &:last-child {
           margin-top: 15px;
 
-          @include desktop {
+          @media (min-width: 991px) {
             margin-top: 0;
             margin-left: 32px;
           }
@@ -77,21 +75,18 @@
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #FFF;
+          color: #fff;
         }
       }
-
     }
 
     .btn {
       margin-top: 30px;
       width: 128px;
 
-      @include desktop {
+      @media (min-width: 991px) {
         margin-top: 36px;
       }
     }
-
-
   }
 }

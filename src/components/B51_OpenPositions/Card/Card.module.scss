@@ -1,28 +1,31 @@
-@import "../../../assets/styles/app";
+@import '../../../assets/styles/app';
 
 .card {
   display: block;
   text-decoration: none;
-  background: #FFFFFF;
-  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+  background: #ffffff;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02),
+    0px 9px 19px rgba(0, 0, 0, 0.01);
   border-radius: 15px;
   box-sizing: border-box;
   transition: 0.3s;
+  width: 100%;
 
   &:hover {
-    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1), 0px 9px 19px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1),
+      0px 9px 19px rgba(0, 0, 0, 0.05);
   }
 
   &:not(:first-child) {
     margin-top: 20px;
 
-    @include desktop {
+    @media (min-width: 768px) {
       margin-top: 0;
     }
   }
 
-  @include desktop {
-    width: 630px;
+  @media (min-width: 1023px) {
+    flex: 0 0 calc(50% - 10px);
     margin-bottom: 20px;
   }
 
@@ -32,7 +35,7 @@
     align-items: flex-start;
     padding: 20px;
 
-    @include desktop {
+    @media (min-width: 768px) {
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: center;
@@ -54,9 +57,9 @@
       font-size: 18px;
       line-height: 130%;
       letter-spacing: -0.02em;
-      color: #0E0B3D;
+      color: #0e0b3d;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 0;
         font-size: 22px;
       }
@@ -64,10 +67,10 @@
   }
 
   .bottom {
-    border-top: 1px solid #F2F2F2;
+    border-top: 1px solid #f2f2f2;
     padding: 20px;
 
-    @include desktop {
+    @media (min-width: 768px) {
       padding: 25px 35px 25px 25px;
     }
 
@@ -76,7 +79,7 @@
       font-size: 14px;
       line-height: 150%;
       letter-spacing: -0.01em;
-      color: #3E3C64;
+      color: #3e3c64;
     }
 
     .items {
@@ -84,7 +87,7 @@
       display: flex;
       flex-direction: column;
 
-      @include desktop {
+      @media (min-width: 768px) {
         flex-direction: row;
       }
 
@@ -95,7 +98,7 @@
         &:last-child {
           margin-top: 15px;
 
-          @include desktop {
+          @media (min-width: 768px) {
             margin-top: 0;
             margin-left: 15px;
           }
@@ -113,11 +116,9 @@
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #0E0B3D;
+          color: #0e0b3d;
         }
       }
-
     }
   }
-
 }

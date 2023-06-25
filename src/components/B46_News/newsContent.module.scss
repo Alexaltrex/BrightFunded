@@ -1,9 +1,9 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .block {
   margin-top: 30px;
 
-  @include desktop {
+  @media (min-width: 991px) {
     margin-top: 60px;
   }
 
@@ -15,7 +15,7 @@
     margin-right: auto;
     border-radius: 20px;
 
-    @include desktop {
+    @media (min-width: 991px) {
       width: 846px;
       height: auto;
     }
@@ -26,9 +26,9 @@
     font-size: 22px;
     line-height: 130%;
     letter-spacing: -0.02em;
-    color: #0F0D31;
+    color: #0f0d31;
 
-    @include desktop {
+    @media (min-width: 991px) {
       font-size: 24px;
     }
   }
@@ -36,7 +36,7 @@
   &_text {
     margin-top: 15px;
 
-    @include desktop {
+    @media (min-width: 991px) {
       margin-top: 16px;
     }
 

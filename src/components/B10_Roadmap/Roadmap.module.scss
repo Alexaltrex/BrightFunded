@@ -1,34 +1,40 @@
 @import '../../assets/styles/app';
 
 .roadmap {
-  @include container;
   position: relative;
   padding-top: 115px;
 
-  @include desktop {
+  @media (min-width: 991px) {
     padding-top: 182px;
   }
 
   .planet_left {
-    @include onlyDesktop;
+    display: none;
     position: absolute;
     height: 456px;
     width: auto;
     top: 720px;
     left: 0;
+
+    @media (min-width: 991px) {
+      display: block;
+    }
   }
 
   .planet_right {
-    @include onlyDesktop;
+    display: none;
     position: absolute;
     height: 600px;
     width: auto;
     top: 80px;
     right: 0;
+
+    @media (min-width: 991px) {
+      display: block;
+    }
   }
 
   .inner {
-    @include inner;
     position: relative;
     z-index: 2;
 
@@ -40,7 +46,7 @@
       letter-spacing: -0.02em;
       color: #ffffff;
 
-      @include desktop {
+      @media (min-width: 991px) {
         font-size: 58px;
       }
     }
@@ -54,7 +60,7 @@
       letter-spacing: -0.01em;
       color: #a1a3a9;
 
-      @include desktop {
+      @media (min-width: 991px) {
         margin-top: 24px;
         width: 700px;
         margin-left: auto;
@@ -70,7 +76,7 @@
       position: relative;
       margin-top: 40px;
 
-      @include desktop {
+      @media (min-width: 991px) {
         margin-top: 116px;
         display: flex;
         flex-direction: column;
@@ -85,7 +91,7 @@
         left: 14px;
         background-color: #131624;
 
-        @media (min-width: 1440px) {
+        @media (min-width: 991px) {
           width: 5px;
           top: 96px;
           bottom: 120px;
@@ -112,33 +118,33 @@
           display: none !important;
         }
 
-        @include desktop {
+        @media (min-width: 991px) {
           padding-left: 0;
         }
 
         &:not(:first-child) {
           margin-top: 20px;
 
-          @include desktop {
+          @media (min-width: 991px) {
             margin-top: -24px;
           }
         }
 
         &:nth-child(odd) {
-          @include desktop {
+          @media (min-width: 991px) {
             align-self: flex-start;
           }
         }
 
         &:nth-child(even) {
-          @include desktop {
+          @media (min-width: 991px) {
             align-self: flex-end;
           }
         }
 
         &:nth-child(1) {
           &::after {
-            @include onlyDesktop() {
+            @media (min-width: 991px) {
               position: absolute;
               display: block;
               content: '';
@@ -153,7 +159,7 @@
 
         &:nth-child(2) {
           &::after {
-            @include onlyDesktop() {
+            @media (min-width: 991px) {
               position: absolute;
               display: block;
               content: '';
@@ -168,7 +174,7 @@
 
         &:nth-child(3) {
           &::after {
-            @include onlyDesktop() {
+            @media (min-width: 991px) {
               position: absolute;
               display: block;
               content: '';
@@ -183,7 +189,7 @@
 
         &:nth-child(4) {
           &::after {
-            @include onlyDesktop() {
+            @media (min-width: 991px) {
               position: absolute;
               display: block;
               content: '';
@@ -198,7 +204,7 @@
 
         &:nth-child(5) {
           &::after {
-            @include onlyDesktop() {
+            @media (min-width: 991px) {
               position: absolute;
               display: block;
               content: '';
@@ -215,28 +221,33 @@
           top: 18px;
           left: 0;
 
-          @include desktop {
+          @media (min-width: 991px) {
             top: auto;
             left: auto;
           }
         }
 
         &:nth-child(odd) {
-          @include desktop {
+          @media (min-width: 991px) {
+            .card {
+              margin: 0 calc(50% + 110px) 0 0;
+            }
             .iconWrapper {
               top: 50%;
               transform: translateY(-50%);
-              right: -129px;
+              // right: -129px;
+              left: calc(50% - 20px);
             }
           }
         }
 
         &:nth-child(even) {
-          @include desktop {
+          @media (min-width: 991px) {
             .iconWrapper {
               top: 50%;
               transform: translateY(-50%);
-              left: -129px;
+              // left: -129px;
+              left: calc(50% - 20px);
             }
           }
         }
@@ -258,42 +269,11 @@
             transition: transform 0.4s ease;
           }
 
-          @include desktop {
+          @media (min-width: 991px) {
             width: 40px;
             height: 40px;
             border-width: 2px;
           }
-
-          // &_ended {
-          //   background: #0f2534;
-          //   border-color: #02afc7;
-
-          //   svg {
-          //     width: 18px;
-          //     height: 18px;
-
-          //     @include desktop {
-          //       width: 24px;
-          //       height: 24px;
-          //     }
-          //   }
-          // }
-
-          // &_active {
-          //   background: #0f2534;
-          //   border-color: #02afc7;
-          //   box-shadow: 0px 0px 24px rgba(6, 147, 236, 0.4);
-
-          //   svg {
-          //     width: 15px;
-          //     height: 3px;
-
-          //     @include desktop {
-          //       width: 20px;
-          //       height: 4px;
-          //     }
-          //   }
-          // }
 
           &_inprogress {
             background: #0f2534;
@@ -309,33 +289,6 @@
           }
         }
 
-        // &:not(:last-child) {
-        //   .card::after {
-        //     @include onlyMobile();
-        //     position: absolute;
-        //     display: block;
-        //     content: '';
-        //     top: 48px;
-        //     bottom: -38px;
-        //     width: 3px;
-        //     left: -34px;
-        //     background: #131624;
-        //   }
-
-        //   .card_ended::after {
-        //     @include onlyMobile();
-        //     position: absolute;
-        //     z-index: 1;
-        //     display: block;
-        //     content: '';
-        //     top: 48px;
-        //     bottom: -38px;
-        //     width: 3px;
-        //     left: -34px;
-        //     background: #02afc7;
-        //   }
-        // }
-
         .card {
           position: relative;
           background: rgba(21, 24, 40, 0.5);
@@ -345,9 +298,10 @@
           box-sizing: border-box;
           border: 1px solid rgba(255, 255, 255, 0.06);
 
-          @include desktop {
+          @media (min-width: 991px) {
             padding: 25px;
-            width: 531px;
+            margin: 0 0 0 calc(50% + 110px);
+            // width: 531px;
           }
 
           .phase {
@@ -358,7 +312,7 @@
             border: 1px solid #707179;
             border-radius: 999px;
 
-            @include desktop {
+            @media (min-width: 991px) {
               width: 85px;
               height: 30px;
             }
@@ -371,7 +325,7 @@
               text-transform: uppercase;
               color: #707179;
 
-              @include desktop {
+              @media (min-width: 991px) {
                 font-size: 14px;
               }
             }
@@ -384,7 +338,7 @@
             line-height: 24px;
             color: #ffffff;
 
-            @include desktop {
+            @media (min-width: 991px) {
               margin-top: 30px;
               font-size: 20px;
               line-height: 30px;
@@ -399,7 +353,7 @@
             letter-spacing: -0.01em;
             color: rgba(255, 255, 255, 0.6);
 
-            @include desktop {
+            @media (min-width: 991px) {
               margin-top: 16px;
             }
           }

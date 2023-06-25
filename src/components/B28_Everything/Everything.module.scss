@@ -1,20 +1,17 @@
 @import '../../assets/styles/app';
 
 .everything {
-  @include container;
   position: relative;
   z-index: 2;
   padding-top: 115px;
   padding-bottom: 80px;
 
-  @include desktop {
+  @media (min-width: 991px) {
     padding-top: 184px;
     padding-bottom: 50px;
   }
 
   .inner {
-    @include inner;
-
     h2.title {
       font-weight: 600;
       font-size: 30px;
@@ -23,7 +20,7 @@
       color: #ffffff;
       width: 258px;
 
-      @include desktop {
+      @media (min-width: 991px) {
         width: auto;
         font-size: 58px;
         text-align: center;
@@ -38,7 +35,7 @@
       letter-spacing: -0.01em;
       color: #a1a3a9;
 
-      @include desktop {
+      @media (min-width: 991px) {
         text-align: center;
       }
 
@@ -60,7 +57,7 @@
       padding: 0 20px;
       box-sizing: border-box;
 
-      @include desktop {
+      @media (min-width: 991px) {
         width: 846px;
         margin-left: auto;
         margin-right: auto;
@@ -109,7 +106,7 @@
       z-index: 2;
       padding-top: 40px;
 
-      @include desktop {
+      @media (min-width: 991px) {
         padding-top: 50px;
         width: 846px;
         margin-left: auto;
@@ -124,15 +121,14 @@
         letter-spacing: -0.02em;
         color: #ffffff;
 
-        @include desktop {
+        @media (min-width: 991px) {
           width: 216px;
           flex-shrink: 0;
         }
       }
 
       .faqBlocks {
-
-        @include desktop {
+        @media (min-width: 991px) {
           width: 630px;
         }
 
@@ -154,7 +150,7 @@
           &:first-child {
             padding-top: 30px;
 
-            @include desktop {
+            @media (min-width: 991px) {
               padding-top: 0;
             }
           }
@@ -172,72 +168,6 @@
           }
         }
       }
-
-      //.resultList {
-      //  margin-top: 24px;
-      //
-      //  @include desktop {
-      //    margin-top: 0;
-      //    flex-grow: 1;
-      //  }
-      //
-      //  .resultCard {
-      //    background: rgba(21, 24, 40, 0.8);
-      //    border-radius: 15px;
-      //    border: 1px solid rgba(255, 255, 255, 0.06);
-      //    padding: 20px 20px 24px;
-      //
-      //    &:not(:first-child) {
-      //      margin-top: 16px;
-      //
-      //      @include desktop {
-      //        margin-top: 20px;
-      //      }
-      //    }
-      //
-      //    .question {
-      //      font-weight: 600;
-      //      font-size: 16px;
-      //      line-height: 130%;
-      //      letter-spacing: -0.02em;
-      //      color: #ffffff;
-      //      //width: 188px;
-      //
-      //      @include desktop {
-      //        font-size: 18px;
-      //        width: auto;
-      //      }
-      //
-      //      span {
-      //        background: yellow;
-      //        color: #000;
-      //      }
-      //    }
-      //
-      //    .answer {
-      //      margin-top: 20px;
-      //      font-weight: 400;
-      //      font-size: 14px;
-      //      line-height: 150%;
-      //      letter-spacing: -0.01em;
-      //      color: #a1a3a9;
-      //
-      //      @include desktop {
-      //        //width: 555px;
-      //      }
-      //
-      //      span {
-      //        background: yellow;
-      //        color: #000;
-      //      }
-      //
-      //      a {
-      //        text-decoration: none;
-      //        color: #02A4C7;
-      //      }
-      //    }
-      //  }
-      //}
     }
 
     .list {
@@ -245,7 +175,7 @@
       z-index: 2;
       padding-top: 40px;
 
-      @include desktop {
+      @media (min-width: 991px) {
         padding-top: 0;
         width: 846px;
         margin-left: auto;
@@ -253,13 +183,21 @@
       }
 
       .listMobile {
-        @include onlyMobile;
+        display: block;
+
+        @media (min-width: 991px) {
+          display: none;
+        }
       }
 
       .listDesktop {
-        @include onlyDesktop(flex);
+        display: none;
         align-items: stretch;
         position: relative;
+
+        @media (min-width: 991px) {
+          display: flex;
+        }
 
         .topicsWrapper {
           position: relative;
@@ -298,9 +236,9 @@
 
                 &:hover {
                   background: linear-gradient(
-                                  34.49deg,
-                                  #0781fe -12.58%,
-                                  #00c7b4 102.84%
+                    34.49deg,
+                    #0781fe -12.58%,
+                    #00c7b4 102.84%
                   );
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
@@ -322,7 +260,6 @@
               bottom: 5px;
             }
           }
-
         }
 
         .faqBlocks {

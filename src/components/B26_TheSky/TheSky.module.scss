@@ -1,19 +1,17 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .theSky {
-  @include container;
   padding-top: 80px;
 
-  @include desktop {
+  @media (min-width: 991px) {
     padding-top: 150px;
   }
 
   .inner {
-    @include inner;
+    // @include inner;
 
     .topBlock {
-
-      @include desktop {
+      @media (min-width: 991px) {
         display: flex;
       }
 
@@ -22,9 +20,9 @@
         font-size: 24px;
         line-height: 130%;
         letter-spacing: -0.02em;
-        color: #0E0B3D;
+        color: #0e0b3d;
 
-        @include desktop {
+        @media (min-width: 991px) {
           font-size: 36px;
           width: 478px;
         }
@@ -36,9 +34,9 @@
         font-size: 14px;
         line-height: 150%;
         letter-spacing: -0.01em;
-        color: #3E3C64;
+        color: #3e3c64;
 
-        @include desktop {
+        @media (min-width: 991px) {
           margin-top: 0;
           margin-left: 280px;
           width: 414px;
@@ -51,15 +49,15 @@
     }
 
     .linesMobile {
-      @include onlyMobile;
+      display: block;
       margin-top: 32px;
 
-      @include desktop {
+      @media (min-width: 991px) {
+        display: none;
         margin-top: 60px;
       }
 
       .lineMobile {
-
         &:not(:first-child) {
           margin-top: 40px;
         }
@@ -80,7 +78,8 @@
           .inner {
             position: relative;
             border-radius: 15px 0px 0px 15px;
-            box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+            box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02),
+              0px 9px 19px rgba(0, 0, 0, 0.01);
             height: 50px;
             border-right: 2px dashed #000;
 
@@ -104,7 +103,7 @@
             transform: translateY(-100%);
             width: 130px;
             height: 23px;
-            background: #008B7D;
+            background: #008b7d;
             border-radius: 10px 10px 0px 0px;
             font-weight: 500;
             font-size: 10px;
@@ -112,7 +111,7 @@
             text-align: right;
             letter-spacing: -0.02em;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #ffffff;
           }
         }
 
@@ -122,25 +121,25 @@
           font-size: 16px;
           line-height: 130%;
           letter-spacing: -0.02em;
-          color: #3E3C64;
+          color: #3e3c64;
         }
 
         &:nth-child(1) {
           .label {
-            color: #045AB1;
+            color: #045ab1;
           }
 
           .lineWrapper {
-            background: #E3EDFF;
+            background: #e3edff;
 
             .inner {
-              background: #D3E2FD;
+              background: #d3e2fd;
 
               width: calc((100% - 80px) * 0.3);
               border-color: rgba(4, 90, 177, 0.5);
 
               .percent {
-                color: #045AB1;
+                color: #045ab1;
               }
             }
           }
@@ -148,19 +147,19 @@
 
         &:nth-child(2) {
           .label {
-            color: #F8540D;
+            color: #f8540d;
           }
 
           .lineWrapper {
-            background: #F2E7E4;
+            background: #f2e7e4;
 
             .inner {
-              background: #F6D2C8;
+              background: #f6d2c8;
               width: calc((100% - 80px) * 0.6);
               border-color: rgba(248, 84, 13, 0.5);
 
               .percent {
-                color: #F8540D;
+                color: #f8540d;
               }
             }
           }
@@ -168,38 +167,41 @@
 
         &:nth-child(3) {
           .label {
-            color: #008B7D;
+            color: #008b7d;
           }
 
           .lineWrapper {
-            background: #D9EAE8;
+            background: #d9eae8;
             border-radius: 12px 0px 12px 12px;
 
             .inner {
-              background: #ABDBD5;
+              background: #abdbd5;
               width: calc((100% - 80px) * 0.9);
               border-color: rgba(0, 139, 125, 0.5);
 
-
               .percent {
-                color: #008B7D;
+                color: #008b7d;
               }
             }
           }
         }
       }
-
     }
 
     .linesDesktop {
-      @include onlyDesktop();
+      display: none;
       margin-top: 60px;
+
+      @media (min-width: 991px) {
+        display: block;
+      }
 
       .lineDesktop {
         position: relative;
         display: flex;
         height: 71px;
-        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02),
+          0px 9px 19px rgba(0, 0, 0, 0.01);
         border-radius: 15px;
 
         &:not(:first-child) {
@@ -239,7 +241,7 @@
             font-size: 21px;
             line-height: 130%;
             letter-spacing: -0.02em;
-            color: #3E3C64;
+            color: #3e3c64;
             width: 478px;
             margin-right: 44px;
           }
@@ -253,63 +255,61 @@
           transform: translateY(100%);
           width: 200px;
           height: 36px;
-          background: #008B7D;
+          background: #008b7d;
           border-radius: 0px 0px 10px 10px;
           font-weight: 500;
           font-size: 14px;
           line-height: 115%;
           letter-spacing: -0.02em;
           text-transform: uppercase;
-          color: #FFFFFF;
+          color: #ffffff;
         }
 
         &:nth-child(1) {
-          background: #E3EDFF;
+          background: #e3edff;
 
           .label {
-            background: #D3E2FD;
-            color: #045AB1;
+            background: #d3e2fd;
+            color: #045ab1;
             width: 15%;
             border-color: rgba(4, 90, 177, 0.5);
           }
 
           .percent {
-            color: #045AB1;
+            color: #045ab1;
           }
         }
 
         &:nth-child(2) {
-          background: #F2E7E4;
+          background: #f2e7e4;
 
           .label {
-            background: #F7D2C8;
-            color: #F8540D;
+            background: #f7d2c8;
+            color: #f8540d;
             width: 30%;
             border-color: rgba(247, 83, 14, 0.5);
           }
 
           .percent {
-            color: #F8540D;
+            color: #f8540d;
           }
         }
 
         &:nth-child(3) {
-          background: #D9EAE8;
+          background: #d9eae8;
 
           .label {
-            background: #ABDBD5;
-            color: #008B7D;
+            background: #abdbd5;
+            color: #008b7d;
             width: 45%;
             border-color: rgba(0, 139, 126, 0.5);
           }
 
           .percent {
-            color: #008C7F;
+            color: #008c7f;
           }
         }
       }
     }
-
-
   }
 }
