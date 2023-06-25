@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/BrightFunded/static/css/main.13013267.css",
-    "main.js": "/BrightFunded/static/js/main.3d6c9db3.js",
-    "static/css/79.bff2b230.chunk.css": "/BrightFunded/static/css/79.bff2b230.chunk.css",
+    "main.js": "/BrightFunded/static/js/main.ea7f31dd.js",
+    "static/css/79.c33e86ce.chunk.css": "/BrightFunded/static/css/79.c33e86ce.chunk.css",
     "static/js/79.1adc85ba.chunk.js": "/BrightFunded/static/js/79.1adc85ba.chunk.js",
     "static/css/991.1c8eba58.chunk.css": "/BrightFunded/static/css/991.1c8eba58.chunk.css",
     "static/js/991.e531c105.chunk.js": "/BrightFunded/static/js/991.e531c105.chunk.js",
-    "static/css/398.52f5031a.chunk.css": "/BrightFunded/static/css/398.52f5031a.chunk.css",
+    "static/css/398.a4ad4c1a.chunk.css": "/BrightFunded/static/css/398.a4ad4c1a.chunk.css",
     "static/js/398.8ec60356.chunk.js": "/BrightFunded/static/js/398.8ec60356.chunk.js",
     "static/css/934.6c71f00f.chunk.css": "/BrightFunded/static/css/934.6c71f00f.chunk.css",
     "static/js/934.1b10e9d9.chunk.js": "/BrightFunded/static/js/934.1b10e9d9.chunk.js",
@@ -87,12 +87,12 @@
     "static/media/check.png": "/BrightFunded/static/media/check.faa9f00d1764d02f9cc6.png",
     "index.html": "/BrightFunded/index.html",
     "main.13013267.css.map": "/BrightFunded/static/css/main.13013267.css.map",
-    "main.3d6c9db3.js.map": "/BrightFunded/static/js/main.3d6c9db3.js.map",
-    "79.bff2b230.chunk.css.map": "/BrightFunded/static/css/79.bff2b230.chunk.css.map",
+    "main.ea7f31dd.js.map": "/BrightFunded/static/js/main.ea7f31dd.js.map",
+    "79.c33e86ce.chunk.css.map": "/BrightFunded/static/css/79.c33e86ce.chunk.css.map",
     "79.1adc85ba.chunk.js.map": "/BrightFunded/static/js/79.1adc85ba.chunk.js.map",
     "991.1c8eba58.chunk.css.map": "/BrightFunded/static/css/991.1c8eba58.chunk.css.map",
     "991.e531c105.chunk.js.map": "/BrightFunded/static/js/991.e531c105.chunk.js.map",
-    "398.52f5031a.chunk.css.map": "/BrightFunded/static/css/398.52f5031a.chunk.css.map",
+    "398.a4ad4c1a.chunk.css.map": "/BrightFunded/static/css/398.a4ad4c1a.chunk.css.map",
     "398.8ec60356.chunk.js.map": "/BrightFunded/static/js/398.8ec60356.chunk.js.map",
     "934.6c71f00f.chunk.css.map": "/BrightFunded/static/css/934.6c71f00f.chunk.css.map",
     "934.1b10e9d9.chunk.js.map": "/BrightFunded/static/js/934.1b10e9d9.chunk.js.map",
@@ -123,6 +123,6 @@
   },
   "entrypoints": [
     "static/css/main.13013267.css",
-    "static/js/main.3d6c9db3.js"
+    "static/js/main.ea7f31dd.js"
   ]
 }
