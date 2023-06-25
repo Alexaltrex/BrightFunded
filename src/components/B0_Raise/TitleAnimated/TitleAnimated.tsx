@@ -6,7 +6,6 @@ import clsx from 'clsx';
 import Fade from '@mui/material/Fade';
 import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
-import { ClickAwayListener } from '@mui/material';
 import { useOutsideButNotOnTargetClick } from '../../../helpers/useOutsideClick';
 
 const text =
@@ -16,22 +15,12 @@ const text =
 const TooltipCustomMobile = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />
 ))(({ theme }) => ({
-  [`& .${tooltipClasses.tooltip}`]: {
-    // backgroundColor: theme.palette.common.white,
-    // color: 'rgba(0, 0, 0, 0.87)',
-    // boxShadow: theme.shadows[1],
-    // fontSize: 11,
-  },
+  [`& .${tooltipClasses.tooltip}`]: {},
 }));
 const TooltipCustomDesktop = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />
 ))(({ theme }) => ({
-  [`& .${tooltipClasses.tooltip}`]: {
-    // backgroundColor: theme.palette.common.white,
-    // color: 'rgba(0, 0, 0, 0.87)',
-    // boxShadow: theme.shadows[1],
-    // fontSize: 11,
-  },
+  [`& .${tooltipClasses.tooltip}`]: {},
 }));
 
 //========= TooltipContent ========//
