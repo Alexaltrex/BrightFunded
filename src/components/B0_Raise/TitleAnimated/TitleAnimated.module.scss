@@ -64,6 +64,7 @@
     span {
       display: inline-block;
       //border-bottom: 5px dashed red;
+      color: #00c7b4!important;
 
       &::after {
         position: absolute;
@@ -92,9 +93,10 @@
     white-space: nowrap;
     font-weight: 600;
     letter-spacing: -0.02em;
-    background: linear-gradient(36.3deg, #0781fe -12.63%, #00c7b4 67.08%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #00c7b4;
+    //background: linear-gradient(36.3deg, #0781fe -12.63%, #00c7b4 67.08%);
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
     position: absolute;
     top: 0;
     left: 0;

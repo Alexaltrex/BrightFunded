@@ -1,19 +1,19 @@
 export const dataMock = {
   EURUSD: {
-    'Bid Price': [
-      { value: '1.08031', dir: 1 },
-      { value: '1.08032', dir: 1 },
-      { value: '1.08033', dir: 1 },
-      { value: '1.08034', dir: 1 },
-      { value: '1.08035', dir: 1 },
-    ],
-    'Ask Price': [
-      { value: '1.08036', dir: -1 },
-      { value: '1.08036', dir: -1 },
-      { value: '1.08036', dir: -1 },
-      { value: '1.08036', dir: -1 },
-      { value: '1.08036', dir: -1 },
-    ],
+    // 'Bid Price': [
+    //   { value: '1.08031', dir: 1 },
+    //   { value: '1.08032', dir: 1 },
+    //   { value: '1.08033', dir: 1 },
+    //   { value: '1.08034', dir: 1 },
+    //   { value: '1.08035', dir: 1 },
+    // ],
+    // 'Ask Price': [
+    //   { value: '1.08036', dir: -1 },
+    //   { value: '1.08036', dir: -1 },
+    //   { value: '1.08036', dir: -1 },
+    //   { value: '1.08036', dir: -1 },
+    //   { value: '1.08036', dir: -1 },
+    // ],
     Spread: [
       { value: '0.00006' },
       { value: '0.00006' },
@@ -37,20 +37,20 @@ export const dataMock = {
     ],
   },
   GBPUSD: {
-    'Bid Price': [
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-    ],
-    'Ask Price': [
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-    ],
+    // 'Bid Price': [
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    // ],
+    // 'Ask Price': [
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    // ],
     Spread: [
       { value: '0.00006' },
       { value: '0.00006' },
@@ -74,20 +74,20 @@ export const dataMock = {
     ],
   },
   EURGBP: {
-    'Bid Price': [
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-    ],
-    'Ask Price': [
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-    ],
+    // 'Bid Price': [
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    // ],
+    // 'Ask Price': [
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    // ],
     Spread: [
       { value: '0.00006' },
       { value: '0.00006' },
@@ -111,20 +111,20 @@ export const dataMock = {
     ],
   },
   EURUSB: {
-    'Bid Price': [
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-    ],
-    'Ask Price': [
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-    ],
+    // 'Bid Price': [
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    // ],
+    // 'Ask Price': [
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    // ],
     Spread: [
       { value: '0.00006' },
       { value: '0.00006' },
@@ -148,20 +148,20 @@ export const dataMock = {
     ],
   },
   USDJPY: {
-    'Bid Price': [
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-    ],
-    'Ask Price': [
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-    ],
+    // 'Bid Price': [
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    // ],
+    // 'Ask Price': [
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    // ],
     Spread: [
       { value: '0.00006' },
       { value: '0.00006' },
@@ -185,20 +185,20 @@ export const dataMock = {
     ],
   },
   USDCAD: {
-    'Bid Price': [
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-      { value: '1.08031', dir: 0 },
-    ],
-    'Ask Price': [
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-      { value: '1.08036', dir: 0 },
-    ],
+    // 'Bid Price': [
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    //   { value: '1.08031', dir: 0 },
+    // ],
+    // 'Ask Price': [
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    //   { value: '1.08036', dir: 0 },
+    // ],
     Spread: [
       { value: '0.00006' },
       { value: '0.00006' },
