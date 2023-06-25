@@ -1,16 +1,16 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .chooseYourDestination {
   overflow: hidden;
 
   .top {
     height: 40px;
-    background: #F7F9FC;
+    background: #f7f9fc;
     position: relative;
 
     &::after {
       display: block;
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -18,41 +18,66 @@
       bottom: -3px;
       border-radius: 40px 40px 0 0;
       overflow: hidden;
-      background: #11131F;;
+      background: #11131f;
     }
-
   }
 
   .content {
-    @include container;
     padding-top: 20px;
 
-    @include desktop {
+    @media (min-width: 800px) {
       padding-top: 60px;
     }
 
     .inner {
-      @include inner;
+      // @include inner;
 
       .titleWrapper {
-        @include h2_block;
-        @include h2_block_white;
+        // @include h2_block;
+        // @include h2_block_white;
         width: 290px;
         margin-left: auto;
         margin-right: auto;
 
-        @include desktop {
+        @media (min-width: 800px) {
           width: auto;
         }
 
-        .title {
-          @include desktop {
-            width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+        .pretext {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 115%;
+          text-align: center;
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.4);
+
+          @media (min-width: 800px) {
+            font-size: 14px;
           }
         }
 
+        .title {
+          margin-top: 10px;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 130%;
+          text-align: center;
+          letter-spacing: -0.02em;
+          color: #fff;
+
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+
+          @media (min-width: 800px) {
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15px;
+            font-size: 36px;
+          }
+        }
       }
 
       .rest {
@@ -60,7 +85,7 @@
         flex-direction: column;
         margin-top: 30px;
 
-        @include desktop {
+        @media (min-width: 1023px) {
           margin-top: 50px;
           flex-direction: row;
         }
@@ -69,32 +94,38 @@
           position: relative;
           z-index: 10;
 
-          @include desktop {
+          @media (min-width: 800px) {
+            width: 100%;
+          }
+          @media (min-width: 1023px) {
             width: 847px;
           }
-
         }
 
         .rightBlock {
+          @media (max-width: 1101px) {
+            display: flex;
+            align-items: flex-end;
+          }
 
           .slider {
+            min-width: 0;
             margin-top: 60px;
 
-            @include desktop {
+            @media (min-width: 1023px) {
+              display: block;
               margin-top: 0;
               position: relative;
               z-index: 5;
               width: 393px;
               margin-left: 40px;
             }
+            @media (max-width: 999px) {
+              // width: 340px;
+            }
           }
-
         }
-
       }
-
-
     }
   }
-
 }

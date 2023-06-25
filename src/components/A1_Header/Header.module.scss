@@ -1,7 +1,7 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .header {
-  @include container;
+  // @include container;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,13 +12,18 @@
   &::before {
     position: absolute;
     z-index: 2;
-    content: "";
+    content: '';
     display: block;
     left: 0;
     bottom: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0));
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.09),
+      rgba(255, 255, 255, 0)
+    );
   }
 
   .gradientLeft {
@@ -40,7 +45,7 @@
   }
 
   .inner {
-    @include inner;
+    // @include inner;
     position: relative;
     z-index: 2;
     display: flex;
@@ -49,7 +54,7 @@
     height: 75px;
     transition: 0.3s;
 
-    @include desktop {
+    @media (min-width: 992px) {
       height: 102px;
     }
 
@@ -60,7 +65,7 @@
         width: 145px;
         height: 28px;
 
-        @include desktop {
+        @media (min-width: 992px) {
           width: 160px;
           height: 30.89px;
         }
@@ -70,8 +75,12 @@
     .links {
       @include absoluteCenter;
       @include centerRow;
-      @include onlyDesktop(flex);
 
+      display: none;
+
+      @media (min-width: 992px) {
+        display: flex;
+      }
 
       .item {
         &:not(:first-child) {
@@ -85,7 +94,7 @@
         font-size: 13px;
         line-height: 20px;
         letter-spacing: -0.02em;
-        color: #FFFFFF;
+        color: #ffffff;
         white-space: nowrap;
         transition: 0.3s;
 
@@ -94,23 +103,31 @@
         }
 
         &:hover {
-          color: #02A4C7;
+          color: #02a4c7;
         }
       }
     }
 
     .tradeBtn {
-      @include onlyDesktop;
       width: 130px;
+      display: none;
+
+      @media (min-width: 992px) {
+        display: block;
+      }
     }
 
     .burgerBtn {
       @include button;
       @include centerRow;
-      @include onlyMobile;
       width: 30px;
       height: 30px;
 
+      display: block;
+
+      @media (min-width: 992px) {
+        display: none;
+      }
     }
   }
 
@@ -120,9 +137,10 @@
 
     .inner {
       height: 75px;
+      // display: none;
 
-      @include desktop {
-        height: 82px;
+      @media (min-width: 992px) {
+        display: flex;
       }
     }
   }
@@ -131,4 +149,3 @@
     transform: translateY(-101%);
   }
 }
-

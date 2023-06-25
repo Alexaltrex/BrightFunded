@@ -1,8 +1,13 @@
-@import "../../../assets/styles/app";
+@import '../../../assets/styles/app';
 
 .tableCustomMobile {
-  @include onlyMobile();
+  display: block;
+  // @include onlyMobile();
   margin-top: 55px;
+
+  @media (min-width: 800px) {
+    display: none;
+  }
 
   .table {
     border-radius: 15px;
@@ -13,7 +18,7 @@
     .row {
       display: flex;
       height: 50px;
-      border-top: 1px solid #1B1C2B;
+      border-top: 1px solid #1b1c2b;
       box-sizing: border-box;
 
       &_header {
@@ -37,7 +42,7 @@
           font-size: 13px;
           line-height: 20px;
           letter-spacing: -0.02em;
-          color: #FFFFFF;
+          color: #ffffff;
         }
 
         .popupBtn {
@@ -52,14 +57,12 @@
             height: 12px;
           }
         }
-
       }
 
       .value {
         flex-grow: 1;
         background: rgba(22, 25, 41, 0.8);
       }
-
     }
 
     .sliderWrapper {
@@ -80,7 +83,7 @@
           line-height: 20px;
           text-align: center;
           letter-spacing: -0.02em;
-          color: #FFFFFF;
+          color: #ffffff;
         }
 
         .tooltipText {
@@ -89,15 +92,19 @@
           line-height: 15px;
           text-align: center;
           letter-spacing: -0.02em;
-          color: #73747D;
-          border-bottom: 1px dashed #73747D;
+          color: #73747d;
+          border-bottom: 1px dashed #73747d;
         }
 
         &_header {
           height: 72px;
 
           p:nth-child(1) {
-            background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+            background: linear-gradient(
+              34.49deg,
+              #0781fe -12.58%,
+              #00c7b4 102.84%
+            );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -107,10 +114,8 @@
           }
         }
       }
-
     }
   }
-
 
   .navigation {
     margin-top: 20px;
@@ -120,12 +125,12 @@
     .item {
       height: 4px;
       width: 40px;
-      background: #1C1F31;
+      background: #1c1f31;
       border-radius: 4px;
       transition: 0.3s;
 
       &_selected {
-        background: linear-gradient(85.01deg, #0072E7 6.26%, #00AA9A 92.45%);
+        background: linear-gradient(85.01deg, #0072e7 6.26%, #00aa9a 92.45%);
       }
 
       &:not(:first-child) {
@@ -133,17 +138,19 @@
       }
     }
   }
-
-
 }
 
 .tableCustomDesktop {
-  @include onlyDesktop();
   margin-top: 48px;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.06);
   background: rgba(21, 24, 40, 0.8);
   backdrop-filter: blur(1px);
+
+  display: none;
+  @media (min-width: 800px) {
+    display: block;
+  }
 
   .header {
     height: 75px;
@@ -151,7 +158,9 @@
     grid-template-columns: repeat(4, 1fr);
 
     div {
-      &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -167,7 +176,7 @@
       }
 
       p:nth-child(1) {
-        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        background: linear-gradient(34.49deg, #0781fe -12.58%, #00c7b4 102.84%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -176,14 +185,11 @@
         color: rgba(115, 116, 125, 1);
       }
     }
-
-
-
   }
 
   .row {
     height: 50px;
-    border-top: 1px solid #1B1C2B;
+    border-top: 1px solid #1b1c2b;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
@@ -202,7 +208,9 @@
         }
       }
 
-      &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
         justify-content: center;
       }
 
@@ -210,7 +218,7 @@
       font-size: 15px;
       line-height: 22px;
       letter-spacing: -0.02em;
-      color: #FFFFFF;
+      color: #ffffff;
     }
 
     .withTooltip {
@@ -224,13 +232,10 @@
         line-height: 18px;
         text-align: center;
         letter-spacing: -0.02em;
-        color: #73747D;
-        border-bottom: 1px dashed #73747D;
+        color: #73747d;
+        border-bottom: 1px dashed #73747d;
       }
     }
-
-
-
   }
 }
 
@@ -248,11 +253,10 @@
     font-size: 11px;
     line-height: 16px;
     letter-spacing: -0.02em;
-    color: #9D9EA2;
+    color: #9d9ea2;
 
     span {
-      color: #FFF;
+      color: #fff;
     }
   }
-
 }

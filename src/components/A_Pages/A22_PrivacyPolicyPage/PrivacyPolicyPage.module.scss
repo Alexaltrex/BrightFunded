@@ -1,20 +1,16 @@
-@import "../../../assets/styles/app";
+@import '../../../assets/styles/app';
 
 .privacyPolicyPage {
   padding-top: 115px;
 
-  @include desktop {
+  @media (min-width: 991px) {
     padding-top: 182px;
     margin-bottom: 30px;
   }
 
   h2.title {
-    @include container;
-
     .inner {
-      @include inner;
-
-      @include desktop {
+      @media (min-width: 991px) {
         width: 846px;
       }
 
@@ -23,19 +19,17 @@
         font-size: 30px;
         line-height: 115%;
         letter-spacing: -0.02em;
-        color: #FFFFFF;
+        color: #ffffff;
 
-        @include desktop {
+        @media (min-width: 991px) {
           font-size: 52px;
         }
       }
-
     }
   }
 
   .card {
-    @include container;
-    background: #F7F9FC;
+    background: #f7f9fc;
     border-radius: 40px;
     position: relative;
     z-index: 2;
@@ -44,25 +38,22 @@
     padding-bottom: 60px;
     padding-left: 38px;
 
-    @include desktop {
+    @media (min-width: 991px) {
       padding-left: 0;
       margin-top: 60px;
       padding-bottom: 80px;
     }
 
     .inner {
-      @include inner;
-
-      @include desktop {
+      @media (min-width: 991px) {
         width: 846px;
       }
 
       .block {
-
         &:not(:first-child) {
           margin-top: 40px;
 
-          @include desktop {
+          @media (min-width: 991px) {
             margin-top: 60px;
           }
         }
@@ -75,9 +66,9 @@
             font-size: 18px;
             line-height: 130%;
             letter-spacing: -0.02em;
-            color: #0F0D31;
+            color: #0f0d31;
 
-            @include desktop {
+            @media (min-width: 991px) {
               font-size: 24px;
             }
 
@@ -86,12 +77,11 @@
               top: 0;
               left: -24px;
 
-              @include desktop {
+              @media (min-width: 991px) {
                 left: -30px;
               }
             }
           }
-
         }
 
         &_text {
@@ -104,27 +94,30 @@
 
           a {
             @include gradient-text;
-            text-decoration: underline!important;
+            text-decoration: underline !important;
             position: relative;
 
             &::after {
-              content: "";
+              content: '';
               display: block;
               position: absolute;
               left: 0;
               bottom: 0;
               right: 0;
               height: 1px;
-              background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+              background: linear-gradient(
+                34.49deg,
+                #0781fe -12.58%,
+                #00c7b4 102.84%
+              );
             }
           }
-
         }
 
         &_list {
           margin-top: 16px;
 
-          @include desktop {
+          @media (min-width: 991px) {
             margin-top: 24px;
           }
 
@@ -134,15 +127,19 @@
             &::before {
               position: absolute;
               display: block;
-              content: "";
+              content: '';
               width: 10px;
               height: 10px;
               border-radius: 50%;
               left: -20px;
               top: 6px;
-              background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+              background: linear-gradient(
+                34.49deg,
+                #0781fe -12.58%,
+                #00c7b4 102.84%
+              );
 
-              @include desktop {
+              @media (min-width: 991px) {
                 top: 9px;
               }
             }
@@ -152,10 +149,10 @@
               font-size: 14px;
               line-height: 150%;
               letter-spacing: -0.01em;
-              color: #231F1F;
+              color: #231f1f;
               margin-bottom: 10px;
 
-              @include desktop {
+              @media (min-width: 991px) {
                 font-size: 18px;
                 margin-bottom: 15px;
               }
@@ -168,7 +165,7 @@
               letter-spacing: -0.01em;
               color: #313235;
 
-              @include desktop {
+              @media (min-width: 991px) {
                 font-size: 14px;
               }
 
@@ -180,14 +177,14 @@
             &:not(:first-child) {
               margin-top: 24px;
 
-              @include desktop {
+              @media (min-width: 991px) {
                 margin-top: 30px;
               }
             }
           }
 
           &_without_label {
-            @include desktop {
+            @media (min-width: 991px) {
               margin-top: 20px;
             }
 
@@ -195,19 +192,14 @@
               &:not(:first-child) {
                 margin-top: 16px;
 
-                @include desktop {
+                @media (min-width: 991px) {
                   margin-top: 20px;
                 }
               }
             }
           }
-
         }
       }
-
     }
   }
-
-
 }
-

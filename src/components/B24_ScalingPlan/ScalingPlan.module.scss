@@ -1,48 +1,48 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .scalingPlan {
-  @include container;
   position: relative;
   padding-top: 125px;
   padding-bottom: 120px;
 
-  @include desktop {
+  @media (min-width: 1023px) {
     padding-top: 188px;
     padding-bottom: 80px;
   }
 
   .rocket {
     position: absolute;
+    pointer-events: none;
     z-index: 3;
     width: 332px;
     height: auto;
     left: -107px;
     bottom: -100px;
 
-    @include desktop {
-      left: calc((100vw - 1280px) / 2 + 408px) ;
+    @media (min-width: 1023px) {
+      z-index: 0;
+      left: calc((100vw - 1280px) / 2 + 408px);
       bottom: 75px;
       width: 380px;
     }
   }
 
   .inner {
-    @include inner;
-
-    @include desktop {
+    position: relative;
+    z-index: 1;
+    @media (min-width: 1023px) {
       display: flex;
     }
 
     .top {
-
       h2.title {
         font-weight: 600;
         font-size: 30px;
         line-height: 115%;
         letter-spacing: -0.02em;
-        color: #FFFFFF;
+        color: #ffffff;
 
-        @include desktop {
+        @media (min-width: 1023px) {
           font-size: 58px;
         }
       }
@@ -53,19 +53,18 @@
         font-size: 18px;
         line-height: 130%;
         letter-spacing: -0.02em;
-        color: #FFFFFF;
+        color: #ffffff;
 
         span {
-          color: #04A3DB;
+          color: #04a3db;
         }
 
-        @include desktop {
+        @media (min-width: 1023px) {
           font-size: 22px;
           width: 498px;
           margin-top: 30px;
         }
       }
-
     }
 
     .text {
@@ -74,19 +73,22 @@
       font-size: 14px;
       line-height: 150%;
       letter-spacing: -0.01em;
-      color: #A1A3A9;
+      color: #a1a3a9;
 
-      @include desktop {
+      @media (min-width: 1023px) {
         margin-top: 97px;
         width: 414px;
-        margin-left: 260px;
+        margin-right: 107px;
+        margin-left: auto;
+      }
+
+      @media (max-width: 1200px) {
+        margin-right: 0;
       }
 
       span {
-        color: #FFF;
+        color: #fff;
       }
     }
-
-
   }
 }

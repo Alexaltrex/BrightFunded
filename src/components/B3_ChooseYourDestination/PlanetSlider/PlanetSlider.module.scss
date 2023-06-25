@@ -1,4 +1,4 @@
-@import "../../../assets/styles/app";
+@import '../../../assets/styles/app';
 
 .wrapper {
   position: relative;
@@ -13,7 +13,7 @@
     height: 220px;
     width: 342px;
 
-    @include desktop {
+    @media (min-width: 1000px) {
       width: 487px;
       height: 315px;
     }
@@ -25,9 +25,13 @@
       height: 220px;
       width: 342px;
 
-      @include desktop {
+      @media (min-width: 1000px) {
         width: 487px;
         height: 315px;
+      }
+
+      @media (max-width: 999px) {
+        width: 300px;
       }
 
       .img {
@@ -35,7 +39,7 @@
         width: auto;
         height: 220px;
 
-        @include desktop {
+        @media (min-width: 1000px) {
           height: 315px;
         }
       }
@@ -53,27 +57,26 @@
     height: 448px;
     overflow: visible;
 
-    @include desktop {
+    @media (min-width: 1000px) {
       height: 557px;
     }
 
     &:after {
       display: block;
-      content: "";
+      content: '';
       position: absolute;
       top: 220px;
       left: 0;
       right: 0;
       height: 1px;
-      background: #1F202F;
+      background: #1f202f;
 
-      @include desktop {
+      @media (min-width: 1000px) {
         top: 314px;
       }
     }
 
     .slide {
-
       .slideInner {
         box-sizing: border-box;
         padding: 240px 20px 25px;
@@ -83,7 +86,7 @@
         justify-content: space-between;
         //overflow: hidden;
 
-        @include desktop {
+        @media (min-width: 1000px) {
           padding: 339px 25px 25px;
           height: 557px;
         }
@@ -92,14 +95,15 @@
           display: flex;
           justify-content: space-between;
 
-          .title, .value {
+          .title,
+          .value {
             font-weight: 600;
             font-size: 20px;
             line-height: 130%;
             letter-spacing: -0.02em;
-            color: #FFFFFF;
+            color: #ffffff;
 
-            @include desktop {
+            @media (min-width: 1000px) {
               font-size: 24px;
             }
           }
@@ -109,18 +113,16 @@
           }
         }
 
-
-
         .text {
           margin-top: 15px;
           font-weight: 400;
           font-size: 13px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #FFFFFF;
+          color: #ffffff;
           opacity: 0.6;
 
-          @include desktop {
+          @media (min-width: 1000px) {
             font-size: 14px;
           }
         }
@@ -138,7 +140,7 @@
           width: auto;
           height: 220px;
 
-          @include desktop {
+          @media (min-width: 1000px) {
             height: 315px;
           }
         }
@@ -146,6 +148,3 @@
     }
   }
 }
-
-
-

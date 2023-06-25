@@ -1,29 +1,25 @@
 @import '../../assets/styles/app';
 
 .technology {
-  @include container;
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @include desktop {
+  @media (min-width: 991px) {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 
   .inner {
-    @include inner;
-
     .block {
-
       &:not(:first-child) {
         margin-top: 60px;
 
-        @include desktop {
+        @media (min-width: 991px) {
           margin-top: 100px;
         }
       }
 
-      @include desktop {
+      @media (min-width: 991px) {
         display: flex;
         justify-content: space-between;
       }
@@ -33,9 +29,9 @@
         font-size: 24px;
         line-height: 130%;
         letter-spacing: -0.02em;
-        color: #0E0B3D;
+        color: #0e0b3d;
 
-        @include desktop {
+        @media (min-width: 991px) {
           font-size: 36px;
         }
 
@@ -47,7 +43,7 @@
       .textsWrapper {
         margin-top: 20px;
 
-        @include desktop {
+        @media (min-width: 991px) {
           margin-top: 0;
           width: 630px;
         }
@@ -57,9 +53,9 @@
           font-size: 18px;
           line-height: 130%;
           letter-spacing: -0.02em;
-          color: #0E0B3D;
+          color: #0e0b3d;
 
-          @include desktop {
+          @media (min-width: 991px) {
             font-size: 22px;
             width: 572px;
           }
@@ -75,13 +71,12 @@
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #3E3C64;
+          color: #3e3c64;
 
-          @include desktop {
+          @media (min-width: 991px) {
             margin-top: 30px;
           }
         }
-
       }
     }
   }

@@ -1,11 +1,10 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .openPositions {
-  @include container;
   padding-top: 80px;
   padding-bottom: 60px;
 
-  @include desktop {
+  @media (min-width: 768px) {
     padding-top: 150px;
     padding-bottom: 80px;
   }
@@ -14,8 +13,7 @@
     @include inner;
 
     .top {
-
-      @include desktop {
+      @media (min-width: 768px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 20px;
@@ -26,9 +24,9 @@
         font-size: 24px;
         line-height: 130%;
         letter-spacing: -0.02em;
-        color: #0E0B3D;
+        color: #0e0b3d;
 
-        @include desktop {
+        @media (min-width: 768px) {
           font-size: 36px;
         }
 
@@ -40,7 +38,7 @@
       .right {
         margin-top: 20px;
 
-        @include desktop {
+        @media (min-width: 768px) {
           margin-top: 0;
         }
 
@@ -50,9 +48,9 @@
           font-size: 18px;
           line-height: 130%;
           letter-spacing: -0.02em;
-          color: #0E0B3D;
+          color: #0e0b3d;
 
-          @include desktop {
+          @media (min-width: 768px) {
             margin-top: 0;
             font-size: 22px;
             width: 518px;
@@ -69,36 +67,37 @@
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #3E3C64;
+          color: #3e3c64;
 
-          @include desktop {
+          @media (min-width: 768px) {
             width: 578px;
           }
-
         }
       }
-
     }
 
     .selectCategory {
-      border-top: 1px solid #E3E3E3;
+      border-top: 1px solid #e3e3e3;
       margin-top: 30px;
       padding-top: 30px;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 40px;
         padding-top: 40px;
       }
 
       .selectCategoryMobile {
-        @include onlyMobile;
+        display: block;
+        @media (min-width: 1023px) {
+          display: none;
+        }
 
         .label {
           font-weight: 400;
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #9A99AF;
+          color: #9a99af;
         }
 
         .select {
@@ -107,13 +106,17 @@
       }
 
       .selectCategoryDesktop {
-        @include onlyDesktop(flex);
+        display: none;
+
+        @media (min-width: 1023px) {
+          display: flex;
+        }
 
         .tab {
           @include button;
           @include centerRow;
           padding: 9px 25px;
-          background: #E4E9EF;
+          background: #e4e9ef;
           border-radius: 999px;
           transition: 0.3s;
 
@@ -130,34 +133,37 @@
             font-size: 16px;
             line-height: 115%;
             letter-spacing: -0.02em;
-            color: #0E0B3D;
+            color: #0e0b3d;
             transition: 0.3s;
           }
 
-          &_selected, &_selected:hover {
-            background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+          &_selected,
+          &_selected:hover {
+            background: linear-gradient(
+              34.49deg,
+              #0781fe -12.58%,
+              #00c7b4 102.84%
+            );
 
             p {
-              color: #FFF;
+              color: #fff;
             }
           }
-
-
         }
       }
-
     }
 
     .cards {
       margin-top: 30px;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 40px;
       }
 
       .inner {
-        @include desktop {
+        @media (min-width: 768px) {
           display: flex;
+          gap: 20px;
           flex-wrap: wrap;
           justify-content: space-between;
         }

@@ -1,4 +1,4 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .ourTeam {
   position: relative;
@@ -8,43 +8,72 @@
   padding-top: 100px;
   padding-bottom: 80px;
 
-  @include desktop {
+  @media (min-width: 768px) {
     padding-top: 140px;
     padding-bottom: 100px;
   }
 
   .gradientLeft {
-    @include onlyDesktop;
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
     transform: translateY(-50%);
+
+    @media (min-width: 768px) {
+      display: block;
+    }
   }
 
   .gradientRight {
-    @include onlyDesktop;
+    display: none;
     position: absolute;
     right: 0;
     top: 43px;
     height: 340px;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
   }
 
   .titleWrapper {
-    @include h2_block;
     @include h2_block_white;
     position: relative;
 
-    h2 {
+    .pretext {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 115%;
+      text-align: center;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+
+      @media (min-width: 768px) {
+        font-size: 14px;
+      }
+    }
+
+    h2.title {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: -0.02em;
+
       width: 240px;
       margin-left: auto;
       margin-right: auto;
 
-      @include desktop {
+      @media (min-width: 768px) {
+        margin-top: 15px;
+        font-size: 36px;
         width: auto;
       }
 
       span {
-        background: linear-gradient(34.49deg, #0781FE -12.58%, #00C7B4 102.84%);
+        background: linear-gradient(34.49deg, #0781fe -12.58%, #00c7b4 102.84%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -54,8 +83,10 @@
   .btn {
     margin-top: 20px;
     width: 161px;
+    margin-left: auto;
+    margin-right: auto;
 
-    @include desktop {
+    @media (min-width: 768px) {
       margin-top: 40px;
       width: 172px;
     }

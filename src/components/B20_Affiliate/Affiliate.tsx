@@ -1,38 +1,38 @@
-import * as React from "react";
-import style from "./Affiliate.module.scss";
-import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
-import {svgIcons} from "../../assets/svgIcons";
-import {observer} from "mobx-react-lite";
-import {useStore} from "../../store/useStore";
+import * as React from 'react';
+import style from './Affiliate.module.scss';
+import { ButtonCustom } from '../common/ButtonCustom/ButtonCustom';
+import { svgIcons } from '../../assets/svgIcons';
+import { observer } from 'mobx-react-lite';
+import { useStore } from '../../store/useStore';
 
 export const Affiliate = observer(() => {
-    const {setAffiliateModal} = useStore();
-    const onClickHandler = () => setAffiliateModal(true);
+  const { setAffiliateModal } = useStore();
+  const onClickHandler = () => setAffiliateModal(true);
 
+  return (
+    <div className={style.affiliate}>
+      <div className={`container ${style.inner}`}>
+        <h2 className={style.title}>
+          Affiliate <span>Partnership</span>
+        </h2>
 
-    return (
-        <div className={style.affiliate}>
-            <div className={style.inner}>
+        <p className={style.text}>
+          Welcome to BrightFunded’s groundbreaking Affiliate Partnership
+          Program. This is your opportunity to transform your community,
+          website, blog, or social media channel into a profitable venture,
+          generating <span>passive income effortlessly.</span> By referring a
+          new trader, you receive an attractive 10% commission on{' '}
+          <span>every purchase</span> they make. An industry game-changer.
+        </p>
 
-                <h2 className={style.title}>
-                    Affiliate <span>Partnership</span>
-                </h2>
-
-                <p className={style.text}>
-                    Welcome to BrightFunded’s groundbreaking Affiliate Partnership Program. This is your opportunity to
-                    transform your community, website, blog, or social media channel into a profitable venture,
-                    generating <span>passive income effortlessly.</span> By referring a new trader, you receive an
-                    attractive 10% commission on <span>every purchase</span> they make. An industry game-changer.
-                </p>
-
-                <ButtonCustom label="Sign Up"
-                              icon={svgIcons.arrow_right}
-                              className={style.signBtn}
-                                // @ts-ignore
-                              onClick={onClickHandler}
-                />
-
-            </div>
-        </div>
-    )
-})
+        <ButtonCustom
+          label='Sign Up'
+          icon={svgIcons.arrow_right}
+          className={style.signBtn}
+          // @ts-ignore
+          onClick={onClickHandler}
+        />
+      </div>
+    </div>
+  );
+});

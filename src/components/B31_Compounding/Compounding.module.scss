@@ -1,19 +1,15 @@
 @import '../../assets/styles/app';
 
 .compounding {
-  @include container;
   padding-top: 60px;
 
-  @include desktop {
+  @media (min-width: 768px) {
     padding-top: 80px;
   }
 
   .inner {
-    @include inner;
-
     .top {
-
-      @include desktop {
+      @media (min-width: 768px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 20px;
@@ -24,9 +20,9 @@
         font-size: 24px;
         line-height: 130%;
         letter-spacing: -0.02em;
-        color: #0E0B3D;
+        color: #0e0b3d;
 
-        @include desktop {
+        @media (min-width: 768px) {
           font-size: 36px;
         }
       }
@@ -37,16 +33,16 @@
         font-size: 18px;
         line-height: 130%;
         letter-spacing: -0.02em;
-        color: #0E0B3D;
+        color: #0e0b3d;
 
-        @include desktop {
+        @media (min-width: 768px) {
           margin-top: 0;
           font-size: 22px;
           width: 451px;
         }
 
         span {
-          color: #04A3DB;
+          color: #04a3db;
         }
       }
     }
@@ -54,27 +50,37 @@
     .cards {
       margin-top: 30px;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 60px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 20px;
+        display: flex;
+        gap: 20px;
+      }
+
+      @media (max-width: 1023px) {
+        flex-wrap: wrap;
       }
 
       .card {
-        background: #FFFFFF;
-        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+        background: #ffffff;
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02),
+          0px 9px 19px rgba(0, 0, 0, 0.01);
         border-radius: 15px;
         padding: 20px;
 
-        @include desktop {
+        @media (min-width: 768px) {
+          box-sizing: border-box;
+          flex: 0 0 calc(25% - 15px);
           padding: 20px 20px 40px;
+        }
+
+        @media (max-width: 1023px) {
+          flex: 0 0 calc(50% - 10px);
         }
 
         &:not(:first-child) {
           margin-top: 20px;
 
-          @include desktop {
+          @media (min-width: 768px) {
             margin-top: 0;
           }
         }
@@ -83,10 +89,14 @@
           @include centerRow;
           width: 45px;
           height: 45px;
-          background: linear-gradient(34.49deg, rgba(7, 129, 254, 0.1) -12.58%, rgba(0, 199, 180, 0.1) 102.84%);
+          background: linear-gradient(
+            34.49deg,
+            rgba(7, 129, 254, 0.1) -12.58%,
+            rgba(0, 199, 180, 0.1) 102.84%
+          );
           border-radius: 10px;
 
-          @include desktop {
+          @media (min-width: 768px) {
             width: 55px;
             height: 55px;
             border-radius: 15px;
@@ -96,7 +106,7 @@
             width: 23px;
             height: 23px;
 
-            @include desktop {
+            @media (min-width: 768px) {
               width: 29px;
               height: 29px;
             }
@@ -109,12 +119,11 @@
           font-size: 20px;
           line-height: 130%;
           letter-spacing: -0.02em;
-          color: #0E0B3D;
+          color: #0e0b3d;
 
-          @include desktop {
+          @media (min-width: 768px) {
             margin-top: 20px;
             font-size: 22px;
-
           }
         }
 
@@ -124,28 +133,27 @@
           font-size: 14px;
           line-height: 150%;
           letter-spacing: -0.01em;
-          color: #3E3C64;
+          color: #3e3c64;
         }
 
-        &:nth-child(1), &:nth-child(2) {
+        &:nth-child(1),
+        &:nth-child(2) {
           .card_text {
-            @include desktop {
+            @media (min-width: 768px) {
               margin-top: 59px;
             }
           }
         }
 
-        &:nth-child(3), &:nth-child(4) {
+        &:nth-child(3),
+        &:nth-child(4) {
           .card_text {
-            @include desktop {
+            @media (min-width: 768px) {
               margin-top: 30px;
             }
           }
         }
-
       }
-
-
     }
   }
 }

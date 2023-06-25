@@ -1,21 +1,17 @@
-@import "../../../assets/styles/app";
+@import '../../../assets/styles/app';
 
 .termsPage {
-
   .titleBlock {
-    @include container;
     padding-top: 115px;
     padding-bottom: 40px;
 
-    @include desktop {
+    @media (min-width: 991px) {
       padding-top: 181px;
       padding-bottom: 60px;
     }
 
     .inner {
-      @include inner;
-
-      @include desktop {
+      @media (min-width: 991px) {
         width: 846px;
       }
 
@@ -24,9 +20,9 @@
         font-size: 30px;
         line-height: 115%;
         letter-spacing: -0.02em;
-        color: #FFFFFF;
+        color: #ffffff;
 
-        @include desktop {
+        @media (min-width: 991px) {
           font-size: 52px;
         }
       }
@@ -34,23 +30,20 @@
   }
 
   .card {
-    @include container;
-    background: #F7F9FC;
+    background: #f7f9fc;
     border-radius: 40px;
     padding-top: 60px;
     padding-bottom: 80px;
     padding-left: 38px;
 
-    @include desktop {
+    @media (min-width: 991px) {
       padding-bottom: 80px;
       padding-left: 0;
       margin-bottom: 29px;
     }
 
     .inner {
-      @include inner;
-
-      @include desktop {
+      @media (min-width: 991px) {
         width: 846px;
       }
 
@@ -58,7 +51,7 @@
         &:not(:first-child) {
           margin-top: 40px;
 
-          @include desktop {
+          @media (min-width: 991px) {
             margin-top: 60px;
           }
         }
@@ -71,23 +64,21 @@
             font-size: 18px;
             line-height: 130%;
             letter-spacing: -0.02em;
-            color: #0F0D31;
+            color: #0f0d31;
 
             &:first-child {
               position: absolute;
               top: 0;
               left: -16px;
 
-              @include desktop {
+              @media (min-width: 991px) {
                 left: -22px;
               }
             }
           }
-
         }
 
         .text {
-
           p {
             margin-top: 16px;
             font-weight: 400;
@@ -100,7 +91,6 @@
               margin-top: 21px;
             }
           }
-
         }
       }
     }

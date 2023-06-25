@@ -1,42 +1,44 @@
-@import "../../assets/styles/app";
+@import '../../assets/styles/app';
 
 .currencyTable {
-  @include container;
+  // @include container;
   padding-top: 60px;
   padding-bottom: 80px;
 
-  @include desktop {
+  @media (min-width: 992px) {
     padding-top: 40px;
     padding-bottom: 100px;
   }
 
   .inner {
-    @include inner;
-
-    @include desktop {
-      width: 1063px;
-    }
-
     .selectWrapper {
-      @include onlyMobile();
+      display: block;
       width: 100%;
+
+      @media (min-width: 992px) {
+        display: none;
+      }
     }
 
     .tableMobile {
-      @include onlyMobile;
+      display: block;
       position: relative;
       margin-top: 20px;
-      border: 1px solid #E6EAEE;
+      border: 1px solid #e6eaee;
       filter: drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.08));
       border-radius: 15px;
       overflow: hidden;
+
+      @media (min-width: 992px) {
+        display: none;
+      }
 
       .row {
         display: flex;
         height: 50px;
 
         &:not(:first-child) {
-          border-top: 1px solid #E6EAEE;
+          border-top: 1px solid #e6eaee;
         }
 
         .currency {
@@ -45,25 +47,25 @@
           width: 120px;
           padding-left: 20px;
           box-sizing: border-box;
-          background: #FFF;
+          background: #fff;
           font-weight: 400;
           font-size: 14px;
           line-height: 21px;
           letter-spacing: -0.02em;
-          color: #0E0B3D;
+          color: #0e0b3d;
         }
 
         .value {
           @include centerRow;
           flex-grow: 1;
-          background: #F1F5FA;
+          background: #f1f5fa;
         }
 
         &:first-child {
           .currency {
             font-size: 15px;
             line-height: 22px;
-            color: #9A99AF;
+            color: #9a99af;
           }
         }
       }
@@ -77,7 +79,6 @@
         //background: rgba(255,0,0,0.1);
 
         .slide {
-
           .cell {
             @include centerRow;
             height: 50px;
@@ -87,7 +88,7 @@
               font-size: 15px;
               line-height: 22px;
               letter-spacing: -0.02em;
-              color: #9A99AF;
+              color: #9a99af;
             }
 
             &:not(:first-child) {
@@ -95,7 +96,7 @@
               font-size: 14px;
               line-height: 21px;
               letter-spacing: -0.02em;
-              color: #0E0B3D;
+              color: #0e0b3d;
             }
 
             p {
@@ -108,27 +109,28 @@
                 transform: translate(100%, -50%);
               }
             }
-
-
-
           }
         }
       }
     }
 
     .navigation {
-      @include onlyMobile(flex);
+      display: flex;
       justify-content: center;
       margin-top: 29px;
+
+      @media (min-width: 992px) {
+        display: none;
+      }
 
       .item {
         width: 40px;
         height: 4px;
-        background: #CDD6E2;
+        background: #cdd6e2;
         border-radius: 4px;
 
         &_selected {
-          background: linear-gradient(85.01deg, #0072E7 6.26%, #00AA9A 92.45%);
+          background: linear-gradient(85.01deg, #0072e7 6.26%, #00aa9a 92.45%);
         }
 
         &:not(:first-child) {
@@ -138,16 +140,20 @@
     }
 
     .tableDesktop {
-      @include onlyDesktop;
-      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02), 0px 9px 19px rgba(0, 0, 0, 0.01);
+      display: none;
+      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.02),
+        0px 9px 19px rgba(0, 0, 0, 0.01);
       border-radius: 15px;
       overflow: hidden;
+
+      @media (min-width: 992px) {
+        display: block;
+      }
 
       .buttons {
         height: 53px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-
 
         .btn {
           @include button;
@@ -158,7 +164,7 @@
           line-height: 22px;
           text-align: center;
           letter-spacing: -0.02em;
-          color: #0E0B3D;
+          color: #0e0b3d;
           transition: 0.3s;
 
           &:hover {
@@ -166,24 +172,23 @@
           }
 
           &_selected {
-            background: #02264C;
-            color: #FFFFFF;
+            background: #02264c;
+            color: #ffffff;
 
             &:hover {
-              background: #02264C;
-              color: #FFFFFF;
+              background: #02264c;
+              color: #ffffff;
             }
           }
         }
       }
 
       .rows {
-
         .row {
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           height: 53px;
-          background: #FFF;
+          background: #fff;
 
           &:first-child {
             .cell {
@@ -192,10 +197,10 @@
           }
 
           &:not(:first-child) {
-            border: 1px solid #F2F2F2;
+            border: 1px solid #f2f2f2;
 
             .cell {
-              color: #0E0B3D;
+              color: #0e0b3d;
             }
           }
 
@@ -218,15 +223,8 @@
               }
             }
           }
-
         }
       }
-
-
-
     }
-
-
-
   }
 }
