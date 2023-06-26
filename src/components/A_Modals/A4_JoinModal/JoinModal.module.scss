@@ -1,4 +1,4 @@
-@import "../../../assets/styles/app";
+@import '../../../assets/styles/app';
 
 .joinModal {
   .card {
@@ -7,13 +7,13 @@
     transform: translateY(-50%);
     left: 20px;
     width: calc(100vw - 40px);
-    background: #FFFFFF;
+    background: #ffffff;
     backdrop-filter: blur(17px);
     border-radius: 15px;
     box-sizing: border-box;
     padding: 40px 20px;
 
-    @include desktop {
+    @media (min-width: 768px) {
       left: 50%;
       width: 514px;
       transform: translate(-50%, -50%);
@@ -32,7 +32,7 @@
       width: 14px;
       height: 14px;
 
-      @include desktop {
+      @media (min-width: 768px) {
         width: 16px;
         height: 16px;
         top: 20px;
@@ -43,7 +43,7 @@
         width: 14px;
         height: 14px;
 
-        @include desktop {
+        @media (min-width: 768px) {
           width: 16px;
           height: 16px;
         }
@@ -56,9 +56,9 @@
       line-height: 130%;
       text-align: center;
       letter-spacing: -0.02em;
-      color: #0E0B3D;
+      color: #0e0b3d;
 
-      @include desktop {
+      @media (min-width: 768px) {
         font-size: 32px;
       }
     }
@@ -70,9 +70,9 @@
       line-height: 150%;
       text-align: center;
       letter-spacing: -0.01em;
-      color: #3E3C64;
+      color: #3e3c64;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 15px;
       }
 
@@ -84,13 +84,12 @@
     .form {
       margin-top: 25px;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 30px;
       }
 
       .top {
-
-        @include desktop {
+        @media (min-width: 768px) {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           grid-column-gap: 10px;
@@ -100,7 +99,7 @@
           &:not(:first-child) {
             margin-top: 15px;
 
-            @include desktop {
+            @media (min-width: 768px) {
               margin-top: 0;
             }
           }
@@ -123,15 +122,13 @@
       font-size: 10px;
       line-height: 15px;
       letter-spacing: -0.02em;
-      color: #6C6B7D;
+      color: #6c6b7d;
       text-align: center;
 
-      @include desktop {
+      @media (min-width: 768px) {
         margin-top: 20px;
         font-size: 12px;
       }
     }
-
-
   }
 }

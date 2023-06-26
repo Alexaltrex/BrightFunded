@@ -1,112 +1,111 @@
-@import "../../../assets/styles/app";
+@import '../../../assets/styles/app';
 
 .welcomeModal {
+  .card {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    width: calc(100vw - 40px);
+    background: #ffffff;
+    backdrop-filter: blur(17px);
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 40px 20px 14px;
 
-    .card {
+    @media (min-width: 768px) {
+      left: 50%;
+      width: 514px;
+      transform: translate(-50%, -50%);
+      padding: 50px 40px 30px;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    .closeBtn {
+      @include button;
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 20px;
-      width: calc(100vw - 40px);
-      background: #FFFFFF;
-      backdrop-filter: blur(17px);
-      border-radius: 15px;
-      box-sizing: border-box;
-      padding: 40px 20px 14px;
+      top: 15px;
+      right: 15px;
+      width: 14px;
+      height: 14px;
 
-      @include desktop {
-        left: 50%;
-        width: 514px;
-        transform: translate(-50%, -50%);
-        padding: 50px 40px 30px;
+      @media (min-width: 768px) {
+        width: 16px;
+        height: 16px;
+        top: 20px;
+        right: 20px;
       }
 
-      &:focus-visible {
-        outline: none;
-      }
-
-      .closeBtn {
-        @include button;
-        position: absolute;
-        top: 15px;
-        right: 15px;
+      svg {
         width: 14px;
         height: 14px;
 
-        @include desktop {
+        @media (min-width: 768px) {
           width: 16px;
           height: 16px;
-          top: 20px;
-          right: 20px;
-        }
-
-        svg {
-          width: 14px;
-          height: 14px;
-
-          @include desktop {
-            width: 16px;
-            height: 16px;
-          }
-        }
-      }
-
-      .title {
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 130%;
-        text-align: center;
-        letter-spacing: -0.02em;
-        color: #0E0B3D;
-
-        @include desktop {
-          font-size: 32px;
-        }
-      }
-
-      .description {
-        margin-top: 12px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 150%;
-        text-align: center;
-        letter-spacing: -0.01em;
-        color: #3E3C64;
-
-        @include desktop {
-          margin-top: 15px;
-        }
-      }
-
-      .btn {
-        margin-top: 20px;
-        width: 250px;
-        margin-left: auto;
-        margin-right: auto;
-
-        @include desktop {
-          margin-top: 30px;
-          width: 100%;
-        }
-      }
-
-      .okBtn {
-        @include button;
-        @include centerRow;
-        width: 100%;
-        height: 42px;
-        margin-top: 2px;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 21px;
-        letter-spacing: -0.03em;
-        color: #0E0B3D;
-        text-align: center;
-        text-transform: uppercase;
-
-        @include desktop {
-          margin-top: 6px;
         }
       }
     }
+
+    .title {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #0e0b3d;
+
+      @media (min-width: 768px) {
+        font-size: 32px;
+      }
+    }
+
+    .description {
+      margin-top: 12px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      text-align: center;
+      letter-spacing: -0.01em;
+      color: #3e3c64;
+
+      @media (min-width: 768px) {
+        margin-top: 15px;
+      }
+    }
+
+    .btn {
+      margin-top: 20px;
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media (min-width: 768px) {
+        margin-top: 30px;
+        width: 100%;
+      }
+    }
+
+    .okBtn {
+      @include button;
+      @include centerRow;
+      width: 100%;
+      height: 42px;
+      margin-top: 2px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.03em;
+      color: #0e0b3d;
+      text-align: center;
+      text-transform: uppercase;
+
+      @media (min-width: 768px) {
+        margin-top: 6px;
+      }
+    }
+  }
 }
