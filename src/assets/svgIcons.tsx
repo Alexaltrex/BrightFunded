@@ -1077,5 +1077,18 @@ export const svgIcons = {
                 </linearGradient>
             </defs>
         </svg>
+    ),
+    checked: (
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="16" height="16" rx="4" fill="#04A3DB"/>
+            <path
+                d="M7.04447 10.9671C6.96655 11.0454 6.8603 11.0891 6.74989 11.0891C6.63947 11.0891 6.53322 11.0454 6.4553 10.9671L4.1028 8.61414C3.85864 8.36998 3.85864 7.97414 4.1028 7.73039L4.39739 7.43581C4.64155 7.19164 5.03697 7.19164 5.28114 7.43581L6.74989 8.90456L10.7186 4.93581C10.9628 4.69164 11.3586 4.69164 11.6024 4.93581L11.897 5.23039C12.1411 5.47456 12.1411 5.87039 11.897 6.11414L7.04447 10.9671Z"
+                fill="white"/>
+        </svg>
+    ),
+    not_checked: (
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="15" height="15" rx="3.5" fill="#02264C" fillOpacity="0.05" stroke="#E5EAEF"/>
+        </svg>
     )
 }
