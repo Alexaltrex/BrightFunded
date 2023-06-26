@@ -52,9 +52,11 @@ export const JoinModal = observer(() => {
         formikHelpers: FormikHelpers<IValues>
     ) => {
         try {
-            console.log(values);
-            setJoinModal(false);
-            setWelcomeModal(true);
+            if (checkedPolicy && checkedTerms) {
+                console.log(values);
+                setJoinModal(false);
+                setWelcomeModal(true);
+            }
         } catch (e: any) {
             console.log(e.message);
         } finally {
