@@ -12,15 +12,19 @@ import {Checkbox} from "@mui/material";
 import {HashLink} from "react-router-hash-link";
 
 interface IValues {
-    name: string;
-    surname: string;
-    email: string;
+    name: string
+    surname: string
+    email: string
+    terms: boolean
+    policy: boolean
 }
 
 const initialValues: IValues = {
     name: '',
     surname: '',
     email: '',
+    terms: false,
+    policy: false
 };
 
 export const JoinModal = observer(() => {
@@ -30,6 +34,8 @@ export const JoinModal = observer(() => {
                           name,
                           surname,
                           email,
+                          terms,
+                          policy,
                       }: IValues): FormikErrors<IValues> => {
         const errors = {} as FormikErrors<IValues>;
         if (!name) {
@@ -44,6 +50,12 @@ export const JoinModal = observer(() => {
         if (email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
             errors.email = 'Not a valid email';
         }
+        if (!terms) {
+            errors.terms = "Required"
+        }
+        if (!policy) {
+            errors.policy = "Required"
+        }
         return errors;
     };
 
@@ -52,11 +64,9 @@ export const JoinModal = observer(() => {
         formikHelpers: FormikHelpers<IValues>
     ) => {
         try {
-            if (checkedPolicy && checkedTerms) {
-                console.log(values);
-                setJoinModal(false);
-                setWelcomeModal(true);
-            }
+            console.log(values);
+            setJoinModal(false);
+            setWelcomeModal(true);
         } catch (e: any) {
             console.log(e.message);
         } finally {
@@ -147,8 +157,7 @@ export const JoinModal = observer(() => {
 
                     <div className={style.checkboxes}>
                         <div className={style.checkboxes_item}>
-                            <Checkbox checked={checkedTerms}
-                                      onChange={onChangeHandlerTerms}
+                            <Checkbox {...formik.getFieldProps('terms')}
                                       checkedIcon={svgIcons.checked}
                                       icon={svgIcons.not_checked}
                                       disableRipple
@@ -165,9 +174,10 @@ export const JoinModal = observer(() => {
                             </HashLink>
                             </p>
                         </div>
+                        {formik.errors.terms && <p className={style.error}>{formik.errors.terms}</p>}
+
                         <div className={style.checkboxes_item}>
-                            <Checkbox checked={checkedPolicy}
-                                      onChange={onChangeHandlerPolicy}
+                            <Checkbox {...formik.getFieldProps('policy')}
                                       checkedIcon={svgIcons.checked}
                                       icon={svgIcons.not_checked}
                                       disableRipple
@@ -184,6 +194,8 @@ export const JoinModal = observer(() => {
                             </HashLink>
                             </p>
                         </div>
+                        {formik.errors.policy && <p className={style.error}>{formik.errors.policy}</p>}
+
                     </div>
 
                     <ButtonCustom
