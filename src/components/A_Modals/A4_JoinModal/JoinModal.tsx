@@ -174,7 +174,7 @@ export const JoinModal = observer(() => {
                             </HashLink>
                             </p>
                         </div>
-                        {formik.errors.terms && <p className={style.error}>{formik.errors.terms}</p>}
+                        {formik.errors.terms && formik.touched.terms && <p className={style.error}>{formik.errors.terms}</p>}
 
                         <div className={style.checkboxes_item}>
                             <Checkbox {...formik.getFieldProps('policy')}
@@ -194,9 +194,9 @@ export const JoinModal = observer(() => {
                             </HashLink>
                             </p>
                         </div>
-                        {formik.errors.policy && <p className={style.error}>{formik.errors.policy}</p>}
-
+                        {formik.errors.policy && formik.touched.policy && <p className={style.error}>{formik.errors.policy}</p>}
                     </div>
+                    
 
                     <ButtonCustom
                         label='Join Waitlist'
