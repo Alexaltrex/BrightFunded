@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 export const Canvas = (props) => {
-    const { draw,  establishContext, establishCanvasWidth, ...rest } = props;
+    const { draw, establishContext, establishCanvasWidth, ...rest } = props;
     const canvasRef = useRef(null);
     const [context, setContext] = useState(null);
 
@@ -33,8 +33,25 @@ export const Canvas = (props) => {
             if (establishContext) {
                 establishContext(ctx);
             }
+
         }
     }, []);
+
+    useEffect(() => {
+        //i.e. value other than null or undefined
+        if (canvasRef.current) {
+            const canvas = canvasRef.current;
+            const ctx = canvas.getContext("2d");
+
+
+            window.addEventListener('resize', () => { resizeCanvas(ctx) });
+
+
+            return _ => {
+                window.removeEventListener('resize', () => { resizeCanvas(ctx) })
+            }
+        }
+    }, [context]);
 
     useEffect(() => {
         let animationFrameId;
@@ -87,9 +104,9 @@ export const Stars = (props) => {
 
     useEffect(() => {
         const handleScroll = (event) => {
-            setTimeout(async ()=>{
+            setTimeout(async () => {
                 setlastScroll(window.scrollY);
-            },50)
+            }, 50)
         };
         const handleResize = (event) => {
             setS({
